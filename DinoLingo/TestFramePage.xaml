@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.TestFramePage"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo">
+    <ContentPage.Content>
+        <StackLayout> 
+            
+            
+            <controls:ExtendedFrame   
+             BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+             CornerRadius="{Binding CornerRadius2}"
+             OutLineWidth = "{Binding StrokeLineWidth2}"
+             BorderColor="{StaticResource MemoryGameLightBlueColor}"
+             HasShadow="false"
+             Padding="3"
+             IsClippedToBounds="true">
+                <Frame
+                    BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                    CornerRadius="{Binding CornerRadius2}"
+                    TranslationX="{Binding CornerRadius2}"> 
+                    <Label Text="Some Text" > </Label>
+                </Frame>
+            </controls:ExtendedFrame>
+
+            <controls:ExtendedFrame   
+             BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+             CornerRadius="{Binding CornerRadius2}"
+             OutLineWidth = "{Binding StrokeLineWidth2}"
+             BorderColor="{StaticResource MemoryGameLightBlueColor}"
+             HasShadow="false"
+             Padding="3"
+             IsClippedToBounds="true">
+                <Frame
+                    BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                    CornerRadius="{Binding CornerRadius2}"
+                    TranslationX="{Binding CornerRadius2}"> 
+                    <Label Text="Some Text" > </Label>
+                </Frame>
+            </controls:ExtendedFrame>
+
+            <controls:ExtendedFrame   
+             BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+             CornerRadius="{Binding CornerRadius2}"
+             OutLineWidth = "{Binding StrokeLineWidth2}"
+             BorderColor="{StaticResource MemoryGameLightBlueColor}"
+             HasShadow="false"
+             Padding="3"
+             IsClippedToBounds="true">
+                <Frame
+                    BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                    CornerRadius="{Binding CornerRadius2}"
+                    TranslationX="{Binding CornerRadius2}"> 
+                    <Label Text="Some Text" > </Label>
+                </Frame>
+            </controls:ExtendedFrame>
+
+            <controls:ExtendedFrame   
+             BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+             CornerRadius="{Binding CornerRadius2}"
+             OutLineWidth = "{Binding StrokeLineWidth2}"
+             BorderColor="{StaticResource MemoryGameLightBlueColor}"
+             HasShadow="false"
+             Padding="3"
+             IsClippedToBounds="true">
+                <Frame
+                    BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                    CornerRadius="{Binding CornerRadius2}"
+                    TranslationX="{Binding CornerRadius2}"> 
+                    <Label Text="Some Text" > </Label>
+                </Frame>
+            </controls:ExtendedFrame>
+
+            <controls:ExtendedFrame   
+             BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+             CornerRadius="{Binding CornerRadius2}"
+             OutLineWidth = "{Binding StrokeLineWidth2}"
+             BorderColor="{StaticResource MemoryGameLightBlueColor}"
+             HasShadow="false"
+             Padding="3"
+             IsClippedToBounds="true">
+                <Frame
+                    BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                    CornerRadius="{Binding CornerRadius2}"
+                    TranslationX="{Binding CornerRadius2}"> 
+                    <Label Text="Some Text" > </Label>
+                </Frame>
+            </controls:ExtendedFrame>
+
+        </StackLayout>
+           
+        
+    </ContentPage.Content>
+</ContentPage>

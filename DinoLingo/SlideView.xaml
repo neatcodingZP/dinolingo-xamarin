@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.SlideView"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             HorizontalOptions="Start">
+    <ContentView.Content>
+        <StackLayout 
+            x:Name="myStack"
+
+            WidthRequest="{Binding MenuWidth}"
+            HorizontalOptions="Start"
+            VerticalOptions="FillAndExpand"
+            BackgroundColor="Fuchsia">
+            <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center"
+                                            WidthRequest="200" HeightRequest="200"
+                                            DownsampleToViewSize="true"
+                                            Source = "{Binding LogoImageSrc}">
+                            </ffimageloading:CachedImage>
+            <Label Text="Label 1"/>
+            <Label Text="Label 2"/>
+            <Label Text="Label 3"/>
+            <Label Text="Label 4"/>
+            <BoxView BackgroundColor="Yellow" HeightRequest="2"/>
+            <Button Text="Button 1" Command = "{Binding Button1_Command}"/>
+            <Button Text="Button 2"/>
+            
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

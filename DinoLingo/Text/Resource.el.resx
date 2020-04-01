@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="choose_language" xml:space="preserve">
+    <value>Επιλέξτε γλώσσα</value>
+  </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Αγαπημένα</value>
+  </data>
+  <data name="favorites_add_post" xml:space="preserve">
+    <value>Προσθήκη ανάρτησης στα αγαπημένα σας;</value>
+  </data>
+  <data name="favorites_cant_add_more_books" xml:space="preserve">
+    <value>Δεν είναι εφικτή η προσθήκη περισσότερων βιβλίων στα αγαπημένα.</value>
+  </data>
+  <data name="favorites_cant_add_more_videos" xml:space="preserve">
+    <value>Δεν είναι εφικτή η προσθήκη περισσότερων βίντεο στα αγαπημένα.</value>
+  </data>
+  <data name="favorites_loading" xml:space="preserve">
+    <value>ΓΙΝΕΤΑΙ ΦΟΡΤΩΣΗ...</value>
+  </data>
+  <data name="favorites_remove_post_from_favorites" xml:space="preserve">
+    <value>Αφαίρεση ανάρτησης από τα αγαπημένα;</value>
+  </data>
+  <data name="favorites_total_books" xml:space="preserve">
+    <value>Σύνολο βιβλίων στα αγαπημένα:</value>
+  </data>
+  <data name="favorites_total_videos" xml:space="preserve">
+    <value>Σύνολο βίντεο στα αγαπημένα:</value>
+  </data>
+  <data name="favorite_books" xml:space="preserve">
+    <value>Αγαπημένα Βιβλία</value>
+  </data>
+  <data name="lang_" xml:space="preserve">
+    <value>el</value>
+  </data>
+  <data name="lang_albanian" xml:space="preserve">
+    <value>αλβανικά</value>
+  </data>
+  <data name="lang_arabic" xml:space="preserve">
+    <value>αραβικά</value>
+  </data>
+  <data name="lang_armenian" xml:space="preserve">
+    <value>αρμένικα</value>
+  </data>
+  <data name="lang_bulgarian" xml:space="preserve">
+    <value>βουλγάρικα</value>
+  </data>
+  <data name="lang_cantonese" xml:space="preserve">
+    <value>καντονέζικα</value>
+  </data>
+  <data name="lang_chinese" xml:space="preserve">
+    <value>κινέζικα</value>
+  </data>
+  <data name="lang_creole" xml:space="preserve">
+    <value>κρεολικά</value>
+  </data>
+  <data name="lang_croatian" xml:space="preserve">
+    <value>κροατικά</value>
+  </data>
+  <data name="lang_czech" xml:space="preserve">
+    <value>τσέχικα</value>
+  </data>
+  <data name="lang_danish" xml:space="preserve">
+    <value>δανέζικα</value>
+  </data>
+  <data name="lang_dari" xml:space="preserve">
+    <value>νταρί</value>
+  </data>
+  <data name="lang_dutch" xml:space="preserve">
+    <value>ολλανδικά</value>
+  </data>
+  <data name="lang_english" xml:space="preserve">
+    <value>αγγλικά</value>
+  </data>
+  <data name="lang_european_portuguese" xml:space="preserve">
+    <value>πορτογαλικά (ΕΕ)</value>
+  </data>
+  <data name="lang_finnish" xml:space="preserve">
+    <value>φινλανδικά</value>
+  </data>
+  <data name="lang_french" xml:space="preserve">
+    <value>γαλλικά</value>
+  </data>
+  <data name="lang_german" xml:space="preserve">
+    <value>γερμανικά</value>
+  </data>
+  <data name="lang_greek" xml:space="preserve">
+    <value>ελληνικά</value>
+  </data>
+  <data name="lang_gujarati" xml:space="preserve">
+    <value>γκουτζαράτι</value>
+  </data>
+  <data name="lang_hawaiian" xml:space="preserve">
+    <value>χαβανέζικα</value>
+  </data>
+  <data name="lang_hebrew" xml:space="preserve">
+    <value>εβραϊκά</value>
+  </data>
+  <data name="lang_hindi" xml:space="preserve">
+    <value>ινδικά</value>
+  </data>
+  <data name="lang_hungarian" xml:space="preserve">
+    <value>ουγγρικά</value>
+  </data>
+  <data name="lang_indonesian" xml:space="preserve">
+    <value>ινδονησιακά</value>
+  </data>
+  <data name="lang_irish" xml:space="preserve">
+    <value>ιρλανδικά</value>
+  </data>
+  <data name="lang_italian" xml:space="preserve">
+    <value>ιταλικά</value>
+  </data>
+  <data name="lang_japanese" xml:space="preserve">
+    <value>ιαπωνικά</value>
+  </data>
+  <data name="lang_kazakh" xml:space="preserve">
+    <value>καζακστανικά</value>
+  </data>
+  <data name="lang_korean" xml:space="preserve">
+    <value>κορεάτικα</value>
+  </data>
+  <data name="lang_latin" xml:space="preserve">
+    <value>λατινικά</value>
+  </data>
+  <data name="lang_malay" xml:space="preserve">
+    <value>μαλαισιανά</value>
+  </data>
+  <data name="lang_norwegian" xml:space="preserve">
+    <value>νορβηγικά</value>
+  </data>
+  <data name="lang_persian" xml:space="preserve">
+    <value>περσικά</value>
+  </data>
+  <data name="lang_polish" xml:space="preserve">
+    <value>πολωνικά</value>
+  </data>
+  <data name="lang_portuguese" xml:space="preserve">
+    <value>πορτογαλικά (ΒΡ)</value>
+  </data>
+  <data name="lang_punjabi" xml:space="preserve">
+    <value>πουντζάμπι</value>
+  </data>
+  <data name="lang_romanian" xml:space="preserve">
+    <value>ρουμανικά</value>
+  </data>
+  <data name="lang_russian" xml:space="preserve">
+    <value>ρωσικά</value>
+  </data>
+  <data name="lang_serbian" xml:space="preserve">
+    <value>σερβικά</value>
+  </data>
+  <data name="lang_slovak" xml:space="preserve">
+    <value>σλοβακικά</value>
+  </data>
+  <data name="lang_slovenian" xml:space="preserve">
+    <value>σλοβενικά</value>
+  </data>
+  <data name="lang_spanish" xml:space="preserve">
+    <value>ισπανικά</value>
+  </data>
+  <data name="lang_swahili" xml:space="preserve">
+    <value>σουαχίλι</value>
+  </data>
+  <data name="lang_swedish" xml:space="preserve">
+    <value>σουηδικά</value>
+  </data>
+  <data name="lang_tagalog" xml:space="preserve">
+    <value>ταγκάλογκ</value>
+  </data>
+  <data name="lang_thai" xml:space="preserve">
+    <value>ταϊλανδικά</value>
+  </data>
+  <data name="lang_turkish" xml:space="preserve">
+    <value>τουρκικά</value>
+  </data>
+  <data name="lang_ukrainian" xml:space="preserve">
+    <value>ουκρανικά</value>
+  </data>
+  <data name="lang_urdu" xml:space="preserve">
+    <value>ούρντου</value>
+  </data>
+  <data name="lang_vietnamese" xml:space="preserve">
+    <value>βιετναμέζικα</value>
+  </data>
+  <data name="lang_welsh" xml:space="preserve">
+    <value>ουαλικά</value>
+  </data>
+  <data name="left_menu_my_dinosaurs" xml:space="preserve">
+    <value>Οι Δεινόσαυροί Μου</value>
+  </data>
+  <data name="left_menu_see_all" xml:space="preserve">
+    <value>Προβολή όλων</value>
+  </data>
+  <data name="left_menu_sign_up_to_collect_dinosaurs" xml:space="preserve">
+    <value>Εγγραφείτε για να συλλέξετε δεινόσαυρους</value>
+  </data>
+  <data name="login_are_you_sure_to_reset_pass" xml:space="preserve">
+    <value>Σίγουρα θέλετε επαναφορά του συνθηματικού;</value>
+  </data>
+  <data name="login_email" xml:space="preserve">
+    <value>Διεύθυνση Email</value>
+  </data>
+  <data name="login_forgot_password" xml:space="preserve">
+    <value>Ξεχάσατε το συνθηματικό;</value>
+  </data>
+  <data name="login_have_no_products" xml:space="preserve">
+    <value>Δεν διαθέτετε προϊόντα! Συνεχίστε δωρεάν.</value>
+  </data>
+  <data name="login_info" xml:space="preserve">
+    <value>Πληροφορίες</value>
+  </data>
+  <data name="login_instructions_to_reset_pass_sent_to_email" xml:space="preserve">
+    <value>Οι οδηγίες επαναφοράς του Συνθηματικού σας εστάλησαν στο Email:</value>
+  </data>
+  <data name="login_lang_learn_program" xml:space="preserve">
+    <value>Πρόγραμμα εκμάθησης γλωσσών για παιδιά.</value>
+  </data>
+  <data name="login_link_will_be_sent_to_email" xml:space="preserve">
+    <value>Ο σύνδεσμος για επαναφορά του συνθηματικού θα σταλεί στο Email Σας:</value>
+  </data>
+  <data name="login_login" xml:space="preserve">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="login_members" xml:space="preserve">
+    <value>Σύνδεση μέλους</value>
+  </data>
+  <data name="login_new_to_dinolingo" xml:space="preserve">
+    <value>Νέος στο DinoLingo;</value>
+  </data>
+  <data name="login_password" xml:space="preserve">
+    <value>Συνθηματικό</value>
+  </data>
+  <data name="login_please_enter_correct_email" xml:space="preserve">
+    <value>Παρακαλούμε, εισάγετε το σωστό Email!</value>
+  </data>
+  <data name="login_please_enter_valid_pass" xml:space="preserve">
+    <value>Παρακαλούμε, εισάγετε ένα έγκυρο συνθηματικό!</value>
+  </data>
+  <data name="login_please_enter_your_email" xml:space="preserve">
+    <value>Παρακαλούμε, εισάγετε το Email σας!</value>
+  </data>
+  <data name="login_reset_pass" xml:space="preserve">
+    <value>Επαναφορά συνθηματικού</value>
+  </data>
+  <data name="login_sign_up" xml:space="preserve">
+    <value>Εγγραφή</value>
+  </data>
+  <data name="login_success" xml:space="preserve">
+    <value>Επιτυχία!</value>
+  </data>
+  <data name="login_try_a_free_lesson" xml:space="preserve">
+    <value>δωρεάν μάθημα</value>
+  </data>
+  <data name="login_welcome_to_dinolingo" xml:space="preserve">
+    <value>Καλωσορίσατε στο DinoLingo</value>
+  </data>
+  <data name="main_page_continue" xml:space="preserve">
+    <value>Συνέχεια</value>
+  </data>
+  <data name="main_page_first_lesson_is_free" xml:space="preserve">
+    <value>Το πρώτο μάθημα είναι πάντα δωρεάν. Για πλήρη πρόσβαση, παρακαλούμε συνδεθείτε ή εγγραφείτε.</value>
+  </data>
+  <data name="main_page_free_trial" xml:space="preserve">
+    <value>Δωρεάν Δοκιμή</value>
+  </data>
+  <data name="main_page_please_sign_up" xml:space="preserve">
+    <value>Παρακαλούμε, εγγραφείτε για πρόσβαση στα αγαπημένα</value>
+  </data>
+  <data name="popup_attention" xml:space="preserve">
+    <value>Προσοχή!</value>
+  </data>
+  <data name="popup_cancel" xml:space="preserve">
+    <value>Ακύρωση</value>
+  </data>
+  <data name="popup_info" xml:space="preserve">
+    <value>Πληροφορίες</value>
+  </data>
+  <data name="popup_no" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="popup_no_connection" xml:space="preserve">
+    <value>Ελέγξτε τη σύνδεσή σας στο διαδίκτυο!</value>
+  </data>
+  <data name="popup_ok" xml:space="preserve">
+    <value>Εντάξει</value>
+  </data>
+  <data name="popup_oops" xml:space="preserve">
+    <value>Ουπς</value>
+  </data>
+  <data name="popup_something_went_wrong" xml:space="preserve">
+    <value>Κάτι πήγε στραβά,</value>
+  </data>
+  <data name="popup_try_again" xml:space="preserve">
+    <value>δοκιμάστε ξανά</value>
+  </data>
+  <data name="popup_yes" xml:space="preserve">
+    <value>Ναι</value>
+  </data>
+  <data name="right_menu_books" xml:space="preserve">
+    <value>Βιβλία</value>
+  </data>
+  <data name="right_menu_lessons" xml:space="preserve">
+    <value>Μαθήματα</value>
+  </data>
+  <data name="right_menu_songs" xml:space="preserve">
+    <value>Τραγούδια</value>
+  </data>
+  <data name="right_menu_stories" xml:space="preserve">
+    <value>Ιστορίες</value>
+  </data>
+  <data name="header_songs_albanian" xml:space="preserve">
+    <value>Αλβανικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_arabic" xml:space="preserve">
+    <value>Αραβικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_armenian" xml:space="preserve">
+    <value>Αρμενικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_bulgarian" xml:space="preserve">
+    <value>Βουλγαρικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_cantonese" xml:space="preserve">
+    <value>Καντονέζικα Τραγούδια</value>
+  </data>
+  <data name="header_songs_chinese" xml:space="preserve">
+    <value>Κινέζικα Τραγούδια</value>
+  </data>
+  <data name="header_songs_creole" xml:space="preserve">
+    <value>Κρεολικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_croatian" xml:space="preserve">
+    <value>Κροατικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_czech" xml:space="preserve">
+    <value>Τσεχικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_danish" xml:space="preserve">
+    <value>Δανέζικα Τραγούδια</value>
+  </data>
+  <data name="header_songs_dari" xml:space="preserve">
+    <value>Νταρί Τραγούδια</value>
+  </data>
+  <data name="header_songs_dutch" xml:space="preserve">
+    <value>Ολλανδικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_english" xml:space="preserve">
+    <value>Αγγλικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_european_portuguese" xml:space="preserve">
+    <value>Πορτογαλικά (ΕΕ) Τραγούδια</value>
+  </data>
+  <data name="header_songs_finnish" xml:space="preserve">
+    <value>Φινλανδικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_french" xml:space="preserve">
+    <value>Γαλλικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_german" xml:space="preserve">
+    <value>Γερμανικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_greek" xml:space="preserve">
+    <value>Ελληνικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_gujarati" xml:space="preserve">
+    <value>Γκουτζαράτι Τραγούδια</value>
+  </data>
+  <data name="header_songs_hawaiian" xml:space="preserve">
+    <value>Χαβανέζικα Τραγούδια</value>
+  </data>
+  <data name="header_songs_hebrew" xml:space="preserve">
+    <value>Εβραϊκά Τραγούδια</value>
+  </data>
+  <data name="header_songs_hindi" xml:space="preserve">
+    <value>Ινδικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_hungarian" xml:space="preserve">
+    <value>Ουγγρικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_indonesian" xml:space="preserve">
+    <value>Ινδονησιακά Τραγούδια</value>
+  </data>
+  <data name="header_songs_irish" xml:space="preserve">
+    <value>Ιρλανδικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_italian" xml:space="preserve">
+    <value>Ιταλικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_japanese" xml:space="preserve">
+    <value>Ιαπωνικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_kazakh" xml:space="preserve">
+    <value>Καζακστανικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_korean" xml:space="preserve">
+    <value>Κορεατικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_latin" xml:space="preserve">
+    <value>Λατινικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_malay" xml:space="preserve">
+    <value>Μαλαισιανά Τραγούδια</value>
+  </data>
+  <data name="header_songs_norwegian" xml:space="preserve">
+    <value>Νορβηγικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_persian" xml:space="preserve">
+    <value>Περσικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_polish" xml:space="preserve">
+    <value>Πολωνικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_portuguese" xml:space="preserve">
+    <value>Πορτογαλικά (ΒΡ) Τραγούδια</value>
+  </data>
+  <data name="header_songs_punjabi" xml:space="preserve">
+    <value>Πουντζάμπι Τραγούδια</value>
+  </data>
+  <data name="header_songs_romanian" xml:space="preserve">
+    <value>Ρουμανικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_russian" xml:space="preserve">
+    <value>Ρωσικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_serbian" xml:space="preserve">
+    <value>Σερβικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_slovak" xml:space="preserve">
+    <value>Σλοβακικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_slovenian" xml:space="preserve">
+    <value>Σλοβενικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_spanish" xml:space="preserve">
+    <value>Ισπανικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_swahili" xml:space="preserve">
+    <value>Σουαχίλι Τραγούδια</value>
+  </data>
+  <data name="header_songs_swedish" xml:space="preserve">
+    <value>Σουηδικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_tagalog" xml:space="preserve">
+    <value>Ταγκάλογκ Τραγούδια</value>
+  </data>
+  <data name="header_songs_thai" xml:space="preserve">
+    <value>Ταϊλανδικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_turkish" xml:space="preserve">
+    <value>Τουρκικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_ukrainian" xml:space="preserve">
+    <value>Ουκρανικά Τραγούδια</value>
+  </data>
+  <data name="header_songs_urdu" xml:space="preserve">
+    <value>Ούρντου Τραγούδια</value>
+  </data>
+  <data name="header_songs_vietnamese" xml:space="preserve">
+    <value>Βιετναμέζικα Τραγούδια</value>
+  </data>
+  <data name="header_songs_welsh" xml:space="preserve">
+    <value>Ουαλικά Τραγούδια</value>
+  </data>
+  <data name="header_books_albanian" xml:space="preserve">
+    <value>Αλβανικά Βιβλία</value>
+  </data>
+  <data name="header_books_arabic" xml:space="preserve">
+    <value>Αραβικά Βιβλία</value>
+  </data>
+  <data name="header_books_armenian" xml:space="preserve">
+    <value>Αρμενικά Βιβλία</value>
+  </data>
+  <data name="header_books_bulgarian" xml:space="preserve">
+    <value>Βουλγαρικά Βιβλία</value>
+  </data>
+  <data name="header_books_cantonese" xml:space="preserve">
+    <value>Καντονέζικα Βιβλία</value>
+  </data>
+  <data name="header_books_chinese" xml:space="preserve">
+    <value>Κινέζικα Βιβλία</value>
+  </data>
+  <data name="header_books_creole" xml:space="preserve">
+    <value>Κρεολικά Βιβλία</value>
+  </data>
+  <data name="header_books_croatian" xml:space="preserve">
+    <value>Κροατικά Βιβλία</value>
+  </data>
+  <data name="header_books_czech" xml:space="preserve">
+    <value>Τσεχικά Βιβλία</value>
+  </data>
+  <data name="header_books_danish" xml:space="preserve">
+    <value>Δανέζικα Βιβλία</value>
+  </data>
+  <data name="header_books_dari" xml:space="preserve">
+    <value>Νταρί Βιβλία</value>
+  </data>
+  <data name="header_books_dutch" xml:space="preserve">
+    <value>Ολλανδικά Βιβλία</value>
+  </data>
+  <data name="header_books_english" xml:space="preserve">
+    <value>Αγγλικά Βιβλία</value>
+  </data>
+  <data name="header_books_european_portuguese" xml:space="preserve">
+    <value>Πορτογαλικά (ΕΕ) Βιβλία</value>
+  </data>
+  <data name="header_books_finnish" xml:space="preserve">
+    <value>Φινλανδικά Βιβλία</value>
+  </data>
+  <data name="header_books_french" xml:space="preserve">
+    <value>Γαλλικά Βιβλία</value>
+  </data>
+  <data name="header_books_german" xml:space="preserve">
+    <value>Γερμανικά Βιβλία</value>
+  </data>
+  <data name="header_books_greek" xml:space="preserve">
+    <value>Ελληνικά Βιβλία</value>
+  </data>
+  <data name="header_books_gujarati" xml:space="preserve">
+    <value>Γκουτζαράτι Βιβλία</value>
+  </data>
+  <data name="header_books_hawaiian" xml:space="preserve">
+    <value>Χαβανέζικα Βιβλία</value>
+  </data>
+  <data name="header_books_hebrew" xml:space="preserve">
+    <value>Εβραϊκά Βιβλία</value>
+  </data>
+  <data name="header_books_hindi" xml:space="preserve">
+    <value>Ινδικά Βιβλία</value>
+  </data>
+  <data name="header_books_hungarian" xml:space="preserve">
+    <value>Ουγγρικά Βιβλία</value>
+  </data>
+  <data name="header_books_indonesian" xml:space="preserve">
+    <value>Ινδονησιακά Βιβλία</value>
+  </data>
+  <data name="header_books_irish" xml:space="preserve">
+    <value>Ιρλανδικά Βιβλία</value>
+  </data>
+  <data name="header_books_italian" xml:space="preserve">
+    <value>Ιταλικά Βιβλία</value>
+  </data>
+  <data name="header_books_japanese" xml:space="preserve">
+    <value>Ιαπωνικά Βιβλία</value>
+  </data>
+  <data name="header_books_kazakh" xml:space="preserve">
+    <value>Καζακστανικά Βιβλία</value>
+  </data>
+  <data name="header_books_korean" xml:space="preserve">
+    <value>Κορεατικά Βιβλία</value>
+  </data>
+  <data name="header_books_latin" xml:space="preserve">
+    <value>Λατινικά Βιβλία</value>
+  </data>
+  <data name="header_books_malay" xml:space="preserve">
+    <value>Μαλαισιανά Βιβλία</value>
+  </data>
+  <data name="header_books_norwegian" xml:space="preserve">
+    <value>Νορβηγικά Βιβλία</value>
+  </data>
+  <data name="header_books_persian" xml:space="preserve">
+    <value>Περσικά Βιβλία</value>
+  </data>
+  <data name="header_books_polish" xml:space="preserve">
+    <value>Πολωνικά Βιβλία</value>
+  </data>
+  <data name="header_books_portuguese" xml:space="preserve">
+    <value>Πορτογαλικά (ΒΡ) Βιβλία</value>
+  </data>
+  <data name="header_books_punjabi" xml:space="preserve">
+    <value>Πουντζάμπι Βιβλία</value>
+  </data>
+  <data name="header_books_romanian" xml:space="preserve">
+    <value>Ρουμανικά Βιβλία</value>
+  </data>
+  <data name="header_books_russian" xml:space="preserve">
+    <value>Ρωσικά Βιβλία</value>
+  </data>
+  <data name="header_books_serbian" xml:space="preserve">
+    <value>Σερβικά Βιβλία</value>
+  </data>
+  <data name="header_books_slovak" xml:space="preserve">
+    <value>Σλοβακικά Βιβλία</value>
+  </data>
+  <data name="header_books_slovenian" xml:space="preserve">
+    <value>Σλοβενικά Βιβλία</value>
+  </data>
+  <data name="header_books_spanish" xml:space="preserve">
+    <value>Ισπανικά Βιβλία</value>
+  </data>
+  <data name="header_books_swahili" xml:space="preserve">
+    <value>Σουαχίλι Βιβλία</value>
+  </data>
+  <data name="header_books_swedish" xml:space="preserve">
+    <value>Σουηδικά Βιβλία</value>
+  </data>
+  <data name="header_books_tagalog" xml:space="preserve">
+    <value>Ταγκάλογκ Τραγούδια</value>
+  </data>
+  <data name="header_books_thai" xml:space="preserve">
+    <value>Ταϊλανδικά Βιβλία</value>
+  </data>
+  <data name="header_books_turkish" xml:space="preserve">
+    <value>Τουρκικά Βιβλία</value>
+  </data>
+  <data name="header_books_ukrainian" xml:space="preserve">
+    <value>Ουκρανικά Βιβλία</value>
+  </data>
+  <data name="header_books_urdu" xml:space="preserve">
+    <value>Ούρντου Βιβλία</value>
+  </data>
+  <data name="header_books_vietnamese" xml:space="preserve">
+    <value>Βιετναμέζικα Βιβλία</value>
+  </data>
+  <data name="header_books_welsh" xml:space="preserve">
+    <value>Ουαλικά Βιβλία</value>
+  </data>
+  <data name="header_stories_albanian" xml:space="preserve">
+    <value>Αλβανικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_arabic" xml:space="preserve">
+    <value>Αραβικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_armenian" xml:space="preserve">
+    <value>Αρμενικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_bulgarian" xml:space="preserve">
+    <value>Βουλγαρικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_cantonese" xml:space="preserve">
+    <value>Καντονέζικες Ιστορίες</value>
+  </data>
+  <data name="header_stories_chinese" xml:space="preserve">
+    <value>Κινέζικες Ιστορίες</value>
+  </data>
+  <data name="header_stories_creole" xml:space="preserve">
+    <value>Κρεολικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_croatian" xml:space="preserve">
+    <value>Κροατικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_czech" xml:space="preserve">
+    <value>Τσεχικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_danish" xml:space="preserve">
+    <value>Δανέζικες Ιστορίες</value>
+  </data>
+  <data name="header_stories_dari" xml:space="preserve">
+    <value>Νταρί Ιστορίες</value>
+  </data>
+  <data name="header_stories_dutch" xml:space="preserve">
+    <value>Ολλανδικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_english" xml:space="preserve">
+    <value>Αγγλικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_european_portuguese" xml:space="preserve">
+    <value>Πορτογαλικές (ΕΕ) Ιστορίες</value>
+  </data>
+  <data name="header_stories_finnish" xml:space="preserve">
+    <value>Φινλανδικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_french" xml:space="preserve">
+    <value>Γαλλικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_german" xml:space="preserve">
+    <value>Γερμανικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_greek" xml:space="preserve">
+    <value>Ελληνικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_gujarati" xml:space="preserve">
+    <value>Γκουτζαράτι Ιστορίες</value>
+  </data>
+  <data name="header_stories_hawaiian" xml:space="preserve">
+    <value>Χαβανέζικες Ιστορίες</value>
+  </data>
+  <data name="header_stories_hebrew" xml:space="preserve">
+    <value>Εβραϊκές Ιστορίες</value>
+  </data>
+  <data name="header_stories_hindi" xml:space="preserve">
+    <value>Ινδικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_hungarian" xml:space="preserve">
+    <value>Ουγγρικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_indonesian" xml:space="preserve">
+    <value>Ινδονησιακές Ιστορίες</value>
+  </data>
+  <data name="header_stories_irish" xml:space="preserve">
+    <value>Ιρλανδικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_italian" xml:space="preserve">
+    <value>Ιταλικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_japanese" xml:space="preserve">
+    <value>Ιαπωνικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_kazakh" xml:space="preserve">
+    <value>Καζακστανικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_korean" xml:space="preserve">
+    <value>Κορεατικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_latin" xml:space="preserve">
+    <value>Λατινικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_malay" xml:space="preserve">
+    <value>Μαλαισιανές Ιστορίες</value>
+  </data>
+  <data name="header_stories_norwegian" xml:space="preserve">
+    <value>Νορβηγικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_persian" xml:space="preserve">
+    <value>Περσικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_polish" xml:space="preserve">
+    <value>Πολωνικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_portuguese" xml:space="preserve">
+    <value>Πορτογαλικές (ΒΡ) Ιστορίες</value>
+  </data>
+  <data name="header_stories_punjabi" xml:space="preserve">
+    <value>Πουντζάμπι Ιστορίες</value>
+  </data>
+  <data name="header_stories_romanian" xml:space="preserve">
+    <value>Ρουμανικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_russian" xml:space="preserve">
+    <value>Ρωσικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_serbian" xml:space="preserve">
+    <value>Σερβικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_slovak" xml:space="preserve">
+    <value>Σλοβακικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_slovenian" xml:space="preserve">
+    <value>Σλοβενικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_spanish" xml:space="preserve">
+    <value>Ισπανικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_swahili" xml:space="preserve">
+    <value>Σουαχίλι Ιστορίες</value>
+  </data>
+  <data name="header_stories_swedish" xml:space="preserve">
+    <value>Σουηδικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_tagalog" xml:space="preserve">
+    <value>Τανγκαλονγκ Ιστορίες</value>
+  </data>
+  <data name="header_stories_thai" xml:space="preserve">
+    <value>Τουρκικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_turkish" xml:space="preserve">
+    <value>Τουρκικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_ukrainian" xml:space="preserve">
+    <value>Ουκρανικές Ιστορίες</value>
+  </data>
+  <data name="header_stories_urdu" xml:space="preserve">
+    <value>Ούρντου Ιστορίες</value>
+  </data>
+  <data name="header_stories_vietnamese" xml:space="preserve">
+    <value>Βιετναμέζικες Ιστορίες</value>
+  </data>
+  <data name="header_stories_welsh" xml:space="preserve">
+    <value>Ουαλικές Ιστορίες</value>
+  </data>
+  <data name="eight" xml:space="preserve">
+    <value>ΟΚΤΩ</value>
+  </data>
+  <data name="five" xml:space="preserve">
+    <value>ΠΕΝΤΕ</value>
+  </data>
+  <data name="four" xml:space="preserve">
+    <value>ΤΕΣΣΕΡΑ</value>
+  </data>
+  <data name="nine" xml:space="preserve">
+    <value>ΕΝΝΕΑ</value>
+  </data>
+  <data name="one" xml:space="preserve">
+    <value>ΕΝΑ</value>
+  </data>
+  <data name="parent_check_enter_the_numbers" xml:space="preserve">
+    <value>Γράψτε τους αριθμούς:</value>
+  </data>
+  <data name="parent_check_parental_control" xml:space="preserve">
+    <value>ΓΟΝΙΚΟΣ ΕΛΕΓΧΟΣ</value>
+  </data>
+  <data name="parent_check_reports_etc" xml:space="preserve">
+    <value>Αναφορές, Βοήθεια, Αλλαγή Γλώσσας, Εγγραφή, κλπ.</value>
+  </data>
+  <data name="parent_check_wrong_password" xml:space="preserve">
+    <value>Λάθος συνθηματικό! Δοκιμάστε ξανά</value>
+  </data>
+  <data name="seven" xml:space="preserve">
+    <value>ΕΦΤΑ</value>
+  </data>
+  <data name="six" xml:space="preserve">
+    <value>ΕΞΙ</value>
+  </data>
+  <data name="three" xml:space="preserve">
+    <value>ΤΡΙΑ</value>
+  </data>
+  <data name="two" xml:space="preserve">
+    <value>ΔΥΟ</value>
+  </data>
+  <data name="header_for_kids" xml:space="preserve">
+    <value>{0} για παιδιά</value>
+  </data>
+  <data name="default_user_name" xml:space="preserve">
+    <value>Χρήστης</value>
+  </data>
+  <data name="game_over" xml:space="preserve">
+    <value>Τέλος παιχνιδιού!</value>
+  </data>
+  <data name="game_questions" xml:space="preserve">
+    <value>ΕΡΩΤΗΣΕΙΣ</value>
+  </data>
+  <data name="game_restart" xml:space="preserve">
+    <value>Επανεκκίνηση</value>
+  </data>
+  <data name="game_score" xml:space="preserve">
+    <value>ΒΑΘΜΟΛΟΓΙΑ</value>
+  </data>
+  <data name="game_time" xml:space="preserve">
+    <value>ΧΡΟΝΟΣ</value>
+  </data>
+  <data name="parent_menu_change_your_language" xml:space="preserve">
+    <value>Αλλάξτε τη Γλώσσα Σας</value>
+  </data>
+  <data name="parent_menu_do_you_want_to_log_out" xml:space="preserve">
+    <value>Θέλετε να Αποσυνδεθείτε;</value>
+  </data>
+  <data name="parent_menu_help_and_support" xml:space="preserve">
+    <value>Βοήθεια &amp; Υποστήριξη</value>
+  </data>
+  <data name="parent_menu_log_out" xml:space="preserve">
+    <value>Αποσύνδεση</value>
+  </data>
+  <data name="parent_menu_log_out_ex" xml:space="preserve">
+    <value>Αποσύνδεση!</value>
+  </data>
+  <data name="parent_menu_my_reports" xml:space="preserve">
+    <value>Οι Αναφορές Μου</value>
+  </data>
+  <data name="parent_menu_please_login_to_access_report" xml:space="preserve">
+    <value>Παρακαλούμε, συνδεθείτε (εγγραφείτε), για πρόσβαση στην αναφορά</value>
+  </data>
+  <data name="parent_menu_sign_up" xml:space="preserve">
+    <value>Εγγραφείτε</value>
+  </data>
+  <data name="parent_menu_sorry" xml:space="preserve">
+    <value>Συγγνώμη</value>
+  </data>
+  <data name="purchase" xml:space="preserve">
+    <value>Αγορά</value>
+  </data>
+  <data name="purchaser_product_name_1_year" xml:space="preserve">
+    <value>{0} 1 χρόνος</value>
+  </data>
+  <data name="purchaser_product_name_6_months" xml:space="preserve">
+    <value>{0} 6 μήνες</value>
+  </data>
+  <data name="purchaser_term_annual" xml:space="preserve">
+    <value>Ετήσιο</value>
+  </data>
+  <data name="purchaser_term_semi_annual" xml:space="preserve">
+    <value>Εξάμηνο</value>
+  </data>
+  <data name="purchase_1_year_of_full_access" xml:space="preserve">
+    <value>1 έτος πλήρους πρόσβασης σε {0}. Μόνο ${1} τον μήνα</value>
+  </data>
+  <data name="purchase_6_months_of_full_access" xml:space="preserve">
+    <value>6 μήνες πλήρους πρόσβασης σε {0}. Μόνο ${1} τον μήνα</value>
+  </data>
+  <data name="purchase_info_line_1" xml:space="preserve">
+    <value>• Η χρέωση θα πραγματοποιηθεί στον Λογαριασμό iTunes με την επιβεβαίωση της αγοράς</value>
+  </data>
+  <data name="purchase_info_line_2" xml:space="preserve">
+    <value>• Η συνδρομή ανανεώνεται αυτόματα εκτός και αν απενεργοποιηθεί η αυτόματη-ανανέωση τουλάχιστον 24-ώρες πριν το τέλος της τρέχουσας περιόδου</value>
+  </data>
+  <data name="purchase_info_line_3" xml:space="preserve">
+    <value>• Ο λογαριασμός θα χρεωθεί για ανανέωση εντός 24-ωρών πριν το τέλος της τρέχουσας περιόδου και ταυτοποίησης του κόστους της ανανέωσης</value>
+  </data>
+  <data name="purchase_info_line_4" xml:space="preserve">
+    <value>• Η διαχείριση των συνδρομών μπορεί να γίνει από τον χρήστη και η αυτόματη-ανανέωση να απενεργοποιηθεί πηγαίνοντας στις Ρυθμίσεις Λογαριασμού του χρήστη μετά την αγορά</value>
+  </data>
+  <data name="purchase_info_line_5" xml:space="preserve">
+    <value>• Οποιοδήποτε μη χρησιμοποιημένο διάστημα της περιόδου δωρεάν δοκιμής, εφόσον προσφέρεται, θα χαθεί όταν ο χρήστης αγοράσει κάποια συνδρομή στη δημοσίευση αυτή, όπου αυτό είναι εφικτό</value>
+  </data>
+  <data name="purchase_privacy_policy" xml:space="preserve">
+    <value>Πολιτική Προσωπικού Απορρήτου</value>
+  </data>
+  <data name="purchase_sorry_restoring_subscriptions" xml:space="preserve">
+    <value>Συγγνώμη, γίνεται επαναφορά των συνδρομών σας αυτή τη στιγμή. Δοκιμάστε να πραγματοποιήσετε αγορά ξανά!</value>
+  </data>
+  <data name="purchase_terms_of_use" xml:space="preserve">
+    <value>Όροι χρήσης</value>
+  </data>
+  <data name="purchase_try_again" xml:space="preserve">
+    <value>Δοκιμάστε ξανά!</value>
+  </data>
+  <data name="report_books" xml:space="preserve">
+    <value>Βιβλία</value>
+  </data>
+  <data name="report_books_read" xml:space="preserve">
+    <value>Διαβασμένα βιβλία:</value>
+  </data>
+  <data name="report_completed" xml:space="preserve">
+    <value>ολοκληρωμένο</value>
+  </data>
+  <data name="report_completion" xml:space="preserve">
+    <value>ΟΛΟΚΛΗΡΩΣΗ</value>
+  </data>
+  <data name="report_daily_report" xml:space="preserve">
+    <value>Ημερήσια Αναφορά</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>ΗΜΕΡΟΜΗΝΙΑ</value>
+  </data>
+  <data name="report_dinosaur_score" xml:space="preserve">
+    <value>Βαθμολογία Δεινοσαύρου:</value>
+  </data>
+  <data name="report_lang_course" xml:space="preserve">
+    <value>Γλωσσικό Μάθημα:</value>
+  </data>
+  <data name="report_last_activity" xml:space="preserve">
+    <value>ΤΕΛΕΥΤΑΙΑ ΔΡΑΣΤΗΡΙΌΤΗΤΑ</value>
+  </data>
+  <data name="report_lesson" xml:space="preserve">
+    <value>ΜΑΘΗΜΑ</value>
+  </data>
+  <data name="report_lessons_and_games" xml:space="preserve">
+    <value>Μαθήματα &amp; παιχνίδια</value>
+  </data>
+  <data name="report_lessons_and_games_completed" xml:space="preserve">
+    <value>Ολοκληρωμένα Μαθήματα &amp; Παιχνίδια:</value>
+  </data>
+  <data name="report_lessons_report" xml:space="preserve">
+    <value>Αναφορά Μαθημάτων</value>
+  </data>
+  <data name="report_my_report" xml:space="preserve">
+    <value>Η Αναφορά Μου</value>
+  </data>
+  <data name="report_not_completed" xml:space="preserve">
+    <value>μη ολοκληρωμένο</value>
+  </data>
+  <data name="report_not_read" xml:space="preserve">
+    <value>μη αναγνωσμένο</value>
+  </data>
+  <data name="report_overall" xml:space="preserve">
+    <value>Συνολικά</value>
+  </data>
+  <data name="report_overall_completed" xml:space="preserve">
+    <value>Ολοκληρωμένα Συνολικά:</value>
+  </data>
+  <data name="report_quiz_score" xml:space="preserve">
+    <value>Βαθμολογία Κουίζ:</value>
+  </data>
+  <data name="report_read" xml:space="preserve">
+    <value>διαβάστε</value>
+  </data>
+  <data name="report_star_score" xml:space="preserve">
+    <value>Βαθμολογία αστεριού:</value>
+  </data>
+  <data name="report_time_spent" xml:space="preserve">
+    <value>ΧΡΗΣΙΜΟΠΟΙΗΜΕΝΟΣ ΧΡΟΝΟΣ</value>
+  </data>
+  <data name="report_total_books" xml:space="preserve">
+    <value>Συνολικά Βιβλία:</value>
+  </data>
+  <data name="report_user_name_or_email" xml:space="preserve">
+    <value>Όνομα χρήστη ή email:</value>
+  </data>
+  <data name="sign_up_are_u_sure" xml:space="preserve">
+    <value>Είστε βέβαιοι;</value>
+  </data>
+  <data name="sign_up_cant_create_new_user" xml:space="preserve">
+    <value>Σφάλμα! Δεν μπορείτε να δημιουργήσετε νέο χρήστη!</value>
+  </data>
+  <data name="sign_up_confirm_password" xml:space="preserve">
+    <value>Επιβεβαίωση Συνθηματικού:</value>
+  </data>
+  <data name="sign_up_create_account" xml:space="preserve">
+    <value>Δημιουργία Λογαριασμού</value>
+  </data>
+  <data name="sign_up_different_passwords" xml:space="preserve">
+    <value>Διαφορετικά Συνθηματικά!</value>
+  </data>
+  <data name="sign_up_do_not_signup" xml:space="preserve">
+    <value>Μην εγγραφείτε</value>
+  </data>
+  <data name="sign_up_email_address" xml:space="preserve">
+    <value>Διεύθυνση Email:</value>
+  </data>
+  <data name="sign_up_error" xml:space="preserve">
+    <value>Σφάλμα!</value>
+  </data>
+  <data name="sign_up_password" xml:space="preserve">
+    <value>Συνθηματικό:</value>
+  </data>
+  <data name="sign_up_please_register" xml:space="preserve">
+    <value>Βαθμολογία Δεινοσαύρου:</value>
+  </data>
+  <data name="sign_up_without_registration_popup" xml:space="preserve">
+    <value>Χωρίς εγγραφή δεν θα είστε σε θέση να χρησιμοποιήσετε τα ακόλουθα χαρακτηριστικά της εφαρμογής:\n- καταγραφή της προόδου σας,\n- νέοι δεινόσαυροι και αστέρια,\n- λογαριασμός στην ιστοσελίδα dinolingo.com;\n- αποθηκεύστε τα δεδομένα σας και συγχρονίστε τα ανάμεσα στις συσκευές σας.\nΣίγουρα θέλετε να συνεχίσετε χωρίς εγγραφή;</value>
+  </data>
+  <data name="subscribe_choose_lang_1_year" xml:space="preserve">
+    <value>Επιλέξτε γλώσσα - 1 χρόνος</value>
+  </data>
+  <data name="subscribe_choose_lang_6_months" xml:space="preserve">
+    <value>Επιλέξτε γλώσσα - 6 μήνες</value>
+  </data>
+  <data name="subscribe_plans" xml:space="preserve">
+    <value>Προγράμματα</value>
+  </data>
+  <data name="subscribe_price_a_month" xml:space="preserve">
+    <value>${0} τον μήνα</value>
+  </data>
+  <data name="subscribe_price_for_1_year" xml:space="preserve">
+    <value>Τιμή: ${0} για 1 χρόνο</value>
+  </data>
+  <data name="subscribe_price_for_6_months" xml:space="preserve">
+    <value>Τιμή: ${0} για 6 μήνες</value>
+  </data>
+  <data name="subscribe_scroll_down" xml:space="preserve">
+    <value>Σύρετε προς τα κάτω για περισσότερες γλώσσες</value>
+  </data>
+  <data name="subscribe_you_have_access_to_subscription" xml:space="preserve">
+    <value>Έχετε ήδη πρόσβαση στη συνδρομή</value>
+  </data>
+  <data name="victory_congratulations" xml:space="preserve">
+    <value>Συγχαρητήρια!</value>
+  </data>
+  <data name="victory_great" xml:space="preserve">
+    <value>Σπουδαία</value>
+  </data>
+  <data name="victory_you_earned_dinosaur" xml:space="preserve">
+    <value>Κερδίσατε έναν νέο δεινόσαυρο!</value>
+  </data>
+  <data name="victory_you_earned_star" xml:space="preserve">
+    <value>Κερδίσατε ένα νέο αστέρι!</value>
+  </data>
+  <data name="victory_you_won" xml:space="preserve">
+    <value>Κερδίσατε!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_ios" xml:space="preserve">
+    <value>Απολαμβάνετε το DinoLingo;\nΑξιολογήστε το στο App Store!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_android" xml:space="preserve">
+    <value>Απολαμβάνετε το DinoLingo;\nΑξιολογήστε το στο Google Play!</value>
+  </data>
+  <data name="rate_rate_dinolingo" xml:space="preserve">
+    <value>Αξιολογήστε το DinoLingo</value>
+  </data>
+  <data name="rate_remind_later" xml:space="preserve">
+    <value>Υπενθύμιση αργότερα</value>
+  </data>
+  <data name="rate_no_thanks" xml:space="preserve">
+    <value>Όχι, ευχαριστώ</value>
+  </data>
+  <data name="login_user_with_email_doesnt_exist" xml:space="preserve">
+    <value>Ο χρήστης με το email αυτό δεν υπάρχει!</value>
+  </data>
+  <data name="login_user_and_pass_doesnt_exist" xml:space="preserve">
+    <value>Ο χρήστης με αυτό το όνομα και συνθηματικό δεν υπάρχει!</value>
+  </data>
+  <data name="subscribe_six_months_subscriptions" xml:space="preserve">
+    <value>Συνδρομές 6 μηνών</value>
+  </data>
+  <data name="subscribe_one_year_subscriptions" xml:space="preserve">
+    <value>Συνδρομές 1 έτους</value>
+  </data>
+  <data name="new_version" xml:space="preserve">
+    <value>Νέα Έκδοση</value>
+  </data>
+  <data name="new_version_text" xml:space="preserve">
+    <value>Υπάρχει διαθέσιμη μια νέα έκδοση της εφαρμογής αυτής. Θέλετε να προχωρήσετε σε ενημέρωση τώρα;</value>
+  </data>
+  <data name="new_version_update_now" xml:space="preserve">
+    <value>Ενημέρωση τώρα</value>
+  </data>
+  <data name="purchaser_product_name_1_month" xml:space="preserve">
+    <value>{0} 1 μήνα</value>
+  </data>
+  <data name="purchaser_term_monthly" xml:space="preserve">
+    <value>Μηνιαίος</value>
+  </data>
+  <data name="purchase_1_month_of_full_access" xml:space="preserve">
+    <value>1 μήνα πλήρης πρόσβαση στο {0}.</value>
+  </data>
+  <data name="subscribe_price_for_1_month" xml:space="preserve">
+    <value>Τιμή: $ {0} για 1 μήνα</value>
+  </data>
+  <data name="subscribe_one_month_subscriptions" xml:space="preserve">
+    <value>1 μήνα συνδρομές</value>
+  </data>
+</root>

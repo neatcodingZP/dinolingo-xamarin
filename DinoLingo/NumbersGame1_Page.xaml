@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.NumbersGame1_Page"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+    <AbsoluteLayout x:Name="mainRootLayout" BackgroundColor="{StaticResource BackgroundBlueColor}">
+
+        <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+            Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+            Fill="Tile"/>
+        <Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+            Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.trans_gradient.png}"
+            Aspect="Fill">
+        </Image>
+
+        <!-- some left part for small_dinos-->
+            
+        <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+            WidthRequest="{Binding MenuWidth}" HeightRequest="{Binding  GameHeight}">
+
+
+            <Grid   AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" RowSpacing="2" ColumnSpacing="2"
+            HeightRequest="{Binding GameHeight}"
+            WidthRequest="{Binding UIWidth}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+
+                    
+                <AbsoluteLayout ClassId="RestartBtn" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                    
+                    <ContentView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Image ClassId="RestartBtnIMAGE" Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.btnblue_x1_5.png}"
+                            Aspect="AspectFit">
+                        </Image>             
+                    </ContentView>
+
+                        <controls:MyLabel Text="{controls:Translate game_restart}"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        FontSize="{Binding SmallTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+                   
+                    <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                </AbsoluteLayout>    
+                    
+
+
+                <Image  Grid.Column="0" Grid.Row="1"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>
+                <Image  x:Name="small_dino_01" Grid.Column="0" Grid.Row="1"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="0" Grid.Row="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                <Image  x:Name="small_dino_02" Grid.Column="0" Grid.Row="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="0" Grid.Row="3"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                    <Image  x:Name="small_dino_03" Grid.Column="0" Grid.Row="3"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="0" Grid.Row="4"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                    <Image  x:Name="small_dino_04" Grid.Column="0" Grid.Row="4"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="1" Grid.Row="1"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                    <Image  x:Name="small_dino_05" Grid.Column="1" Grid.Row="1"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="1" Grid.Row="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                    <Image  x:Name="small_dino_06" Grid.Column="1" Grid.Row="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="1" Grid.Row="3"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                    <Image  x:Name="small_dino_07" Grid.Column="1" Grid.Row="3"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Image  Grid.Column="1" Grid.Row="4"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_gray.png}"
+                    Aspect="AspectFit">
+                </Image>    
+                    <Image  x:Name="small_dino_08" Grid.Column="1" Grid.Row="4"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.small_dino_color.png}"
+                    Aspect="AspectFit">
+                </Image>
+            </Grid>
+                    
+        </AbsoluteLayout>
+
+        
+                    
+        <!-- MAIN GAME GRID -->
+        <AbsoluteLayout x:Name="yellowSquare" AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="{StaticResource YellowColor}"
+                        WidthRequest="{Binding GameHeight}" HeightRequest="{Binding GameHeight}">             
+        </AbsoluteLayout>
+
+        
+        
+
+        <!-- RIGHT MENU -->
+            
+        <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        WidthRequest="{Binding MenuWidth}" HeightRequest="{Binding GameHeight}">
+
+            <Grid AbsoluteLayout.LayoutBounds="0.5,0.5" RowSpacing="0"
+                AbsoluteLayout.LayoutFlags="PositionProportional" 
+                HeightRequest="{Binding GameHeight}"
+                WidthRequest="{Binding UIWidth}">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90*" />
+
+                    <RowDefinition Height="204*" />
+                    <RowDefinition Height="76*" />
+                    <RowDefinition Height="123*" />
+                    <RowDefinition Height="90*" /> 
+                    
+                    <RowDefinition Height="90*" />
+
+                    <RowDefinition Height="204*" />
+                    <RowDefinition Height="76*" />
+                    <RowDefinition Height="123*" />
+                    <RowDefinition Height="90*" />
+
+                    
+                    <RowDefinition Height="90*" />
+                </Grid.RowDefinitions>
+
+                <Image  Grid.Row="1" Grid.RowSpan="4"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.score.png}"
+                    Aspect="AspectFit">
+                </Image>
+                <controls:MyLabel Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{controls:Translate game_score}"
+                    FontSize="{Binding SmallScoreFontSize}" TextColor="White"/>
+                <controls:MyLabel Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{Binding ScoreText}"
+                    FontSize="{Binding ScoreFontSize}" TextColor="White"/>
+                  
+                <Image  Grid.Row="6" Grid.RowSpan="4"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.time.png}"
+                    Aspect="AspectFit">
+                </Image>
+                <controls:MyLabel Grid.Row="7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{controls:Translate game_time}"
+                    FontSize="{Binding SmallScoreFontSize}" TextColor="White"/>
+                <controls:MyLabel Grid.Row="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{Binding TimeText}"
+                    FontSize="{Binding ScoreFontSize}" TextColor="White"/>
+            </Grid>
+
+           
+                
+        </AbsoluteLayout>    
+
+        <ContentView ClassId="CloseBtn" AbsoluteLayout.LayoutBounds="1,0" AbsoluteLayout.LayoutFlags="PositionProportional"
+                WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"> 
+
+                <AbsoluteLayout>
+                    <Image  AbsoluteLayout.LayoutBounds="0,1,0.9,0.9" AbsoluteLayout.LayoutFlags="All"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit"/>
+                </AbsoluteLayout>
+                
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                </ContentView.GestureRecognizers>
+        </ContentView>
+            
+        
+          
+        <!-- loading view -->
+             
+        <Grid x:Name="loadingView" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" 
+                    Text="{Binding LoadingWaitText}" FontSize="Medium" TextColor="White" HorizontalOptions="Center"  VerticalOptions="Center"/>
+                <ffimageloading:CachedImage  Grid.Row="1" 
+                        Source = "{Binding GifSource}"
+                        IsVisible="{Binding IsGifVisible}"                     
+                        Aspect="AspectFit">
+                </ffimageloading:CachedImage>
+
+                <Image  ClassId="CloseBtn" x:Name="LoadingCloseBtn"
+                        Grid.Row="0" Grid.RowSpan="3"
+                        IsEnabled="False" IsVisible="False"
+                        HorizontalOptions="End" VerticalOptions="Start"
+                        WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit">
+                    
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>  
+
+    </AbsoluteLayout>        
+    </ContentPage.Content>
+</ContentPage>

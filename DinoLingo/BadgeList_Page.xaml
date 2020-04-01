@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.BadgeList_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <RelativeLayout x:Name="rootRelative" BackgroundColor="{StaticResource BackgroundBlueColor}">
+            
+            <Grid RowSpacing="1"
+                RelativeLayout.XConstraint = "0"
+                RelativeLayout.YConstraint = "0"
+                RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"> 
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="7*" />
+                </Grid.RowDefinitions>
+
+                <Forms9Patch:Image Grid.Row="0" Grid.RowSpan="2"
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+                
+                <Image Grid.Row="0"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.my_dinosaurs_big.png}"
+                    Aspect="AspectFit">
+                </Image>
+
+                <Grid Grid.Row="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="9*" />
+                        <RowDefinition Height="11*" />
+                    </Grid.RowDefinitions>
+                    <controls:MyLabel Text="{controls:Translate left_menu_my_dinosaurs}"  Grid.Row="1" 
+                           FontSize="{Binding MyDinosTextSize}"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                           TextColor="{StaticResource BlueTextLoginColor}">
+                    </controls:MyLabel>
+                </Grid>
+                
+                <AbsoluteLayout Grid.Row="1" Margin="10">
+                    <Frame  AbsoluteLayout.LayoutBounds="1,1,0.98,0.97" AbsoluteLayout.LayoutFlags="All"
+                        CornerRadius="20"
+                        BorderColor="Transparent"                        
+                        BackgroundColor="{StaticResource ShadowLoginColor}">
+                    </Frame>
+                    <Frame  x:Name = "frameForList" AbsoluteLayout.LayoutBounds="0,0,0.98,0.97" AbsoluteLayout.LayoutFlags="All"
+                        CornerRadius="20"
+                        BorderColor="Transparent"                        
+                        BackgroundColor="White"
+                        IsClippedToBounds="true"
+                        Padding="5,10,5,10">
+
+                    </Frame>
+
+                </AbsoluteLayout>
+
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

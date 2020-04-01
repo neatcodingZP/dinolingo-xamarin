@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="choose_language" xml:space="preserve">
+    <value>Kies een taal</value>
+  </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Favorieten</value>
+  </data>
+  <data name="favorites_add_post" xml:space="preserve">
+    <value>Wilt u een bericht aan uw favorieten toevoegen?</value>
+  </data>
+  <data name="favorites_cant_add_more_books" xml:space="preserve">
+    <value>U kunt niet nog meer boeken toevoegen aan uw favorieten.</value>
+  </data>
+  <data name="favorites_cant_add_more_videos" xml:space="preserve">
+    <value>U kunt niet nog meer video´s toevoegen aan uw favorieten.</value>
+  </data>
+  <data name="favorites_loading" xml:space="preserve">
+    <value>LADEN…</value>
+  </data>
+  <data name="favorites_remove_post_from_favorites" xml:space="preserve">
+    <value>Wilt u een bericht uit uw favorieten verwijderen?</value>
+  </data>
+  <data name="favorites_total_books" xml:space="preserve">
+    <value>Totaal aantal boeken in favorieten:</value>
+  </data>
+  <data name="favorites_total_videos" xml:space="preserve">
+    <value>Totaal aantal video´s in favorieten:</value>
+  </data>
+  <data name="favorite_books" xml:space="preserve">
+    <value>Favoriete boeken</value>
+  </data>
+  <data name="lang_" xml:space="preserve">
+    <value>nl</value>
+  </data>
+  <data name="lang_albanian" xml:space="preserve">
+    <value>Albanees</value>
+  </data>
+  <data name="lang_arabic" xml:space="preserve">
+    <value>Arabisch</value>
+  </data>
+  <data name="lang_armenian" xml:space="preserve">
+    <value>Armeens</value>
+  </data>
+  <data name="lang_bulgarian" xml:space="preserve">
+    <value>Bulgaars</value>
+  </data>
+  <data name="lang_cantonese" xml:space="preserve">
+    <value>Kantonees</value>
+  </data>
+  <data name="lang_chinese" xml:space="preserve">
+    <value>Chinees</value>
+  </data>
+  <data name="lang_creole" xml:space="preserve">
+    <value>Creools</value>
+  </data>
+  <data name="lang_croatian" xml:space="preserve">
+    <value>Kroatisch</value>
+  </data>
+  <data name="lang_czech" xml:space="preserve">
+    <value>Tjechisch</value>
+  </data>
+  <data name="lang_danish" xml:space="preserve">
+    <value>Deens</value>
+  </data>
+  <data name="lang_dari" xml:space="preserve">
+    <value>Dari</value>
+  </data>
+  <data name="lang_dutch" xml:space="preserve">
+    <value>Nederlands</value>
+  </data>
+  <data name="lang_english" xml:space="preserve">
+    <value>Engels</value>
+  </data>
+  <data name="lang_european_portuguese" xml:space="preserve">
+    <value>Portugees (EU)</value>
+  </data>
+  <data name="lang_finnish" xml:space="preserve">
+    <value>Fins</value>
+  </data>
+  <data name="lang_french" xml:space="preserve">
+    <value>Frans</value>
+  </data>
+  <data name="lang_german" xml:space="preserve">
+    <value>Duits</value>
+  </data>
+  <data name="lang_greek" xml:space="preserve">
+    <value>Grieks</value>
+  </data>
+  <data name="lang_gujarati" xml:space="preserve">
+    <value>Gujarati</value>
+  </data>
+  <data name="lang_hawaiian" xml:space="preserve">
+    <value>Hawaïaans</value>
+  </data>
+  <data name="lang_hebrew" xml:space="preserve">
+    <value>Hebreeuws</value>
+  </data>
+  <data name="lang_hindi" xml:space="preserve">
+    <value>Hindi</value>
+  </data>
+  <data name="lang_hungarian" xml:space="preserve">
+    <value>Hongaars</value>
+  </data>
+  <data name="lang_indonesian" xml:space="preserve">
+    <value>Indonesisch</value>
+  </data>
+  <data name="lang_irish" xml:space="preserve">
+    <value>Iers</value>
+  </data>
+  <data name="lang_italian" xml:space="preserve">
+    <value>Italiaans</value>
+  </data>
+  <data name="lang_japanese" xml:space="preserve">
+    <value>Japans</value>
+  </data>
+  <data name="lang_kazakh" xml:space="preserve">
+    <value>Kazachs</value>
+  </data>
+  <data name="lang_korean" xml:space="preserve">
+    <value>Koreaans</value>
+  </data>
+  <data name="lang_latin" xml:space="preserve">
+    <value>Latijns</value>
+  </data>
+  <data name="lang_malay" xml:space="preserve">
+    <value>Maleis</value>
+  </data>
+  <data name="lang_norwegian" xml:space="preserve">
+    <value>Noors</value>
+  </data>
+  <data name="lang_persian" xml:space="preserve">
+    <value>Perzisch</value>
+  </data>
+  <data name="lang_polish" xml:space="preserve">
+    <value>Pools</value>
+  </data>
+  <data name="lang_portuguese" xml:space="preserve">
+    <value>Portugees (BR)</value>
+  </data>
+  <data name="lang_punjabi" xml:space="preserve">
+    <value>Punjabi</value>
+  </data>
+  <data name="lang_romanian" xml:space="preserve">
+    <value>Roemeens</value>
+  </data>
+  <data name="lang_russian" xml:space="preserve">
+    <value>Russisch</value>
+  </data>
+  <data name="lang_serbian" xml:space="preserve">
+    <value>Servisch</value>
+  </data>
+  <data name="lang_slovak" xml:space="preserve">
+    <value>Slowaaks</value>
+  </data>
+  <data name="lang_slovenian" xml:space="preserve">
+    <value>Sloveens</value>
+  </data>
+  <data name="lang_spanish" xml:space="preserve">
+    <value>Spaans</value>
+  </data>
+  <data name="lang_swahili" xml:space="preserve">
+    <value>Swahili</value>
+  </data>
+  <data name="lang_swedish" xml:space="preserve">
+    <value>Zweeds</value>
+  </data>
+  <data name="lang_tagalog" xml:space="preserve">
+    <value>Tagalog</value>
+  </data>
+  <data name="lang_thai" xml:space="preserve">
+    <value>Thais</value>
+  </data>
+  <data name="lang_turkish" xml:space="preserve">
+    <value>Turks</value>
+  </data>
+  <data name="lang_ukrainian" xml:space="preserve">
+    <value>Oekraïens</value>
+  </data>
+  <data name="lang_urdu" xml:space="preserve">
+    <value>Urdu</value>
+  </data>
+  <data name="lang_vietnamese" xml:space="preserve">
+    <value>Vietnamees</value>
+  </data>
+  <data name="lang_welsh" xml:space="preserve">
+    <value>Wels</value>
+  </data>
+  <data name="left_menu_my_dinosaurs" xml:space="preserve">
+    <value>Mijn dinosaurussen</value>
+  </data>
+  <data name="left_menu_see_all" xml:space="preserve">
+    <value>Zie alles</value>
+  </data>
+  <data name="left_menu_sign_up_to_collect_dinosaurs" xml:space="preserve">
+    <value>Schrijf je in om dinosaurussen te sparen</value>
+  </data>
+  <data name="login_are_you_sure_to_reset_pass" xml:space="preserve">
+    <value>Weet u zeker dat u uw wachtwoord wilt wijzigen?</value>
+  </data>
+  <data name="login_email" xml:space="preserve">
+    <value>Emailadres</value>
+  </data>
+  <data name="login_forgot_password" xml:space="preserve">
+    <value>Wachtwoord vergeten?</value>
+  </data>
+  <data name="login_have_no_products" xml:space="preserve">
+    <value>U heeft geen producten! Ga gratis verder.</value>
+  </data>
+  <data name="login_info" xml:space="preserve">
+    <value>Informatie</value>
+  </data>
+  <data name="login_instructions_to_reset_pass_sent_to_email" xml:space="preserve">
+    <value>De instructies om uw wachtwoord opnieuw in te stellen zijn naar volgend emailadres gestuurd:</value>
+  </data>
+  <data name="login_lang_learn_program" xml:space="preserve">
+    <value>Taal leerprogramma voor kinderen.</value>
+  </data>
+  <data name="login_link_will_be_sent_to_email" xml:space="preserve">
+    <value>De link om uw wachtwoord opnieuw in te stellen wordt naar uw emailadres gestuurd:</value>
+  </data>
+  <data name="login_login" xml:space="preserve">
+    <value>Inloggen</value>
+  </data>
+  <data name="login_members" xml:space="preserve">
+    <value>Inloggen voor Leden</value>
+  </data>
+  <data name="login_new_to_dinolingo" xml:space="preserve">
+    <value>Nieuw bij DinoLingo?</value>
+  </data>
+  <data name="login_password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="login_please_enter_correct_email" xml:space="preserve">
+    <value>Alstublieft, voer het correcte emailadres in!</value>
+  </data>
+  <data name="login_please_enter_valid_pass" xml:space="preserve">
+    <value>Alstublieft, voer een geldig wachtwoord in!</value>
+  </data>
+  <data name="login_please_enter_your_email" xml:space="preserve">
+    <value>Alstublieft, voer uw emailadres in!</value>
+  </data>
+  <data name="login_reset_pass" xml:space="preserve">
+    <value>Wachtwoord opnieuw instellen</value>
+  </data>
+  <data name="login_sign_up" xml:space="preserve">
+    <value>Inschrijven</value>
+  </data>
+  <data name="login_success" xml:space="preserve">
+    <value>Succes!</value>
+  </data>
+  <data name="login_try_a_free_lesson" xml:space="preserve">
+    <value>Gratis les</value>
+  </data>
+  <data name="login_welcome_to_dinolingo" xml:space="preserve">
+    <value>Welkom bij DinoLingo</value>
+  </data>
+  <data name="main_page_continue" xml:space="preserve">
+    <value>Doorgaan</value>
+  </data>
+  <data name="main_page_first_lesson_is_free" xml:space="preserve">
+    <value>De eerste les is altijd gratis. Voor volledige toegang, log alstublieft in of schrijf u in.</value>
+  </data>
+  <data name="main_page_free_trial" xml:space="preserve">
+    <value>Probeer gratis</value>
+  </data>
+  <data name="main_page_please_sign_up" xml:space="preserve">
+    <value>Alstublieft, schrijf u in om toegang tot de favorieten te krijgen</value>
+  </data>
+  <data name="popup_attention" xml:space="preserve">
+    <value>Attentie!</value>
+  </data>
+  <data name="popup_cancel" xml:space="preserve">
+    <value>Annuleer</value>
+  </data>
+  <data name="popup_info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="popup_no" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="popup_no_connection" xml:space="preserve">
+    <value>Check uw internet connectie!</value>
+  </data>
+  <data name="popup_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="popup_oops" xml:space="preserve">
+    <value>Oeps</value>
+  </data>
+  <data name="popup_something_went_wrong" xml:space="preserve">
+    <value>Er ging iets verkeerd,</value>
+  </data>
+  <data name="popup_try_again" xml:space="preserve">
+    <value>probeer het nog eens.</value>
+  </data>
+  <data name="popup_yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="right_menu_books" xml:space="preserve">
+    <value>Boeken</value>
+  </data>
+  <data name="right_menu_lessons" xml:space="preserve">
+    <value>Lessen</value>
+  </data>
+  <data name="right_menu_songs" xml:space="preserve">
+    <value>Liedjes</value>
+  </data>
+  <data name="right_menu_stories" xml:space="preserve">
+    <value>Verhalen</value>
+  </data>
+  <data name="header_songs_albanian" xml:space="preserve">
+    <value>Albanese liedjes</value>
+  </data>
+  <data name="header_songs_arabic" xml:space="preserve">
+    <value>Arabische liedjes</value>
+  </data>
+  <data name="header_songs_armenian" xml:space="preserve">
+    <value>Armeense liedjes</value>
+  </data>
+  <data name="header_songs_bulgarian" xml:space="preserve">
+    <value>Bulgaarse liedjes</value>
+  </data>
+  <data name="header_songs_cantonese" xml:space="preserve">
+    <value>Kantonese liedjes</value>
+  </data>
+  <data name="header_songs_chinese" xml:space="preserve">
+    <value>Chinese liedjes</value>
+  </data>
+  <data name="header_songs_creole" xml:space="preserve">
+    <value>Creoolse liedjes</value>
+  </data>
+  <data name="header_songs_croatian" xml:space="preserve">
+    <value>Kroatische liedjes</value>
+  </data>
+  <data name="header_songs_czech" xml:space="preserve">
+    <value>Tjechische liedjes</value>
+  </data>
+  <data name="header_songs_danish" xml:space="preserve">
+    <value>Deense liedjes</value>
+  </data>
+  <data name="header_songs_dari" xml:space="preserve">
+    <value>Dari liedjes</value>
+  </data>
+  <data name="header_songs_dutch" xml:space="preserve">
+    <value>Nederlandse liedjes</value>
+  </data>
+  <data name="header_songs_english" xml:space="preserve">
+    <value>Engelse liedjes</value>
+  </data>
+  <data name="header_songs_european_portuguese" xml:space="preserve">
+    <value>Portugese (EU) liedjes</value>
+  </data>
+  <data name="header_songs_finnish" xml:space="preserve">
+    <value>Finse liedjes</value>
+  </data>
+  <data name="header_songs_french" xml:space="preserve">
+    <value>Franse liedjes</value>
+  </data>
+  <data name="header_songs_german" xml:space="preserve">
+    <value>Duitse liedjes</value>
+  </data>
+  <data name="header_songs_greek" xml:space="preserve">
+    <value>Griekse liedjes</value>
+  </data>
+  <data name="header_songs_gujarati" xml:space="preserve">
+    <value>Gujarati liedjes</value>
+  </data>
+  <data name="header_songs_hawaiian" xml:space="preserve">
+    <value>Hawaïaanse liedjes</value>
+  </data>
+  <data name="header_songs_hebrew" xml:space="preserve">
+    <value>Hebreeuwse liedjes</value>
+  </data>
+  <data name="header_songs_hindi" xml:space="preserve">
+    <value>Hindi liedjes</value>
+  </data>
+  <data name="header_songs_hungarian" xml:space="preserve">
+    <value>Hongaarse liedjes</value>
+  </data>
+  <data name="header_songs_indonesian" xml:space="preserve">
+    <value>Indonesische liedjes</value>
+  </data>
+  <data name="header_songs_irish" xml:space="preserve">
+    <value>Ierse liedjes</value>
+  </data>
+  <data name="header_songs_italian" xml:space="preserve">
+    <value>Italiaanse liedjes</value>
+  </data>
+  <data name="header_songs_japanese" xml:space="preserve">
+    <value>Japanse liedjes</value>
+  </data>
+  <data name="header_songs_kazakh" xml:space="preserve">
+    <value>Kazachse liedjes</value>
+  </data>
+  <data name="header_songs_korean" xml:space="preserve">
+    <value>Koreaanse liedjes</value>
+  </data>
+  <data name="header_songs_latin" xml:space="preserve">
+    <value>Latijnse liedjes</value>
+  </data>
+  <data name="header_songs_malay" xml:space="preserve">
+    <value>Maleise liedjes</value>
+  </data>
+  <data name="header_songs_norwegian" xml:space="preserve">
+    <value>Noorse liedjes</value>
+  </data>
+  <data name="header_songs_persian" xml:space="preserve">
+    <value>Perzische liedjes</value>
+  </data>
+  <data name="header_songs_polish" xml:space="preserve">
+    <value>Poolse liedjes</value>
+  </data>
+  <data name="header_songs_portuguese" xml:space="preserve">
+    <value>Portugese (BR) liedjes</value>
+  </data>
+  <data name="header_songs_punjabi" xml:space="preserve">
+    <value>Punjabi liedjes</value>
+  </data>
+  <data name="header_songs_romanian" xml:space="preserve">
+    <value>Roemeense liedjes</value>
+  </data>
+  <data name="header_songs_russian" xml:space="preserve">
+    <value>Russische liedjes</value>
+  </data>
+  <data name="header_songs_serbian" xml:space="preserve">
+    <value>Servische liedjes</value>
+  </data>
+  <data name="header_songs_slovak" xml:space="preserve">
+    <value>Slowaakse liedjes</value>
+  </data>
+  <data name="header_songs_slovenian" xml:space="preserve">
+    <value>Sloveense liedjes</value>
+  </data>
+  <data name="header_songs_spanish" xml:space="preserve">
+    <value>Spaanse liedjes</value>
+  </data>
+  <data name="header_songs_swahili" xml:space="preserve">
+    <value>Swahili liedjes</value>
+  </data>
+  <data name="header_songs_swedish" xml:space="preserve">
+    <value>Zweedse liedjes</value>
+  </data>
+  <data name="header_songs_tagalog" xml:space="preserve">
+    <value>Tagalog liedjes</value>
+  </data>
+  <data name="header_songs_thai" xml:space="preserve">
+    <value>Thaise liedjes</value>
+  </data>
+  <data name="header_songs_turkish" xml:space="preserve">
+    <value>Turkse liedjes</value>
+  </data>
+  <data name="header_songs_ukrainian" xml:space="preserve">
+    <value>Oekraïense liedjes</value>
+  </data>
+  <data name="header_songs_urdu" xml:space="preserve">
+    <value>Urdu liedjes</value>
+  </data>
+  <data name="header_songs_vietnamese" xml:space="preserve">
+    <value>Vietnamese liedjes</value>
+  </data>
+  <data name="header_songs_welsh" xml:space="preserve">
+    <value>Welse liedjes</value>
+  </data>
+  <data name="header_books_albanian" xml:space="preserve">
+    <value>Albanese boeken</value>
+  </data>
+  <data name="header_books_arabic" xml:space="preserve">
+    <value>Arabische boeken</value>
+  </data>
+  <data name="header_books_armenian" xml:space="preserve">
+    <value>Armeense boeken</value>
+  </data>
+  <data name="header_books_bulgarian" xml:space="preserve">
+    <value>Bulgaarse boeken</value>
+  </data>
+  <data name="header_books_cantonese" xml:space="preserve">
+    <value>Kantonese boeken</value>
+  </data>
+  <data name="header_books_chinese" xml:space="preserve">
+    <value>Chinese boeken</value>
+  </data>
+  <data name="header_books_creole" xml:space="preserve">
+    <value>Creoolse boeken</value>
+  </data>
+  <data name="header_books_croatian" xml:space="preserve">
+    <value>Kroatische boeken</value>
+  </data>
+  <data name="header_books_czech" xml:space="preserve">
+    <value>Tjechische boeken</value>
+  </data>
+  <data name="header_books_danish" xml:space="preserve">
+    <value>Deense boeken</value>
+  </data>
+  <data name="header_books_dari" xml:space="preserve">
+    <value>Dari boeken</value>
+  </data>
+  <data name="header_books_dutch" xml:space="preserve">
+    <value>Nederlandse boeken</value>
+  </data>
+  <data name="header_books_english" xml:space="preserve">
+    <value>Engelse boeken</value>
+  </data>
+  <data name="header_books_european_portuguese" xml:space="preserve">
+    <value>Portugese (EU) boeken</value>
+  </data>
+  <data name="header_books_finnish" xml:space="preserve">
+    <value>Finse boeken</value>
+  </data>
+  <data name="header_books_french" xml:space="preserve">
+    <value>Franse boeken</value>
+  </data>
+  <data name="header_books_german" xml:space="preserve">
+    <value>Duitse boeken</value>
+  </data>
+  <data name="header_books_greek" xml:space="preserve">
+    <value>Griekse boeken</value>
+  </data>
+  <data name="header_books_gujarati" xml:space="preserve">
+    <value>Gujarati boeken</value>
+  </data>
+  <data name="header_books_hawaiian" xml:space="preserve">
+    <value>Hawaïaanse boeken</value>
+  </data>
+  <data name="header_books_hebrew" xml:space="preserve">
+    <value>Hebreeuwse boeken</value>
+  </data>
+  <data name="header_books_hindi" xml:space="preserve">
+    <value>Hindi boeken</value>
+  </data>
+  <data name="header_books_hungarian" xml:space="preserve">
+    <value>Hongaarse boeken</value>
+  </data>
+  <data name="header_books_indonesian" xml:space="preserve">
+    <value>Indonesische boeken</value>
+  </data>
+  <data name="header_books_irish" xml:space="preserve">
+    <value>Ierse boeken</value>
+  </data>
+  <data name="header_books_italian" xml:space="preserve">
+    <value>Italiaanse boeken</value>
+  </data>
+  <data name="header_books_japanese" xml:space="preserve">
+    <value>Japanse boeken</value>
+  </data>
+  <data name="header_books_kazakh" xml:space="preserve">
+    <value>Kazachse boeken</value>
+  </data>
+  <data name="header_books_korean" xml:space="preserve">
+    <value>Koreaanse boeken</value>
+  </data>
+  <data name="header_books_latin" xml:space="preserve">
+    <value>Latijnse boeken</value>
+  </data>
+  <data name="header_books_malay" xml:space="preserve">
+    <value>Maleise boeken</value>
+  </data>
+  <data name="header_books_norwegian" xml:space="preserve">
+    <value>Noorse boeken</value>
+  </data>
+  <data name="header_books_persian" xml:space="preserve">
+    <value>Perzische boeken</value>
+  </data>
+  <data name="header_books_polish" xml:space="preserve">
+    <value>Poolse boeken</value>
+  </data>
+  <data name="header_books_portuguese" xml:space="preserve">
+    <value>Portugese (BR) boeken</value>
+  </data>
+  <data name="header_books_punjabi" xml:space="preserve">
+    <value>Punjabi boeken</value>
+  </data>
+  <data name="header_books_romanian" xml:space="preserve">
+    <value>Roemeense boeken</value>
+  </data>
+  <data name="header_books_russian" xml:space="preserve">
+    <value>Russische boeken</value>
+  </data>
+  <data name="header_books_serbian" xml:space="preserve">
+    <value>Servische boeken</value>
+  </data>
+  <data name="header_books_slovak" xml:space="preserve">
+    <value>Slowaakse boeken</value>
+  </data>
+  <data name="header_books_slovenian" xml:space="preserve">
+    <value>Sloveense boeken</value>
+  </data>
+  <data name="header_books_spanish" xml:space="preserve">
+    <value>Spaanse boeken</value>
+  </data>
+  <data name="header_books_swahili" xml:space="preserve">
+    <value>Swahili boeken</value>
+  </data>
+  <data name="header_books_swedish" xml:space="preserve">
+    <value>Zweedse boeken</value>
+  </data>
+  <data name="header_books_tagalog" xml:space="preserve">
+    <value>Tagalog boeken</value>
+  </data>
+  <data name="header_books_thai" xml:space="preserve">
+    <value>Thaise boeken</value>
+  </data>
+  <data name="header_books_turkish" xml:space="preserve">
+    <value>Turkse boeken</value>
+  </data>
+  <data name="header_books_ukrainian" xml:space="preserve">
+    <value>Oekraïense boeken</value>
+  </data>
+  <data name="header_books_urdu" xml:space="preserve">
+    <value>Urdu boeken</value>
+  </data>
+  <data name="header_books_vietnamese" xml:space="preserve">
+    <value>Vietnamese boeken</value>
+  </data>
+  <data name="header_books_welsh" xml:space="preserve">
+    <value>Welse boeken</value>
+  </data>
+  <data name="header_stories_albanian" xml:space="preserve">
+    <value>Albanese verhalen</value>
+  </data>
+  <data name="header_stories_arabic" xml:space="preserve">
+    <value>Arabische verhalen</value>
+  </data>
+  <data name="header_stories_armenian" xml:space="preserve">
+    <value>Armeense verhalen</value>
+  </data>
+  <data name="header_stories_bulgarian" xml:space="preserve">
+    <value>Bulgaarse verhalen</value>
+  </data>
+  <data name="header_stories_cantonese" xml:space="preserve">
+    <value>Kantonese verhalen</value>
+  </data>
+  <data name="header_stories_chinese" xml:space="preserve">
+    <value>Chinese verhalen</value>
+  </data>
+  <data name="header_stories_creole" xml:space="preserve">
+    <value>Creoolse verhalen</value>
+  </data>
+  <data name="header_stories_croatian" xml:space="preserve">
+    <value>Kroatische verhalen</value>
+  </data>
+  <data name="header_stories_czech" xml:space="preserve">
+    <value>Tjechische verhalen</value>
+  </data>
+  <data name="header_stories_danish" xml:space="preserve">
+    <value>Deense verhalen</value>
+  </data>
+  <data name="header_stories_dari" xml:space="preserve">
+    <value>Dari verhalen</value>
+  </data>
+  <data name="header_stories_dutch" xml:space="preserve">
+    <value>Nederlandse verhalen</value>
+  </data>
+  <data name="header_stories_english" xml:space="preserve">
+    <value>Engelse verhalen</value>
+  </data>
+  <data name="header_stories_european_portuguese" xml:space="preserve">
+    <value>Portugese (EU) verhalen</value>
+  </data>
+  <data name="header_stories_finnish" xml:space="preserve">
+    <value>Finse verhalen</value>
+  </data>
+  <data name="header_stories_french" xml:space="preserve">
+    <value>Franse verhalen</value>
+  </data>
+  <data name="header_stories_german" xml:space="preserve">
+    <value>Duitse verhalen</value>
+  </data>
+  <data name="header_stories_greek" xml:space="preserve">
+    <value>Griekse verhalen</value>
+  </data>
+  <data name="header_stories_gujarati" xml:space="preserve">
+    <value>Gujarati verhalen</value>
+  </data>
+  <data name="header_stories_hawaiian" xml:space="preserve">
+    <value>Hawaïaanse verhalen</value>
+  </data>
+  <data name="header_stories_hebrew" xml:space="preserve">
+    <value>Hebreeuwse verhalen</value>
+  </data>
+  <data name="header_stories_hindi" xml:space="preserve">
+    <value>Hindi verhalen</value>
+  </data>
+  <data name="header_stories_hungarian" xml:space="preserve">
+    <value>Hongaarse verhalen</value>
+  </data>
+  <data name="header_stories_indonesian" xml:space="preserve">
+    <value>Indonesische verhalen</value>
+  </data>
+  <data name="header_stories_irish" xml:space="preserve">
+    <value>Ierse verhalen</value>
+  </data>
+  <data name="header_stories_italian" xml:space="preserve">
+    <value>Italiaanse verhalen</value>
+  </data>
+  <data name="header_stories_japanese" xml:space="preserve">
+    <value>Japanse verhalen</value>
+  </data>
+  <data name="header_stories_kazakh" xml:space="preserve">
+    <value>Kazachse verhalen</value>
+  </data>
+  <data name="header_stories_korean" xml:space="preserve">
+    <value>Koreaanse verhalen</value>
+  </data>
+  <data name="header_stories_latin" xml:space="preserve">
+    <value>Latijnse verhalen</value>
+  </data>
+  <data name="header_stories_malay" xml:space="preserve">
+    <value>Maleise verhalen</value>
+  </data>
+  <data name="header_stories_norwegian" xml:space="preserve">
+    <value>Noorse verhalen</value>
+  </data>
+  <data name="header_stories_persian" xml:space="preserve">
+    <value>Perzische verhalen</value>
+  </data>
+  <data name="header_stories_polish" xml:space="preserve">
+    <value>Poolse verhalen</value>
+  </data>
+  <data name="header_stories_portuguese" xml:space="preserve">
+    <value>Portugese (BR) verhalen</value>
+  </data>
+  <data name="header_stories_punjabi" xml:space="preserve">
+    <value>Punjabi verhalen</value>
+  </data>
+  <data name="header_stories_romanian" xml:space="preserve">
+    <value>Roemeense verhalen</value>
+  </data>
+  <data name="header_stories_russian" xml:space="preserve">
+    <value>Russische verhalen</value>
+  </data>
+  <data name="header_stories_serbian" xml:space="preserve">
+    <value>Servische verhalen</value>
+  </data>
+  <data name="header_stories_slovak" xml:space="preserve">
+    <value>Slowaakse verhalen</value>
+  </data>
+  <data name="header_stories_slovenian" xml:space="preserve">
+    <value>Sloveense verhalen</value>
+  </data>
+  <data name="header_stories_spanish" xml:space="preserve">
+    <value>Spaanse verhalen</value>
+  </data>
+  <data name="header_stories_swahili" xml:space="preserve">
+    <value>Swahili verhalen</value>
+  </data>
+  <data name="header_stories_swedish" xml:space="preserve">
+    <value>Zweedse verhalen</value>
+  </data>
+  <data name="header_stories_tagalog" xml:space="preserve">
+    <value>Tagalog verhalen</value>
+  </data>
+  <data name="header_stories_thai" xml:space="preserve">
+    <value>Thaise verhalen</value>
+  </data>
+  <data name="header_stories_turkish" xml:space="preserve">
+    <value>Turkse verhalen</value>
+  </data>
+  <data name="header_stories_ukrainian" xml:space="preserve">
+    <value>Oekraïense verhalen</value>
+  </data>
+  <data name="header_stories_urdu" xml:space="preserve">
+    <value>Urdu verhalen</value>
+  </data>
+  <data name="header_stories_vietnamese" xml:space="preserve">
+    <value>Vietnamese verhalen</value>
+  </data>
+  <data name="header_stories_welsh" xml:space="preserve">
+    <value>Welse verhalen</value>
+  </data>
+  <data name="eight" xml:space="preserve">
+    <value>ACHT</value>
+  </data>
+  <data name="five" xml:space="preserve">
+    <value>VIJF</value>
+  </data>
+  <data name="four" xml:space="preserve">
+    <value>VIER</value>
+  </data>
+  <data name="nine" xml:space="preserve">
+    <value>NEGEN</value>
+  </data>
+  <data name="one" xml:space="preserve">
+    <value>EEN</value>
+  </data>
+  <data name="parent_check_enter_the_numbers" xml:space="preserve">
+    <value>Vul de nummers in:</value>
+  </data>
+  <data name="parent_check_parental_control" xml:space="preserve">
+    <value>OUDERLIJK TOEZICHT</value>
+  </data>
+  <data name="parent_check_reports_etc" xml:space="preserve">
+    <value>Meldingen, Hulp, Wijzig Taal, Inschrijven, etc.</value>
+  </data>
+  <data name="parent_check_wrong_password" xml:space="preserve">
+    <value>Verkeerd wachtwoord! Probeer het nog eens</value>
+  </data>
+  <data name="seven" xml:space="preserve">
+    <value>ZEVEN</value>
+  </data>
+  <data name="six" xml:space="preserve">
+    <value>ZES</value>
+  </data>
+  <data name="three" xml:space="preserve">
+    <value>DRIE</value>
+  </data>
+  <data name="two" xml:space="preserve">
+    <value>TWEE</value>
+  </data>
+  <data name="header_for_kids" xml:space="preserve">
+    <value>{0} voor kinderen</value>
+  </data>
+  <data name="default_user_name" xml:space="preserve">
+    <value>Gebruiker</value>
+  </data>
+  <data name="game_over" xml:space="preserve">
+    <value>Game over!</value>
+  </data>
+  <data name="game_questions" xml:space="preserve">
+    <value>VRAGEN</value>
+  </data>
+  <data name="game_restart" xml:space="preserve">
+    <value>Herstarten</value>
+  </data>
+  <data name="game_score" xml:space="preserve">
+    <value>SCORE</value>
+  </data>
+  <data name="game_time" xml:space="preserve">
+    <value>TIJD</value>
+  </data>
+  <data name="parent_menu_change_your_language" xml:space="preserve">
+    <value>Wijzig uw taal</value>
+  </data>
+  <data name="parent_menu_do_you_want_to_log_out" xml:space="preserve">
+    <value>Wilt u uitloggen?</value>
+  </data>
+  <data name="parent_menu_help_and_support" xml:space="preserve">
+    <value>Hulp &amp; ondersteuning</value>
+  </data>
+  <data name="parent_menu_log_out" xml:space="preserve">
+    <value>Log uit</value>
+  </data>
+  <data name="parent_menu_log_out_ex" xml:space="preserve">
+    <value>Log uit!</value>
+  </data>
+  <data name="parent_menu_my_reports" xml:space="preserve">
+    <value>Mijn Meldingen</value>
+  </data>
+  <data name="parent_menu_please_login_to_access_report" xml:space="preserve">
+    <value>Alstublieft, log in (schrijf u in), om toegang tot de melding te krijgen</value>
+  </data>
+  <data name="parent_menu_sign_up" xml:space="preserve">
+    <value>Inschrijven</value>
+  </data>
+  <data name="parent_menu_sorry" xml:space="preserve">
+    <value>Sorry</value>
+  </data>
+  <data name="purchase" xml:space="preserve">
+    <value>Aankoop</value>
+  </data>
+  <data name="purchaser_product_name_1_year" xml:space="preserve">
+    <value>{0} 1 jaar</value>
+  </data>
+  <data name="purchaser_product_name_6_months" xml:space="preserve">
+    <value>{0} 6 maanden</value>
+  </data>
+  <data name="purchaser_term_annual" xml:space="preserve">
+    <value>Jaarlijks</value>
+  </data>
+  <data name="purchaser_term_semi_annual" xml:space="preserve">
+    <value>Half jaarlijks</value>
+  </data>
+  <data name="purchase_1_year_of_full_access" xml:space="preserve">
+    <value>1 jaar volledige toegang tot {0}. Voor maar $ {1} per maand</value>
+  </data>
+  <data name="purchase_6_months_of_full_access" xml:space="preserve">
+    <value>6 maanden volledige toegang tot {0}. Voor maar $ {1} per maand</value>
+  </data>
+  <data name="purchase_info_line_1" xml:space="preserve">
+    <value>De betaling wordt doorberekend naar uw iTunes Account op het moment dat de aankoop is bevestigd</value>
+  </data>
+  <data name="purchase_info_line_2" xml:space="preserve">
+    <value>• Inschrijving wordt automatisch vernieuwd behalve als de auto-renew minimaal 24 uur voor het einde van de huidige periode is uitgeschakeld</value>
+  </data>
+  <data name="purchase_info_line_3" xml:space="preserve">
+    <value>• Account wordt binnen 24 uur voorafgaand aan het eind van de lopende perionde in rekening worden gebracht voor verlenging en identificeert de kosten van de verlenging</value>
+  </data>
+  <data name="purchase_info_line_4" xml:space="preserve">
+    <value>• Inschrijving kan door de gebruiker worden beheerd en de auto-renewal mag worden uitgeschakeld door na aankoop naar de gebruikers Account Instellingen te gaan</value>
+  </data>
+  <data name="purchase_info_line_5" xml:space="preserve">
+    <value>• Elk ongebruikt deel van een gratis proef periode, indien aangeboden, zal verloren gaan op het moment dat de gebruiker zich abboneert op deze publicatie, waar van toepassing</value>
+  </data>
+  <data name="purchase_privacy_policy" xml:space="preserve">
+    <value>privacy beleid</value>
+  </data>
+  <data name="purchase_sorry_restoring_subscriptions" xml:space="preserve">
+    <value>Sorry, uw abonnement is aan het herstellen op dit moment. Porbeer nogmaals aan te kopen!</value>
+  </data>
+  <data name="purchase_terms_of_use" xml:space="preserve">
+    <value>Algemene voorwaarden</value>
+  </data>
+  <data name="purchase_try_again" xml:space="preserve">
+    <value>Probeer het nog eens!</value>
+  </data>
+  <data name="report_books" xml:space="preserve">
+    <value>Boeken</value>
+  </data>
+  <data name="report_books_read" xml:space="preserve">
+    <value>Boeken gelezen:</value>
+  </data>
+  <data name="report_completed" xml:space="preserve">
+    <value>voltooid</value>
+  </data>
+  <data name="report_completion" xml:space="preserve">
+    <value>VOLTOOIING</value>
+  </data>
+  <data name="report_daily_report" xml:space="preserve">
+    <value>Dagelijkse Melding</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>DATUM</value>
+  </data>
+  <data name="report_dinosaur_score" xml:space="preserve">
+    <value>Dinosaurus Score:</value>
+  </data>
+  <data name="report_lang_course" xml:space="preserve">
+    <value>Taalcursus:</value>
+  </data>
+  <data name="report_last_activity" xml:space="preserve">
+    <value>LAATSTE ACTIVITEIT</value>
+  </data>
+  <data name="report_lesson" xml:space="preserve">
+    <value>Les</value>
+  </data>
+  <data name="report_lessons_and_games" xml:space="preserve">
+    <value>Lessen &amp; Spellen</value>
+  </data>
+  <data name="report_lessons_and_games_completed" xml:space="preserve">
+    <value>Lessen &amp; Spellen voltooid</value>
+  </data>
+  <data name="report_lessons_report" xml:space="preserve">
+    <value>Lessen Melding</value>
+  </data>
+  <data name="report_my_report" xml:space="preserve">
+    <value>Mijn Melding</value>
+  </data>
+  <data name="report_not_completed" xml:space="preserve">
+    <value>niet voltooid</value>
+  </data>
+  <data name="report_not_read" xml:space="preserve">
+    <value>niet gelezen</value>
+  </data>
+  <data name="report_overall" xml:space="preserve">
+    <value>Totaal</value>
+  </data>
+  <data name="report_overall_completed" xml:space="preserve">
+    <value>Totaal voltooid:</value>
+  </data>
+  <data name="report_quiz_score" xml:space="preserve">
+    <value>Quiz score:</value>
+  </data>
+  <data name="report_read" xml:space="preserve">
+    <value>lees</value>
+  </data>
+  <data name="report_star_score" xml:space="preserve">
+    <value>Ster score:</value>
+  </data>
+  <data name="report_time_spent" xml:space="preserve">
+    <value>TIJD BESTEED</value>
+  </data>
+  <data name="report_total_books" xml:space="preserve">
+    <value>Totaal aantal boeken:</value>
+  </data>
+  <data name="report_user_name_or_email" xml:space="preserve">
+    <value>Gebruikersnaam of email:</value>
+  </data>
+  <data name="sign_up_are_u_sure" xml:space="preserve">
+    <value>Weet u het zeker?</value>
+  </data>
+  <data name="sign_up_cant_create_new_user" xml:space="preserve">
+    <value>Error! Kan de nieuwe gebruiker niet aanmaken!</value>
+  </data>
+  <data name="sign_up_confirm_password" xml:space="preserve">
+    <value>Bevestig wachtwoord:</value>
+  </data>
+  <data name="sign_up_create_account" xml:space="preserve">
+    <value>Maak een account aan</value>
+  </data>
+  <data name="sign_up_different_passwords" xml:space="preserve">
+    <value>Verschillende wachtwoorden!</value>
+  </data>
+  <data name="sign_up_do_not_signup" xml:space="preserve">
+    <value>Niet inschrijven</value>
+  </data>
+  <data name="sign_up_email_address" xml:space="preserve">
+    <value>Emailadres:</value>
+  </data>
+  <data name="sign_up_error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="sign_up_password" xml:space="preserve">
+    <value>Wachtwoord:</value>
+  </data>
+  <data name="sign_up_please_register" xml:space="preserve">
+    <value>Schrijf u alstublieft in om alle functies van de applicatie te hebben: \n - je vooruitgang bij te houden, nieuwe dinosaurussen en sterren verdienen; \n - account op de website dinolingo.com; \n - bewaar je data en synchroniseer tussen je apparaten.</value>
+  </data>
+  <data name="sign_up_without_registration_popup" xml:space="preserve">
+    <value>Zonder registratie zult u niet in staat zijn volgende functies van de applicatie te gebruiken: \n- je vooruitgang bijhouden; \n- nieuwe dinosaurussen en sterren verdienen;n- account op de website dinolingo.com;\n- je data bewaren en synchroniseren tussen je apparaten.\nWeet u zeker dat u door wilt gaan zonder te registreren?</value>
+  </data>
+  <data name="subscribe_choose_lang_1_year" xml:space="preserve">
+    <value>Kies een taal - 1 jaar</value>
+  </data>
+  <data name="subscribe_choose_lang_6_months" xml:space="preserve">
+    <value>Kies een taal - 6 maanden</value>
+  </data>
+  <data name="subscribe_plans" xml:space="preserve">
+    <value>Plannen</value>
+  </data>
+  <data name="subscribe_price_a_month" xml:space="preserve">
+    <value>${0} per maand</value>
+  </data>
+  <data name="subscribe_price_for_1_year" xml:space="preserve">
+    <value>Prijs: ${0} voor 1 jaar</value>
+  </data>
+  <data name="subscribe_price_for_6_months" xml:space="preserve">
+    <value>Prijs: ${0} voor 6 maanden</value>
+  </data>
+  <data name="subscribe_scroll_down" xml:space="preserve">
+    <value>Scroll naar beneden voor meer talen</value>
+  </data>
+  <data name="subscribe_you_have_access_to_subscription" xml:space="preserve">
+    <value>U heeft al toegang tot de publicatie</value>
+  </data>
+  <data name="victory_congratulations" xml:space="preserve">
+    <value>Gefeliciteerd!</value>
+  </data>
+  <data name="victory_great" xml:space="preserve">
+    <value>Geweldig</value>
+  </data>
+  <data name="victory_you_earned_dinosaur" xml:space="preserve">
+    <value>Je hebt een nieuwe dinosaurus verdient!</value>
+  </data>
+  <data name="victory_you_earned_star" xml:space="preserve">
+    <value>Je het een ster verdient!</value>
+  </data>
+  <data name="victory_you_won" xml:space="preserve">
+    <value>Je hebt gewonnen!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_ios" xml:space="preserve">
+    <value>Vind je DinoLingo leuk? \nBeoordeel het in de App Store!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_android" xml:space="preserve">
+    <value>Vind je DinoLingo leuk? \nBeoordeel het op Google Play!</value>
+  </data>
+  <data name="rate_rate_dinolingo" xml:space="preserve">
+    <value>Beoordeel DinoLingo</value>
+  </data>
+  <data name="rate_remind_later" xml:space="preserve">
+    <value>Herinner me later</value>
+  </data>
+  <data name="rate_no_thanks" xml:space="preserve">
+    <value>Nee, Bedankt</value>
+  </data>
+  <data name="login_user_with_email_doesnt_exist" xml:space="preserve">
+    <value>Gebruiker met dit emailadres bestaat niet!</value>
+  </data>
+  <data name="login_user_and_pass_doesnt_exist" xml:space="preserve">
+    <value>Gebruiker met deze inlogcode en wachtwoord bestaat niet!</value>
+  </data>
+  <data name="subscribe_six_months_subscriptions" xml:space="preserve">
+    <value>6 maanden abbonnement</value>
+  </data>
+  <data name="subscribe_one_year_subscriptions" xml:space="preserve">
+    <value>1 jaar abbonnement</value>
+  </data>
+  <data name="new_version" xml:space="preserve">
+    <value>Nieuwe Versie</value>
+  </data>
+  <data name="new_version_text" xml:space="preserve">
+    <value>Er is een nieuwe versie van de app beschikbaar. Wilt u nu updaten?</value>
+  </data>
+  <data name="new_version_update_now" xml:space="preserve">
+    <value>Nu updaten</value>
+  </data>
+  <data name="purchaser_product_name_1_month" xml:space="preserve">
+    <value>{0} 1 maand</value>
+  </data>
+  <data name="purchaser_term_monthly" xml:space="preserve">
+    <value>Maandelijks</value>
+  </data>
+  <data name="purchase_1_month_of_full_access" xml:space="preserve">
+    <value>1 maand volledige toegang tot {0}.</value>
+  </data>
+  <data name="subscribe_price_for_1_month" xml:space="preserve">
+    <value>Prijs: $ {0} voor 1 maand</value>
+  </data>
+  <data name="subscribe_one_month_subscriptions" xml:space="preserve">
+    <value>Abonnementen van 1 maand</value>
+  </data>
+</root>

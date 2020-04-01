@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinoLingo.Favorites_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absRootLayout" BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+            <Grid x:Name="absMainGrid" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+                <!-- main table -->
+                <Frame x:Name="shadowFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"                        
+                        BorderColor="Transparent"                        
+                        HasShadow="false"
+                        Padding="5"
+                        BackgroundColor="{StaticResource ShadowLoginColor}">
+                </Frame>
+
+                <Frame x:Name="mainFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"                          
+                        BorderColor="Transparent"                        
+                        HasShadow="false"
+                        Padding="5"
+                        BackgroundColor="White">
+
+                    <ScrollView>
+                        <StackLayout x:Name="favoritesStack" HorizontalOptions="CenterAndExpand">
+                        </StackLayout>
+                    </ScrollView>
+
+                </Frame>
+
+                <!-- close button -->
+                <Image  x:Name = "CloseBtn" ClassId="CloseBtn" HorizontalOptions="End" VerticalOptions="Start"
+                        
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,1346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C73F60AC-8FE0-4164-8429-CAE5D7F0E6AA}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DinoLingo.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>DinoLingo.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: Serdar Acar (E4U76SMQ84)</CodesignKey>
+    <MtouchSdkVersion>12.1</MtouchSdkVersion>
+    <MtouchFastDev>true</MtouchFastDev>
+    <OptimizePNGs>false</OptimizePNGs>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignEntitlements />
+    <MtouchExtraArgs>--registrar:static</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchExtraArgs>--registrar:static</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer: Serdar Acar (E4U76SMQ84)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignProvision>dinolingo_alvakos_dev_2019_2020</CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Dino Lingo Inc. (3525UWD6G4)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>dinolingo_alvakos_distr_2019_2020</CodesignProvision>
+    <MtouchFloat32>true</MtouchFloat32>
+    <OptimizePNGs>true</OptimizePNGs>
+    <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>false</IpaIncludeArtwork>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignKey>iPhone Distribution: Dino Lingo Inc. (3525UWD6G4)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Localize .cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <BundleResource Include="GoogleService-Info.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="MyViews\BorderlessEntryRenderer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="FodyWeavers.xml" />
+    <Compile Include="RequestReview_IOS.cs" />
+    <Compile Include="ScreenOrientation.cs" />
+    <Compile Include="TapContentViewRenderer.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPicker.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPlayerRenderer.cs" />
+    <Compile Include="BorderlessEntryRenderer.cs" />
+    <Compile Include="ExtendedFrameRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_splash_screen.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\notification-icon-40x40-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\notification-icon-60x60-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\settings-icon-58x58-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\settings-icon-87x87-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\spotlight-icon-80x80-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\spotlight-icon-120x120-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\launch-icon-Dino-only-180x180-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\launch-icon-1024x1024-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_splash_screen.imageset\splash_screen_512x512.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58-min.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CarouselView.FormsPlugin">
+      <Version>5.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="CocosSharp.Forms">
+      <Version>1.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="ksemenenko.GoogleAnalytics">
+      <Version>1.0.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.FirebasePushNotification">
+      <Version>2.3.5</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.InAppBilling">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>1.68.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.59.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.DeviceInfo">
+      <Version>4.0.0.13</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.LatestVersion">
+      <Version>1.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>2.5.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Forms9Patch">
+      <Version>1.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+    <PackageReference Include="PCLStorage">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.8.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\DinoLingo\DinoLingo.csproj">
+      <Project>{7172AE3B-966C-400B-8755-E5A0B8E39420}</Project>
+      <Name>DinoLingo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\picture_loading_failed.png" />
+    <BundleResource Include="Resources\my_loading_512.gif" />
+    <BundleResource Include="Resources\Arial_Rounded_MT_Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\logo_splash_screen.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rexy_dancing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\terry_dancing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\EIGHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\EIGHT_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\FIVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\FIVE_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\FON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\FOUR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\FOUR_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\NINE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\NINE_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\ONE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\ONE_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\SEVEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\SEVEN_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\SIX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\SIX_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\TEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\TEN_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\THREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\THREE_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\TWO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SAS\TWO_CANDIES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\EIGHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\FIVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\FOUR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\NINE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\ONE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SEVEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\SIX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\TEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\THREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NUMBERS\TWO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\MEMORY_GAME\square_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\MEMORY_GAME\square_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\MEMORY_GAME\logo_bg_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\BLACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\BLUE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\BROWN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\GREEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\ORANGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\PINK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\PURPLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\RED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\SAS\YELLOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\BLACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\BLUE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\BROWN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\GREEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\ORANGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\PINK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\PURPLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\RED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\COLORS\YELLOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\DANCING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\DRINKING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\EATING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\FLYING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\JUMPING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\LOOKING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\PLAYING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\READING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\RUNNING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\SLEEPING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\SMELLING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\SMILING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\SWIMMING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ACTIONS\WALKING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\DUCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\EAGLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\ELEPHANT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\FISH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\FLAMINGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\FROG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\GIRAFFE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\GORILLA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\HIPPO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\HORSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\LION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\MONKEY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\MOUSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\OSTRICH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\OWL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\PARROT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\PENGUIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\PIG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\RABBIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\RHINO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\ROOSTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\SHARK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\SHEEP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\SNAKE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\SPIDER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\TIGER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\TURKEY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\TURTLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\WHALE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\ZEBRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\animals_fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\ANT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\BEAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\BEE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\BIRD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\BUTTERFLY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\CAMEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\CAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\CHICK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\CHICKEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\COW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\CROCODILE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\DEER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\DOG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\DOLPHIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\ANIMALS\DONKEY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_tag4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_duga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_fon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_tag1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_tag2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\SAS\body_tag3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\ARM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\BODY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\EAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\EYES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\FACE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\FINGER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\FOOT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\HAIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\HAND.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\HEAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\LEGS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\MOUTH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\BODYPARTS\NOSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\BOOTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\clothes_dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\clothes_floor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\clothes_fon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\clothes_gesha_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\clothes_gesha3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\DRESS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\GLASSES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\GLOVES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\HAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\JACKET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\PANTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\SCARF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\SHOES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\SKIRT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\SOCKS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\SWEATER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SAS\TSHIRT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\BOOTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\DRESS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\GLASSES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\GLOVES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\HAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\JACKET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\PANTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SCARF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SHOES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SKIRT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SOCKS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\SWEATER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CLOTHES\TSHIRT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\BABY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\BOY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\FATHER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\GIRL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\MAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\MOTHER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FAMILY\WOMAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\BREAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\BUTTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\CAKE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\CHEESE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\CHOCOLATE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\EGG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\food_fon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\food_girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\HONEY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\ICECREAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\JUICE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\MILK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\SOUP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SAS\WATER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\WATER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\BREAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\BUTTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\CAKE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\CHEESE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\CHOCOLATE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\EGG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\HONEY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\ICECREAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\JUICE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\MILK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FOOD\SOUP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\APPLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\BANANA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\BROCCOLI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\CARROT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\CHERRY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_dish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_fon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_rabbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\GRAPES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\LEMON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\MELON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\ORANGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\PEACH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\PEAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\POTATO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\STRAWBERRY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\TOMATO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\SAS\WATERMELON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\WATERMELON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\APPLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\BANANA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\BROCCOLI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\CARROT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\CHERRY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\GRAPES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\LEMON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\MELON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\ORANGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\PEACH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\PEAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\POTATO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\STRAWBERRY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\FRUITSANDVEGETABLES\TOMATO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BAG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BALL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BALLOON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BOOK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BOX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\BOY_HAND.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\CHAIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\CLOCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\COMPUTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\DOOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\house_boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\house_fon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\KITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\LAMP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\PICTURE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\TABLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\TELEPHONE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\TELEVISION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\TOYS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\SAS\WINDOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\WINDOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\BALL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\BALLOON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\BED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\BOOK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\BOX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\CHAIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\CLOCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\COMPUTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\DOOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\KITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\LAMP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\PICTURE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\TABLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\TELEPHONE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\TELEVISION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\TOYS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_night.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_night_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\RAIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\RAINBOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\ROCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\SEA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\SKY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\SNOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\STAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\SUN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\TREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\CLOUD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\FLOWER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\FOREST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\GRASS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\MOON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_cloud1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SAS\nature_flower_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\TREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\CLOUD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\FLOWER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\FOREST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\GRASS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\MOON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\RAIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\RAINBOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\ROCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SEA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SKY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SNOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\STAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\NATURE\SUN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_truck2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_bicycle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_boat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_bus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_car2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_fon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_helicopter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_kust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_motorcycle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\SAS\vehicles_train2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\TRUCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\AIRPLANE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\BICYCLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\BOAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\BUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\CAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\HELICOPTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\MOTORCYCLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\ROCKET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\VEHICLES\TRAIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CAROUSEL_GAME\circle_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CAROUSEL_GAME\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CAROUSEL_GAME\line2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\CAROUSEL_GAME\round2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\UI\btn_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\UI\btnblue_x1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\UI\pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Sounds\tick_tack.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Sounds\Cartoon_Boing.wav" />
+    <BundleResource Include="Content\Sounds\CORRECT.wav" />
+    <BundleResource Include="Content\Sounds\Crowd.wav" />
+    <BundleResource Include="Content\Sounds\WRONG.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\UI\btnred_x1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\HOUSE\BAG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\UI\button_no_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\UI\button_yes_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\SPRINT_GAME\bucket_no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\SPRINT_GAME\bucket_yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\SPRINT_GAME\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\SPRINT_GAME\star_score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\SPRINT_GAME\timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\Images\SPRINT_GAME\question2.png" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.VideoPage"
+             xmlns:video="clr-namespace:FormsVideoLibrary"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <RelativeLayout x:Name="rootRelative">
+            <ContentView RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="0"
+                               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}">
+                
+                <!--video:VideoPlayer x:Name="videoPlayer" Source="{Binding VideoSource}" AutoPlay="{Binding AutoPlayVideo}"/-->
+                <video:VideoPlayer x:Name="videoPlayer" Source="{Binding VideoSource}" UpdateStatus="Handle_UpdateStatus"/>
+
+            </ContentView>
+
+                <!-- loading view -->
+             <Grid x:Name="loadingView" 
+                   RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="0"
+                               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}" BackgroundColor="Black" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+               
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

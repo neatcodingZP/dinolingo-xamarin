@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinoLingo.Purchase_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absRootLayout" BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+            <Grid AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="absMainGrid" >
+                <!-- main table -->
+                <Frame x:Name="shadowFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"                        
+                        BorderColor="Transparent"                        
+                        HasShadow="false"
+                        Padding="5"
+                        BackgroundColor="{StaticResource ShadowLoginColor}">
+                </Frame>
+
+                <Frame x:Name="mainFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"                          
+                        BorderColor="Transparent"                        
+                        HasShadow="false"
+                        Padding="5"
+                        BackgroundColor="White">
+
+                    <Grid RowSpacing="1" x:Name="robustGrid" >                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />                           
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Title -->
+                        <controls:MyLabel x:Name="Title" Grid.Row="0"
+                             HorizontalOptions="Center" TextColor="{StaticResource BlueTextLoginColor}"/>
+
+                        <!-- Length -->
+                        <controls:MyLabel x:Name="Length" Grid.Row="1"
+                             HorizontalOptions="Center" TextColor="{StaticResource BlueTextLoginColor}"/>
+
+                        <!-- Price -->
+                        <controls:MyLabel x:Name="Price" Grid.Row="2"
+                             HorizontalOptions="Center" TextColor="{StaticResource BlueTextLoginColor}"/>
+
+                        <!-- Description -->
+                        <controls:MyLabel x:Name="Description" Grid.Row="3"
+                             HorizontalOptions="Center" TextColor="{StaticResource BlueTextLoginColor}"/>
+
+                        <!-- Information -->
+                        <ScrollView Grid.Row="4" x:Name="infoScrollView">
+                            <StackLayout Padding="15,0,15,0" Spacing="0">
+                                <Label FontSize="{Binding InfoFontSize}"
+                                   Text="{controls:Translate purchase_info_line_1}"                                   
+                                   TextColor="DarkGray" />
+                                <Label FontSize="{Binding InfoFontSize}"
+                                   Text="{controls:Translate purchase_info_line_2}"                                   
+                                   TextColor="DarkGray" />
+                                <Label FontSize="{Binding InfoFontSize}"
+                                   Text="{controls:Translate purchase_info_line_3}"                                   
+                                   TextColor="DarkGray" />
+                                <Label FontSize="{Binding InfoFontSize}"
+                                   Text="{controls:Translate purchase_info_line_4}"                                   
+                                   TextColor="DarkGray" />
+                                <Label FontSize="{Binding InfoFontSize}"
+                                   Text="{controls:Translate purchase_info_line_5}"                                   
+                                   TextColor="DarkGray" />
+                            </StackLayout>
+                                                          
+                           
+                        </ScrollView>                   
+
+                       
+
+                        
+
+                        <!-- Purchase -->
+                        <Grid  Grid.Row="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />                                                              
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Terms of use -->
+                            <Label x:Name="TermsOfUse" ClassId="TermsOfUse" Grid.Column="0"
+                               Text="{controls:Translate purchase_terms_of_use}"  FontAttributes="Italic" TextColor="{StaticResource ButtonBlueTextColor}"
+                                   TextDecorations="Underline"
+                             HorizontalOptions="Center" VerticalOptions="Center" FontFamily="{StaticResource ArialRoundedMTBold}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <!-- Privacy policy -->
+                            <Label x:Name="PrivacyPolicy" ClassId="PrivacyPolicy" Grid.Column="1"
+                               Text="{controls:Translate purchase_privacy_policy}" FontAttributes="Italic" TextColor="{StaticResource ButtonBlueTextColor}"
+                                   TextDecorations="Underline"
+                             HorizontalOptions="Center"  VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <!--
+                            <Grid ClassId="PurchaseBtn" Grid.Column="1">
+                                <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    TranslationY="{Binding BtnShadowTranslationY}"
+                                    BorderColor="Transparent"                                    
+                                    Padding="0"
+                                    HasShadow="false">
+                                </Frame>
+
+                                <Frame  
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"
+                                    HasShadow="false"  
+                                    Padding="0"
+                                    IsClippedToBounds="true">                                    
+                                </Frame>
+                                
+                                <Frame 
+                                    Margin="{Binding StrokeLineMarginBtn}"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="{Binding BtnCornerRadiusInner}"
+                                    BorderColor="Transparent"
+                                    HasShadow="false"  
+                                    Padding="0"
+                                    IsClippedToBounds="true">
+                                    <controls:MyLabel Text="{controls:Translate purchase}" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding BtnTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+                                </Frame>
+                                
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                            -->
+                            
+                        </Grid>
+                        
+
+                    </Grid>
+
+                </Frame>
+                
+                <!-- close button -->
+                <Image  x:Name = "CloseBtn" ClassId="CloseBtn" HorizontalOptions="End" VerticalOptions="Start"
+                        
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

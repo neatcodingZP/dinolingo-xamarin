@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.InteractiveView"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentView.Content>
+        <AbsoluteLayout x:Name="absLayout">
+            
+             
+            <ContentView 
+                            AbsoluteLayout.LayoutBounds="0,0,1,1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            >
+                        <Image 
+                            Source = "{Binding ImageSource}"
+                            Aspect="AspectFill">
+                        </Image>
+                        <!--Forms9Patch:Image
+                           Source = "{Binding ImageSource}"
+                           Fill="AspectFit"/-->
+                        <!--ffimageloading:CachedImage 
+                                            DownsampleToViewSize="true"
+                                            Source = "{Binding ImageSource}">
+                        </ffimageloading:CachedImage-->
+            </ContentView>
+            
+            <!--ffimageloading:CachedImage 
+                    RelativeLayout.XConstraint="0"
+                    RelativeLayout.YConstraint="0"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, 
+                        Property=Width, Factor=1, Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, 
+                        Property=Height, Factor=1, Constant=0}"
+                    Source = "{Binding ImageSource}"
+                    DownsampleToViewSize="true"
+                    Aspect="Fill">
+            </ffimageloading:CachedImage--> 
+
+        </AbsoluteLayout>
+
+    </ContentView.Content>
+</ContentView>

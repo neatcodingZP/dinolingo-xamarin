@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.BookPage"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absoluteRoot" BackgroundColor="{StaticResource BackgroundBlueColor}">
+
+            <!-- CACHED IMAGE -->
+
+            <ffimageloading:CachedImage  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                IsEnabled="false" IsVisible="false"
+                Source = "{Binding CashedImageSource}"
+                DownsampleToViewSize="true"                     
+                Aspect="AspectFill">
+            </ffimageloading:CachedImage>
+
+            
+            <!-- MAIN IMAGE 
+            <ffimageloading:CachedImage  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                ClassId="MainImageBtn"  IsEnabled="{Binding IsMainImageEnabled}"
+                Source = "{Binding MainImageSource}"
+                DownsampleToViewSize="true"                     
+                Aspect="AspectFill">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            -->
+            
+            <!-- MAIN CAROUSEL VIEW -->
+            <carousel:CarouselViewControl Orientation="Horizontal" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding myItemsSource}" 
+                                          ShowIndicators="False" ShowArrows="False" IsSwipeEnabled="{Binding IsSwipeEnabled}"
+                                          AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White"
+                                          PositionSelected="OnPositionSelected">
+                <carousel:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <ffimageloading:CachedImage                             
+                            Source = "{Binding image}"                                              
+                            Aspect="AspectFit">                            
+                        </ffimageloading:CachedImage>
+                    </DataTemplate>
+                </carousel:CarouselViewControl.ItemTemplate>
+            </carousel:CarouselViewControl>
+
+            <!-- Close Button-->
+                <Image  ClassId="CloseBtn" AbsoluteLayout.LayoutBounds="{Binding CloseBtnRect}" 
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                    Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+             </Image>
+
+                <!-- Sound Button-->
+                <AbsoluteLayout ClassId="SoundBtn"  AbsoluteLayout.LayoutBounds="{Binding SoundBtnRect}" >
+                    <Image  IsVisible="{Binding IsAudioVisible}" 
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.books_btn_audio_play.png}"
+                        Aspect="AspectFit">
+                    </Image>
+                    <Image  IsVisible="{Binding IsAudioPlaying}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.books_btn_audio_pause.png}"
+                        Aspect="AspectFit">
+                    </Image>
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                </AbsoluteLayout>
+
+                <!-- Switch language Button-->
+                <AbsoluteLayout ClassId="SwitchLangBtn" AbsoluteLayout.LayoutBounds="{Binding SwitchBtnRect}">
+                    <Image    IsVisible="{Binding IsSwitchLangVisible}" 
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.books_btn_native.png}"
+                        Aspect="AspectFit">
+                    </Image>
+                    <Image   IsVisible="{Binding IsEngVisible}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.books_btn_eng.png}"
+                        Aspect="AspectFit">
+                    </Image>
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                </AbsoluteLayout>
+           
+
+            <!-- Prev Button-->
+            <Image  ClassId="PrevBtn" AbsoluteLayout.LayoutBounds="{Binding LeftBtnRect}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.btn_left.png}"
+                        IsVisible="{Binding IsPrevBtnVisible}"
+                        IsEnabled="{Binding IsPrevBtnEnabled}"
+                        Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+            </Image> 
+
+            <!-- Home Button-->
+            <Image  ClassId="HomeBtn" AbsoluteLayout.LayoutBounds="{Binding RightBtnRect}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.books_btn_home.png}"
+                        IsVisible="{Binding IsHomeBtnVisible}"
+                        IsEnabled="{Binding IsHomeBtnEnabled}"
+                        Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+            </Image>
+                    
+            <!-- Next Button-->
+            <Image  ClassId="NextBtn" AbsoluteLayout.LayoutBounds="{Binding RightBtnRect}" 
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.btn_right.png}"
+                        IsVisible="{Binding IsNextBtnVisible}"
+                        IsEnabled="{Binding IsNextBtnEnabled}"
+                        Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+            </Image>
+
+            <!-- text field -->
+            <Frame x:Name="BottomTextFrame" CornerRadius="10" AbsoluteLayout.LayoutBounds="{Binding BottomTextRect}"
+                       IsEnabled="{Binding BottomFrameEnabled}"
+                       IsVisible="{Binding BottomFrameVisible}" 
+                       Padding="5,0,5,0">
+                    
+                    <ScrollView x:Name= "BottomTextScrollView">
+                        <StackLayout>
+                                 <!-- Text -->
+                        <Label Text="{Binding Text2}" FontSize="{Binding TextFontSize}" TextColor="White">
+                        </Label>
+
+                        </StackLayout>
+                    </ScrollView>
+            </Frame>
+            
+           
+
+
+            
+           <!-- LOADING VIEW -->
+                
+           <Grid x:Name="loadingView" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" 
+                    Text="{Binding LoadingWaitText}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                
+                <ffimageloading:CachedImage  Grid.Row="1" 
+                        Source = "{Binding GifSource}" 
+                        IsVisible="{Binding IsGifVisible}"
+                        Aspect="AspectFit">
+                </ffimageloading:CachedImage>
+
+                <Image  ClassId="CloseBtn" x:Name="LoadingCloseBtn"
+                        Grid.Row="0" Grid.RowSpan="3"
+                        IsEnabled="False" IsVisible="False"
+                        HorizontalOptions="End" VerticalOptions="Start"
+                        WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid> 
+               
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

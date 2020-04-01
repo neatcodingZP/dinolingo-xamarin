@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinoLingo.Subscribe_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+
+            <Grid x:Name ="mainGrid" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Column = "0" Grid.Row="0" Grid.ColumnSpan="3"
+                       Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.rainbow_big.png}"
+                       Aspect="AspectFit">
+                </Image>
+
+                <!-- text inside rainbow -->
+                <Grid Grid.Column = "0" Grid.Row="0" Grid.ColumnSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+                    <controls:MyLabel Text="{controls:Translate choose_language}" TextColor="{StaticResource BlueTextLoginColor}" Grid.Row="1"
+                           FontSize="{Binding HeaderFontSize}"                           
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    </controls:MyLabel>
+                </Grid>
+
+                <controls:MyLabel Grid.Column = "0" Grid.Row="1" Grid.ColumnSpan="3"
+                                  VerticalOptions="Center"
+                        x:Name="subscriptonPlan"
+                            Text="{controls:Translate subscribe_one_month_subscriptions}" TextColor="White"
+                                                      
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                </controls:MyLabel>
+                
+                <StackLayout Grid.Column = "0" Grid.Row="2" VerticalOptions="End">                   
+                    
+                    <Image  Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.choose_lang_dino.png}"
+                           WidthRequest="{Binding DinoSize}"
+                           Aspect="AspectFit">
+                    </Image>
+                    <!--
+                    <Label TextColor="White"
+                            Text="DinoLingo.com" 
+                            FontFamily="{StaticResource ArialRoundedMTBold}"
+                               FontSize="Small"
+                               TextDecorations="Underline"
+                            HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    -->
+                </StackLayout>
+
+
+
+                <AbsoluteLayout Grid.Column = "1" Grid.Row="2">
+                    <Frame x:Name="shadowFrame"
+                        AbsoluteLayout.LayoutBounds="0,0,0.95,0.95" AbsoluteLayout.LayoutFlags="All"
+                        CornerRadius="{Binding BigCornerRadius}"
+                        BorderColor="Transparent"
+                        
+                        BackgroundColor="{StaticResource ShadowLoginColor}">
+                    </Frame>
+
+                    <Frame  AbsoluteLayout.LayoutBounds="0,0,0.95,0.95" AbsoluteLayout.LayoutFlags="All"
+                        CornerRadius="{Binding BigCornerRadius}"
+                        BorderColor="Transparent"
+                        
+                        BackgroundColor="White"
+                        IsClippedToBounds="false"
+                        Padding="{Binding ListPadding}">
+
+                        <ListView x:Name="Languages" ItemsSource="{Binding ListItemSource}" HasUnevenRows="true"  
+                                  ItemTapped="OnItemTapped" ItemSelected="OnItemSelected"                                  
+                            SeparatorVisibility="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <!-- Element Label -->
+
+
+                                        <Frame HeightRequest="{Binding CellHeight}" HorizontalOptions="FillAndExpand"
+                                            BackgroundColor="{Binding CellColor}" Margin = "{Binding ListItemsMargin}"  CornerRadius="7">
+                                            <controls:MyLabel TextColor="{Binding TextColor}"
+                                        Text="{Binding LanguageName}" 
+                                        FontSize="{Binding FontSize}"
+                                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                                            </controls:MyLabel>
+                                        </Frame>
+
+
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </Frame>
+                </AbsoluteLayout>
+
+                <!-- close button -->
+                <Image  x:Name = "CloseBtn" ClassId="CloseBtn" Grid.Column = "0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="End" VerticalOptions="Start"
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

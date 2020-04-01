@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499002431441",
+    "firebase_url": "https://dinolingo-app-a93a8.firebaseio.com",
+    "project_id": "dinolingo-app-a93a8",
+    "storage_bucket": "dinolingo-app-a93a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499002431441:android:0785435f6462b8eb",
+        "android_client_info": {
+          "package_name": "com.dinolingo.DinoLingo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499002431441-d1a45dd899e0cdhut5f45lf258l3m9hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYkoj3aCVDkcrrbhNvP2ZbnlDkQeCuUy8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinoLingo.SignUp_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absRootLayout" BackgroundColor="White">
+            <!--
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+            -->
+            <AbsoluteLayout x:Name="absMainLayout" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+
+            <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                    <!-- main table 
+                    <RelativeLayout x:Name="relLayout"
+                            VerticalOptions="Center" HorizontalOptions="Center">
+                        
+                    <Frame x:Name="shadowFrame"
+                        RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.03}"
+                        RelativeLayout.YConstraint = "0"
+                        RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.94}"
+                        RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.98}"
+                        CornerRadius="{Binding FrameCornerRadius}"
+                        BorderColor="Transparent"
+                        
+                        HasShadow="false"
+                           Padding="5"
+                        BackgroundColor="{StaticResource ShadowLoginColor}">                       
+                    </Frame>
+
+                    <Frame x:Name="mainFrame" 
+                        RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.03}"
+                        RelativeLayout.YConstraint = "0"
+                        RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.94}"
+                        RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.98}"
+                        CornerRadius="{Binding FrameCornerRadius}"
+                        BorderColor="Transparent"
+                        
+                        HasShadow="false"
+                           Padding="5"
+                        BackgroundColor="White">
+
+                                             
+
+                    </Frame>                        
+
+                </RelativeLayout>
+                    -->
+
+                    <StackLayout x:Name="mainStack" Margin="5,20,20,5" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                        <!-- Header -->
+
+                        <controls:MyLabel x:Name="HeaderBig" HorizontalOptions="Center" 
+                                    Text="{controls:Translate sign_up_create_account}" TextColor="{StaticResource BlueTextLoginColor}"/>
+                        
+                        <Label FontSize="Default">
+                            
+                        </Label>
+                        
+                        <controls:MyLabel x:Name="HeaderSmall" HorizontalOptions="Center"
+                                    Text="{controls:Translate sign_up_please_register}" 
+                                       TextColor="{StaticResource BlueTextLoginColor}"/>
+
+                        <Grid x:Name="fieldsGrid" HorizontalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height= "*"/>
+                                <RowDefinition Height= "14*"/>
+                                <RowDefinition Height= "*"/>
+                                <RowDefinition Height= "14*"/>
+                                <RowDefinition Height= "*"/>
+                                <RowDefinition Height= "14*"/>
+                                <RowDefinition Height= "*"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- e-mail -->
+                            <Image  Grid.Row="1"
+                                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.login_entry_gray.png}"
+                                Aspect="Fill">                            
+                            </Image>
+                            <controls:BorderlessEntry x:Name="emailEntry" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" 
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                FontSize="{Binding MicroTextSize}" Placeholder = "{controls:Translate login_email}"/>
+
+                            <!-- password -->
+                            <Image  Grid.Row="3"
+                                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.login_entry_gray.png}"
+                                Aspect="Fill">
+                            </Image>
+                            <controls:BorderlessEntry x:Name="passEntry" TextColor="Black" PlaceholderColor="Gray" Grid.Row="3" 
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                FontSize="{Binding MicroTextSize}" Placeholder = "{controls:Translate login_password}" IsPassword ="True"/>
+                            
+                            <!-- confirm password -->
+                            <Image  Grid.Row="5"
+                                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.login_entry_gray.png}"
+                                Aspect="Fill">
+                            </Image>
+                            <controls:BorderlessEntry x:Name="passConfirmEntry" Grid.Row="5" TextColor="Black" PlaceholderColor="Gray" 
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                FontSize="{Binding MicroTextSize}" Placeholder = "{controls:Translate sign_up_confirm_password}" IsPassword ="True"/>
+                            
+                            
+                        </Grid>
+
+                        <!-- 
+                        
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Padding="0, 20, 0, 0">                            
+                            <controls:MyLabel 
+                                Text="{controls:Translate sign_up_email_address}" FontSize="{Binding SmallTextSize}" TextColor="{StaticResource BlueTextLoginColor}" 
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                            
+                        </StackLayout>
+                        
+
+                        
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <controls:MyLabel 
+                                Text="{controls:Translate sign_up_password}" FontSize="{Binding SmallTextSize}" TextColor="{StaticResource BlueTextLoginColor}" 
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                            
+                        </StackLayout>
+                        
+                        
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Padding="0, 0, 0, 20">
+                            <controls:MyLabel 
+                                Text="{controls:Translate sign_up_confirm_password}" FontSize="{Binding MicroTextSize}" TextColor="{StaticResource BlueTextLoginColor}" 
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                            
+                        </StackLayout>
+                        -->
+                        
+                        <!-- sign up 
+                        <AbsoluteLayout  ClassId="SignUpBtn" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
+                            <Frame x:Name="BtnShadow" AbsoluteLayout.LayoutBounds="0.5,0,0.3,0.96" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"                                    
+                                    Padding="0"
+                                    HasShadow="false">
+                            </Frame>
+
+                            <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0,0.3,0.96" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    OutLineWidth = "{Binding BtnOutlineWidth}"
+                                    BorderColor="White"
+                                    HasShadow="false"  
+                                    Padding="0"
+                                    IsClippedToBounds="true">
+                                <controls:MyLabel Text="{controls:Translate parent_menu_sign_up}" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding SmallTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                            </controls:ExtendedFrame>
+                            <AbsoluteLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </AbsoluteLayout.GestureRecognizers>
+                        </AbsoluteLayout>
+                        -->
+                    </StackLayout>
+                </ScrollView>
+
+            <!-- close button -->
+            <Image  x:Name = "CloseBtn" ClassId="CloseBtn" AbsoluteLayout.LayoutBounds="1,0" AbsoluteLayout.LayoutFlags="PositionProportional"
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+                 
+        </AbsoluteLayout>
+        </AbsoluteLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

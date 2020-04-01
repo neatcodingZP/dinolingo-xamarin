@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.BadgeListView"
+             xmlns:local="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo">
+    <ContentView.Resources>
+            <ResourceDictionary>
+
+                <DataTemplate x:Key="SingleItemTemplate">
+                    <ViewCell>
+                        <Grid HeightRequest="{Binding CellHeight}" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="2*" />
+                                 <ColumnDefinition Width="2*" />
+                                 <ColumnDefinition Width="2*" />
+                                 <ColumnDefinition Width="*" />
+                           </Grid.ColumnDefinitions>
+                            <!-- first element -->
+                            <Grid  Grid.Column="2">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+                
+                <DataTemplate x:Key="DoubleItemTemplate">
+                    <ViewCell>
+                        <Grid HeightRequest="{Binding CellHeight}" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                           </Grid.ColumnDefinitions>
+                            <!-- first element -->
+                            <Grid  Grid.Column="1">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+                            <!-- second element -->
+                            <Grid  Grid.Column="2">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped2"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource2}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name2}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+
+                <DataTemplate x:Key="TrioItemTemplate">
+                    <ViewCell>
+                        <Grid HeightRequest="{Binding CellHeight}" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="2*" />
+                                 <ColumnDefinition Width="2*" />
+                                 <ColumnDefinition Width="2*" />
+                                 <ColumnDefinition Width="*" />
+                           </Grid.ColumnDefinitions>
+                            <!-- first element -->
+                            <Grid  Grid.Column="1">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+                            <!-- second element -->
+                            <Grid  Grid.Column="2">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped2"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource2}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name2}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                        <!-- third element -->
+                            <Grid  Grid.Column="3">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped3"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource3}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name3}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            
+                <DataTemplate x:Key="QuadroItemTemplate">
+                    <ViewCell>
+                        <Grid HeightRequest="{Binding CellHeight}" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                           </Grid.ColumnDefinitions>
+                            <!-- first element -->
+                            <Grid  Grid.Column="0">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+                            <!-- second element -->
+                            <Grid  Grid.Column="1">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped2"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource2}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name2}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                            <!-- third element -->
+                            <Grid  Grid.Column="2">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped3"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource3}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name3}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                            <!-- fourth element -->
+                            <Grid  Grid.Column="3">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped4"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="1"
+                                        LoadingPlaceholder="loading.gif" 
+                                        Source="{Binding Imagesource4}" 
+                                        Aspect="AspectFit" >
+                                    </ffimageloading:CachedImage>
+
+                                    <Label TextColor="Black" Grid.Row="2"
+                                            Text="{Binding Name4}" FontSize="{Binding FontSize}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                                    </Label>
+                             </Grid>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            
+                
+            
+            <local:ProductTemplateSelector x:Key="productTemplateSelector"
+
+            SingleItemTemplate="{StaticResource SingleItemTemplate}" 
+            DoubleItemTemplate="{StaticResource DoubleItemTemplate}"
+            TrioItemTemplate="{StaticResource TrioItemTemplate}"
+            QuadroItemTemplate="{StaticResource QuadroItemTemplate}"/>
+    </ResourceDictionary>
+</ContentView.Resources>
+    
+    <ContentView.Content>
+        <ListView x:Name = "listView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                  CachingStrategy="RetainElement"
+                  ItemsSource="{Binding ListItems}" SelectedItem="{Binding SelectedItem}"
+                  HasUnevenRows="true"
+                  ItemTemplate="{StaticResource productTemplateSelector}">
+          
+        </ListView>
+    </ContentView.Content>
+</ContentView>

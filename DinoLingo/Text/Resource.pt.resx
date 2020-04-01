@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="choose_language" xml:space="preserve">
+    <value>Escolha Idioma</value>
+  </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="favorites_add_post" xml:space="preserve">
+    <value>Adicionar post aos seus favoritos?</value>
+  </data>
+  <data name="favorites_cant_add_more_books" xml:space="preserve">
+    <value>Não é possível adicionar mais livros aos favoritos.</value>
+  </data>
+  <data name="favorites_cant_add_more_videos" xml:space="preserve">
+    <value>Não é possível adicionar mais vídeos aos favoritos.</value>
+  </data>
+  <data name="favorites_loading" xml:space="preserve">
+    <value>CARREGANDO...</value>
+  </data>
+  <data name="favorites_remove_post_from_favorites" xml:space="preserve">
+    <value>Remover post dos favoritos?</value>
+  </data>
+  <data name="favorites_total_books" xml:space="preserve">
+    <value>Total de livros nos favoritos:</value>
+  </data>
+  <data name="favorites_total_videos" xml:space="preserve">
+    <value>Total de vídeos nos favoritos:</value>
+  </data>
+  <data name="favorite_books" xml:space="preserve">
+    <value>Livros Favoritos</value>
+  </data>
+  <data name="lang_" xml:space="preserve">
+    <value>pt</value>
+  </data>
+  <data name="lang_albanian" xml:space="preserve">
+    <value>albanês</value>
+  </data>
+  <data name="lang_arabic" xml:space="preserve">
+    <value>árabe</value>
+  </data>
+  <data name="lang_armenian" xml:space="preserve">
+    <value>armênio</value>
+  </data>
+  <data name="lang_bulgarian" xml:space="preserve">
+    <value>búlgaro</value>
+  </data>
+  <data name="lang_cantonese" xml:space="preserve">
+    <value>cantonês</value>
+  </data>
+  <data name="lang_chinese" xml:space="preserve">
+    <value>chinês</value>
+  </data>
+  <data name="lang_creole" xml:space="preserve">
+    <value>crioulo haitiano</value>
+  </data>
+  <data name="lang_croatian" xml:space="preserve">
+    <value>croata</value>
+  </data>
+  <data name="lang_czech" xml:space="preserve">
+    <value>checo</value>
+  </data>
+  <data name="lang_danish" xml:space="preserve">
+    <value>dinamarquês</value>
+  </data>
+  <data name="lang_dari" xml:space="preserve">
+    <value>dari</value>
+  </data>
+  <data name="lang_dutch" xml:space="preserve">
+    <value>holandês</value>
+  </data>
+  <data name="lang_english" xml:space="preserve">
+    <value>inglês</value>
+  </data>
+  <data name="lang_european_portuguese" xml:space="preserve">
+    <value>português (Portugal)</value>
+  </data>
+  <data name="lang_finnish" xml:space="preserve">
+    <value>finlandês</value>
+  </data>
+  <data name="lang_french" xml:space="preserve">
+    <value>francês</value>
+  </data>
+  <data name="lang_german" xml:space="preserve">
+    <value>alemão</value>
+  </data>
+  <data name="lang_greek" xml:space="preserve">
+    <value>grego</value>
+  </data>
+  <data name="lang_gujarati" xml:space="preserve">
+    <value>gujarate</value>
+  </data>
+  <data name="lang_hawaiian" xml:space="preserve">
+    <value>havaiano</value>
+  </data>
+  <data name="lang_hebrew" xml:space="preserve">
+    <value>hebraico</value>
+  </data>
+  <data name="lang_hindi" xml:space="preserve">
+    <value>hindi</value>
+  </data>
+  <data name="lang_hungarian" xml:space="preserve">
+    <value>húngaro</value>
+  </data>
+  <data name="lang_indonesian" xml:space="preserve">
+    <value>indonésio</value>
+  </data>
+  <data name="lang_irish" xml:space="preserve">
+    <value>irlandês</value>
+  </data>
+  <data name="lang_italian" xml:space="preserve">
+    <value>italiano</value>
+  </data>
+  <data name="lang_japanese" xml:space="preserve">
+    <value>japonês</value>
+  </data>
+  <data name="lang_kazakh" xml:space="preserve">
+    <value>cazaque</value>
+  </data>
+  <data name="lang_korean" xml:space="preserve">
+    <value>coreano</value>
+  </data>
+  <data name="lang_latin" xml:space="preserve">
+    <value>latino</value>
+  </data>
+  <data name="lang_malay" xml:space="preserve">
+    <value>malaio</value>
+  </data>
+  <data name="lang_norwegian" xml:space="preserve">
+    <value>norueguês</value>
+  </data>
+  <data name="lang_persian" xml:space="preserve">
+    <value>persa</value>
+  </data>
+  <data name="lang_polish" xml:space="preserve">
+    <value>polonês</value>
+  </data>
+  <data name="lang_portuguese" xml:space="preserve">
+    <value>português (Brasil)</value>
+  </data>
+  <data name="lang_punjabi" xml:space="preserve">
+    <value>punjabi</value>
+  </data>
+  <data name="lang_romanian" xml:space="preserve">
+    <value>romeno</value>
+  </data>
+  <data name="lang_russian" xml:space="preserve">
+    <value>russo</value>
+  </data>
+  <data name="lang_serbian" xml:space="preserve">
+    <value>sérvio</value>
+  </data>
+  <data name="lang_slovak" xml:space="preserve">
+    <value>eslovaco</value>
+  </data>
+  <data name="lang_slovenian" xml:space="preserve">
+    <value>esloveno</value>
+  </data>
+  <data name="lang_spanish" xml:space="preserve">
+    <value>espanhol</value>
+  </data>
+  <data name="lang_swahili" xml:space="preserve">
+    <value>suaíli</value>
+  </data>
+  <data name="lang_swedish" xml:space="preserve">
+    <value>sueco</value>
+  </data>
+  <data name="lang_tagalog" xml:space="preserve">
+    <value>tagalo</value>
+  </data>
+  <data name="lang_thai" xml:space="preserve">
+    <value>tailandês</value>
+  </data>
+  <data name="lang_turkish" xml:space="preserve">
+    <value>turco</value>
+  </data>
+  <data name="lang_ukrainian" xml:space="preserve">
+    <value>ucraniano</value>
+  </data>
+  <data name="lang_urdu" xml:space="preserve">
+    <value>urdu</value>
+  </data>
+  <data name="lang_vietnamese" xml:space="preserve">
+    <value>vietnamês</value>
+  </data>
+  <data name="lang_welsh" xml:space="preserve">
+    <value>galês</value>
+  </data>
+  <data name="left_menu_my_dinosaurs" xml:space="preserve">
+    <value>Meus Dinossauros</value>
+  </data>
+  <data name="left_menu_see_all" xml:space="preserve">
+    <value>Ver Todos</value>
+  </data>
+  <data name="left_menu_sign_up_to_collect_dinosaurs" xml:space="preserve">
+    <value>Registre-se para colecionar os dinossauros</value>
+  </data>
+  <data name="login_are_you_sure_to_reset_pass" xml:space="preserve">
+    <value>Tem Certeza de que Deseja Redefinir a senha?</value>
+  </data>
+  <data name="login_email" xml:space="preserve">
+    <value>Endereço de e-mail</value>
+  </data>
+  <data name="login_forgot_password" xml:space="preserve">
+    <value>Esqueceu-se da senha?</value>
+  </data>
+  <data name="login_have_no_products" xml:space="preserve">
+    <value>Você não tem produtos! Continuar grátis.</value>
+  </data>
+  <data name="login_info" xml:space="preserve">
+    <value>Informações</value>
+  </data>
+  <data name="login_instructions_to_reset_pass_sent_to_email" xml:space="preserve">
+    <value>As instruções para redefinir sua senha foram enviadas para o e-mail:</value>
+  </data>
+  <data name="login_lang_learn_program" xml:space="preserve">
+    <value>Programa de aprendizagem de idiomas para as crianças.</value>
+  </data>
+  <data name="login_link_will_be_sent_to_email" xml:space="preserve">
+    <value>O link para redefinir sua senha foi enviado para o seu e-mail:</value>
+  </data>
+  <data name="login_login" xml:space="preserve">
+    <value>Acesso</value>
+  </data>
+  <data name="login_members" xml:space="preserve">
+    <value>Acesso de membro</value>
+  </data>
+  <data name="login_new_to_dinolingo" xml:space="preserve">
+    <value>Novo no DinoLingo?</value>
+  </data>
+  <data name="login_password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="login_please_enter_correct_email" xml:space="preserve">
+    <value>Por favor, digite o e-mail correto!</value>
+  </data>
+  <data name="login_please_enter_valid_pass" xml:space="preserve">
+    <value>Por favor, digite uma senha válida!</value>
+  </data>
+  <data name="login_please_enter_your_email" xml:space="preserve">
+    <value>Por favor, digite seu e-mail!</value>
+  </data>
+  <data name="login_reset_pass" xml:space="preserve">
+    <value>Redefinir senha</value>
+  </data>
+  <data name="login_sign_up" xml:space="preserve">
+    <value>Registrar-se</value>
+  </data>
+  <data name="login_success" xml:space="preserve">
+    <value>Sucesso!</value>
+  </data>
+  <data name="login_try_a_free_lesson" xml:space="preserve">
+    <value>Lição grátis</value>
+  </data>
+  <data name="login_welcome_to_dinolingo" xml:space="preserve">
+    <value>Bem-vindo ao DinoLingo</value>
+  </data>
+  <data name="main_page_continue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="main_page_first_lesson_is_free" xml:space="preserve">
+    <value>A primeira aula é sempre gratuita. Para ter acesso completo, por favor faça o acesso ou registre-se.</value>
+  </data>
+  <data name="main_page_free_trial" xml:space="preserve">
+    <value>Teste Gratuito</value>
+  </data>
+  <data name="main_page_please_sign_up" xml:space="preserve">
+    <value>Por favor, registre-se para obter acesso aos favoritos</value>
+  </data>
+  <data name="popup_attention" xml:space="preserve">
+    <value>Atenção!</value>
+  </data>
+  <data name="popup_cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="popup_info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="popup_no" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="popup_no_connection" xml:space="preserve">
+    <value>Verifique sua conexão de internet!</value>
+  </data>
+  <data name="popup_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="popup_oops" xml:space="preserve">
+    <value>Opa!</value>
+  </data>
+  <data name="popup_something_went_wrong" xml:space="preserve">
+    <value>Algo deu errado,</value>
+  </data>
+  <data name="popup_try_again" xml:space="preserve">
+    <value>tente novamente.</value>
+  </data>
+  <data name="popup_yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="right_menu_books" xml:space="preserve">
+    <value>Livros</value>
+  </data>
+  <data name="right_menu_lessons" xml:space="preserve">
+    <value>Aulas</value>
+  </data>
+  <data name="right_menu_songs" xml:space="preserve">
+    <value>Músicas</value>
+  </data>
+  <data name="right_menu_stories" xml:space="preserve">
+    <value>Histórias</value>
+  </data>
+  <data name="header_songs_albanian" xml:space="preserve">
+    <value>Canções em Albanês</value>
+  </data>
+  <data name="header_songs_arabic" xml:space="preserve">
+    <value>Canções em Árabe</value>
+  </data>
+  <data name="header_songs_armenian" xml:space="preserve">
+    <value>Canções em Armênio</value>
+  </data>
+  <data name="header_songs_bulgarian" xml:space="preserve">
+    <value>Canções em Búlgaro</value>
+  </data>
+  <data name="header_songs_cantonese" xml:space="preserve">
+    <value>Canções em Cantonês</value>
+  </data>
+  <data name="header_songs_chinese" xml:space="preserve">
+    <value>Canções em Chinês</value>
+  </data>
+  <data name="header_songs_creole" xml:space="preserve">
+    <value>Canções em Crioulo Haitiano</value>
+  </data>
+  <data name="header_songs_croatian" xml:space="preserve">
+    <value>Canções em Croata</value>
+  </data>
+  <data name="header_songs_czech" xml:space="preserve">
+    <value>Canções em Checo</value>
+  </data>
+  <data name="header_songs_danish" xml:space="preserve">
+    <value>Canções em Dinamarquês</value>
+  </data>
+  <data name="header_songs_dari" xml:space="preserve">
+    <value>Canções em Dari</value>
+  </data>
+  <data name="header_songs_dutch" xml:space="preserve">
+    <value>Canções em Holandês</value>
+  </data>
+  <data name="header_songs_english" xml:space="preserve">
+    <value>Canções em Inglês</value>
+  </data>
+  <data name="header_songs_european_portuguese" xml:space="preserve">
+    <value>Canções em Português (Portugal)</value>
+  </data>
+  <data name="header_songs_finnish" xml:space="preserve">
+    <value>Canções em Finlandês</value>
+  </data>
+  <data name="header_songs_french" xml:space="preserve">
+    <value>Canções em Francês</value>
+  </data>
+  <data name="header_songs_german" xml:space="preserve">
+    <value>Canções em Alemão</value>
+  </data>
+  <data name="header_songs_greek" xml:space="preserve">
+    <value>Canções em Grego</value>
+  </data>
+  <data name="header_songs_gujarati" xml:space="preserve">
+    <value>Canções em Gujarate</value>
+  </data>
+  <data name="header_songs_hawaiian" xml:space="preserve">
+    <value>Canções em Havaiano</value>
+  </data>
+  <data name="header_songs_hebrew" xml:space="preserve">
+    <value>Canções em Hebraico</value>
+  </data>
+  <data name="header_songs_hindi" xml:space="preserve">
+    <value>Canções em Hindi</value>
+  </data>
+  <data name="header_songs_hungarian" xml:space="preserve">
+    <value>Canções em Húngaro</value>
+  </data>
+  <data name="header_songs_indonesian" xml:space="preserve">
+    <value>Canções em Indonésio</value>
+  </data>
+  <data name="header_songs_irish" xml:space="preserve">
+    <value>Canções em Irlandês</value>
+  </data>
+  <data name="header_songs_italian" xml:space="preserve">
+    <value>Canções em Italiano</value>
+  </data>
+  <data name="header_songs_japanese" xml:space="preserve">
+    <value>Canções em Japonês</value>
+  </data>
+  <data name="header_songs_kazakh" xml:space="preserve">
+    <value>Canções em Cazaque</value>
+  </data>
+  <data name="header_songs_korean" xml:space="preserve">
+    <value>Canções em Coreano</value>
+  </data>
+  <data name="header_songs_latin" xml:space="preserve">
+    <value>Canções em Latim</value>
+  </data>
+  <data name="header_songs_malay" xml:space="preserve">
+    <value>Canções em Malaio</value>
+  </data>
+  <data name="header_songs_norwegian" xml:space="preserve">
+    <value>Canções em Norueguês</value>
+  </data>
+  <data name="header_songs_persian" xml:space="preserve">
+    <value>Canções em Persa</value>
+  </data>
+  <data name="header_songs_polish" xml:space="preserve">
+    <value>Canções em Polonês</value>
+  </data>
+  <data name="header_songs_portuguese" xml:space="preserve">
+    <value>Canções em Português (Brasil)</value>
+  </data>
+  <data name="header_songs_punjabi" xml:space="preserve">
+    <value>Canções em Punjabi</value>
+  </data>
+  <data name="header_songs_romanian" xml:space="preserve">
+    <value>Canções em Romeno</value>
+  </data>
+  <data name="header_songs_russian" xml:space="preserve">
+    <value>Canções em Russo</value>
+  </data>
+  <data name="header_songs_serbian" xml:space="preserve">
+    <value>Canções em Sérvio</value>
+  </data>
+  <data name="header_songs_slovak" xml:space="preserve">
+    <value>Canções em Eslovaco</value>
+  </data>
+  <data name="header_songs_slovenian" xml:space="preserve">
+    <value>Canções em Esloveno</value>
+  </data>
+  <data name="header_songs_spanish" xml:space="preserve">
+    <value>Canções em Espanhol</value>
+  </data>
+  <data name="header_songs_swahili" xml:space="preserve">
+    <value>Canções em Suaíli</value>
+  </data>
+  <data name="header_songs_swedish" xml:space="preserve">
+    <value>Canções em Sueco</value>
+  </data>
+  <data name="header_songs_tagalog" xml:space="preserve">
+    <value>Canções em Tagalo</value>
+  </data>
+  <data name="header_songs_thai" xml:space="preserve">
+    <value>Canções em Tailandês</value>
+  </data>
+  <data name="header_songs_turkish" xml:space="preserve">
+    <value>Canções em Turco</value>
+  </data>
+  <data name="header_songs_ukrainian" xml:space="preserve">
+    <value>Canções em Ucraniano</value>
+  </data>
+  <data name="header_songs_urdu" xml:space="preserve">
+    <value>Canções em Urdu</value>
+  </data>
+  <data name="header_songs_vietnamese" xml:space="preserve">
+    <value>Canções em Vietnamês</value>
+  </data>
+  <data name="header_songs_welsh" xml:space="preserve">
+    <value>Canções em Galês</value>
+  </data>
+  <data name="header_books_albanian" xml:space="preserve">
+    <value>Livros em Albanês</value>
+  </data>
+  <data name="header_books_arabic" xml:space="preserve">
+    <value>Livros em Árabe</value>
+  </data>
+  <data name="header_books_armenian" xml:space="preserve">
+    <value>Livros em Armênio</value>
+  </data>
+  <data name="header_books_bulgarian" xml:space="preserve">
+    <value>Livros em Búlgaro</value>
+  </data>
+  <data name="header_books_cantonese" xml:space="preserve">
+    <value>Livros em Cantonês</value>
+  </data>
+  <data name="header_books_chinese" xml:space="preserve">
+    <value>Livros em Chinês</value>
+  </data>
+  <data name="header_books_creole" xml:space="preserve">
+    <value>Livros em Crioulo Haitiano</value>
+  </data>
+  <data name="header_books_croatian" xml:space="preserve">
+    <value>Livros em Croata</value>
+  </data>
+  <data name="header_books_czech" xml:space="preserve">
+    <value>Livros em Checo</value>
+  </data>
+  <data name="header_books_danish" xml:space="preserve">
+    <value>Livros em Dinamarquês</value>
+  </data>
+  <data name="header_books_dari" xml:space="preserve">
+    <value>Livros em Dari</value>
+  </data>
+  <data name="header_books_dutch" xml:space="preserve">
+    <value>Livros em Holandês</value>
+  </data>
+  <data name="header_books_english" xml:space="preserve">
+    <value>Livros em Inglês</value>
+  </data>
+  <data name="header_books_european_portuguese" xml:space="preserve">
+    <value>Livros em Português (Portugal)</value>
+  </data>
+  <data name="header_books_finnish" xml:space="preserve">
+    <value>Livros em Finlandês</value>
+  </data>
+  <data name="header_books_french" xml:space="preserve">
+    <value>Livros em Francês</value>
+  </data>
+  <data name="header_books_german" xml:space="preserve">
+    <value>Livros em Alemão</value>
+  </data>
+  <data name="header_books_greek" xml:space="preserve">
+    <value>Livros em Grego</value>
+  </data>
+  <data name="header_books_gujarati" xml:space="preserve">
+    <value>Livros em Gujarate</value>
+  </data>
+  <data name="header_books_hawaiian" xml:space="preserve">
+    <value>Livros em Havaiano</value>
+  </data>
+  <data name="header_books_hebrew" xml:space="preserve">
+    <value>Livros em Hebraico</value>
+  </data>
+  <data name="header_books_hindi" xml:space="preserve">
+    <value>Livros em Hindi</value>
+  </data>
+  <data name="header_books_hungarian" xml:space="preserve">
+    <value>Livros em Húngaro</value>
+  </data>
+  <data name="header_books_indonesian" xml:space="preserve">
+    <value>Livros em Indonésio</value>
+  </data>
+  <data name="header_books_irish" xml:space="preserve">
+    <value>Livros em Irlandês</value>
+  </data>
+  <data name="header_books_italian" xml:space="preserve">
+    <value>Livros em Italiano</value>
+  </data>
+  <data name="header_books_japanese" xml:space="preserve">
+    <value>Livros em Japonês</value>
+  </data>
+  <data name="header_books_kazakh" xml:space="preserve">
+    <value>Livros em Cazaque</value>
+  </data>
+  <data name="header_books_korean" xml:space="preserve">
+    <value>Livros em Coreano</value>
+  </data>
+  <data name="header_books_latin" xml:space="preserve">
+    <value>Livros em Latim</value>
+  </data>
+  <data name="header_books_malay" xml:space="preserve">
+    <value>Livros em Malaio</value>
+  </data>
+  <data name="header_books_norwegian" xml:space="preserve">
+    <value>Livros em Norueguês</value>
+  </data>
+  <data name="header_books_persian" xml:space="preserve">
+    <value>Livros em Persa</value>
+  </data>
+  <data name="header_books_polish" xml:space="preserve">
+    <value>Livros em Polonês</value>
+  </data>
+  <data name="header_books_portuguese" xml:space="preserve">
+    <value>Livros em Português (Brasil)</value>
+  </data>
+  <data name="header_books_punjabi" xml:space="preserve">
+    <value>Livros em Punjabi</value>
+  </data>
+  <data name="header_books_romanian" xml:space="preserve">
+    <value>Livros em Romeno</value>
+  </data>
+  <data name="header_books_russian" xml:space="preserve">
+    <value>Livros em Russo</value>
+  </data>
+  <data name="header_books_serbian" xml:space="preserve">
+    <value>Livros em Sérvio</value>
+  </data>
+  <data name="header_books_slovak" xml:space="preserve">
+    <value>Livros em Eslovaco</value>
+  </data>
+  <data name="header_books_slovenian" xml:space="preserve">
+    <value>Livros em Esloveno</value>
+  </data>
+  <data name="header_books_spanish" xml:space="preserve">
+    <value>Livros em Espanhol</value>
+  </data>
+  <data name="header_books_swahili" xml:space="preserve">
+    <value>Livros em Suaíli</value>
+  </data>
+  <data name="header_books_swedish" xml:space="preserve">
+    <value>Livros em Sueco</value>
+  </data>
+  <data name="header_books_tagalog" xml:space="preserve">
+    <value>Livros em Tagalo</value>
+  </data>
+  <data name="header_books_thai" xml:space="preserve">
+    <value>Livros em Tailandês</value>
+  </data>
+  <data name="header_books_turkish" xml:space="preserve">
+    <value>Livros em Turco</value>
+  </data>
+  <data name="header_books_ukrainian" xml:space="preserve">
+    <value>Livros em Ucraniano</value>
+  </data>
+  <data name="header_books_urdu" xml:space="preserve">
+    <value>Livros em Urdu</value>
+  </data>
+  <data name="header_books_vietnamese" xml:space="preserve">
+    <value>Livros em Vietnamês</value>
+  </data>
+  <data name="header_books_welsh" xml:space="preserve">
+    <value>Livros em Galês</value>
+  </data>
+  <data name="header_stories_albanian" xml:space="preserve">
+    <value>Histórias em Albanês</value>
+  </data>
+  <data name="header_stories_arabic" xml:space="preserve">
+    <value>Histórias em Árabe</value>
+  </data>
+  <data name="header_stories_armenian" xml:space="preserve">
+    <value>Histórias em Armênio</value>
+  </data>
+  <data name="header_stories_bulgarian" xml:space="preserve">
+    <value>Histórias em Búlgaro</value>
+  </data>
+  <data name="header_stories_cantonese" xml:space="preserve">
+    <value>Histórias em Cantonês</value>
+  </data>
+  <data name="header_stories_chinese" xml:space="preserve">
+    <value>Histórias em Chinês</value>
+  </data>
+  <data name="header_stories_creole" xml:space="preserve">
+    <value>Histórias em Crioulo Haitiano</value>
+  </data>
+  <data name="header_stories_croatian" xml:space="preserve">
+    <value>Histórias em Croata</value>
+  </data>
+  <data name="header_stories_czech" xml:space="preserve">
+    <value>Histórias em Checo</value>
+  </data>
+  <data name="header_stories_danish" xml:space="preserve">
+    <value>Histórias em Dinamarquês</value>
+  </data>
+  <data name="header_stories_dari" xml:space="preserve">
+    <value>Histórias em Dari</value>
+  </data>
+  <data name="header_stories_dutch" xml:space="preserve">
+    <value>Histórias em Holandês</value>
+  </data>
+  <data name="header_stories_english" xml:space="preserve">
+    <value>Histórias em Inglês</value>
+  </data>
+  <data name="header_stories_european_portuguese" xml:space="preserve">
+    <value>Histórias em Português (Portugal)</value>
+  </data>
+  <data name="header_stories_finnish" xml:space="preserve">
+    <value>Histórias em Finlandês</value>
+  </data>
+  <data name="header_stories_french" xml:space="preserve">
+    <value>Histórias em Francês</value>
+  </data>
+  <data name="header_stories_german" xml:space="preserve">
+    <value>Histórias em Alemão</value>
+  </data>
+  <data name="header_stories_greek" xml:space="preserve">
+    <value>Histórias em Grego</value>
+  </data>
+  <data name="header_stories_gujarati" xml:space="preserve">
+    <value>Histórias em Gujarate</value>
+  </data>
+  <data name="header_stories_hawaiian" xml:space="preserve">
+    <value>Histórias em Havaiano</value>
+  </data>
+  <data name="header_stories_hebrew" xml:space="preserve">
+    <value>Histórias em Hebraico</value>
+  </data>
+  <data name="header_stories_hindi" xml:space="preserve">
+    <value>Histórias em Hindi</value>
+  </data>
+  <data name="header_stories_hungarian" xml:space="preserve">
+    <value>Histórias em Húngaro</value>
+  </data>
+  <data name="header_stories_indonesian" xml:space="preserve">
+    <value>Histórias em Indonésio</value>
+  </data>
+  <data name="header_stories_irish" xml:space="preserve">
+    <value>Histórias em Irlandês</value>
+  </data>
+  <data name="header_stories_italian" xml:space="preserve">
+    <value>Histórias em Italiano</value>
+  </data>
+  <data name="header_stories_japanese" xml:space="preserve">
+    <value>Historias em Japonês</value>
+  </data>
+  <data name="header_stories_kazakh" xml:space="preserve">
+    <value>Histórias em Cazaque</value>
+  </data>
+  <data name="header_stories_korean" xml:space="preserve">
+    <value>Histórias em Coreano</value>
+  </data>
+  <data name="header_stories_latin" xml:space="preserve">
+    <value>Histórias em Latim</value>
+  </data>
+  <data name="header_stories_malay" xml:space="preserve">
+    <value>Histórias em Malaio</value>
+  </data>
+  <data name="header_stories_norwegian" xml:space="preserve">
+    <value>Histórias em Norueguês</value>
+  </data>
+  <data name="header_stories_persian" xml:space="preserve">
+    <value>Histórias em Persa</value>
+  </data>
+  <data name="header_stories_polish" xml:space="preserve">
+    <value>Histórias em Polonês</value>
+  </data>
+  <data name="header_stories_portuguese" xml:space="preserve">
+    <value>Histórias em Português (Brasil)</value>
+  </data>
+  <data name="header_stories_punjabi" xml:space="preserve">
+    <value>Histórias em Punjabi</value>
+  </data>
+  <data name="header_stories_romanian" xml:space="preserve">
+    <value>Histórias em Romeno</value>
+  </data>
+  <data name="header_stories_russian" xml:space="preserve">
+    <value>Histórias em Russo</value>
+  </data>
+  <data name="header_stories_serbian" xml:space="preserve">
+    <value>Histórias em Sérvio</value>
+  </data>
+  <data name="header_stories_slovak" xml:space="preserve">
+    <value>Histórias em Eslovaco</value>
+  </data>
+  <data name="header_stories_slovenian" xml:space="preserve">
+    <value>Histórias em Esloveno</value>
+  </data>
+  <data name="header_stories_spanish" xml:space="preserve">
+    <value>Histórias em Espanhol</value>
+  </data>
+  <data name="header_stories_swahili" xml:space="preserve">
+    <value>Histórias em Suaíli</value>
+  </data>
+  <data name="header_stories_swedish" xml:space="preserve">
+    <value>Histórias em Sueco</value>
+  </data>
+  <data name="header_stories_tagalog" xml:space="preserve">
+    <value>Histórias em Tagalo</value>
+  </data>
+  <data name="header_stories_thai" xml:space="preserve">
+    <value>Histórias em Tailandês</value>
+  </data>
+  <data name="header_stories_turkish" xml:space="preserve">
+    <value>Histórias em Turco</value>
+  </data>
+  <data name="header_stories_ukrainian" xml:space="preserve">
+    <value>Histórias em Ucraniano</value>
+  </data>
+  <data name="header_stories_urdu" xml:space="preserve">
+    <value>Histórias em Urdu</value>
+  </data>
+  <data name="header_stories_vietnamese" xml:space="preserve">
+    <value>Histórias em Vietnamês</value>
+  </data>
+  <data name="header_stories_welsh" xml:space="preserve">
+    <value>Histórias em Galês</value>
+  </data>
+  <data name="eight" xml:space="preserve">
+    <value>OITO</value>
+  </data>
+  <data name="five" xml:space="preserve">
+    <value>CINCO</value>
+  </data>
+  <data name="four" xml:space="preserve">
+    <value>QUATRO</value>
+  </data>
+  <data name="nine" xml:space="preserve">
+    <value>NOVE</value>
+  </data>
+  <data name="one" xml:space="preserve">
+    <value>UM</value>
+  </data>
+  <data name="parent_check_enter_the_numbers" xml:space="preserve">
+    <value>Insira os números:</value>
+  </data>
+  <data name="parent_check_parental_control" xml:space="preserve">
+    <value>CONTROLE PARENTAL</value>
+  </data>
+  <data name="parent_check_reports_etc" xml:space="preserve">
+    <value>Relatórios, Ajuda, Mudar de Idioma, Cadastro, etc.</value>
+  </data>
+  <data name="parent_check_wrong_password" xml:space="preserve">
+    <value>Senha errada! Tente novamente</value>
+  </data>
+  <data name="seven" xml:space="preserve">
+    <value>SETE</value>
+  </data>
+  <data name="six" xml:space="preserve">
+    <value>SEIS</value>
+  </data>
+  <data name="three" xml:space="preserve">
+    <value>TRÊS</value>
+  </data>
+  <data name="two" xml:space="preserve">
+    <value>DOIS</value>
+  </data>
+  <data name="header_for_kids" xml:space="preserve">
+    <value>{0} para crianças</value>
+  </data>
+  <data name="default_user_name" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="game_over" xml:space="preserve">
+    <value>Fim de Jogo!</value>
+  </data>
+  <data name="game_questions" xml:space="preserve">
+    <value>PERGUNTAS</value>
+  </data>
+  <data name="game_restart" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="game_score" xml:space="preserve">
+    <value>PONTUAÇÃO</value>
+  </data>
+  <data name="game_time" xml:space="preserve">
+    <value>TEMPO</value>
+  </data>
+  <data name="parent_menu_change_your_language" xml:space="preserve">
+    <value>Altere o Seu Idioma</value>
+  </data>
+  <data name="parent_menu_do_you_want_to_log_out" xml:space="preserve">
+    <value>Você Quer Sair?</value>
+  </data>
+  <data name="parent_menu_help_and_support" xml:space="preserve">
+    <value>Ajuda &amp; Suporte</value>
+  </data>
+  <data name="parent_menu_log_out" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="parent_menu_log_out_ex" xml:space="preserve">
+    <value>Sair!</value>
+  </data>
+  <data name="parent_menu_my_reports" xml:space="preserve">
+    <value>Meus Relatórios</value>
+  </data>
+  <data name="parent_menu_please_login_to_access_report" xml:space="preserve">
+    <value>Por favor, acesse (registre-se) para obter acesso aos relatórios</value>
+  </data>
+  <data name="parent_menu_sign_up" xml:space="preserve">
+    <value>Registrar-se</value>
+  </data>
+  <data name="parent_menu_sorry" xml:space="preserve">
+    <value>Desculpa</value>
+  </data>
+  <data name="purchase" xml:space="preserve">
+    <value>Comprar</value>
+  </data>
+  <data name="purchaser_product_name_1_year" xml:space="preserve">
+    <value>{0} 1 ano</value>
+  </data>
+  <data name="purchaser_product_name_6_months" xml:space="preserve">
+    <value>{0} 6 meses</value>
+  </data>
+  <data name="purchaser_term_annual" xml:space="preserve">
+    <value>Anual</value>
+  </data>
+  <data name="purchaser_term_semi_annual" xml:space="preserve">
+    <value>Semi-anual</value>
+  </data>
+  <data name="purchase_1_year_of_full_access" xml:space="preserve">
+    <value>1 ano de acesso completo para {0}. Apenas ${1} por mês</value>
+  </data>
+  <data name="purchase_6_months_of_full_access" xml:space="preserve">
+    <value>6 meses de acesso completo para {0}. Apenas ${1} por mês</value>
+  </data>
+  <data name="purchase_info_line_1" xml:space="preserve">
+    <value>• Pagamento será debitado da conta do iTunes na confirmação da compra</value>
+  </data>
+  <data name="purchase_info_line_2" xml:space="preserve">
+    <value>• A inscrição renova-se automaticamente a menos que o auto-renovar for desligado pelo menos 24 horas antes do fim do período atual</value>
+  </data>
+  <data name="purchase_info_line_3" xml:space="preserve">
+    <value>• A conta será cobrada para renovação dentro de 24 horas antes do final do período atual, e identificado o custo da renovação</value>
+  </data>
+  <data name="purchase_info_line_4" xml:space="preserve">
+    <value>• Inscrições podem ser gerenciadas pelo usuário e a auto-renovação pode ser desligada indo nas configurações de conta do usuário após a compra</value>
+  </data>
+  <data name="purchase_info_line_5" xml:space="preserve">
+    <value>• Qualquer parte não utilizada de um período experimental gratuito será perdido quando o usuário comprar uma assinatura para aquela publicação, quando aplicável</value>
+  </data>
+  <data name="purchase_privacy_policy" xml:space="preserve">
+    <value>Política de privacidade</value>
+  </data>
+  <data name="purchase_sorry_restoring_subscriptions" xml:space="preserve">
+    <value>Pedimos desculpa, restaurando sua inscrição agora mesmo. Tente comprar novamente!</value>
+  </data>
+  <data name="purchase_terms_of_use" xml:space="preserve">
+    <value>Termos de uso</value>
+  </data>
+  <data name="purchase_try_again" xml:space="preserve">
+    <value>Tente novamente!</value>
+  </data>
+  <data name="report_books" xml:space="preserve">
+    <value>Livros</value>
+  </data>
+  <data name="report_books_read" xml:space="preserve">
+    <value>Livros lidos:</value>
+  </data>
+  <data name="report_completed" xml:space="preserve">
+    <value>concluído</value>
+  </data>
+  <data name="report_completion" xml:space="preserve">
+    <value>CONCLUSÃO</value>
+  </data>
+  <data name="report_daily_report" xml:space="preserve">
+    <value>Relatório Diário</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>DATA</value>
+  </data>
+  <data name="report_dinosaur_score" xml:space="preserve">
+    <value>Pontuação Dinossauro:</value>
+  </data>
+  <data name="report_lang_course" xml:space="preserve">
+    <value>Curso de línguas:</value>
+  </data>
+  <data name="report_last_activity" xml:space="preserve">
+    <value>ÚLTIMA ATIVIDADE</value>
+  </data>
+  <data name="report_lesson" xml:space="preserve">
+    <value>AULA</value>
+  </data>
+  <data name="report_lessons_and_games" xml:space="preserve">
+    <value>Aulas e jogos</value>
+  </data>
+  <data name="report_lessons_and_games_completed" xml:space="preserve">
+    <value>Aulas e jogos concluídos:</value>
+  </data>
+  <data name="report_lessons_report" xml:space="preserve">
+    <value>Relatório de Aulas</value>
+  </data>
+  <data name="report_my_report" xml:space="preserve">
+    <value>Meu Relatório</value>
+  </data>
+  <data name="report_not_completed" xml:space="preserve">
+    <value>não concluído</value>
+  </data>
+  <data name="report_not_read" xml:space="preserve">
+    <value>não lido</value>
+  </data>
+  <data name="report_overall" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="report_overall_completed" xml:space="preserve">
+    <value>Total Concluído:</value>
+  </data>
+  <data name="report_quiz_score" xml:space="preserve">
+    <value>Pontuação do Quiz:</value>
+  </data>
+  <data name="report_read" xml:space="preserve">
+    <value>lido</value>
+  </data>
+  <data name="report_star_score" xml:space="preserve">
+    <value>Pontuação Estrela:</value>
+  </data>
+  <data name="report_time_spent" xml:space="preserve">
+    <value>TEMPO GASTO</value>
+  </data>
+  <data name="report_total_books" xml:space="preserve">
+    <value>Total de Livros:</value>
+  </data>
+  <data name="report_user_name_or_email" xml:space="preserve">
+    <value>Nome de usuário ou e-mail:</value>
+  </data>
+  <data name="sign_up_are_u_sure" xml:space="preserve">
+    <value>Tem Certeza?</value>
+  </data>
+  <data name="sign_up_cant_create_new_user" xml:space="preserve">
+    <value>Erro! Não é possível criar o novo usuário!</value>
+  </data>
+  <data name="sign_up_confirm_password" xml:space="preserve">
+    <value>Confirme a Senha:</value>
+  </data>
+  <data name="sign_up_create_account" xml:space="preserve">
+    <value>Criar uma Conta</value>
+  </data>
+  <data name="sign_up_different_passwords" xml:space="preserve">
+    <value>Senhas Diferentes!</value>
+  </data>
+  <data name="sign_up_do_not_signup" xml:space="preserve">
+    <value>Não registre-se</value>
+  </data>
+  <data name="sign_up_email_address" xml:space="preserve">
+    <value>Endereço de e-mail:</value>
+  </data>
+  <data name="sign_up_error" xml:space="preserve">
+    <value>Erro!</value>
+  </data>
+  <data name="sign_up_password" xml:space="preserve">
+    <value>Senha:</value>
+  </data>
+  <data name="sign_up_please_register" xml:space="preserve">
+    <value>Por favor registre-se para ter todos os recursos do aplicativo:\n - siga seu progresso, ganhando novos dinossauros e estrelas;\n - conta no site dinolingo.com;\n - salve os dados e sincronize entre os dispositivos.</value>
+  </data>
+  <data name="sign_up_without_registration_popup" xml:space="preserve">
+    <value>Sem registro, você não será capaz de usar os seguintes recursos do aplicativo:\n- seguir seu progresso;\n- ganhar novos dinossauros e novas estrelas;\n- conta no site dinolingo.com;\n- salvar seus dados e sincronizar entre dispositivos.\ntem certeza de que deseja continuar sem registro?</value>
+  </data>
+  <data name="subscribe_choose_lang_1_year" xml:space="preserve">
+    <value>Escolha um idioma - 1 ano</value>
+  </data>
+  <data name="subscribe_choose_lang_6_months" xml:space="preserve">
+    <value>Escolha um idioma - 6 meses</value>
+  </data>
+  <data name="subscribe_plans" xml:space="preserve">
+    <value>Planos</value>
+  </data>
+  <data name="subscribe_price_a_month" xml:space="preserve">
+    <value>${0} por mês</value>
+  </data>
+  <data name="subscribe_price_for_1_year" xml:space="preserve">
+    <value>Preço: ${0} por 1 ano</value>
+  </data>
+  <data name="subscribe_price_for_6_months" xml:space="preserve">
+    <value>Preço: ${0} por 6 meses</value>
+  </data>
+  <data name="subscribe_scroll_down" xml:space="preserve">
+    <value>Deslize para baixo para mais idiomas</value>
+  </data>
+  <data name="subscribe_you_have_access_to_subscription" xml:space="preserve">
+    <value>Você já tem acesso à inscrição</value>
+  </data>
+  <data name="victory_congratulations" xml:space="preserve">
+    <value>Parabéns!</value>
+  </data>
+  <data name="victory_great" xml:space="preserve">
+    <value>Boa</value>
+  </data>
+  <data name="victory_you_earned_dinosaur" xml:space="preserve">
+    <value>Você ganhou um novo dinossauro!</value>
+  </data>
+  <data name="victory_you_earned_star" xml:space="preserve">
+    <value>Você ganhou uma estrela!</value>
+  </data>
+  <data name="victory_you_won" xml:space="preserve">
+    <value>Você ganhou!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_ios" xml:space="preserve">
+    <value>Desfrutando de DinoLingo? \nDê uma nota para ele na App Store!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_android" xml:space="preserve">
+    <value>Desfrutando de DinoLingo? \nDê uma nota para ele no Google Play!</value>
+  </data>
+  <data name="rate_rate_dinolingo" xml:space="preserve">
+    <value>Dar uma nota para DinoLingo</value>
+  </data>
+  <data name="rate_remind_later" xml:space="preserve">
+    <value>Lembrar-me mais tarde</value>
+  </data>
+  <data name="rate_no_thanks" xml:space="preserve">
+    <value>Não, obrigado</value>
+  </data>
+  <data name="login_user_with_email_doesnt_exist" xml:space="preserve">
+    <value>Usuário com este e-mail não existe!</value>
+  </data>
+  <data name="login_user_and_pass_doesnt_exist" xml:space="preserve">
+    <value>Usuário com este login e senha não existe!</value>
+  </data>
+  <data name="subscribe_six_months_subscriptions" xml:space="preserve">
+    <value>Assinatura de 6 meses</value>
+  </data>
+  <data name="subscribe_one_year_subscriptions" xml:space="preserve">
+    <value>Assinatura de 1 ano</value>
+  </data>
+  <data name="new_version" xml:space="preserve">
+    <value>Nova Versão</value>
+  </data>
+  <data name="new_version_text" xml:space="preserve">
+    <value>Há uma nova versão do aplicativo disponível. Gostaria de atualizar agora?</value>
+  </data>
+  <data name="new_version_update_now" xml:space="preserve">
+    <value>Atualizar agora</value>
+  </data>
+  <data name="purchaser_product_name_1_month" xml:space="preserve">
+    <value>{0} 1 mês</value>
+  </data>
+  <data name="purchaser_term_monthly" xml:space="preserve">
+    <value>Por mês</value>
+  </data>
+  <data name="purchase_1_month_of_full_access" xml:space="preserve">
+    <value>1 mês de acesso total a {0}.</value>
+  </data>
+  <data name="subscribe_price_for_1_month" xml:space="preserve">
+    <value>Preço: $ {0} por 1 mês</value>
+  </data>
+  <data name="subscribe_one_month_subscriptions" xml:space="preserve">
+    <value>Assinaturas de um mês</value>
+  </data>
+</root>

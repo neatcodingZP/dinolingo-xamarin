@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.RightMenuView"
+             VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentView.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="188*" />
+                <ColumnDefinition Width="26*" />
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="17*" />
+                <ColumnDefinition Width="500*" />
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Column="0" Grid.ColumnSpan="5"
+                x:Name="transparentFrame" BackgroundColor="{StaticResource MenuTransparentBlueColor}"
+                   BorderColor="Transparent"                   
+                   HasShadow="False">                
+            </Frame>
+            
+            <Forms9Patch:Image Grid.Column="4" 
+                           BackgroundColor="{StaticResource BackgroundBlueColor}"    
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+            <Image Grid.Column="4" Source="{controls:ImageMultiResource DinoLingo.Resources.UI.gradient_right.png}" Aspect="Fill">
+            </Image>
+
+            <ContentView Grid.Column="3" BackgroundColor="{StaticResource YellowColor}">
+            </ContentView>
+
+            <ContentView Grid.Column="2" BackgroundColor="{StaticResource ShadowLoginColor}">
+            </ContentView>
+
+
+                <Grid  x:Name="gridMainMenu" RowSpacing="2" Grid.Column="4" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <!--
+                    <Frame  Grid.Row="0"
+                                HasShadow="false" 
+                                   Margin="0,5,0,5"
+                                   IsClippedToBounds="false"
+                                   BorderColor="Transparent" BackgroundColor="White" 
+                                   CornerRadius="{Binding CornerRadius}"> 
+                    </Frame>
+                    -->
+                    <Grid  Grid.Row="0" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="5*" />                        
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                            Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.rainbow_small.png}"
+                            Aspect="AspectFit">
+                        </Image>
+
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <controls:MyLabel Grid.Row="1"
+                                Text="{Binding LanguageText}"  
+                                FontSize="{Binding LanguageTextSize}" TextColor="{StaticResource BlueTextLoginColor}"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </controls:MyLabel>
+                    </Grid>                    
+                    </Grid>
+                
+                    
+                    
+
+                    <!-- dinos in the bottom-->
+                    <Image  x:Name= "dinoBig" Grid.Row="3" Grid.RowSpan="2" Aspect="AspectFit"
+                            Source="{controls:ImageMultiResource DinoLingo.Resources.UI.choose_lang_dino.png}">                    
+                    </Image>
+
+                    <!-- dinos in the bottom-->
+                    <Image  x:Name= "dinoSmall" Grid.Row="4" Aspect="AspectFit"
+                            Source="{controls:ImageMultiResource DinoLingo.Resources.UI.dino_logo_long.png}">
+                    </Image>
+
+                <!-- 0 -->
+                <Grid x:Name= "g_0" RowSpacing="0" ColumnSpacing="0" ClassId="0" Grid.Row="1">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="13*" />                        
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageTapped"/>
+                    </Grid.GestureRecognizers>
+
+                    <Image  x:Name= "l_0_img" Aspect="AspectFit" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <controls:MyLabel x:Name= "l_0" Grid.Column="1"                                 
+                                FontSize="{Binding BtnTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    </controls:MyLabel>
+                </Grid>
+
+
+
+
+                <!-- 1 -->
+                <Grid x:Name= "g_1" RowSpacing="0" ColumnSpacing="0" ClassId="1" Grid.Row="2">
+                   
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="13*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageTapped"/>
+                    </Grid.GestureRecognizers>
+
+                    <Image  x:Name= "l_1_img" Aspect="AspectFit"  Grid.Column="0"  Grid.ColumnSpan="2"/>
+                    <controls:MyLabel x:Name= "l_1" Grid.Column="1"                                 
+                                FontSize="{Binding BtnTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    </controls:MyLabel>
+                </Grid>
+
+                <!-- 2 -->
+                <Grid x:Name= "g_2" RowSpacing="0" ColumnSpacing="0" ClassId="2" Grid.Row="3">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="13*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageTapped"/>
+                    </Grid.GestureRecognizers>
+
+                    <Image  x:Name= "l_2_img" Aspect="AspectFit"  Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <controls:MyLabel x:Name= "l_2"  Grid.Column="1"                                 
+                                FontSize="{Binding BtnTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    </controls:MyLabel>
+                </Grid>
+
+                <!-- 3 -->
+                <Grid x:Name= "g_3" RowSpacing="0" ColumnSpacing="0" ClassId="3" Grid.Row="4">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="13*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageTapped"/>
+                    </Grid.GestureRecognizers>
+
+                    <Image  x:Name= "l_3_img" Aspect="AspectFit" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <controls:MyLabel x:Name= "l_3" Grid.Column="1"                                 
+                                FontSize="{Binding BtnTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    </controls:MyLabel>
+                </Grid>
+
+
+            </Grid>            
+
+            <Image x:Name = "OpenButton" Grid.Column="0" VerticalOptions="Start" Margin="5,5,0,0" 
+                   ClassId="OpenButton" Source="{controls:ImageMultiResource DinoLingo.Resources.UI.btn_hamburger.png}" 
+                   Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ImageTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- parent lock -->
+            <Image   ClassId="ParentLockBtn" Grid.Column="0" VerticalOptions="End" Margin="5,0,0,5"
+                     Aspect="AspectFit" 
+                             Source="{controls:ImageMultiResource DinoLingo.Resources.UI.btn_settings.png}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ImageTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

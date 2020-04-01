@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DinoLingo.App"
+             xmlns:video="clr-namespace:FormsVideoLibrary">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArialRoundedMTBold">
+                <On Platform="Android" Value="Arial_Rounded_MT_Bold.ttf#Arial Rounded MT Bold" />
+                <On Platform="iOS" Value="Arial Rounded MT Bold" />
+            </OnPlatform>
+            
+            <!-- COLORS -->
+            <Color x:FactoryMethod="FromHex" x:Key="BackgroundBlueColor">
+                <x:Arguments><x:String>#4b87c1</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="BlueTextLoginColor">
+                <x:Arguments><x:String>#0275c4</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="ShadowLoginColor">
+                <x:Arguments><x:String>#60000000</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="ButtonBlueTextColor">
+                <x:Arguments><x:String>#034f7c</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="ButtonWhiteTextColor">
+                <x:Arguments>
+                    <x:String>#ffffff</x:String>
+                </x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="ButtonBlueBackgroundColor">
+                <x:Arguments><x:String>#69c4e3</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="YellowColor">
+                <x:Arguments><x:String>#ffbd00</x:String></x:Arguments>
+            </Color>
+            
+            <Color x:FactoryMethod="FromHex" x:Key="YellowColorLight">
+                <x:Arguments><x:String>#FFDD7F</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="BackgroundBlueHeaderColor">
+                <x:Arguments><x:String>#0182af</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="BackgroundBrightBlueHeaderColor">
+                <x:Arguments> <x:String>#00c6ff</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="BackgroundWinLightGrayColor">
+                <x:Arguments><x:String>#f2f2f2</x:String></x:Arguments>
+            </Color>
+
+            <!-- Report page -->
+            <Color x:FactoryMethod="FromHex" x:Key="ReportOrangeColor">
+                <x:Arguments><x:String>#f4a900</x:String></x:Arguments>
+            </Color>
+            <Color x:FactoryMethod="FromHex" x:Key="ReportGreenColor">
+                <x:Arguments><x:String>#00ff57</x:String></x:Arguments>
+            </Color>
+            <Color x:FactoryMethod="FromHex" x:Key="ReportBlueColor">
+                <x:Arguments><x:String>#2e77bb</x:String></x:Arguments>
+            </Color>
+            <Color x:FactoryMethod="FromHex" x:Key="ReportRedColor">
+                <x:Arguments><x:String>#ff6666</x:String></x:Arguments>
+            </Color>
+
+            <!-- Memory game -->
+            <Color x:FactoryMethod="FromHex" x:Key="MemoryGameLightBlueColor">
+                <x:Arguments><x:String>#d5f6fd</x:String></x:Arguments>
+            </Color>
+
+            <Color x:FactoryMethod="FromHex" x:Key="MenuTransparentBlueColor">
+                <x:Arguments>
+                    <x:String>#a0d5f6fd</x:String>
+                </x:Arguments>
+            </Color>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

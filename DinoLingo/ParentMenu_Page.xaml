@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.ParentMenu_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                Fill="Tile"/>
+            <Grid x:Name="mainGrid" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height= "3*"/>
+                    <RowDefinition Height= "5*"/>
+                </Grid.RowDefinitions>
+                
+                <!-- all the buttons-->
+                <Frame x:Name="shadowFrame"   Grid.Row="1" HorizontalOptions="Center" VerticalOptions="StartAndExpand"
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding FrameCornerRadius}"
+                                    BorderColor="Transparent"                                    
+                                    Padding="0"
+                                    HasShadow="false"> 
+                </Frame>
+
+                <Frame x:Name="whiteFrame" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="StartAndExpand"
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding FrameCornerRadius}"
+                                    BorderColor="Transparent"                                    
+                                    HasShadow="false" 
+                                    Padding="0"
+                                    IsClippedToBounds="true">
+                    
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="{Binding BtnWidth}" Spacing="3">
+
+                        <!-- sign up btn -->
+                        <Grid x:Name="SignUpBtn" ClassId="SignUpBtn"  HorizontalOptions="FillAndExpand" HeightRequest="{Binding BtnHeight}">
+                            <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"
+                                                                      
+                                    HasShadow="false">
+                            </Frame>
+                            <controls:ExtendedFrame                               
+                                BackgroundColor="{StaticResource BackgroundBrightBlueHeaderColor}"
+                                CornerRadius="{Binding BtnCornerRadius}"
+                                OutLineWidth = "{Binding BtnOutlineWidth}"
+                                BorderColor="White"
+                                HasShadow="false" 
+                                Padding="0"
+                                Margin ="{Binding ButtonShadowPadding}">
+                                <controls:MyLabel Text="{controls:Translate parent_menu_sign_up}" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding TextSize}" TextColor="White"/>
+                            </controls:ExtendedFrame>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+
+                        <!-- My Report -->
+                        <Grid x:Name="MyReportBtn" ClassId ="MyReportBtn"  HorizontalOptions="FillAndExpand" HeightRequest="{Binding BtnHeight}">
+                            <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"                                                                        
+                                    HasShadow="false">
+                            </Frame>
+                            <controls:ExtendedFrame                               
+                                BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                                CornerRadius="{Binding BtnCornerRadius}"
+                                OutLineWidth = "{Binding BtnOutlineWidth}"
+                                BorderColor="White"
+                                HasShadow="false" 
+                                Padding="0"
+                                Margin ="{Binding ButtonShadowPadding}">
+                                <controls:MyLabel Text="{controls:Translate parent_menu_my_reports}" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding TextSize}" TextColor="{StaticResource ButtonWhiteTextColor}"/>
+                            </controls:ExtendedFrame>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+
+                        <!-- change language btn -->
+                        <Grid ClassId="ChangeLanguageBtn"  HorizontalOptions="FillAndExpand" HeightRequest="{Binding BtnHeight}">
+                            <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"                                                                        
+                                    HasShadow="false">
+                            </Frame>
+                            <controls:ExtendedFrame                               
+                                BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                                CornerRadius="{Binding BtnCornerRadius}"
+                                OutLineWidth = "{Binding BtnOutlineWidth}"
+                                BorderColor="White"
+                                HasShadow="false" 
+                                Padding="0"
+                                Margin ="{Binding ButtonShadowPadding}">
+                                <controls:MyLabel Text="{controls:Translate parent_menu_change_your_language}" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding TextSize}" TextColor="{StaticResource ButtonWhiteTextColor}"/>
+                            </controls:ExtendedFrame>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+
+                        <!-- help btn -->
+                        <Grid ClassId="HelpBtn"  HorizontalOptions="FillAndExpand" HeightRequest="{Binding BtnHeight}">
+                            <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"                                                                         
+                                    HasShadow="false">
+                            </Frame>
+                            <controls:ExtendedFrame                               
+                                BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                                CornerRadius="{Binding BtnCornerRadius}"
+                                OutLineWidth = "{Binding BtnOutlineWidth}"
+                                BorderColor="White"
+                                HasShadow="false" 
+                                Padding="0"
+                                Margin ="{Binding ButtonShadowPadding}">
+                                <controls:MyLabel Text="{controls:Translate parent_menu_help_and_support}" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding TextSize}" TextColor="{StaticResource ButtonWhiteTextColor}"/>
+                            </controls:ExtendedFrame>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>    
+                        
+                        <!--  Log in -->
+                        <Grid  x:Name="LoginBtn" ClassId="LoginBtn"  HorizontalOptions="FillAndExpand" HeightRequest="{Binding BtnHeight}">
+                            <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"                                    
+                                    BorderColor="Transparent"                                     
+                                    HasShadow="false">
+                            </Frame>
+                            <controls:ExtendedFrame                               
+                                BackgroundColor="{StaticResource BackgroundBlueHeaderColor}"
+                                CornerRadius="{Binding BtnCornerRadius}"
+                                OutLineWidth = "{Binding BtnOutlineWidth}"
+                                BorderColor="White"
+                                HasShadow="false" 
+                                Padding="0"
+                                Margin ="{Binding ButtonShadowPadding}">
+                                <controls:MyLabel x:Name="loginLabel" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding TextSize}" TextColor="{StaticResource ButtonWhiteTextColor}"/>
+
+                            </controls:ExtendedFrame>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+
+                        
+
+                        <!-- Privacy 
+                <AbsoluteLayout x:Name="PrivacyPolicyBtn" ClassId="PrivacyPolicyBtn" Grid.Column="1" Grid.Row="1">
+                    <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.98,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="{Binding BtnCornerRadius}"
+                               BorderColor="Transparent"
+                               HasShadow="false"
+                               TranslationY="{Binding ShadowTranslation}">
+                    </Frame>
+                    <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    OutLineWidth = "{Binding OutLineWidth}"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                                 Padding="0"
+                                    IsClippedToBounds="true">
+                        <Label Text="Privacy" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding TextSize}" TextColor="{StaticResource ButtonBlueTextColor}" FontFamily="{StaticResource ArialRoundedMTBold}"/>
+
+                    </controls:ExtendedFrame>
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                </AbsoluteLayout>                
+-->
+
+                    </StackLayout>
+                </Frame>
+
+
+                <StackLayout Grid.Row = "0"  VerticalOptions="EndAndExpand">                    
+
+                    <controls:MyLabel x:Name="label_course" HorizontalOptions="Center"
+                                           TextColor="White"/>
+                    <controls:MyLabel x:Name="label_userName" HorizontalOptions="Center"
+                                           TextColor="White"/>
+
+                    <Image x:Name="dinoImage" Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.choose_lang_dino.png}"
+                           Margin="20"
+                           Aspect="AspectFit">
+                    </Image>
+
+                    <controls:MyLabel ClassId = "DinoLingoLink" TextColor="White"
+                            Text="DinoLingo.com" 
+                            FontSize="Small"
+                            TextDecorations="Underline"
+                            HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </controls:MyLabel>
+                    <Label>
+                        
+                    </Label>
+                    
+                </StackLayout>
+                
+
+                <!-- close button -->
+                <Image  x:Name = "CloseBtn" ClassId="CloseBtn" Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start"
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>                             
+            
+        </AbsoluteLayout>    
+    </ContentPage.Content>
+</ContentPage>

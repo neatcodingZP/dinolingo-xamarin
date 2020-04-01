@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.QuizGamePage"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absRootLayout" BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                Fill="Tile"/>
+            <Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.trans_gradient.png}"
+                Aspect="Fill">
+            </Image>
+            
+            <!-- intearctive field -->
+            <Grid AbsoluteLayout.LayoutBounds="0.5, 0.5" AbsoluteLayout.LayoutFlags="PositionProportional" HeightRequest="{Binding GameHeight}">  
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{Binding BorderSize}" />
+                    <ColumnDefinition Width="{Binding GameWidth}" />
+                    <ColumnDefinition Width="{Binding SpacingSize}" />
+                    <ColumnDefinition Width="{Binding MenuWidth}" />
+                    <ColumnDefinition Width="{Binding BorderSize}" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="1"  
+                    BackgroundColor="{StaticResource YellowColor}"
+                    CornerRadius="{Binding CornerRadius1}"
+                    BorderColor="Transparent"
+                    
+                    Padding="{Binding StrokeLineWidth1}">
+
+                    <Grid x:Name="gameGrid" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                        
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <!-- gameGrid content -->
+                                <!--0-->
+                                <controls:ExtendedFrame  ClassId="cell_0" Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding CornerRadius2}"
+                                    OutLineWidth = "{Binding StrokeLineWidth2}"
+                                    BorderColor="{StaticResource MemoryGameLightBlueColor}"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+
+                                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> 
+                                            <Image  Source="{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.card_bg.png}" 
+                                                    AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                                                    Aspect="Fill">
+                                            </Image>
+                                            <ContentView x:Name="cell_0" IsVisible="false" BackgroundColor="White"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                                                <Image x:Name="cellImage_0"
+                                                    Aspect="AspectFit">
+                                                </Image>
+                                             </ContentView>
+                                    </AbsoluteLayout>
+
+                                    <controls:ExtendedFrame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                    </controls:ExtendedFrame.GestureRecognizers>
+                                </controls:ExtendedFrame>
+                        
+                                <!--1-->
+                                <controls:ExtendedFrame  ClassId="cell_1" Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding CornerRadius2}"
+                                    OutLineWidth = "{Binding StrokeLineWidth2}"
+                                    BorderColor="{StaticResource MemoryGameLightBlueColor}"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+
+                                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> 
+                                            <Image  Source="{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.card_bg.png}" 
+                                                    AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                                                    Aspect="Fill">
+                                            </Image>
+                                            <ContentView x:Name="cell_1" IsVisible="false" BackgroundColor="White"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                                                <Image x:Name="cellImage_1"
+                                                    Aspect="AspectFit">
+                                                </Image>
+                                             </ContentView>
+                                    </AbsoluteLayout>
+
+                                    <controls:ExtendedFrame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                    </controls:ExtendedFrame.GestureRecognizers>
+                                </controls:ExtendedFrame>
+
+                                <!--2-->
+                                <controls:ExtendedFrame  ClassId="cell_2" Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding CornerRadius2}"
+                                    OutLineWidth = "{Binding StrokeLineWidth2}"
+                                    BorderColor="{StaticResource MemoryGameLightBlueColor}"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+
+                                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> 
+                                            <Image  Source="{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.card_bg.png}" 
+                                                    AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                                                    Aspect="Fill">
+                                            </Image>
+                                            <ContentView x:Name="cell_2" IsVisible="false" BackgroundColor="White"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                                                <Image x:Name="cellImage_2"
+                                                    Aspect="AspectFit">
+                                                </Image>
+                                             </ContentView>
+                                    </AbsoluteLayout>
+
+                                    <controls:ExtendedFrame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                    </controls:ExtendedFrame.GestureRecognizers>
+                                </controls:ExtendedFrame>
+
+                                <!--3-->
+                                <controls:ExtendedFrame  ClassId="cell_3" Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding CornerRadius2}"
+                                    OutLineWidth = "{Binding StrokeLineWidth2}"
+                                    BorderColor="{StaticResource MemoryGameLightBlueColor}"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+
+                                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> 
+                                            <Image  Source="{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.card_bg.png}" 
+                                                    AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                                                    Aspect="Fill">
+                                            </Image>
+                                            <ContentView x:Name="cell_3" IsVisible="false" BackgroundColor="White"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                                                <Image x:Name="cellImage_3"
+                                                    Aspect="AspectFit">
+                                                </Image>
+                                             </ContentView>
+                                    </AbsoluteLayout>
+
+                                    <controls:ExtendedFrame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                                    </controls:ExtendedFrame.GestureRecognizers>
+                                </controls:ExtendedFrame>
+                        </Grid>
+                </Frame> 
+
+                <!-- right menu -->
+                <Grid Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!-- repeat button -->
+                    <Image  ClassId="RepeatBtn" Grid.Row="1" HorizontalOptions="StartAndExpand"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.btn_repeat.png}" Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image> 
+
+                    <!-- score -->
+                    <Grid Grid.Row="3" IsEnabled="false" ColumnSpacing="0" RowSpacing="0"> 
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="167*" />
+                                <ColumnDefinition Width="460*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="84*" />
+                                <RowDefinition Height="126*" />
+                                <RowDefinition Height="40*" />
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3" 
+                            Source = "{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.score.png}" Aspect="Fill">
+                        </Image>
+                        <controls:MyLabel  Grid.Column="1" Grid.Row="0"
+                            Text="{controls:Translate game_score}" FontSize="{Binding SmallMenuFontSize}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                            TextColor="White">
+                        </controls:MyLabel>
+                        <controls:MyLabel  Grid.Column="1" Grid.Row="1"
+                            Text="{Binding ScoreText}" FontSize="{Binding MenuFontSize}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                            TextColor="White">
+                        </controls:MyLabel>
+                    </Grid>
+                    
+                    <!-- time -->
+                    <Grid Grid.Row="5" IsEnabled="false" ColumnSpacing="0" RowSpacing="0"> 
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="167*" />
+                                <ColumnDefinition Width="460*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="84*" />
+                            <RowDefinition Height="126*" />
+                            <RowDefinition Height="40*" />
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3" 
+                            Source = "{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.time.png}" Aspect="Fill">
+                        </Image>
+                        <controls:MyLabel  Grid.Column="1" Grid.Row="0"
+                            Text="{controls:Translate game_time}" FontSize="{Binding SmallMenuFontSize}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                            TextColor="White">
+                        </controls:MyLabel>
+                        <controls:MyLabel  Grid.Column="1" Grid.Row="1"
+                            Text="{Binding TimeText}" FontSize="{Binding MenuFontSize}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               TextColor="White">
+                        </controls:MyLabel>
+                    </Grid>
+                    
+                    <!-- question -->
+                    <Grid Grid.Row="7" IsEnabled="false" ColumnSpacing="0" RowSpacing="0"> 
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="167*" />
+                                <ColumnDefinition Width="460*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="84*" />
+                            <RowDefinition Height="126*" />
+                            <RowDefinition Height="40*" />
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3" 
+                            Source = "{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.questions.png}" Aspect="Fill">
+                        </Image>
+                        <controls:MyLabel  Grid.Column="1" Grid.Row="0"
+                            Text="{controls:Translate game_questions}" FontSize="{Binding SmallMenuFontSize}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                            TextColor="White">
+                        </controls:MyLabel>
+                        <controls:MyLabel  Grid.Column="1" Grid.Row="1" 
+                            Text="{Binding QuestionsText}" FontSize="{Binding MenuFontSize}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                            TextColor="White">
+                        </controls:MyLabel>
+                    </Grid>
+
+                </Grid>    
+                
+            </Grid>
+
+
+            <!-- close button -->
+           <Image  ClassId="CloseBtn" Margin="0,5,5,0" AbsoluteLayout.LayoutBounds="1,0" AbsoluteLayout.LayoutFlags="PositionProportional"
+                  WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                  <Image.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                  </Image.GestureRecognizers>
+            </Image>
+            
+           
+
+            <!-- loading view -->
+             <Grid x:Name="loadingView" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0"  
+                    Text="{Binding LoadingWaitText}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <ffimageloading:CachedImage  Grid.Row="1"  ClassId="StartBtn"  IsEnabled="{Binding IsStartBtnEnabled}"
+                        Source = "{Binding StartBtnSource}" IsVisible="{Binding IsStartBtnVisible}"
+                                             VerticalOptions="FillAndExpand"
+                        Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <Image  ClassId="CloseBtn" x:Name="LoadingCloseBtn"
+                        Grid.Row="0" Grid.RowSpan="3"
+                        IsEnabled="False" IsVisible="False"
+                        HorizontalOptions="End" VerticalOptions="Start"
+                        WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                 
+
+            </Grid> 
+
+
+
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.MainPage_"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>     
+            
+            <RelativeLayout x:Name="rootRelaytiveLayout">
+            <Image RelativeLayout.XConstraint ="0"                         
+                   RelativeLayout.YConstraint ="0"
+                   RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"                        
+                   RelativeLayout.HeightConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                   Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.mainpage_background_02.png}"
+                   Aspect="AspectFill">
+             </Image>
+            
+                
+            <ContentView x:Name="centralView" 
+                         RelativeLayout.XConstraint ="0"                         
+                         RelativeLayout.YConstraint ="0"
+                         RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"                        
+                         RelativeLayout.HeightConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"    >
+            </ContentView>
+            </RelativeLayout>
+       
+       
+    </ContentPage.Content>
+</ContentPage>

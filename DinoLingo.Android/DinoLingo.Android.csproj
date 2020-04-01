@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>
+    </AndroidSigningKeyStore>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+    <AndroidSigningKeyPass>
+    </AndroidSigningKeyPass>
+    <AndroidSigningKeyAlias>
+    </AndroidSigningKeyAlias>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBF186D0-CF58-4D63-A249-46483F948AF2}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DinoLingo.Droid</RootNamespace>
+    <AssemblyName>DinoLingo.Android</AssemblyName>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>
+    </AndroidSigningKeyStore>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+    <AndroidSigningKeyPass>
+    </AndroidSigningKeyPass>
+    <AndroidSigningKeyAlias>
+    </AndroidSigningKeyAlias>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>
+    </AndroidSigningKeyStore>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+    <AndroidSigningKeyPass>
+    </AndroidSigningKeyPass>
+    <AndroidSigningKeyAlias>
+    </AndroidSigningKeyAlias>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidSupportedAbis />
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidTlsProvider>
+    </AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>
+    </AndroidSigningKeyStore>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+    <AndroidSigningKeyPass>
+    </AndroidSigningKeyPass>
+    <AndroidSigningKeyAlias>
+    </AndroidSigningKeyAlias>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CarouselView.FormsPlugin">
+      <Version>5.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="CocosSharp.Forms">
+      <Version>1.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="ksemenenko.GoogleAnalytics">
+      <Version>1.0.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.FirebasePushNotification">
+      <Version>2.3.5</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.InAppBilling">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.StoreReview">
+      <Version>2.0.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>1.68.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.59.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.DeviceInfo">
+      <Version>4.0.0.13</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.LatestVersion">
+      <Version>1.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>2.5.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Forms9Patch">
+      <Version>1.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+    <PackageReference Include="PCLStorage">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.8.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Localize.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="MyViews\BorderlessEntryRenderer.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenOrientation.cs" />
+    <Compile Include="TapContentViewRenderer.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPicker.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPlayerRenderer.cs" />
+    <Compile Include="BorderlessEntryRenderer.cs" />
+    <Compile Include="ExtendedFrameRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+    <AndroidNativeLibrary Include="lib\arm64-v8a\libopenal32.so" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\drawable\picture_loading_failed.png" />
+    <AndroidResource Include="Resources\drawable\my_loading_512.gif" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DinoLingo\DinoLingo.csproj">
+      <Project>{7172AE3B-966C-400B-8755-E5A0B8E39420}</Project>
+      <Name>DinoLingo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Arial_Rounded_MT_Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rexy_dancing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\terry_dancing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\NUMBERS\EIGHT.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\FIVE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\FOUR.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\NINE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\ONE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\EIGHT.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\EIGHT_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\FIVE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\FIVE_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\FON.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\FOUR.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\FOUR_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\NINE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\NINE_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\ONE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\ONE_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\SEVEN.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\SEVEN_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\SIX.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\SIX_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\TEN.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\TEN_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\THREE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\THREE_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\TWO.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SAS\TWO_CANDIES.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SEVEN.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\SIX.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\TEN.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\THREE.png" />
+    <AndroidAsset Include="Content\Images\NUMBERS\TWO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\MEMORY_GAME\square_blue.png" />
+    <AndroidAsset Include="Content\Images\MEMORY_GAME\square_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\MEMORY_GAME\logo_bg_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\COLORS\BLACK.png" />
+    <AndroidAsset Include="Content\Images\COLORS\BLUE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\BROWN.png" />
+    <AndroidAsset Include="Content\Images\COLORS\GREEN.png" />
+    <AndroidAsset Include="Content\Images\COLORS\ORANGE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\PINK.png" />
+    <AndroidAsset Include="Content\Images\COLORS\PURPLE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\RED.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\BLACK.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\BLUE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\BROWN.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\GREEN.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\ORANGE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\PINK.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\PURPLE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\RED.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\WHITE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\SAS\YELLOW.png" />
+    <AndroidAsset Include="Content\Images\COLORS\WHITE.png" />
+    <AndroidAsset Include="Content\Images\COLORS\YELLOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\ACTIONS\DANCING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\DRINKING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\EATING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\FLYING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\JUMPING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\LOOKING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\PLAYING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\READING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\RUNNING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\SLEEPING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\SMELLING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\SMILING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\SWIMMING.png" />
+    <AndroidAsset Include="Content\Images\ACTIONS\WALKING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\ANIMALS\ANT.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\BEAR.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\BEE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\BIRD.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\BUTTERFLY.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\CAMEL.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\CAT.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\CHICK.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\CHICKEN.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\COW.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\CROCODILE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\DEER.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\DOG.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\DOLPHIN.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\DONKEY.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\DUCK.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\EAGLE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\ELEPHANT.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\FISH.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\FLAMINGO.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\FROG.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\GIRAFFE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\GORILLA.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\HIPPO.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\HORSE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\LION.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\MONKEY.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\MOUSE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\OSTRICH.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\OWL.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\PARROT.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\PENGUIN.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\PIG.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\RABBIT.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\RHINO.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\ROOSTER.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\SHARK.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\SHEEP.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\SNAKE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\SPIDER.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\TIGER.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\TURKEY.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\TURTLE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\WHALE.png" />
+    <AndroidAsset Include="Content\Images\ANIMALS\ZEBRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_boy.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_circle.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_duga.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_fon.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_girl.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_tag1.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_tag2.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_tag3.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\SAS\body_tag4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\BODYPARTS\ARM.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\BODY.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\EAR.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\EYES.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\FACE.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\FINGER.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\FOOT.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\HAIR.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\HAND.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\HEAD.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\LEGS.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\MOUTH.png" />
+    <AndroidAsset Include="Content\Images\BODYPARTS\NOSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\BOOTS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\clothes_dog.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\clothes_floor.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\clothes_fon.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\clothes_gesha3.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\clothes_gesha_head.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\DRESS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\GLASSES.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\GLOVES.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\HAT.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\JACKET.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\PANTS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\SCARF.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\SHOES.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\SKIRT.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\SOCKS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\SWEATER.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SAS\TSHIRT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\CLOTHES\BOOTS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\DRESS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\GLASSES.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\GLOVES.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\HAT.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\JACKET.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\PANTS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SCARF.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SHOES.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SKIRT.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SOCKS.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\SWEATER.png" />
+    <AndroidAsset Include="Content\Images\CLOTHES\TSHIRT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\FAMILY\BABY.png" />
+    <AndroidAsset Include="Content\Images\FAMILY\BOY.png" />
+    <AndroidAsset Include="Content\Images\FAMILY\FATHER.png" />
+    <AndroidAsset Include="Content\Images\FAMILY\GIRL.png" />
+    <AndroidAsset Include="Content\Images\FAMILY\MAN.png" />
+    <AndroidAsset Include="Content\Images\FAMILY\MOTHER.png" />
+    <AndroidAsset Include="Content\Images\FAMILY\WOMAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\FOOD\SAS\BREAD.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\BUTTER.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\CAKE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\CHEESE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\CHOCOLATE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\EGG.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\food_fon.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\food_girl.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\HONEY.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\ICECREAM.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\JUICE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\MILK.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\SOUP.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SAS\WATER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\FOOD\BREAD.png" />
+    <AndroidAsset Include="Content\Images\FOOD\BUTTER.png" />
+    <AndroidAsset Include="Content\Images\FOOD\CAKE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\CHEESE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\CHOCOLATE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\EGG.png" />
+    <AndroidAsset Include="Content\Images\FOOD\HONEY.png" />
+    <AndroidAsset Include="Content\Images\FOOD\ICECREAM.png" />
+    <AndroidAsset Include="Content\Images\FOOD\JUICE.png" />
+    <AndroidAsset Include="Content\Images\FOOD\MILK.png" />
+    <AndroidAsset Include="Content\Images\FOOD\SOUP.png" />
+    <AndroidAsset Include="Content\Images\FOOD\WATER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\APPLE.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\BANANA.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\BROCCOLI.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\CARROT.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\CHERRY.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_dish.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_fon.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_rabbit.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\fruit_shadow.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\GRAPES.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\LEMON.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\MELON.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\ORANGE.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\PEACH.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\PEAR.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\POTATO.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\STRAWBERRY.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\TOMATO.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\SAS\WATERMELON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\APPLE.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\BANANA.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\BROCCOLI.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\CARROT.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\CHERRY.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\GRAPES.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\LEMON.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\MELON.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\ORANGE.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\PEACH.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\PEAR.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\POTATO.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\STRAWBERRY.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\TOMATO.png" />
+    <AndroidAsset Include="Content\Images\FRUITSANDVEGETABLES\WATERMELON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BAG.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BALL.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BALLOON.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BED.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BOOK.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BOX.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\BOY_HAND.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\CHAIR.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\CLOCK.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\COMPUTER.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\DOOR.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\house_boy.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\house_fon.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\KITE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\LAMP.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\PICTURE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\TABLE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\TELEPHONE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\TELEVISION.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\TOYS.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\SAS\WINDOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\HOUSE\BALL.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\BALLOON.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\BED.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\BOOK.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\BOX.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\CHAIR.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\CLOCK.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\COMPUTER.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\DOOR.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\KITE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\LAMP.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\PICTURE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\TABLE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\TELEPHONE.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\TELEVISION.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\TOYS.png" />
+    <AndroidAsset Include="Content\Images\HOUSE\WINDOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\NATURE\SAS\CLOUD.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\FLOWER.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\FOREST.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\GRASS.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\MOON.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_cloud1.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_flower.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_flower_trunk.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_land.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_night.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_night_forest.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\nature_star.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\RAIN.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\RAINBOW.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\ROCK.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\SEA.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\SKY.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\SNOW.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\STAR.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\SUN.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\TREE.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SAS\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\NATURE\CLOUD.png" />
+    <AndroidAsset Include="Content\Images\NATURE\FLOWER.png" />
+    <AndroidAsset Include="Content\Images\NATURE\FOREST.png" />
+    <AndroidAsset Include="Content\Images\NATURE\GRASS.png" />
+    <AndroidAsset Include="Content\Images\NATURE\MOON.png" />
+    <AndroidAsset Include="Content\Images\NATURE\RAIN.png" />
+    <AndroidAsset Include="Content\Images\NATURE\RAINBOW.png" />
+    <AndroidAsset Include="Content\Images\NATURE\ROCK.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SEA.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SKY.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SNOW.png" />
+    <AndroidAsset Include="Content\Images\NATURE\STAR.png" />
+    <AndroidAsset Include="Content\Images\NATURE\SUN.png" />
+    <AndroidAsset Include="Content\Images\NATURE\TREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_airplane.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_bicycle2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_boat2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_bus2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_car2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_fon2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_helicopter.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_house.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_kust.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_motorcycle2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_rocket.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_train2.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\SAS\vehicles_truck2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\VEHICLES\AIRPLANE.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\BICYCLE.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\BOAT.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\BUS.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\CAR.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\HELICOPTER.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\MOTORCYCLE.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\ROCKET.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\TRAIN.png" />
+    <AndroidAsset Include="Content\Images\VEHICLES\TRUCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\CAROUSEL_GAME\bg.jpg" />
+    <AndroidAsset Include="Content\Images\CAROUSEL_GAME\circle_white.png" />
+    <AndroidAsset Include="Content\Images\CAROUSEL_GAME\line2.png" />
+    <AndroidAsset Include="Content\Images\CAROUSEL_GAME\round2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\UI\btn_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\UI\btnblue_x1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\UI\pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\Cartoon_Boing.wav" />
+    <AndroidAsset Include="Content\Sounds\CORRECT.wav" />
+    <AndroidAsset Include="Content\Sounds\Crowd.wav" />
+    <AndroidAsset Include="Content\Sounds\tick_tack.wav" />
+    <AndroidAsset Include="Content\Sounds\WRONG.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\UI\btnred_x1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\HOUSE\BAG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\UI\button_no_red.png" />
+    <AndroidAsset Include="Content\Images\UI\button_yes_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\SPRINT_GAME\bucket_no.png" />
+    <AndroidAsset Include="Content\Images\SPRINT_GAME\bucket_yes.png" />
+    <AndroidAsset Include="Content\Images\SPRINT_GAME\card.png" />
+    <AndroidAsset Include="Content\Images\SPRINT_GAME\star_score.png" />
+    <AndroidAsset Include="Content\Images\SPRINT_GAME\timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\SPRINT_GAME\question2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

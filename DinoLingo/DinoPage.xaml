@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="DinoLingo.DinoPage"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+        <RelativeLayout x:Name="rootRelative" BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <ContentView 
+                RelativeLayout.XConstraint = "0"
+                RelativeLayout.YConstraint = "0"
+                RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+                RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"> 
+
+                <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                           Fill="Tile"/>
+                
+            </ContentView>
+
+            <AbsoluteLayout
+                RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.03}"
+                RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.03}"
+                RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}" 
+                RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}">
+                
+                    <Frame  AbsoluteLayout.LayoutBounds="1,1,0.98,0.97" AbsoluteLayout.LayoutFlags="All"
+                        CornerRadius="20"
+                        BorderColor="Transparent"
+                        
+                        BackgroundColor="{StaticResource ShadowLoginColor}">
+                    </Frame>
+                    <Frame  x:Name = "frameForList" AbsoluteLayout.LayoutBounds="0,0,0.98,0.97" AbsoluteLayout.LayoutFlags="All"
+                        CornerRadius="20"
+                        BorderColor="Transparent"
+                        
+                        BackgroundColor="White"
+                        IsClippedToBounds="true"
+                        Padding="5,10,5,10">
+                    
+                        <StackLayout
+                            Padding="5,5,5,5">
+                
+                        <ContentView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <ffimageloading:CachedImage Source="{Binding MainImage}" Aspect="AspectFit"/>
+                        </ContentView>
+              
+                        <Label Text="{Binding TitleText}" FontSize="{Binding TitleTextSize}" FontAttributes="Bold" VerticalOptions="End"
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               TextColor="{StaticResource BlueTextLoginColor}" FontFamily="{StaticResource ArialRoundedMTBold}"/>
+                        <Label Text="{Binding MainText}" FontSize="{Binding MainTextSize}" VerticalOptions="End"
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               TextColor="{StaticResource BlueTextLoginColor}" FontFamily="{StaticResource ArialRoundedMTBold}"/>
+                        </StackLayout>
+                    
+                     </Frame>
+
+            </AbsoluteLayout>
+            
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

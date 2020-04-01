@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.SASGamePage"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo">
+    <ContentPage.Content>
+         <!--Forms9Patch:Image
+                           Source = "{controls:ImageMultiResource DinoLingo.Resources.NUMBERS.SAS.FON.png}"
+                           IsVisible="true"
+                           Fill="Tile"
+                           HasShadow="false"/-->
+
+        <AbsoluteLayout x:Name="absoluteRoot">
+        <!-- background -->
+            <ContentView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" 
+                         BackgroundColor="{Binding BackgroundColor}"
+                         IsEnabled="false">
+                <Forms9Patch:Image
+                           Source = "{Binding BackgroundImageSource}"
+                           Fill="{Binding BackgroundFillMode}"/>
+            </ContentView>
+            
+           <!-- main content --> 
+            <ContentView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Padding="10">
+               <RelativeLayout x:Name="totalLayout" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" 
+                            BackgroundColor="Transparent">
+                
+                </RelativeLayout>
+            </ContentView>
+
+            <!-- loading view -->
+             <Grid x:Name="loadingView" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" 
+                    Text="{Binding LoadingWaitText}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ffimageloading:CachedImage  Grid.Row="1" 
+                        Source = "{Binding GifSource}"
+                        IsVisible="{Binding IsGifVisible}"                     
+                        Aspect="AspectFit">
+                </ffimageloading:CachedImage>
+
+                <Image  ClassId="CloseBtn" x:Name="LoadingCloseBtn"
+                        Grid.Row="0" Grid.RowSpan="3"
+                        IsEnabled="False" IsVisible="False"
+                        HorizontalOptions="End" VerticalOptions="Start"
+                        WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>  
+        </AbsoluteLayout> 
+    </ContentPage.Content>
+</ContentPage>

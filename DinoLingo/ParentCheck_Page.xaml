@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.ParentCheck_Page"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+
+        <AbsoluteLayout BackgroundColor="{StaticResource BackgroundBlueColor}">
+            <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                Fill="Tile"/>
+
+            <Grid x:Name = "MainGrid" AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height= "*"/>
+                    <RowDefinition Height= "*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="10,30,10,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "3*"/>
+                        <RowDefinition Height= "*"/>
+                        <RowDefinition Height= "3*"/>
+                        <RowDefinition Height= "3*"/>
+                        <RowDefinition Height= "3*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Grid.RowSpan="2" Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.choose_lang_dino.png}"
+                           WidthRequest="{Binding DinoSize}"
+                           Aspect="AspectFit">
+                    </Image>
+                    <!--
+                    <Label  ClassId = "DinoLingoLink" Grid.Row="1" TextColor="White"
+                            Text="DinoLingo.com" 
+                            FontFamily="{StaticResource ArialRoundedMTBold}"
+                               FontSize="Small"
+                               TextDecorations="Underline"
+                            HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>                    
+-->
+                    <StackLayout Grid.Row="2">
+                        <controls:MyLabel   HorizontalOptions="Center" x:Name="ParentOnlyLabel"
+                        Text="{controls:Translate parent_check_parental_control}" TextColor="White"
+                            HorizontalTextAlignment="Center"/>
+                        <controls:MyLabel   HorizontalOptions="Center" x:Name="ParentOnlyLabel2"
+                        Text="{controls:Translate parent_check_reports_etc}" TextColor="White"  HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <controls:MyLabel  Grid.Row="3" HorizontalOptions="Center" x:Name="EnterTheNumbersTextLabel"
+                        TextColor="White"/>
+
+                    <Grid Grid.Row="4" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width= "*"/>
+                            <ColumnDefinition Width= "*"/>
+                            <ColumnDefinition Width= "*"/>
+                            <ColumnDefinition Width= "*"/>
+                            <ColumnDefinition Width= "*"/>
+                            <ColumnDefinition Width= "*"/>
+                            <ColumnDefinition Width= "*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <controls:MyLabel  Grid.Column="1" HorizontalOptions="Center"
+                        Text="_" FontSize="{Binding KeysTextSize}" TextColor="White" TranslationY="5" VerticalOptions="End"/>
+                        <controls:MyLabel x:Name = "key_0" Grid.Column="1" HorizontalOptions="Center"
+                        FontSize="{Binding KeysTextSize}" TextColor="White" VerticalOptions="End"/>
+
+                        <controls:MyLabel  Grid.Column="2" HorizontalOptions="Center"
+                        Text="_" FontSize="{Binding KeysTextSize}" TextColor="White" TranslationY="5" VerticalOptions="End"/>
+                        <controls:MyLabel x:Name = "key_1" Grid.Column="2" HorizontalOptions="Center"
+                         FontSize="{Binding KeysTextSize}" TextColor="White" VerticalOptions="End"/>
+
+                        <controls:MyLabel  Grid.Column="3" HorizontalOptions="Center"
+                        Text="_" FontSize="{Binding KeysTextSize}" TextColor="White" TranslationY="5" VerticalOptions="End"/>
+                        <controls:MyLabel x:Name = "key_2" Grid.Column="3" HorizontalOptions="Center"
+                        FontSize="{Binding KeysTextSize}" TextColor="White" VerticalOptions="End"/>
+
+                        <controls:MyLabel  Grid.Column="4" HorizontalOptions="Center"
+                        Text="_" FontSize="{Binding KeysTextSize}" TextColor="White" TranslationY="5" VerticalOptions="End"/>
+                        <controls:MyLabel x:Name = "key_3" Grid.Column="4" HorizontalOptions="Center"
+                        FontSize="{Binding KeysTextSize}" TextColor="White" VerticalOptions="End"/>
+
+
+                        <!-- Del button -->
+                        <AbsoluteLayout ClassId="DelBtn" Grid.Column="5" Margin="3" VerticalOptions="End">
+                            <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All" 
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               
+                               HasShadow="false"
+                               TranslationY="2">
+                            </Frame>
+                            <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                                <controls:MyLabel x:Name="DelLabel" HorizontalOptions="Center" VerticalOptions="Center"
+                                           TextColor="{StaticResource ButtonBlueTextColor}"/>
+                            </controls:ExtendedFrame>
+                            <AbsoluteLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                            </AbsoluteLayout.GestureRecognizers>
+                        </AbsoluteLayout>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1" x:Name ="DialGrid" HorizontalOptions="Center" VerticalOptions="Center" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width= "*"/>
+                        <ColumnDefinition Width= "*"/>
+                        <ColumnDefinition Width= "*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "*"/>
+                        <RowDefinition Height= "*"/>
+                        <RowDefinition Height= "*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- 1 -->
+                    <AbsoluteLayout ClassId="1" Grid.Column="0" Grid.Row="0">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3" 
+                                               
+                                    IsClippedToBounds="false">
+                            <controls:MyLabel Text="1" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 2 -->
+                    <AbsoluteLayout ClassId="2" Grid.Column="1" Grid.Row="0">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="2" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 3 -->
+                    <AbsoluteLayout ClassId="3" Grid.Column="2" Grid.Row="0">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="3" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 4 -->
+                    <AbsoluteLayout ClassId="4" Grid.Column="0" Grid.Row="1">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="4" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 5 -->
+                    <AbsoluteLayout ClassId="5" Grid.Column="1" Grid.Row="1">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="5" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 6 -->
+                    <AbsoluteLayout ClassId="6" Grid.Column="2" Grid.Row="1">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="6" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 7 -->
+                    <AbsoluteLayout ClassId="7" Grid.Column="0" Grid.Row="2">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="7" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 8 -->
+                    <AbsoluteLayout ClassId="8" Grid.Column="1" Grid.Row="2">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"
+                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="8" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                    <!-- 9 -->
+                    <AbsoluteLayout ClassId="9" Grid.Column="2" Grid.Row="2">
+                        <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.95,1" AbsoluteLayout.LayoutFlags="All"
+                               BackgroundColor="{StaticResource ShadowLoginColor}"
+                               CornerRadius="5"
+                               BorderColor="Transparent"                               
+                               HasShadow="false"
+                               TranslationY="2">
+                        </Frame>
+
+                        <controls:ExtendedFrame  AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="5"
+                                    OutLineWidth = "3"
+                                    BorderColor="White"
+                                    HasShadow="false"
+                                    Padding="3"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="9" HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="{Binding DialTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+
+                        </controls:ExtendedFrame>
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                    </AbsoluteLayout>
+
+                </Grid>
+            </Grid>
+
+
+            <!-- close button -->
+            <Image  x:Name = "CloseBtn" ClassId="CloseBtn" Margin="0,5,5,0" AbsoluteLayout.LayoutBounds="1,0" AbsoluteLayout.LayoutFlags="PositionProportional"
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

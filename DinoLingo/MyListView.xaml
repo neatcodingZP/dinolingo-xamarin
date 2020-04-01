@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.MyListView"
+             xmlns:local="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo">
+    <ContentView.Resources>
+            <ResourceDictionary>
+
+            <DataTemplate x:Key="HeaderWithImageItemTemplate">
+                <ViewCell>                   
+                        
+                        <!-- Image and text -->
+                        <Grid HeightRequest="{Binding CellHeight}" RowSpacing="0">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </Grid.GestureRecognizers>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="6*" />                                
+                                <RowDefinition Height="90*" /> 
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Grid.RowSpan="2"
+                                    Source="{controls:ImageMultiResource DinoLingo.Resources.UI.main_list_header.png}"
+                                    Aspect="AspectFit">
+                            </Image>
+                            <controls:MyLabel Grid.Row="1"
+                                TextColor="{StaticResource BlueTextLoginColor}"                                
+                                Text="{Binding Name}" 
+                                FontSize="{Binding FontSize}"                                
+                                VerticalOptions="Center" HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </controls:MyLabel>
+                        </Grid>   
+                   
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="HeaderItemTemplate">
+                    <ViewCell>
+                        <AbsoluteLayout HeightRequest="{Binding CellHeight}">
+                            <AbsoluteLayout.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </AbsoluteLayout.GestureRecognizers>
+                            <!-- Element Label -->
+                        <Frame BackgroundColor="{Binding HeaderColor}" AbsoluteLayout.LayoutBounds="0,0,1,0.9" AbsoluteLayout.LayoutFlags="All" CornerRadius="4" Padding="0">
+                            <controls:MyLabel TextColor="White"                                
+                                Text="{Binding Name}" 
+                                FontSize="{Binding FontSize}"
+                                VerticalOptions="Center" HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </controls:MyLabel>
+                        </Frame>
+                        
+                        </AbsoluteLayout>
+                    </ViewCell>
+                </DataTemplate>
+            
+                <DataTemplate x:Key="SpaceItemTemplate">
+                    <ViewCell>
+                        <ContentView HeightRequest="{Binding CellHeight}"> 
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            
+                <!-- SINGLE ITEM -->
+                <!-- *********** -->
+                <DataTemplate x:Key="SingleItemTemplate">
+                    <ViewCell >
+                        <AbsoluteLayout HeightRequest="{Binding CellHeight}" WidthRequest="{Binding CellWidth}">
+                            <AbsoluteLayout.GestureRecognizers>
+                                <TapGestureRecognizer/>
+                            </AbsoluteLayout.GestureRecognizers>
+                            <!-- Cell zone -->
+                            <ContentView AbsoluteLayout.LayoutBounds="0.5,0,0.5,1" AbsoluteLayout.LayoutFlags="All">
+                                <Grid WidthRequest="{Binding CellWidth}" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="4*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <!-- Stars image -->
+                                    <Image Source="{Binding StarsImagesource}" Aspect="AspectFit" Grid.Row="0">
+                                    </Image>
+                                    <!-- Main Image Source="{Binding Imagesource}" -->
+                                <Image  
+                                    Aspect="AspectFit" Grid.Row="1"
+                                    Source="{Binding BackgroundImageSource}">
+                                </Image>
+
+                                <ffimageloading:CachedImage 
+                                        LoadingPlaceholder = "my_loading_512.gif" 
+                                        ErrorPlaceholder="picture_loading_failed.png" 
+                                        Source="{Binding Imagesource}"
+                                        Aspect="AspectFit" Grid.Row="1">
+                                    </ffimageloading:CachedImage>
+
+                                    <ffimageloading:CachedImage Source="{Binding FavoritesImagesource}" 
+                                            WidthRequest="{Binding FavoritesSize}"
+                                            HeightRequest="{Binding FavoritesSize}"
+                                            IsEnabled="{Binding IsFavoritesVisible}"
+                                            IsVisible="{Binding IsFavoritesVisible}"
+                                           
+                                            HorizontalOptions="End" VerticalOptions="Start"
+                                                Grid.Row="1">
+                                        <ffimageloading:CachedImage.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Favorites_OnTapped"/>
+                                        </ffimageloading:CachedImage.GestureRecognizers>
+                                    </ffimageloading:CachedImage>
+                                <!--
+                                    <Image 
+                                    Source="{controls:ImageMultiResource DinoLingo.Resources.COMMON.loading.gif}"
+                                    Aspect="AspectFit" Grid.Row="1">
+                                    </Image>
+                                -->
+                                <!-- Name -->
+
+                                <Label  Grid.Row="2"
+                                            Text="{Binding Name}" 
+                                            FontSize="{Binding FontSize}"
+                                            FontFamily="{Binding MyFont}"
+                                            FontAttributes="{Binding FontAttributes_}"
+                                            TextColor="White"
+                                            TranslationX="1"
+                                            TranslationY="1"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Start" >
+                                </Label>
+
+                                <!-- Name -->
+                                
+                                    <Label  Grid.Row="2"
+                                            Text="{Binding Name}" 
+                                            FontSize="{Binding FontSize}"
+                                            FontFamily="{Binding MyFont}"
+                                            FontAttributes="{Binding FontAttributes_}"
+                                            TextColor="{StaticResource BlueTextLoginColor}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Start" >
+                                    </Label>
+                                </Grid>
+                            </ContentView>
+                        </AbsoluteLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+
+                <!-- DOUBLE ITEM -->
+                <!-- *********** -->
+                <DataTemplate x:Key="DoubleItemTemplate">
+                    <ViewCell>
+                        <Grid HeightRequest="{Binding CellHeight}" HorizontalOptions="FillAndExpand" ColumnSpacing="15">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer />
+                                    </Grid.GestureRecognizers>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                            <!-- FIRST ELEMENT -->
+                        <ContentView Grid.Column="0"  WidthRequest="{Binding CellWidth}" HorizontalOptions="End">
+                            <ContentView.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped"/>
+                            </ContentView.GestureRecognizers>
+                            <Grid>
+                                    <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding FistRowHeight}" />
+                                        <RowDefinition Height="4*" />
+                                    <RowDefinition Height="{Binding LastRowHeight}" />
+                                    </Grid.RowDefinitions>
+                                    <!-- Stars image -->
+                                    <Image Source="{Binding StarsImagesource}" Aspect="AspectFit" Grid.Row="0">
+                                    </Image>
+                                    <!-- Main Image -->
+
+                                <Image  Grid.Row="1"
+                                    Aspect="AspectFit"
+                                    Source="{Binding BackgroundImageSource}">                                    
+                                </Image>
+
+                                <ffimageloading:CachedImage 
+                                        LoadingPlaceholder="my_loading_512.gif" 
+                                        ErrorPlaceholder="picture_loading_failed.png"
+                                        Source="{Binding Imagesource}"
+                                        Margin="{Binding MainImagePadding}"
+                                        Aspect="AspectFit" Grid.Row="1">
+                                </ffimageloading:CachedImage>
+                                    <ffimageloading:CachedImage Source="{Binding FavoritesImagesource}" 
+                                            WidthRequest="{Binding FavoritesSize}"
+                                            HeightRequest="{Binding FavoritesSize}"
+                                            IsEnabled="{Binding IsFavoritesVisible}"
+                                            IsVisible="{Binding IsFavoritesVisible}"
+                                           
+                                            HorizontalOptions="End" VerticalOptions="Start"
+                                                Grid.Row="1">
+                                        <ffimageloading:CachedImage.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Favorites_OnTapped"/>
+                                        </ffimageloading:CachedImage.GestureRecognizers>
+                                    </ffimageloading:CachedImage>
+                                
+                                <!--
+                                    <Image 
+                                        Source="{controls:ImageMultiResource DinoLingo.Resources.COMMON.loading.gif}"
+                                        Aspect="AspectFit" Grid.Row="1">
+                                    </Image>
+                                    -->
+                                <!-- Name -->
+                                <Label Grid.Row="2"
+                                            Text="{Binding Name}" 
+                                           FontSize="{Binding FontSize}"
+                                           FontFamily="{Binding MyFont}"
+                                       FontAttributes="{Binding FontAttributes_}"
+                                           TextColor="White"
+                                           TranslationX="1"
+                                       TranslationY="1"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Start" >
+                                </Label>
+                                <!-- Name -->
+                                    <Label Grid.Row="2"
+                                            Text="{Binding Name}" 
+                                           FontSize="{Binding FontSize}"
+                                           FontFamily="{Binding MyFont}"
+                                           FontAttributes="{Binding FontAttributes_}"
+                                           TextColor="{StaticResource BlueTextLoginColor}"
+                                           
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Start" >
+                                    </Label>
+                                </Grid>
+                        </ContentView>
+
+                        <!-- SECOND ELEMENT -->
+                        <ContentView HorizontalOptions="Start" Grid.Column="1"  WidthRequest="{Binding CellWidth}">
+                            <ContentView.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Name_OnTapped2"/>
+                            </ContentView.GestureRecognizers>
+                            <Grid>
+                                    <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding FistRowHeight}" />
+                                        <RowDefinition Height="4*" />
+                                    <RowDefinition Height="{Binding LastRowHeight}"/>
+                                    </Grid.RowDefinitions>
+                                    <!-- Stars image -->
+                                    <Image Source="{Binding StarsImagesource2}" Aspect="AspectFit" Grid.Row="0">
+                                    </Image>
+                                    <!-- Main Image -->
+
+                                <Image  
+                                    Aspect="AspectFit" Grid.Row="1"
+                                    Source="{Binding BackgroundImageSource}">
+                                </Image>
+
+                                <ffimageloading:CachedImage 
+                                        Source="{Binding Imagesource2}"
+                                        Margin="{Binding MainImagePadding}"
+                                        LoadingPlaceholder="my_loading_512.gif"
+                                        ErrorPlaceholder="picture_loading_failed.png"
+                                        Aspect="AspectFit" Grid.Row="1">
+                                    </ffimageloading:CachedImage>
+                                
+                                <ffimageloading:CachedImage Source="{Binding FavoritesImagesource2}" 
+                                            WidthRequest="{Binding FavoritesSize}"
+                                            HeightRequest="{Binding FavoritesSize}"
+                                            IsEnabled="{Binding IsFavoritesVisible2}"
+                                            IsVisible="{Binding IsFavoritesVisible2}"
+                                           
+                                            HorizontalOptions="End" VerticalOptions="Start"
+                                                Grid.Row="1">
+                                        <ffimageloading:CachedImage.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="Favorites_OnTapped2"/>
+                                        </ffimageloading:CachedImage.GestureRecognizers>
+                                    </ffimageloading:CachedImage>
+                                <!--
+                                    <Image 
+                                        Source="{controls:ImageMultiResource DinoLingo.Resources.COMMON.loading.gif}"
+                                        Aspect="AspectFit" Grid.Row="1">
+                                    </Image>
+                                -->
+
+                                <!-- Name -->
+                                <Label Grid.Row="2"
+                                            Text="{Binding Name2}" 
+                                           TextColor="White"
+                                           FontSize="{Binding FontSize}"
+                                           FontFamily="{Binding MyFont}"
+                                       FontAttributes="{Binding FontAttributes_}"
+                                       TranslationX="1"
+                                       TranslationY="1"
+                                           
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Start" >
+                                </Label>
+                                <!-- Name -->
+                                    <Label Grid.Row="2"
+                                            Text="{Binding Name2}" 
+                                           TextColor="{StaticResource BlueTextLoginColor}"
+                                           FontSize="{Binding FontSize}"
+                                           FontFamily="{Binding MyFont}"
+                                           FontAttributes="{Binding FontAttributes_}"
+                                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center" VerticalTextAlignment="Start" >
+                                    </Label>
+                                </Grid>
+                        </ContentView>
+                        
+                        </Grid>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            
+            <local:ProductTemplateSelector x:Key="productTemplateSelector"
+            HeaderWithImageItemTemplate ="{StaticResource HeaderWithImageItemTemplate}"
+            HeaderItemTemplate="{StaticResource HeaderItemTemplate}"
+            SpaceItemTemplate="{StaticResource SpaceItemTemplate}"
+            SingleItemTemplate="{StaticResource SingleItemTemplate}" 
+            DoubleItemTemplate="{StaticResource DoubleItemTemplate}"/>
+            
+        </ResourceDictionary>
+</ContentView.Resources>
+    
+    <ContentView.Content>
+        <StackLayout x:Name="rootStack" VerticalOptions="StartAndExpand">
+            
+            <!-- sub menu bar-->
+            <StackLayout x:Name="subMenuBar" Orientation="Horizontal" HorizontalOptions="Center" 
+                         Padding="5"
+                         IsVisible="False" IsEnabled="False">
+                <!-- 0 -->
+                <Image  x:Name = "sub_0" ClassId="0" WidthRequest="{Binding SubViewBtnSize}" HeightRequest="{Binding SubViewBtnSize}" Aspect="AspectFit"
+                        Source="{controls:ImageMultiResource DinoLingo.Resources.UI.btn_books_lv_1.png}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- 1 -->
+                <Image  x:Name = "sub_1" ClassId="1" WidthRequest="{Binding SubViewBtnSize}" HeightRequest="{Binding SubViewBtnSize}" Aspect="AspectFit"
+                        Source="{controls:ImageMultiResource DinoLingo.Resources.UI.btn_books_lv_1.png}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- 2 -->
+                <Image  x:Name = "sub_2" ClassId="2" WidthRequest="{Binding SubViewBtnSize}" Aspect="AspectFit"
+                        Source="{controls:ImageMultiResource DinoLingo.Resources.UI.btn_books_lv_1.png}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- 3 -->
+                <Image  x:Name = "sub_3" ClassId="3" WidthRequest="{Binding SubViewBtnSize}" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- 4 -->
+                <Image  x:Name = "sub_4" ClassId="4" WidthRequest="{Binding SubViewBtnSize}" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- 5 -->
+                <Image  x:Name = "sub_5" ClassId="5" WidthRequest="{Binding SubViewBtnSize}" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- 6 -->
+                <Image  x:Name = "sub_6" ClassId="6" WidthRequest="{Binding SubViewBtnSize}" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubCat_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+            </StackLayout>
+            
+            <ListView x:Name = "listView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                    BackgroundColor="Transparent"
+                  CachingStrategy="RetainElement"
+                  SeparatorVisibility="None"
+                  ItemAppearing="Handle_ItemAppearing" 
+                  ItemDisappearing="Handle_ItemDisappearing"
+                  ItemsSource="{Binding ListItems}" SelectedItem="{Binding SelectedItem}"
+                  HasUnevenRows="true"
+                  ItemTemplate="{StaticResource productTemplateSelector}">
+
+            </ListView>
+        </StackLayout>
+        
+    </ContentView.Content>
+</ContentView>

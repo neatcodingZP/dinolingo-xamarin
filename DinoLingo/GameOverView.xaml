@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.GameOverView"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             IsVisible="false"
+             IsEnabled="false"
+             InputTransparent="true">
+    <ContentView.Content>
+        <AbsoluteLayout>
+            
+            <Grid x:Name="gameoverDialog" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional"
+                  WidthRequest="{Binding DialogWidth}" HeightRequest="{Binding DialogHeight}">                
+                
+                <Grid.RowDefinitions>                    
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Frame x:Name="shadowFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="5"                       
+                        BorderColor="Transparent"                        
+                        HasShadow="false"
+                        Padding="5"
+                        BackgroundColor="{StaticResource ShadowLoginColor}">
+                </Frame>
+
+                <Frame x:Name="mainFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="5"                         
+                        BorderColor="Transparent"                        
+                        HasShadow="false"
+                        Padding="5"
+                        BackgroundColor="White"/>
+
+
+                <Image  x:Name = "CloseBtn" ClassId="CloseBtn"  Grid.Column="0" HorizontalOptions="End" VerticalOptions="Start"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Button_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+
+                <controls:MyLabel Text="{controls:Translate game_over}" Grid.Row="1" HorizontalOptions="Center"                    
+                    VerticalOptions="Center"
+                    FontSize="{Binding DialogFontSize}"                    
+                    TextColor="{StaticResource YellowColor}"/>
+
+                <controls:MyLabel Grid.Row="2" HorizontalOptions="Center"
+                                   Text="{controls:Translate purchase_try_again}"                    
+                       VerticalOptions="Center"
+                    FontSize="{Binding DialogFontSize}"  
+                    TextColor="{StaticResource BlueTextLoginColor}"/>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid ClassId="RestartBtn" Grid.Column="1">
+                        <Frame 
+                                    BackgroundColor="{StaticResource ShadowLoginColor}"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    TranslationY="{Binding BtnShadowTranslationY}"
+                                    BorderColor="Transparent"                                    
+                                    Padding="0"
+                                    HasShadow="false">
+                        </Frame>
+
+                        <Frame  
+                                    BackgroundColor="White"
+                                    CornerRadius="{Binding BtnCornerRadius}"
+                                    BorderColor="Transparent"
+                                    HasShadow="false"  
+                                    Padding="0"
+                                    IsClippedToBounds="true">
+                        </Frame>
+
+                        <Frame 
+                                    Margin="{Binding StrokeLineMarginBtn}"
+                                    BackgroundColor="{StaticResource ButtonBlueBackgroundColor}"
+                                    CornerRadius="{Binding BtnCornerRadiusInner}"
+                                    BorderColor="Transparent"
+                                    HasShadow="false"  
+                                    Padding="0"
+                                    IsClippedToBounds="true">
+                            <controls:MyLabel Text="{controls:Translate purchase_try_again}" HorizontalOptions="Center" VerticalOptions="Center"
+                                     FontSize="{Binding BtnTextSize}" TextColor="{StaticResource ButtonBlueTextColor}"/>
+                        </Frame>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Button_Tapped"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </Grid>
+                
+
+            </Grid>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>

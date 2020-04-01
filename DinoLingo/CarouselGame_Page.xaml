@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DinoLingo.CarouselGame_Page"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:DinoLingo;assembly=DinoLingo"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch">
+    <ContentPage.Content>
+       <AbsoluteLayout x:Name="absoluteRoot" BackgroundColor="{StaticResource BackgroundBlueColor}"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> 
+        
+           <Forms9Patch:Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                Source = "{controls:ImageMultiResource DinoLingo.Resources.UI.pattern.png}"
+                Fill="Tile"/>
+            <Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                Source = "{controls:ImageMultiResource DinoLingo.Resources.FINDTHEPAIR.trans_gradient.png}"
+                Aspect="Fill">
+            </Image>
+
+           <AbsoluteLayout AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+                           WidthRequest="{Binding TotalWidth}" HeightRequest="{Binding GameHeight}">
+                <ContentView x:Name="rootLayout" AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+                           WidthRequest="{Binding GameWidth}" HeightRequest="{Binding GameHeight}"
+                           BackgroundColor="{StaticResource YellowColor}" IsClippedToBounds="True">
+                </ContentView>
+
+         <!-- RIGHT MENU -->
+         <Grid AbsoluteLayout.LayoutBounds="1,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" 
+            HeightRequest="{Binding GameHeight}" WidthRequest="{Binding TotalMenuesWidth}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="292*" />
+                    <RowDefinition Height="160*" />
+                    <RowDefinition Height="120*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="160*" />
+                    <RowDefinition Height="120*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="160*" />
+                    <RowDefinition Height="120*" />
+                    <RowDefinition Height="30*" />
+                </Grid.RowDefinitions>
+                    
+                <!-- Targets -->
+                <Image   Grid.Row="1" Grid.RowSpan="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.CAROUSEL.target_shots.png}"
+                    Aspect="AspectFit" IsEnabled="false">
+                </Image>
+                <Label Grid.Row="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{Binding TargetsText}" FontSize="{Binding MenuFontSize}"
+                       FontFamily="{StaticResource ArialRoundedMTBold}"  TextColor="White"
+                       IsEnabled="false"/>
+
+                <!-- Aimed -->    
+                <Image  Grid.Row="4" Grid.RowSpan="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.CAROUSEL.good_shots.png}"
+                    Aspect="AspectFit" IsEnabled="false">
+                </Image>
+                <Label Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{Binding AimedText}"
+                    FontSize="{Binding MenuFontSize}"   
+                    FontFamily="{StaticResource ArialRoundedMTBold}"  TextColor="White" IsEnabled="false"/>
+
+                <!-- Misses -->    
+                <Image  Grid.Row="7" Grid.RowSpan="2"
+                    Source = "{controls:ImageMultiResource DinoLingo.Resources.CAROUSEL.missed_shots.png}"
+                    Aspect="AspectFit" IsEnabled="false">
+                </Image>
+                <Label Grid.Row="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    Text="{Binding MissesText}"
+                    FontSize="{Binding MenuFontSize}"   
+                    FontFamily="{StaticResource ArialRoundedMTBold}"  TextColor="White" IsEnabled="false"/>
+        </Grid>
+
+                <!-- LEFT MENU -->
+            <Grid AbsoluteLayout.LayoutBounds="0,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" 
+                    HeightRequest="{Binding GameHeight}"  WidthRequest="{Binding TotalMenuesWidth}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="200*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="952*" />
+                    <RowDefinition Height="30*" />
+                </Grid.RowDefinitions> 
+
+                <!-- Repeat -->   
+                <Image  ClassId="RepeatBtn" Grid.Row="1" 
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.QUIZGAME.btn_repeat.png}"
+                        Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+                </Image> 
+                <!-- Shots -->
+                <Grid x:Name="shotsGrid" Grid.Row="3" IsEnabled="false" WidthRequest="{Binding ShotsWidth}" HorizontalOptions="Center"
+                      RowSpacing="0" ColumnSpacing="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="10*" />
+                    </Grid.RowDefinitions>
+                </Grid> 
+            </Grid>
+
+           </AbsoluteLayout> 
+       
+            
+             <!-- close button -->
+           <Image  ClassId="CloseBtn" Margin="0,5,5,0" AbsoluteLayout.LayoutBounds="1,0" AbsoluteLayout.LayoutFlags="PositionProportional"
+                  WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                  Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                  Aspect="AspectFit">
+                  <Image.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                  </Image.GestureRecognizers>
+            </Image>
+            
+
+           <!-- loading view -->
+             <Grid x:Name="loadingView" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" 
+                    Text="{Binding LoadingWaitText}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                
+                
+                <ffimageloading:CachedImage  Grid.Row="1" ClassId="StartBtn"  IsEnabled="{Binding IsStartBtnEnabled}"
+                        Source = "{Binding StartBtnSource}" IsVisible="{Binding IsStartBtnVisible}"
+                                             VerticalOptions="FillAndExpand"
+                        Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                        </Image.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <Image  ClassId="CloseBtn" x:Name="LoadingCloseBtn"
+                        Grid.Row="0" Grid.RowSpan="3"
+                        IsEnabled="False" IsVisible="False"
+                        HorizontalOptions="End" VerticalOptions="Start"
+                        WidthRequest="{Binding CloseBtnSize}" HeightRequest="{Binding CloseBtnSize}"
+                        Source = "{controls:ImageMultiResource DinoLingo.Resources.COMMON.btn_close.png}"
+                        Aspect="AspectFit">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>  
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

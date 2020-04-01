@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="choose_language" xml:space="preserve">
+    <value>언어를 선택하세요</value>
+  </data>
+  <data name="favorites" xml:space="preserve">
+    <value>즐겨찾기</value>
+  </data>
+  <data name="favorites_add_post" xml:space="preserve">
+    <value>즐겨찾기에 게시물을 추가하겠습니까?</value>
+  </data>
+  <data name="favorites_cant_add_more_books" xml:space="preserve">
+    <value>즐겨찾기에 책을 더 추가할 수 없습니다.</value>
+  </data>
+  <data name="favorites_cant_add_more_videos" xml:space="preserve">
+    <value>즐겨찾기에 동영상을 더 추가할 수 없습니다.</value>
+  </data>
+  <data name="favorites_loading" xml:space="preserve">
+    <value>로딩중…</value>
+  </data>
+  <data name="favorites_remove_post_from_favorites" xml:space="preserve">
+    <value>즐겨찾기에서 게시물을 삭제하겠습니까?</value>
+  </data>
+  <data name="favorites_total_books" xml:space="preserve">
+    <value>즐겨찾기의 총 책 수:</value>
+  </data>
+  <data name="favorites_total_videos" xml:space="preserve">
+    <value>즐겨찾기의 총 동영상 수:</value>
+  </data>
+  <data name="favorite_books" xml:space="preserve">
+    <value>즐겨찾기 책</value>
+  </data>
+  <data name="lang_" xml:space="preserve">
+    <value>ko</value>
+  </data>
+  <data name="lang_albanian" xml:space="preserve">
+    <value>알바니아어</value>
+  </data>
+  <data name="lang_arabic" xml:space="preserve">
+    <value>아랍어</value>
+  </data>
+  <data name="lang_armenian" xml:space="preserve">
+    <value>아르메니아어</value>
+  </data>
+  <data name="lang_bulgarian" xml:space="preserve">
+    <value>불가리아어</value>
+  </data>
+  <data name="lang_cantonese" xml:space="preserve">
+    <value>광둥어</value>
+  </data>
+  <data name="lang_chinese" xml:space="preserve">
+    <value>중국어</value>
+  </data>
+  <data name="lang_creole" xml:space="preserve">
+    <value>크리올어</value>
+  </data>
+  <data name="lang_croatian" xml:space="preserve">
+    <value>크로아티아어</value>
+  </data>
+  <data name="lang_czech" xml:space="preserve">
+    <value>체코어</value>
+  </data>
+  <data name="lang_danish" xml:space="preserve">
+    <value>덴마크어</value>
+  </data>
+  <data name="lang_dari" xml:space="preserve">
+    <value>다리어</value>
+  </data>
+  <data name="lang_dutch" xml:space="preserve">
+    <value>네덜란드어</value>
+  </data>
+  <data name="lang_english" xml:space="preserve">
+    <value>영어</value>
+  </data>
+  <data name="lang_european_portuguese" xml:space="preserve">
+    <value>포르투갈어(유럽)</value>
+  </data>
+  <data name="lang_finnish" xml:space="preserve">
+    <value>핀란드어</value>
+  </data>
+  <data name="lang_french" xml:space="preserve">
+    <value>불어</value>
+  </data>
+  <data name="lang_german" xml:space="preserve">
+    <value>독일어</value>
+  </data>
+  <data name="lang_greek" xml:space="preserve">
+    <value>그리스어</value>
+  </data>
+  <data name="lang_gujarati" xml:space="preserve">
+    <value>구자라트어</value>
+  </data>
+  <data name="lang_hawaiian" xml:space="preserve">
+    <value>하와이어</value>
+  </data>
+  <data name="lang_hebrew" xml:space="preserve">
+    <value>히브리어</value>
+  </data>
+  <data name="lang_hindi" xml:space="preserve">
+    <value>힌디어</value>
+  </data>
+  <data name="lang_hungarian" xml:space="preserve">
+    <value>헝가리어</value>
+  </data>
+  <data name="lang_indonesian" xml:space="preserve">
+    <value>인도네시아어</value>
+  </data>
+  <data name="lang_irish" xml:space="preserve">
+    <value>아일랜드어</value>
+  </data>
+  <data name="lang_italian" xml:space="preserve">
+    <value>이탈리아어</value>
+  </data>
+  <data name="lang_japanese" xml:space="preserve">
+    <value>일본어</value>
+  </data>
+  <data name="lang_kazakh" xml:space="preserve">
+    <value>카자흐어</value>
+  </data>
+  <data name="lang_korean" xml:space="preserve">
+    <value>한국어</value>
+  </data>
+  <data name="lang_latin" xml:space="preserve">
+    <value>라틴어</value>
+  </data>
+  <data name="lang_malay" xml:space="preserve">
+    <value>말레이어</value>
+  </data>
+  <data name="lang_norwegian" xml:space="preserve">
+    <value>노르웨이어</value>
+  </data>
+  <data name="lang_persian" xml:space="preserve">
+    <value>페르시아어</value>
+  </data>
+  <data name="lang_polish" xml:space="preserve">
+    <value>폴란드어</value>
+  </data>
+  <data name="lang_portuguese" xml:space="preserve">
+    <value>포르투갈어(브라질)</value>
+  </data>
+  <data name="lang_punjabi" xml:space="preserve">
+    <value>펀자브어</value>
+  </data>
+  <data name="lang_romanian" xml:space="preserve">
+    <value>루마니아어</value>
+  </data>
+  <data name="lang_russian" xml:space="preserve">
+    <value>러시아어</value>
+  </data>
+  <data name="lang_serbian" xml:space="preserve">
+    <value>세르비아어</value>
+  </data>
+  <data name="lang_slovak" xml:space="preserve">
+    <value>슬로바키아어</value>
+  </data>
+  <data name="lang_slovenian" xml:space="preserve">
+    <value>슬로베니아어</value>
+  </data>
+  <data name="lang_spanish" xml:space="preserve">
+    <value>스페인어</value>
+  </data>
+  <data name="lang_swahili" xml:space="preserve">
+    <value>스와힐리어</value>
+  </data>
+  <data name="lang_swedish" xml:space="preserve">
+    <value>스웨덴어</value>
+  </data>
+  <data name="lang_tagalog" xml:space="preserve">
+    <value>타갈로그어</value>
+  </data>
+  <data name="lang_thai" xml:space="preserve">
+    <value>태국어</value>
+  </data>
+  <data name="lang_turkish" xml:space="preserve">
+    <value>터키어</value>
+  </data>
+  <data name="lang_ukrainian" xml:space="preserve">
+    <value>우크라이나어</value>
+  </data>
+  <data name="lang_urdu" xml:space="preserve">
+    <value>우르두어</value>
+  </data>
+  <data name="lang_vietnamese" xml:space="preserve">
+    <value>베트남어</value>
+  </data>
+  <data name="lang_welsh" xml:space="preserve">
+    <value>웨일스어</value>
+  </data>
+  <data name="left_menu_my_dinosaurs" xml:space="preserve">
+    <value>나의 공룡</value>
+  </data>
+  <data name="left_menu_see_all" xml:space="preserve">
+    <value>모두 보기</value>
+  </data>
+  <data name="left_menu_sign_up_to_collect_dinosaurs" xml:space="preserve">
+    <value>공룡을 모으기 위해 가입하십시오</value>
+  </data>
+  <data name="login_are_you_sure_to_reset_pass" xml:space="preserve">
+    <value>암호를 재설정 하시겠습니까?</value>
+  </data>
+  <data name="login_email" xml:space="preserve">
+    <value>이메일 주소</value>
+  </data>
+  <data name="login_forgot_password" xml:space="preserve">
+    <value>비밀번호를 잊으셨나요?</value>
+  </data>
+  <data name="login_have_no_products" xml:space="preserve">
+    <value>상품이 없으시네요! 무료로 계속하세요.</value>
+  </data>
+  <data name="login_info" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="login_instructions_to_reset_pass_sent_to_email" xml:space="preserve">
+    <value>비밀번호 재설정 안내가 이메일로 발송되었습니다:</value>
+  </data>
+  <data name="login_lang_learn_program" xml:space="preserve">
+    <value>아이들을 위한 언어 학습 프로그램</value>
+  </data>
+  <data name="login_link_will_be_sent_to_email" xml:space="preserve">
+    <value>비밀번호 재설정 링크가 귀하의 이메일로 전송됩니다:</value>
+  </data>
+  <data name="login_login" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="login_members" xml:space="preserve">
+    <value>회원 로그인</value>
+  </data>
+  <data name="login_new_to_dinolingo" xml:space="preserve">
+    <value>다이노링고를 처음 사용하시나요?</value>
+  </data>
+  <data name="login_password" xml:space="preserve">
+    <value>비밀번호</value>
+  </data>
+  <data name="login_please_enter_correct_email" xml:space="preserve">
+    <value>올바른 이메일을 입력하십시오!</value>
+  </data>
+  <data name="login_please_enter_valid_pass" xml:space="preserve">
+    <value>올바른 암호를 입력하십시오!</value>
+  </data>
+  <data name="login_please_enter_your_email" xml:space="preserve">
+    <value>이메일을 입력하십시오!</value>
+  </data>
+  <data name="login_reset_pass" xml:space="preserve">
+    <value>비밀번호 재설정</value>
+  </data>
+  <data name="login_sign_up" xml:space="preserve">
+    <value>가입</value>
+  </data>
+  <data name="login_success" xml:space="preserve">
+    <value>완료되었습니다!</value>
+  </data>
+  <data name="login_try_a_free_lesson" xml:space="preserve">
+    <value>무료 수업</value>
+  </data>
+  <data name="login_welcome_to_dinolingo" xml:space="preserve">
+    <value>다이노링고에 오신 것을 환영합니다</value>
+  </data>
+  <data name="main_page_continue" xml:space="preserve">
+    <value>계속</value>
+  </data>
+  <data name="main_page_first_lesson_is_free" xml:space="preserve">
+    <value>첫 레슨은 언제나 무료입니다. 전체 이용 권한을 원하시면 로그인하거나 가입하십시오.</value>
+  </data>
+  <data name="main_page_free_trial" xml:space="preserve">
+    <value>무료 시험판</value>
+  </data>
+  <data name="main_page_please_sign_up" xml:space="preserve">
+    <value>즐겨찾기 이용을 위해서는 가입이 필요합니다</value>
+  </data>
+  <data name="popup_attention" xml:space="preserve">
+    <value>주의!</value>
+  </data>
+  <data name="popup_cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="popup_info" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="popup_no" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="popup_no_connection" xml:space="preserve">
+    <value>인터넷 연결을 확인하십시오!</value>
+  </data>
+  <data name="popup_ok" xml:space="preserve">
+    <value>네</value>
+  </data>
+  <data name="popup_oops" xml:space="preserve">
+    <value>이런</value>
+  </data>
+  <data name="popup_something_went_wrong" xml:space="preserve">
+    <value>뭔가 잘못되었네요</value>
+  </data>
+  <data name="popup_try_again" xml:space="preserve">
+    <value>재시도 해보세요</value>
+  </data>
+  <data name="popup_yes" xml:space="preserve">
+    <value>네</value>
+  </data>
+  <data name="right_menu_books" xml:space="preserve">
+    <value>책</value>
+  </data>
+  <data name="right_menu_lessons" xml:space="preserve">
+    <value>레슨</value>
+  </data>
+  <data name="right_menu_songs" xml:space="preserve">
+    <value>노래</value>
+  </data>
+  <data name="right_menu_stories" xml:space="preserve">
+    <value>이야기</value>
+  </data>
+  <data name="header_songs_albanian" xml:space="preserve">
+    <value>알바니아어 노래</value>
+  </data>
+  <data name="header_songs_arabic" xml:space="preserve">
+    <value>아랍어 노래</value>
+  </data>
+  <data name="header_songs_armenian" xml:space="preserve">
+    <value>아르메니아어 노래</value>
+  </data>
+  <data name="header_songs_bulgarian" xml:space="preserve">
+    <value>불가리아어 노래</value>
+  </data>
+  <data name="header_songs_cantonese" xml:space="preserve">
+    <value>광둥어 노래</value>
+  </data>
+  <data name="header_songs_chinese" xml:space="preserve">
+    <value>중국어 노래</value>
+  </data>
+  <data name="header_songs_creole" xml:space="preserve">
+    <value>크리올어 노래</value>
+  </data>
+  <data name="header_songs_croatian" xml:space="preserve">
+    <value>크로아티아어 노래</value>
+  </data>
+  <data name="header_songs_czech" xml:space="preserve">
+    <value>체코어 노래</value>
+  </data>
+  <data name="header_songs_danish" xml:space="preserve">
+    <value>덴마크어 노래</value>
+  </data>
+  <data name="header_songs_dari" xml:space="preserve">
+    <value>다리어 노래</value>
+  </data>
+  <data name="header_songs_dutch" xml:space="preserve">
+    <value>네덜란드어 노래</value>
+  </data>
+  <data name="header_songs_english" xml:space="preserve">
+    <value>영어 노래</value>
+  </data>
+  <data name="header_songs_european_portuguese" xml:space="preserve">
+    <value>포르투갈어(유럽) 노래</value>
+  </data>
+  <data name="header_songs_finnish" xml:space="preserve">
+    <value>핀란드어 노래</value>
+  </data>
+  <data name="header_songs_french" xml:space="preserve">
+    <value>불어 노래</value>
+  </data>
+  <data name="header_songs_german" xml:space="preserve">
+    <value>독일어 노래</value>
+  </data>
+  <data name="header_songs_greek" xml:space="preserve">
+    <value>그리스어 노래</value>
+  </data>
+  <data name="header_songs_gujarati" xml:space="preserve">
+    <value>구자라트어 노래</value>
+  </data>
+  <data name="header_songs_hawaiian" xml:space="preserve">
+    <value>하와이어 노래</value>
+  </data>
+  <data name="header_songs_hebrew" xml:space="preserve">
+    <value>히브리어 노래</value>
+  </data>
+  <data name="header_songs_hindi" xml:space="preserve">
+    <value>힌디어 노래</value>
+  </data>
+  <data name="header_songs_hungarian" xml:space="preserve">
+    <value>헝가리어 노래</value>
+  </data>
+  <data name="header_songs_indonesian" xml:space="preserve">
+    <value>인도네시아어 노래</value>
+  </data>
+  <data name="header_songs_irish" xml:space="preserve">
+    <value>아일랜드어 노래</value>
+  </data>
+  <data name="header_songs_italian" xml:space="preserve">
+    <value>이탈리아어 노래</value>
+  </data>
+  <data name="header_songs_japanese" xml:space="preserve">
+    <value>일본어 노래</value>
+  </data>
+  <data name="header_songs_kazakh" xml:space="preserve">
+    <value>카자흐어 노래</value>
+  </data>
+  <data name="header_songs_korean" xml:space="preserve">
+    <value>한국어 노래</value>
+  </data>
+  <data name="header_songs_latin" xml:space="preserve">
+    <value>라틴어 노래</value>
+  </data>
+  <data name="header_songs_malay" xml:space="preserve">
+    <value>말레이어 노래</value>
+  </data>
+  <data name="header_songs_norwegian" xml:space="preserve">
+    <value>노르웨이어 노래</value>
+  </data>
+  <data name="header_songs_persian" xml:space="preserve">
+    <value>페르시아어 노래</value>
+  </data>
+  <data name="header_songs_polish" xml:space="preserve">
+    <value>폴란드어 노래</value>
+  </data>
+  <data name="header_songs_portuguese" xml:space="preserve">
+    <value>포르투갈어(브라질) 노래</value>
+  </data>
+  <data name="header_songs_punjabi" xml:space="preserve">
+    <value>펀자브어 노래</value>
+  </data>
+  <data name="header_songs_romanian" xml:space="preserve">
+    <value>루마니아어 노래</value>
+  </data>
+  <data name="header_songs_russian" xml:space="preserve">
+    <value>러시아어 노래</value>
+  </data>
+  <data name="header_songs_serbian" xml:space="preserve">
+    <value>세르비아어 노래</value>
+  </data>
+  <data name="header_songs_slovak" xml:space="preserve">
+    <value>슬로바키아어 노래</value>
+  </data>
+  <data name="header_songs_slovenian" xml:space="preserve">
+    <value>슬로베니아어 노래</value>
+  </data>
+  <data name="header_songs_spanish" xml:space="preserve">
+    <value>스페인어 노래</value>
+  </data>
+  <data name="header_songs_swahili" xml:space="preserve">
+    <value>스와힐리어 노래</value>
+  </data>
+  <data name="header_songs_swedish" xml:space="preserve">
+    <value>스웨덴어 노래</value>
+  </data>
+  <data name="header_songs_tagalog" xml:space="preserve">
+    <value>타갈로그어 노래</value>
+  </data>
+  <data name="header_songs_thai" xml:space="preserve">
+    <value>태국어 노래</value>
+  </data>
+  <data name="header_songs_turkish" xml:space="preserve">
+    <value>터키어 노래</value>
+  </data>
+  <data name="header_songs_ukrainian" xml:space="preserve">
+    <value>우크라이나어 노래</value>
+  </data>
+  <data name="header_songs_urdu" xml:space="preserve">
+    <value>우르두어 노래</value>
+  </data>
+  <data name="header_songs_vietnamese" xml:space="preserve">
+    <value>베트남어 노래</value>
+  </data>
+  <data name="header_songs_welsh" xml:space="preserve">
+    <value>웨일스어 노래</value>
+  </data>
+  <data name="header_books_albanian" xml:space="preserve">
+    <value>알바니아어 책</value>
+  </data>
+  <data name="header_books_arabic" xml:space="preserve">
+    <value>아랍어 책</value>
+  </data>
+  <data name="header_books_armenian" xml:space="preserve">
+    <value>아르메니아어 책</value>
+  </data>
+  <data name="header_books_bulgarian" xml:space="preserve">
+    <value>불가리아어 책</value>
+  </data>
+  <data name="header_books_cantonese" xml:space="preserve">
+    <value>광둥어 책</value>
+  </data>
+  <data name="header_books_chinese" xml:space="preserve">
+    <value>중국어 책</value>
+  </data>
+  <data name="header_books_creole" xml:space="preserve">
+    <value>크리올어 책</value>
+  </data>
+  <data name="header_books_croatian" xml:space="preserve">
+    <value>크로아티아어 책</value>
+  </data>
+  <data name="header_books_czech" xml:space="preserve">
+    <value>체코어 책</value>
+  </data>
+  <data name="header_books_danish" xml:space="preserve">
+    <value>덴마크어 책</value>
+  </data>
+  <data name="header_books_dari" xml:space="preserve">
+    <value>다리어 책</value>
+  </data>
+  <data name="header_books_dutch" xml:space="preserve">
+    <value>네덜란드어 책</value>
+  </data>
+  <data name="header_books_english" xml:space="preserve">
+    <value>영어 책</value>
+  </data>
+  <data name="header_books_european_portuguese" xml:space="preserve">
+    <value>포르투갈어(유럽) 책</value>
+  </data>
+  <data name="header_books_finnish" xml:space="preserve">
+    <value>핀란드어 책</value>
+  </data>
+  <data name="header_books_french" xml:space="preserve">
+    <value>불어 책</value>
+  </data>
+  <data name="header_books_german" xml:space="preserve">
+    <value>독일어 책</value>
+  </data>
+  <data name="header_books_greek" xml:space="preserve">
+    <value>그리스어 책</value>
+  </data>
+  <data name="header_books_gujarati" xml:space="preserve">
+    <value>구자라트어 책</value>
+  </data>
+  <data name="header_books_hawaiian" xml:space="preserve">
+    <value>하와이어 책</value>
+  </data>
+  <data name="header_books_hebrew" xml:space="preserve">
+    <value>히브리어 책</value>
+  </data>
+  <data name="header_books_hindi" xml:space="preserve">
+    <value>힌디어 책</value>
+  </data>
+  <data name="header_books_hungarian" xml:space="preserve">
+    <value>헝가리어 책</value>
+  </data>
+  <data name="header_books_indonesian" xml:space="preserve">
+    <value>인도네시아어 책</value>
+  </data>
+  <data name="header_books_irish" xml:space="preserve">
+    <value>아일랜드어 책</value>
+  </data>
+  <data name="header_books_italian" xml:space="preserve">
+    <value>이탈리아어 책</value>
+  </data>
+  <data name="header_books_japanese" xml:space="preserve">
+    <value>일본어 책</value>
+  </data>
+  <data name="header_books_kazakh" xml:space="preserve">
+    <value>카자흐어 책</value>
+  </data>
+  <data name="header_books_korean" xml:space="preserve">
+    <value>한국어 책</value>
+  </data>
+  <data name="header_books_latin" xml:space="preserve">
+    <value>라틴어 책</value>
+  </data>
+  <data name="header_books_malay" xml:space="preserve">
+    <value>말레이어 책</value>
+  </data>
+  <data name="header_books_norwegian" xml:space="preserve">
+    <value>노르웨이어 책</value>
+  </data>
+  <data name="header_books_persian" xml:space="preserve">
+    <value>페르시아어 책</value>
+  </data>
+  <data name="header_books_polish" xml:space="preserve">
+    <value>폴란드어 책</value>
+  </data>
+  <data name="header_books_portuguese" xml:space="preserve">
+    <value>포르투갈어(브라질) 책</value>
+  </data>
+  <data name="header_books_punjabi" xml:space="preserve">
+    <value>펀자브어 책</value>
+  </data>
+  <data name="header_books_romanian" xml:space="preserve">
+    <value>루마니아어 책</value>
+  </data>
+  <data name="header_books_russian" xml:space="preserve">
+    <value>러시아어 책</value>
+  </data>
+  <data name="header_books_serbian" xml:space="preserve">
+    <value>세르비아어 책</value>
+  </data>
+  <data name="header_books_slovak" xml:space="preserve">
+    <value>슬로바키아어 책</value>
+  </data>
+  <data name="header_books_slovenian" xml:space="preserve">
+    <value>슬로베니아어 책</value>
+  </data>
+  <data name="header_books_spanish" xml:space="preserve">
+    <value>스페인어 책</value>
+  </data>
+  <data name="header_books_swahili" xml:space="preserve">
+    <value>스와힐리어 책</value>
+  </data>
+  <data name="header_books_swedish" xml:space="preserve">
+    <value>스웨덴어 책</value>
+  </data>
+  <data name="header_books_tagalog" xml:space="preserve">
+    <value>타갈로그어 책</value>
+  </data>
+  <data name="header_books_thai" xml:space="preserve">
+    <value>태국어 책</value>
+  </data>
+  <data name="header_books_turkish" xml:space="preserve">
+    <value>터키어 책</value>
+  </data>
+  <data name="header_books_ukrainian" xml:space="preserve">
+    <value>우크라이나어 책</value>
+  </data>
+  <data name="header_books_urdu" xml:space="preserve">
+    <value>우르두어 책</value>
+  </data>
+  <data name="header_books_vietnamese" xml:space="preserve">
+    <value>베트남어 책</value>
+  </data>
+  <data name="header_books_welsh" xml:space="preserve">
+    <value>웨일스어 책</value>
+  </data>
+  <data name="header_stories_albanian" xml:space="preserve">
+    <value>알바니아어 이야기</value>
+  </data>
+  <data name="header_stories_arabic" xml:space="preserve">
+    <value>아랍어 이야기</value>
+  </data>
+  <data name="header_stories_armenian" xml:space="preserve">
+    <value>아르메니아어 이야기</value>
+  </data>
+  <data name="header_stories_bulgarian" xml:space="preserve">
+    <value>불가리아어 이야기</value>
+  </data>
+  <data name="header_stories_cantonese" xml:space="preserve">
+    <value>광둥어 이야기</value>
+  </data>
+  <data name="header_stories_chinese" xml:space="preserve">
+    <value>중국어 이야기</value>
+  </data>
+  <data name="header_stories_creole" xml:space="preserve">
+    <value>크리올어 이야기</value>
+  </data>
+  <data name="header_stories_croatian" xml:space="preserve">
+    <value>크로아티아어 이야기</value>
+  </data>
+  <data name="header_stories_czech" xml:space="preserve">
+    <value>체코어 이야기</value>
+  </data>
+  <data name="header_stories_danish" xml:space="preserve">
+    <value>덴마크어 이야기</value>
+  </data>
+  <data name="header_stories_dari" xml:space="preserve">
+    <value>다리어 이야기</value>
+  </data>
+  <data name="header_stories_dutch" xml:space="preserve">
+    <value>네덜란드어 이야기</value>
+  </data>
+  <data name="header_stories_english" xml:space="preserve">
+    <value>영어 이야기</value>
+  </data>
+  <data name="header_stories_european_portuguese" xml:space="preserve">
+    <value>포르투갈어(유럽) 이야기</value>
+  </data>
+  <data name="header_stories_finnish" xml:space="preserve">
+    <value>핀란드어 이야기</value>
+  </data>
+  <data name="header_stories_french" xml:space="preserve">
+    <value>불어 이야기</value>
+  </data>
+  <data name="header_stories_german" xml:space="preserve">
+    <value>독일어 이야기</value>
+  </data>
+  <data name="header_stories_greek" xml:space="preserve">
+    <value>그리스어 이야기</value>
+  </data>
+  <data name="header_stories_gujarati" xml:space="preserve">
+    <value>구자라트어 이야기</value>
+  </data>
+  <data name="header_stories_hawaiian" xml:space="preserve">
+    <value>하와이어 이야기</value>
+  </data>
+  <data name="header_stories_hebrew" xml:space="preserve">
+    <value>히브리어 이야기</value>
+  </data>
+  <data name="header_stories_hindi" xml:space="preserve">
+    <value>힌디어 이야기</value>
+  </data>
+  <data name="header_stories_hungarian" xml:space="preserve">
+    <value>헝가리어 이야기</value>
+  </data>
+  <data name="header_stories_indonesian" xml:space="preserve">
+    <value>인도네시아어 이야기</value>
+  </data>
+  <data name="header_stories_irish" xml:space="preserve">
+    <value>아일랜드어 이야기</value>
+  </data>
+  <data name="header_stories_italian" xml:space="preserve">
+    <value>이탈리아어 이야기</value>
+  </data>
+  <data name="header_stories_japanese" xml:space="preserve">
+    <value>일본어 이야기</value>
+  </data>
+  <data name="header_stories_kazakh" xml:space="preserve">
+    <value>카자흐어 이야기</value>
+  </data>
+  <data name="header_stories_korean" xml:space="preserve">
+    <value>한국어 이야기</value>
+  </data>
+  <data name="header_stories_latin" xml:space="preserve">
+    <value>라틴어 이야기</value>
+  </data>
+  <data name="header_stories_malay" xml:space="preserve">
+    <value>말레이어 이야기</value>
+  </data>
+  <data name="header_stories_norwegian" xml:space="preserve">
+    <value>노르웨이어 이야기</value>
+  </data>
+  <data name="header_stories_persian" xml:space="preserve">
+    <value>페르시아어 이야기</value>
+  </data>
+  <data name="header_stories_polish" xml:space="preserve">
+    <value>폴란드어 이야기</value>
+  </data>
+  <data name="header_stories_portuguese" xml:space="preserve">
+    <value>포르투갈어(브라질) 이야기</value>
+  </data>
+  <data name="header_stories_punjabi" xml:space="preserve">
+    <value>펀자브어 이야기</value>
+  </data>
+  <data name="header_stories_romanian" xml:space="preserve">
+    <value>루마니아어 이야기</value>
+  </data>
+  <data name="header_stories_russian" xml:space="preserve">
+    <value>러시아어 이야기</value>
+  </data>
+  <data name="header_stories_serbian" xml:space="preserve">
+    <value>세르비아어 이야기</value>
+  </data>
+  <data name="header_stories_slovak" xml:space="preserve">
+    <value>슬로바키아어 이야기</value>
+  </data>
+  <data name="header_stories_slovenian" xml:space="preserve">
+    <value>슬로베니아어 이야기</value>
+  </data>
+  <data name="header_stories_spanish" xml:space="preserve">
+    <value>스페인어 이야기</value>
+  </data>
+  <data name="header_stories_swahili" xml:space="preserve">
+    <value>스와힐리어 이야기</value>
+  </data>
+  <data name="header_stories_swedish" xml:space="preserve">
+    <value>스웨덴어 이야기</value>
+  </data>
+  <data name="header_stories_tagalog" xml:space="preserve">
+    <value>타갈로그어 이야기</value>
+  </data>
+  <data name="header_stories_thai" xml:space="preserve">
+    <value>태국어 이야기</value>
+  </data>
+  <data name="header_stories_turkish" xml:space="preserve">
+    <value>터키어 이야기</value>
+  </data>
+  <data name="header_stories_ukrainian" xml:space="preserve">
+    <value>우크라이나어 이야기</value>
+  </data>
+  <data name="header_stories_urdu" xml:space="preserve">
+    <value>우르두어 이야기</value>
+  </data>
+  <data name="header_stories_vietnamese" xml:space="preserve">
+    <value>베트남어 이야기</value>
+  </data>
+  <data name="header_stories_welsh" xml:space="preserve">
+    <value>웨일스어 이야기</value>
+  </data>
+  <data name="eight" xml:space="preserve">
+    <value>팔</value>
+  </data>
+  <data name="five" xml:space="preserve">
+    <value>오</value>
+  </data>
+  <data name="four" xml:space="preserve">
+    <value>사</value>
+  </data>
+  <data name="nine" xml:space="preserve">
+    <value>구</value>
+  </data>
+  <data name="one" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="parent_check_enter_the_numbers" xml:space="preserve">
+    <value>숫자를 입력하세요:</value>
+  </data>
+  <data name="parent_check_parental_control" xml:space="preserve">
+    <value>시청 규제</value>
+  </data>
+  <data name="parent_check_reports_etc" xml:space="preserve">
+    <value>보고서, 도움말, 언어 변경, 가입 등</value>
+  </data>
+  <data name="parent_check_wrong_password" xml:space="preserve">
+    <value>비밀번호가 틀렸습니다! 다시 시도하십시오</value>
+  </data>
+  <data name="seven" xml:space="preserve">
+    <value>칠</value>
+  </data>
+  <data name="six" xml:space="preserve">
+    <value>육</value>
+  </data>
+  <data name="three" xml:space="preserve">
+    <value>삼</value>
+  </data>
+  <data name="two" xml:space="preserve">
+    <value>이</value>
+  </data>
+  <data name="header_for_kids" xml:space="preserve">
+    <value>어린이용 {0}</value>
+  </data>
+  <data name="default_user_name" xml:space="preserve">
+    <value>이용자</value>
+  </data>
+  <data name="game_over" xml:space="preserve">
+    <value>게임 끝!</value>
+  </data>
+  <data name="game_questions" xml:space="preserve">
+    <value>질문</value>
+  </data>
+  <data name="game_restart" xml:space="preserve">
+    <value>재시작</value>
+  </data>
+  <data name="game_score" xml:space="preserve">
+    <value>점수</value>
+  </data>
+  <data name="game_time" xml:space="preserve">
+    <value>시각</value>
+  </data>
+  <data name="parent_menu_change_your_language" xml:space="preserve">
+    <value>언어 변경</value>
+  </data>
+  <data name="parent_menu_do_you_want_to_log_out" xml:space="preserve">
+    <value>로그아웃하시겠습니까?</value>
+  </data>
+  <data name="parent_menu_help_and_support" xml:space="preserve">
+    <value>도움말 및 지원</value>
+  </data>
+  <data name="parent_menu_log_out" xml:space="preserve">
+    <value>로그아웃</value>
+  </data>
+  <data name="parent_menu_log_out_ex" xml:space="preserve">
+    <value>로그아웃하세요!</value>
+  </data>
+  <data name="parent_menu_my_reports" xml:space="preserve">
+    <value>나의 보고서</value>
+  </data>
+  <data name="parent_menu_please_login_to_access_report" xml:space="preserve">
+    <value>보고서에 접근하기 위해 로그인(가입)하십시오.</value>
+  </data>
+  <data name="parent_menu_sign_up" xml:space="preserve">
+    <value>가입</value>
+  </data>
+  <data name="parent_menu_sorry" xml:space="preserve">
+    <value>죄송합니다</value>
+  </data>
+  <data name="purchase" xml:space="preserve">
+    <value>구입</value>
+  </data>
+  <data name="purchaser_product_name_1_year" xml:space="preserve">
+    <value>{0} 1년</value>
+  </data>
+  <data name="purchaser_product_name_6_months" xml:space="preserve">
+    <value>{0} 6개월</value>
+  </data>
+  <data name="purchaser_term_annual" xml:space="preserve">
+    <value>연간</value>
+  </data>
+  <data name="purchaser_term_semi_annual" xml:space="preserve">
+    <value>반년</value>
+  </data>
+  <data name="purchase_1_year_of_full_access" xml:space="preserve">
+    <value>1년 전체 이용 {0}. 한 달에 오직 {1}달러</value>
+  </data>
+  <data name="purchase_6_months_of_full_access" xml:space="preserve">
+    <value>6개월 전체 이용 {0}. 한 달에 오직 {1}달러</value>
+  </data>
+  <data name="purchase_info_line_1" xml:space="preserve">
+    <value>• 구매 확정시 iTunes 계정으로 요금이 부과됩니다</value>
+  </data>
+  <data name="purchase_info_line_2" xml:space="preserve">
+    <value>• 현재 기간의 종료 최소 24시간 전에 자동갱신이 해제되지 않는 한 구독은 자동으로 갱신됩니다</value>
+  </data>
+  <data name="purchase_info_line_3" xml:space="preserve">
+    <value>• 현재 기간의 종료 24시간 이내에 계정에 갱신 비용이 부과되고 갱신 비용이 확인됩니다</value>
+  </data>
+  <data name="purchase_info_line_4" xml:space="preserve">
+    <value>• 구독은 사용자가 관리할 수 있으며, 구매 후 사용자의 계정 설정에서 자동 갱신을 해제할 수 있습니다</value>
+  </data>
+  <data name="purchase_info_line_5" xml:space="preserve">
+    <value>• 무료 시험판 사용 기간 중의 미사용 부분은 사용자의 해당 구독 가입시 소멸합니다</value>
+  </data>
+  <data name="purchase_privacy_policy" xml:space="preserve">
+    <value>개인 정보 정책</value>
+  </data>
+  <data name="purchase_sorry_restoring_subscriptions" xml:space="preserve">
+    <value>죄송합니다, 지금 구독 정보를 복원하고 있습니다. 다시 구매를 시도해주세요!</value>
+  </data>
+  <data name="purchase_terms_of_use" xml:space="preserve">
+    <value>이용 약관</value>
+  </data>
+  <data name="purchase_try_again" xml:space="preserve">
+    <value>다시 시도하십시오!</value>
+  </data>
+  <data name="report_books" xml:space="preserve">
+    <value>책</value>
+  </data>
+  <data name="report_books_read" xml:space="preserve">
+    <value>읽은 책:</value>
+  </data>
+  <data name="report_completed" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="report_completion" xml:space="preserve">
+    <value>완성</value>
+  </data>
+  <data name="report_daily_report" xml:space="preserve">
+    <value>하루 보고서</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>날짜</value>
+  </data>
+  <data name="report_dinosaur_score" xml:space="preserve">
+    <value>공룡 점수:</value>
+  </data>
+  <data name="report_lang_course" xml:space="preserve">
+    <value>언어 코스:</value>
+  </data>
+  <data name="report_last_activity" xml:space="preserve">
+    <value>마지막 활동</value>
+  </data>
+  <data name="report_lesson" xml:space="preserve">
+    <value>레슨</value>
+  </data>
+  <data name="report_lessons_and_games" xml:space="preserve">
+    <value>레슨 및 게임</value>
+  </data>
+  <data name="report_lessons_and_games_completed" xml:space="preserve">
+    <value>완료한 레슨 및 게임</value>
+  </data>
+  <data name="report_lessons_report" xml:space="preserve">
+    <value>레슨 보고서</value>
+  </data>
+  <data name="report_my_report" xml:space="preserve">
+    <value>나의 보고서</value>
+  </data>
+  <data name="report_not_completed" xml:space="preserve">
+    <value>미완료</value>
+  </data>
+  <data name="report_not_read" xml:space="preserve">
+    <value>읽지 않음</value>
+  </data>
+  <data name="report_overall" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="report_overall_completed" xml:space="preserve">
+    <value>전체 완료:</value>
+  </data>
+  <data name="report_quiz_score" xml:space="preserve">
+    <value>퀴즈 점수:</value>
+  </data>
+  <data name="report_read" xml:space="preserve">
+    <value>읽기</value>
+  </data>
+  <data name="report_star_score" xml:space="preserve">
+    <value>스타 점수:</value>
+  </data>
+  <data name="report_time_spent" xml:space="preserve">
+    <value>이용 시간:</value>
+  </data>
+  <data name="report_total_books" xml:space="preserve">
+    <value>총 책 수:</value>
+  </data>
+  <data name="report_user_name_or_email" xml:space="preserve">
+    <value>아이디 또는 이메일:</value>
+  </data>
+  <data name="sign_up_are_u_sure" xml:space="preserve">
+    <value>확실하십니까?</value>
+  </data>
+  <data name="sign_up_cant_create_new_user" xml:space="preserve">
+    <value>오류! 새 사용자를 만들 수 없습니다!</value>
+  </data>
+  <data name="sign_up_confirm_password" xml:space="preserve">
+    <value>비밀번호 확인:</value>
+  </data>
+  <data name="sign_up_create_account" xml:space="preserve">
+    <value>계정 만들기</value>
+  </data>
+  <data name="sign_up_different_passwords" xml:space="preserve">
+    <value>다른 암호를 사용하세요!</value>
+  </data>
+  <data name="sign_up_do_not_signup" xml:space="preserve">
+    <value>가입하지 마세요</value>
+  </data>
+  <data name="sign_up_email_address" xml:space="preserve">
+    <value>이메일 주소:</value>
+  </data>
+  <data name="sign_up_error" xml:space="preserve">
+    <value>오류!</value>
+  </data>
+  <data name="sign_up_password" xml:space="preserve">
+    <value>비밀번호:</value>
+  </data>
+  <data name="sign_up_please_register" xml:space="preserve">
+    <value>어플리케이션의 전체 기능 이용을 위해 가입하세요:\n - 진행 상황을 추적하고, 새로운 공룡과 별을 적립하십시오;\n - 웹사이트 dinolingo.com에서 계정을 만드십시오;\n - 데이터를 저장하고 장치 간에 동기화를 하십시오.</value>
+  </data>
+  <data name="sign_up_without_registration_popup" xml:space="preserve">
+    <value>가입을 하지 않을 경우 다음과 같은 어플리케이션 기능을 사용할 수 없습니다:\n- 진행 상황 추적;\n- 새로운 공룡과 별 모으기;\n- 웹사이트 dinolingo.com에서의 계정;\n- 데이터를 저장하고 장치 간에 동기화를 하십시오.\n가입하지 않고 계속 하시겠습니까?</value>
+  </data>
+  <data name="subscribe_choose_lang_1_year" xml:space="preserve">
+    <value>언어 선택 - 1년</value>
+  </data>
+  <data name="subscribe_choose_lang_6_months" xml:space="preserve">
+    <value>언어 선택 - 6개월</value>
+  </data>
+  <data name="subscribe_plans" xml:space="preserve">
+    <value>계획</value>
+  </data>
+  <data name="subscribe_price_a_month" xml:space="preserve">
+    <value>한 달에 ${0} 달러</value>
+  </data>
+  <data name="subscribe_price_for_1_year" xml:space="preserve">
+    <value>가격 : 1년간 $ {0}</value>
+  </data>
+  <data name="subscribe_price_for_6_months" xml:space="preserve">
+    <value>가격 : 6 개월간 $ {0}</value>
+  </data>
+  <data name="subscribe_scroll_down" xml:space="preserve">
+    <value>더 많은 언어를 보려면 아래로 스크롤 하십시오</value>
+  </data>
+  <data name="subscribe_you_have_access_to_subscription" xml:space="preserve">
+    <value>이미 구독 중입니다.</value>
+  </data>
+  <data name="victory_congratulations" xml:space="preserve">
+    <value>축하합니다!</value>
+  </data>
+  <data name="victory_great" xml:space="preserve">
+    <value>대단해요</value>
+  </data>
+  <data name="victory_you_earned_dinosaur" xml:space="preserve">
+    <value>새로운 공룡을 얻었습니다!</value>
+  </data>
+  <data name="victory_you_earned_star" xml:space="preserve">
+    <value>별을 얻었습니다!</value>
+  </data>
+  <data name="victory_you_won" xml:space="preserve">
+    <value>이겼습니다!</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_ios" xml:space="preserve">
+    <value>다이노링고를 즐기고 있나요? \n앱스토어에서 평가해주세요</value>
+  </data>
+  <data name="rate_enjoy_dinolingo_android" xml:space="preserve">
+    <value>다이노링고를 즐기고 있나요? \n구글플레이에서 평가해주세요</value>
+  </data>
+  <data name="rate_rate_dinolingo" xml:space="preserve">
+    <value>다이노링고를 평가해주세요</value>
+  </data>
+  <data name="rate_remind_later" xml:space="preserve">
+    <value>나중에 리마인더 주세요</value>
+  </data>
+  <data name="rate_no_thanks" xml:space="preserve">
+    <value>아니요, 괜찮습니다</value>
+  </data>
+  <data name="login_user_with_email_doesnt_exist" xml:space="preserve">
+    <value>이 이메일을 가진 사용자가 존재하지 않습니다!</value>
+  </data>
+  <data name="login_user_and_pass_doesnt_exist" xml:space="preserve">
+    <value>이 로그인 및 비밀번호를 가진 사용자가 존재하지 않습니다!</value>
+  </data>
+  <data name="subscribe_six_months_subscriptions" xml:space="preserve">
+    <value>6개월 구독</value>
+  </data>
+  <data name="subscribe_one_year_subscriptions" xml:space="preserve">
+    <value>1년 구독</value>
+  </data>
+  <data name="new_version" xml:space="preserve">
+    <value>새로운 버전</value>
+  </data>
+  <data name="new_version_text" xml:space="preserve">
+    <value>이 어플리케이션의 새로운 버전이 사용 가능합니다. 지금 업데이트 하시겠습니까?</value>
+  </data>
+  <data name="new_version_update_now" xml:space="preserve">
+    <value>지금 업데이트</value>
+  </data>
+  <data name="purchaser_product_name_1_month" xml:space="preserve">
+    <value>{0} 1 개월</value>
+  </data>
+  <data name="purchaser_term_monthly" xml:space="preserve">
+    <value>월간 간행물</value>
+  </data>
+  <data name="purchase_1_month_of_full_access" xml:space="preserve">
+    <value>{0}에 대한 1 개월간의 전체 액세스 권한.</value>
+  </data>
+  <data name="subscribe_price_for_1_month" xml:space="preserve">
+    <value>가격 : 1 개월 동안 $ {0}</value>
+  </data>
+  <data name="subscribe_one_month_subscriptions" xml:space="preserve">
+    <value>1 개월 구독</value>
+  </data>
+</root>
