@@ -77,11 +77,12 @@ namespace DinoLingo.iOS
 
         });
 
-
+            /*
             var key = new NSString("AppleLanguages");
             string[] languageValues = { "en-US" };
             NSUserDefaults.StandardUserDefaults.SetValueForKey(NSArray.FromObjects(languageValues), key);
             NSUserDefaults.StandardUserDefaults.Synchronize();
+            */
 
             return base.FinishedLaunching(app, options);
         }

@@ -273,7 +273,7 @@ namespace DinoLingo
 
         public async void ForceOpen (uint time) {
             State = STATE.ANIMATING;
-                //this.IsEnabled = false;
+            //this.IsEnabled = false;
 
 
             double targetDistance = Math.Abs (parent.Width * (RelativeXOpened - RelativeXClosed));
@@ -282,21 +282,25 @@ namespace DinoLingo
 
             await this.TranslateTo( parent.Width * (RelativeXOpened - RelativeXClosed), 0, targetTime);
 
-            var c = BoundsConstraint.FromExpression((Expression<Func<Rectangle>>)(() => new Rectangle(parent.Width * RelativeXOpened, 0, parent.Width * RelativeWidth, parent.Height)), new View[0]);
-            RelativeLayout.SetBoundsConstraint(this, c);
-            this.TranslationX = 0;
-            parent.ForceLayout();
-
-            State = STATE.IDLE;
-            IsOpened = true;
-            //this.IsEnabled = true;
-
-
-            SetCanPan();
-            OnSlideOpened();
+            
 
             Debug.WriteLine("Force Open, State = " + State + ", CanPan=" + CanPan);
 
+            Device.BeginInvokeOnMainThread(() => {
+                var c = BoundsConstraint.FromExpression((Expression<Func<Rectangle>>)(() => new Rectangle(parent.Width * RelativeXOpened, 0, parent.Width * RelativeWidth, parent.Height)), new View[0]);
+                RelativeLayout.SetBoundsConstraint(this, c);
+
+                this.TranslationX = 0;
+
+                State = STATE.IDLE;
+                IsOpened = true;
+                //this.IsEnabled = true;
+
+                SetCanPan();
+                OnSlideOpened();
+
+                parent.ForceLayout();
+            });
         }
     
         public async void ForceClose(uint time)
@@ -310,20 +314,23 @@ namespace DinoLingo
 
             await this.TranslateTo(parent.Width * (-RelativeXOpened + RelativeXClosed), 0, targetTime);
 
-            var c = BoundsConstraint.FromExpression((Expression<Func<Rectangle>>)(() => new Rectangle(parent.Width * RelativeXClosed, 0, parent.Width * RelativeWidth, parent.Height)), new View[0]);
-            RelativeLayout.SetBoundsConstraint(this, c);
-            this.TranslationX = 0;
-            parent.ForceLayout();
-
-            State = STATE.IDLE;
-            IsOpened = false;
-               //this.IsEnabled = true;
-
-
-            SetCanPan();
-            OnSlideClosed();
+            
             Debug.WriteLine("Force Close, State = " + State + ", CanPan=" + CanPan);
 
+            Device.BeginInvokeOnMainThread(() => {
+                var c = BoundsConstraint.FromExpression((Expression<Func<Rectangle>>)(() => new Rectangle(parent.Width * RelativeXClosed, 0, parent.Width * RelativeWidth, parent.Height)), new View[0]);
+                RelativeLayout.SetBoundsConstraint(this, c);
+                this.TranslationX = 0;
+                //parent.ForceLayout();
+
+                State = STATE.IDLE;
+                IsOpened = false;
+                //this.IsEnabled = true;
+
+                SetCanPan();
+                OnSlideClosed();
+                parent.ForceLayout();
+            });
         }
 
         void SetCanPan () {
@@ -350,9 +357,12 @@ namespace DinoLingo
             await this.TranslateTo(0, 0, time);
             State = STATE.IDLE;
             //this.IsEnabled = true;
-            SetCanPan();
-
+            SetCanPan();            
             Debug.WriteLine("ParkBack, State = " + State + ", CanPan=" + CanPan);
+
+            Device.BeginInvokeOnMainThread(() => {
+                parent.ForceLayout();
+            });
         }
 
 

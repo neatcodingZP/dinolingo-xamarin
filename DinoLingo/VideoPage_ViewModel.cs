@@ -232,7 +232,7 @@ namespace DinoLingo
                 }
                 else
                 {
-                    stars = starsInfo.data[starsInfo.isSingleItem ? starsInfo.eventArgs.MyItem.Index : (starsInfo.eventArgs.MyItem as DoubleItem).Index2].Stars;
+                    stars = starsInfo.data[starsInfo.isSingleItem ? starsInfo.listViewItem.Index : (starsInfo.listViewItem as DoubleItem).Index2].Stars;
                 }
                 Debug.WriteLine("VideoPage_ViewModel -> AnimateLoadingView_InBckground -> stars = " + stars);
 

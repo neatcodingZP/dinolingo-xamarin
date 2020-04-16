@@ -230,11 +230,11 @@ namespace DinoLingo.MyViews
             {
                 if (starsInfo.isSingleItem)
                 {
-                    stars = starsInfo.data[starsInfo.eventArgs.MyItem.Index].Stars;
+                    stars = starsInfo.data[starsInfo.listViewItem.Index].Stars;
                 }
                 else
                 {
-                    stars = starsInfo.data[(starsInfo.eventArgs.MyItem as DoubleItem).Index2].Stars;
+                    stars = starsInfo.data[(starsInfo.listViewItem as DoubleItem).Index2].Stars;
                 }
             }
 
@@ -276,7 +276,7 @@ namespace DinoLingo.MyViews
             }
             Debug.WriteLine("EndOfGameVictory --> savedDataIndex =  " + savedDataIndex);
             int index = -1;
-            if (starsInfo.favorites_Page == null) index = starsInfo.isSingleItem ? starsInfo.eventArgs.MyItem.Index : (starsInfo.eventArgs.MyItem as DoubleItem).Index2;
+            if (starsInfo.favorites_Page == null) index = starsInfo.isSingleItem ? starsInfo.listViewItem.Index : (starsInfo.listViewItem as DoubleItem).Index2;
             stars = savedData[savedDataIndex].Stars;
 
             if (stars < 0) stars = 0;
@@ -343,13 +343,13 @@ namespace DinoLingo.MyViews
                             if (starsInfo.isSingleItem)
                             {
                                 starsInfo.data[index].ImgResource = post.after_finish;
-                                starsInfo.eventArgs.MyItem.Imagesource = post.after_finish;
+                                starsInfo.listViewItem.Imagesource = post.after_finish;
 
                             }
                             else
                             {
                                 starsInfo.data[index].ImgResource = post.after_finish;
-                                (starsInfo.eventArgs.MyItem as DoubleItem).Imagesource2 = post.after_finish;
+                                (starsInfo.listViewItem as DoubleItem).Imagesource2 = post.after_finish;
                             }
                         }
                         savedData[savedDataIndex].ImgResource = post.after_finish;
@@ -362,13 +362,13 @@ namespace DinoLingo.MyViews
                 {
                     if (starsInfo.isSingleItem)
                     {
-                        starsInfo.eventArgs.MyItem.StarsImagesource = TestViewModel.stars_imgs[stars];
-                        Debug.WriteLine("STARS ADDED to item 1: " + starsInfo.eventArgs.MyItem.Name);
+                        starsInfo.listViewItem.StarsImagesource = TestViewModel.stars_imgs[stars];
+                        Debug.WriteLine("STARS ADDED to item 1: " + starsInfo.listViewItem.Name);
                     }
                     else
                     {
-                        (starsInfo.eventArgs.MyItem as DoubleItem).StarsImagesource2 = TestViewModel.stars_imgs[stars];
-                        Debug.WriteLine("STARS ADDED to item 2: " + (starsInfo.eventArgs.MyItem as DoubleItem).Name2);
+                        (starsInfo.listViewItem as DoubleItem).StarsImagesource2 = TestViewModel.stars_imgs[stars];
+                        Debug.WriteLine("STARS ADDED to item 2: " + (starsInfo.listViewItem as DoubleItem).Name2);
                     }
                 }
                 Debug.WriteLine("victoryView -> EndOfGameVictory -> stars = " + stars);
@@ -442,7 +442,7 @@ namespace DinoLingo.MyViews
                 }
                 else
                 {
-                    int index = starsInfo.isSingleItem ? starsInfo.eventArgs.MyItem.Index : (starsInfo.eventArgs.MyItem as DoubleItem).Index2;
+                    int index = starsInfo.isSingleItem ? starsInfo.listViewItem.Index : (starsInfo.listViewItem as DoubleItem).Index2;
                     stars = starsInfo.data[index].Stars;
                 }    //if (stars > 0) return true;
 

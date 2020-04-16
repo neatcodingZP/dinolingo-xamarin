@@ -70,7 +70,7 @@ namespace DinoLingo
             BindingContext = viewModel = new NumbersGame1_ViewModel(navigation, loadingView, theme, starsInfo);
             viewModel.OnLoadingEndedSuccess += OnLoadingEndedSuccess;
 
-            int index = starsInfo.isSingleItem ? starsInfo.eventArgs.MyItem.Index : (starsInfo.eventArgs.MyItem as DoubleItem).Index2;
+            int index = starsInfo.isSingleItem ? starsInfo.listViewItem.Index : (starsInfo.listViewItem as DoubleItem).Index2;
             viewModel.activityReport = new ActivityReport(ActivityReport.ACT_TYPE.GAME, starsInfo.data[index].id);
 
             AddCocosGameView(yellowSquare);

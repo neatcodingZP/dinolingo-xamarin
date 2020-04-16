@@ -15,6 +15,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <SynchReleaseVersion>false</SynchReleaseVersion>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +30,8 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Serdar Acar (E4U76SMQ84)</CodesignKey>
-    <MtouchSdkVersion>12.1</MtouchSdkVersion>
+    <MtouchSdkVersion>
+    </MtouchSdkVersion>
     <MtouchFastDev>true</MtouchFastDev>
     <OptimizePNGs>false</OptimizePNGs>
     <CodesignProvision>
@@ -57,7 +59,7 @@
     <OutputPath>bin\iPhone\Debug</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer: Serdar Acar (E4U76SMQ84)</CodesignKey>
@@ -67,6 +69,13 @@
     <CodesignProvision>dinolingo_alvakos_dev_2019_2020</CodesignProvision>
     <CodesignExtraArgs />
     <CodesignResourceRules />
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchSdkVersion>
+    </MtouchSdkVersion>
+    <OptimizePNGs>true</OptimizePNGs>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -230,7 +239,6 @@
     <PackageReference Include="Xam.Plugin.LatestVersion">
       <Version>1.1.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
     <PackageReference Include="PropertyChanged.Fody">
       <Version>2.5.9</Version>
     </PackageReference>
@@ -260,6 +268,9 @@
     </PackageReference>
     <PackageReference Include="HtmlAgilityPack">
       <Version>1.8.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.709228</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

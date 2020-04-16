@@ -5,6 +5,9 @@ using System.Diagnostics;
 using System.Text;
 using Xamarin.Forms;
 
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
 namespace DinoLingo
 {
     class ChooseLanguagePage_new: ContentPage
@@ -33,11 +36,15 @@ namespace DinoLingo
         }
         bool IsDownloading = false;
 
-        ListView mainList;
+        Xamarin.Forms.ListView mainList;
 
         public ChooseLanguagePage_new(Login_Response.Login loginResult)
         {
+            Debug.WriteLine("ChooseLanguagePage_new -> ");
             FlowDirection = Translate.FlowDirection_;
+
+            // iOS Solution for a ModalPage (popup) which is not fullscreen
+            On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FullScreen);
 
             var absLayout = new AbsoluteLayout() { BackgroundColor = MyColors.BackgroundBlueColor };
 
@@ -122,7 +129,7 @@ namespace DinoLingo
             AbsoluteLayout.SetLayoutBounds(mainFrame, new Rectangle(0, 0, 0.95, 0.95));
             AbsoluteLayout.SetLayoutFlags(mainFrame, AbsoluteLayoutFlags.All);
 
-            ListView mainList_ = new ListView()
+            Xamarin.Forms.ListView mainList_ = new Xamarin.Forms.ListView()
             {
                 HasUnevenRows = true,
                 IsEnabled = !IsDownloading,

@@ -119,7 +119,7 @@ namespace DinoLingo
             App.OnSleepEvent += OnSleep;
             App.OnResumeEvent += OnResume;
 
-            int index = starsInfo.isSingleItem ? starsInfo.eventArgs.MyItem.Index : (starsInfo.eventArgs.MyItem as DoubleItem).Index2;
+            int index = starsInfo.isSingleItem ? starsInfo.listViewItem.Index : (starsInfo.listViewItem as DoubleItem).Index2;
             activityReport = new ActivityReport(ActivityReport.ACT_TYPE.GAME, starsInfo.data[index].id);
             //activityReport.OnCompleted += ActivityReport_OnCompleted;
         }

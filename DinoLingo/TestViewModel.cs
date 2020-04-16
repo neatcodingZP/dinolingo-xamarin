@@ -1126,26 +1126,27 @@ namespace DinoLingo
             IsAnimating = false;
         }
 
-        public async void  Name_OnTapped(object sender, MyListItemEventArgs e)       
+        public async void  Name_OnTapped(object sender, ListViewItem listViewItem)       
         {
             if (isBlocked) return;
             isBlocked = true;
 
             if (IsAnimating) return;
             IsAnimating = true;
-            Debug.WriteLine("Name_OnTapped");
-            var item = e.MyItem;
-            if (item == null) return;
+            Debug.WriteLine("TestViewModel -> Name_OnTapped");
+            
+            if (listViewItem == null) return;
             // now you can fully access the listview item here via the variable "item"
             // ...
             await AnimateImage(sender as View, 250);
-            Debug.WriteLine("Name_OnTapped,  e.MyItem.Name= " + e.MyItem.Name + ", e.MyItem.Index=" + e.MyItem.Index);
-            int index = e.MyItem.Index;
-            OnTapped1or2(e, index, e.MyItem.Name_slug);
+            Debug.WriteLine("Name_OnTapped,  e.MyItem.Name= " + listViewItem.Name + ", e.MyItem.Index=" + listViewItem.Index);
+            int index = listViewItem.Index;
+
+            OnTapped1or2(listViewItem, index, listViewItem.Name_slug);
 
         }
 
-        public async void Favorites_OnTapped(object sender, MyListItemEventArgs e)
+        public async void Favorites_OnTapped(object sender, ListViewItem listViewItem)
         {
             if (isBlocked) return;
             isBlocked = true;
@@ -1153,16 +1154,16 @@ namespace DinoLingo
             if (IsAnimating) return;
             IsAnimating = true;
             Debug.WriteLine("Favorites_OnTapped");
-            var item = e.MyItem;
-            if (item == null) return;
+            
+            if (listViewItem == null) return;
 
             await AnimateImage(sender as View, 250);
-            Debug.WriteLine("Favorites_OnTapped,  e.MyItem.Name= " + e.MyItem.Name + ", e.MyItem.Index=" + e.MyItem.Index);
+            Debug.WriteLine("Favorites_OnTapped,  e.MyItem.Name= " + listViewItem.Name + ", e.MyItem.Index=" + listViewItem.Index);
 
-            OnFavoritesTapped(e, e.MyItem.Index);
+            OnFavoritesTapped(listViewItem, listViewItem.Index);
         }
 
-        public async void Favorites_OnTapped2(object sender, MyListItemEventArgs e)
+        public async void Favorites_OnTapped2(object sender, ListViewItem listViewItem)
         {
             if (isBlocked) return;
             isBlocked = true;
@@ -1176,7 +1177,7 @@ namespace DinoLingo
             */
 
             Debug.WriteLine("Favorites_OnTapped");
-            var item = e.MyItem as DoubleItem;
+            var item = listViewItem as DoubleItem;
             if (item == null)
             {
                 isBlocked = true;
@@ -1185,10 +1186,10 @@ namespace DinoLingo
             await AnimateImage(sender as View, 250);
             Debug.WriteLine("TestViewModel -> Favorites_OnTapped,  e.MyItem.Name= " + item.Name2 + ", e.MyItem.Index=" + item.Index2);
 
-            OnFavoritesTapped(e, item.Index2, false);
+            OnFavoritesTapped(listViewItem, item.Index2, false);
         }
 
-        async void OnFavoritesTapped (MyListItemEventArgs e, int index, bool isSingle = true) {
+        async void OnFavoritesTapped (ListViewItem listViewItem, int index, bool isSingle = true) {
             
             // close side panels
             rootViewModel.OnBackButtonPressed();
@@ -1220,7 +1221,7 @@ namespace DinoLingo
             //Debug.WriteLine("TestViewModel -> OnFavoritesTapped -> Favorites.WaitIfListsAreBuisy");
 
             Favorites.WaitIfListsAreBuisy("TestView -> OnFavoritesTapped");
-            int lIndex = e.MyItem.listIndex;
+            int lIndex = listViewItem.listIndex;
             string id = dataForListView[index].id;
            // Debug.WriteLine("TestViewModel -> OnFavoritesTapped -> Favorites.IsVisualFavorite ?");
             Debug.WriteLine("TestViewModel -> OnFavoritesTapped -> Favorites.IsVisualFavorite -> index = " + index);
@@ -1274,12 +1275,12 @@ namespace DinoLingo
                 bool removed;
                 if (isSingle) {
                     removed = Favorites.Remove(id, viewType, this, lIndex, isSingle);
-                    if (removed) e.MyItem.FavoritesImagesource = heart_gray_img;
+                    if (removed) listViewItem.FavoritesImagesource = heart_gray_img;
                     Debug.WriteLine($"item added to remove list, Books = {Favorites.Books}, Videos = {Favorites.Videos}");
                 }
                 else {
                     removed = Favorites.Remove(id, viewType, this , lIndex, isSingle);
-                    if (removed) (e.MyItem as DoubleItem).FavoritesImagesource2 = heart_gray_img;
+                    if (removed) (listViewItem as DoubleItem).FavoritesImagesource2 = heart_gray_img;
                     Debug.WriteLine($"item added to remove list, Books = {Favorites.Books}, Videos = {Favorites.Videos}");
                 }
                 await Favorites.InstantRemoveAll();
@@ -1296,13 +1297,13 @@ namespace DinoLingo
                 Debug.WriteLine("answer && !isFavorite");
                 if (isSingle)
                 {
-                    e.MyItem.FavoritesImagesource = heart_preloader_img;
+                    listViewItem.FavoritesImagesource = heart_preloader_img;
                     bool addedToAddList = Favorites.Add(id, viewType, this, lIndex, isSingle);
                     Debug.WriteLine($"item added to add list, Books = {Favorites.Books}, Videos = {Favorites.Videos}");
                 }
                 else
                 {
-                    (e.MyItem as DoubleItem).FavoritesImagesource2 = heart_preloader_img;
+                    (listViewItem as DoubleItem).FavoritesImagesource2 = heart_preloader_img;
                     bool addedToAddList = Favorites.Add(id, viewType, this, lIndex, isSingle);
                     Debug.WriteLine($"item added to add list, Books = {Favorites.Books}, Videos = {Favorites.Videos}");
                 }
@@ -1323,7 +1324,7 @@ namespace DinoLingo
             IsAnimating = false;
         }
 
-        public async void Name_OnTapped2(object sender, MyListItemEventArgs e)
+        public async void Name_OnTapped2(object sender, ListViewItem listViewItem)
         {
             if (isBlocked) return;
             isBlocked = true;
@@ -1332,7 +1333,7 @@ namespace DinoLingo
             IsAnimating = true;
 
             Debug.WriteLine("Name_OnTapped2");
-            var item = e.MyItem as DoubleItem;
+            var item = listViewItem as DoubleItem;
             if (item == null) return;
             int index = item.Index2;
 
@@ -1341,7 +1342,7 @@ namespace DinoLingo
             await AnimateImage(sender as View, 250);
             Debug.WriteLine("Name_OnTapped2,  item.Name2= " + item.Name2 + ", item.Index2=" + item.Index2);
 
-            OnTapped1or2(e, index, item.Name2_slug, false);
+            OnTapped1or2(listViewItem, index, item.Name2_slug, false);
         }
 
         public void OnAppearing()
@@ -1349,7 +1350,7 @@ namespace DinoLingo
             isBlocked = false;
         }
 
-        async void OnTapped1or2(MyListItemEventArgs e, int index, string title, bool isSingle = true) {
+        async void OnTapped1or2(ListViewItem listViewItem_, int index, string title, bool isSingle = true) {
            
             //check if user expired
 
@@ -1363,7 +1364,7 @@ namespace DinoLingo
                 favoriteListCoords = new FavoriteListCoords() { CentralView = viewType.CentralView, SubView = viewType.SubView, },
                 isSingleItem = isSingle,
                 data = dataForListView,
-                eventArgs = e,
+                listViewItem = listViewItem_,
                 POST_LIST_ITEM_DATA_key = CacheHelper.POST_LIST_ITEM_DATA + "_" + cur_cats + "_" + UserHelper.Login.user_id + "_" + viewType.CentralView + "_" + viewType.SubView,
                 rootVM = rootViewModel,
             };
@@ -1719,7 +1720,7 @@ namespace DinoLingo
         public FavoriteListCoords favoriteListCoords { get; set; }
         public Favorites_Page favorites_Page { get; set; }
         public bool isSingleItem { get; set; }
-        public MyListItemEventArgs eventArgs { get; set; }
+        public ListViewItem listViewItem { get; set; }
         public List<ListViewItemData> data { get; set; }
         public string POST_LIST_ITEM_DATA_key { get; set; }
         public MainPage_ViewModel rootVM;

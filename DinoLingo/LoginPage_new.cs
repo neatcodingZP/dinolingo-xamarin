@@ -7,6 +7,10 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+using Xamarin.Forms.PlatformConfiguration;
+using iOSSpecific = Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
+
 namespace DinoLingo
 {
     public class LoginPage_new: ContentPage
@@ -38,7 +42,7 @@ namespace DinoLingo
         }
 
         // available UI elements
-        Entry loginEntry, passwordEntry;
+        Xamarin.Forms.Entry loginEntry, passwordEntry;
         View blockerView;
 
         private double _loginBtnWidthFactor = 420.0 / 125.0;
@@ -46,6 +50,11 @@ namespace DinoLingo
         
         public LoginPage_new(bool goToCooseLanguage_Page = false)
         {
+            /*
+            var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            Debug.WriteLine("LoginPage_new() ->  ci = " + ci.Name);
+            */
+
             FlowDirection = Translate.FlowDirection_;
             this.goToCooseLanguage_Page = goToCooseLanguage_Page;
 
@@ -64,7 +73,7 @@ namespace DinoLingo
             AbsoluteLayout.SetLayoutFlags(patternImage, AbsoluteLayoutFlags.All);
             */
 
-            ScrollView scrollView = new ScrollView();
+            Xamarin.Forms.ScrollView scrollView = new Xamarin.Forms.ScrollView();
             AbsoluteLayout.SetLayoutBounds(scrollView, new Rectangle(0.5, 0.5, 1, 1));
             AbsoluteLayout.SetLayoutFlags(scrollView, AbsoluteLayoutFlags.All);
 
@@ -238,7 +247,7 @@ namespace DinoLingo
                 FontSize = UI_Sizes.MicroTextSize,
             };
             loginGrid.Children.Add(loginEntry_, 1, 0);
-            loginEntry = (Entry)loginEntry_;
+            loginEntry = (Xamarin.Forms.Entry)loginEntry_;
 
             // password entry
             MyViews.BorderlessEntry passwordEntry_ = new MyViews.BorderlessEntry
@@ -253,7 +262,7 @@ namespace DinoLingo
 
             passwordEntry_.Completed += OnLoginClicked;
             passGrid.Children.Add(passwordEntry_, 1, 0);
-            passwordEntry = (Entry)passwordEntry_;
+            passwordEntry = (Xamarin.Forms.Entry)passwordEntry_;
 
             grid.Children.Add(loginGrid, 0, 6);
             grid.Children.Add(passGrid, 0, 8);
@@ -737,7 +746,9 @@ namespace DinoLingo
                 if (login != null) // try free modeDisplay
                 {
                     Debug.WriteLine("Login -> ProcessLogin -> try free mode ");
-                    await App.Current.MainPage.Navigation.PushModalAsync(new ChooseLanguage_Page(UserHelper.Login));
+
+                    var chooseLangPage = new ChooseLanguage_Page(UserHelper.Login);
+                    await App.Current.MainPage.Navigation.PushModalAsync(chooseLangPage);
                 }
                 else if (totalProducts == 0)
                 { // 
@@ -807,7 +818,7 @@ namespace DinoLingo
                     CategoryResponse categoryResponse = await CacheHelper.GetAsync<CategoryResponse>(CacheHelper.CATEGORYS_RESPONSE + cat_id);
                     Debug.WriteLine("categories:" + (await CacheHelper.GetAsync(CacheHelper.CATEGORYS_RESPONSE + cat_id)).Data);
 
-                    Page current = App.Current.MainPage;
+                    Xamarin.Forms.Page current = App.Current.MainPage;
                     App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
                     //navigation.RemovePage(current);
                 }
@@ -830,7 +841,7 @@ namespace DinoLingo
                             Debug.WriteLine("categoryResponse after reorder = " + JsonConvert.SerializeObject(categoryResponse));
                             await CacheHelper.Add(CacheHelper.CATEGORYS_RESPONSE + cat_id, categoryResponse);
 
-                            Page current = App.Current.MainPage;
+                            Xamarin.Forms.Page current = App.Current.MainPage;
                             App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
                             //navigation.RemovePage(current);
                         }

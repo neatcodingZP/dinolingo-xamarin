@@ -19,7 +19,11 @@ namespace DinoLingo
                 Aspect = Aspect.AspectFit,
             };
             Content = image;
-            
+
+            /*
+            var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            Debug.WriteLine("SplashPage_new() ->  ci = " + ci.Name);
+            */
         }            
            
         protected override void OnParentSet()

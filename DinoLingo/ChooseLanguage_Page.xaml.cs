@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Xamarin.Forms;
 
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
 namespace DinoLingo
-{
+{    
     public partial class ChooseLanguage_Page : ContentPage
     {
 
@@ -13,7 +16,12 @@ namespace DinoLingo
 
         public ChooseLanguage_Page(Login_Response.Login loginResult)
         {
+            Debug.WriteLine("ChooseLanguagePage -> ");
             InitializeComponent();
+
+            // iOS Solution for a ModalPage (popup) which is not fullscreen
+            On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FullScreen);
+
             FlowDirection = Translate.FlowDirection_;
             BindingContext = viewModel = new ChooseLanguage_ViewModel (loginResult, Navigation);
             mainGrid.Padding = UI_Sizes.MainMargin;

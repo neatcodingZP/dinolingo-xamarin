@@ -60,7 +60,7 @@ namespace DinoLingo
             this.themeName = themeName;
             var absLayout = new AbsoluteLayout() { BackgroundColor = backgroundBlueColor };
 
-            int index = starsInfo.isSingleItem ? starsInfo.eventArgs.MyItem.Index : (starsInfo.eventArgs.MyItem as DoubleItem).Index2;
+            int index = starsInfo.isSingleItem ? starsInfo.listViewItem.Index : (starsInfo.listViewItem as DoubleItem).Index2;
             activityReport = new ActivityReport(ActivityReport.ACT_TYPE.GAME, starsInfo.data[index].id);
 
             LoadingView loadingView = new LoadingView();

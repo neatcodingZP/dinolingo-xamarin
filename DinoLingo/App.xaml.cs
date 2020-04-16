@@ -87,7 +87,7 @@ namespace DinoLingo
             Translate.Init();
 
             MainPage = navPage;
-            
+
 
             //ImageService.Instance.Config.DiskCacheDuration = TimeSpan.FromDays(180);
             //ImageService.Instance.Config.TryToReadDiskCacheDurationFromHttpHeaders = false;
@@ -99,6 +99,11 @@ namespace DinoLingo
             {
                 Debug.WriteLine($"{keyValuePair.Value.Name.ToLower().Replace("-", "_")}_{Purchaser.TermIndexToId(2)}_{keyValuePair.Value.ProductsIds[2]}");
             }
+            */
+
+            /*
+            var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            Debug.WriteLine("App(), ci = " + ci.Name);
             */
         }
 
@@ -251,12 +256,14 @@ namespace DinoLingo
             //var encoded = Uri.EscapeUriString("DEBUG ! How to encode   -(3 spaces),'-(one_apostroph)");
             //Debug.WriteLine($"Uri.EscapeUriString = {encoded}");
 
-            SetUpNotifications();
+
 
             //DownloadHelper.DownloadHelper.ParseAllMultySpaceAudios();
 
+            
+            SetUpNotifications();
             DoOnStart();
-             
+            
         }
 
         bool App_Timer()
@@ -582,7 +589,13 @@ namespace DinoLingo
         {
             // Handle when your app sleeps
             OnSleepEvent?.Invoke();
-            Debug.WriteLine("App OnSleep()");
+
+            /*
+            var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            Debug.WriteLine("App OnSleep(), ci = " + ci.Name);
+            */
+            
+
         }
 
         
