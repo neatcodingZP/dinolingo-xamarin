@@ -11,6 +11,7 @@
     </AndroidSigningKeyPass>
     <AndroidSigningKeyAlias>
     </AndroidSigningKeyAlias>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -81,23 +82,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <AndroidKeyStore>false</AndroidKeyStore>
-    <AndroidSigningKeyStore>
-    </AndroidSigningKeyStore>
-    <AndroidSigningStorePass>
-    </AndroidSigningStorePass>
-    <AndroidSigningKeyPass>
-    </AndroidSigningKeyPass>
-    <AndroidSigningKeyAlias>
-    </AndroidSigningKeyAlias>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>D:\Xamarin_projects\DinoLingo\dinolingo18.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>alvakos-18</AndroidSigningStorePass>
+    <AndroidSigningKeyPass>alvakos-18</AndroidSigningKeyPass>
+    <AndroidSigningKeyAlias>dinolingo18</AndroidSigningKeyAlias>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
-    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <MandroidI18n />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -156,10 +156,10 @@
       <Version>2.5.9</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
-      <Version>2.4.4.859</Version>
+      <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Transformations">
-      <Version>2.4.4.859</Version>
+      <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Forms9Patch">
       <Version>1.3.3</Version>

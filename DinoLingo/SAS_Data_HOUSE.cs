@@ -250,7 +250,7 @@ namespace DinoLingo
                 //" ".png", ".png", ".png", ".png", ".png", ".png", ".png", ".png",  ".png"  
                 new SAS_Label { // CLOCK
                     KeyName = "CLOCK",
-                    BaseCoords = new Rect (382,22+128+labelOffset,128,labelHeight),
+                    BaseCoords = new Rect (382,22+128+labelOffset,180,labelHeight),
                         color = labelColor
                     },
                 new SAS_Label { // LAMP
@@ -260,7 +260,7 @@ namespace DinoLingo
                     },
                 new SAS_Label { // KITE
                     KeyName = "KITE",
-                    BaseCoords = new Rect (933,503+192+labelOffset,112,labelHeight),
+                    BaseCoords = new Rect (933,503+192+labelOffset,160,labelHeight),
                         color = labelColor
                     },
 
