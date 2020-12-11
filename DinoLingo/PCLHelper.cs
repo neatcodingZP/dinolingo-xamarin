@@ -103,11 +103,19 @@ namespace DinoLingo
             // create a file, overwriting any existing file  
             IFile file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);  
             Debug.WriteLine("file = " + file.Path);
-            // populate the file with image data  
-            using (System.IO.Stream stream = await file.OpenAsync(FileAccess.ReadAndWrite))  
-            {  
-                stream.Write(image, 0, image.Length); 
-            }  
+            // populate the file with image data 
+            try
+            {
+                using (System.IO.Stream stream = await file.OpenAsync(FileAccess.ReadAndWrite))
+                {
+                    stream.Write(image, 0, image.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("PCLHelper -> SaveImage, EX: " + ex.Message);
+            }
+            
         }  
   
         public async static Task<byte[]> LoadImage(this byte[] image, String fileName, IFolder rootFolder = null)  

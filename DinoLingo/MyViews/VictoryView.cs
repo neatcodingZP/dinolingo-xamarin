@@ -41,7 +41,8 @@ namespace DinoLingo.MyViews
         }
 
         AbsoluteLayout dialogLayout_;
-        Image victoryImage_;
+        //Image victoryImage_;
+        CachedImage victoryImage_;
         MyViews.MyLabel victoryTextLabel_;
         MyViews.ButtonWithImage okBtn_;
 
@@ -128,7 +129,7 @@ namespace DinoLingo.MyViews
             victoryTextLabel_ = victoryTextLabel;
 
             // add victory image
-            Image victoryImage = new Image
+            CachedImage victoryImage = new CachedImage
             {
                 Source = Forms9Patch.ImageSource.FromResource("DinoLingo.Resources.UI.win_cup.png"),
                 Aspect = Aspect.AspectFit,

@@ -59,7 +59,7 @@ namespace DinoLingo
         public ObservableCollection<BookPageResponse.BookPage.Data> myItemsSource { get; set; }
         public bool IsSwipeEnabled { get; set; }
         
-        int prevPosSelected = -1;
+       
 
 
         INavigation navigation;
@@ -89,7 +89,7 @@ namespace DinoLingo
         bool firstStart = true;
         View loadingView, bottomTextView;
         ScrollView scrollView;
-        int page = 0;
+        //int page = 0;
         int maxReadPages = -1;
         bool mainLanguage = true;
 
@@ -97,6 +97,56 @@ namespace DinoLingo
 
         bool isFavorite = false;
         ActivityReport activityReport;
+
+        int soundLoadingTasks;
+        Object soundLoadingTasksLock = new Object();
+
+        public bool CanAddSoundLoadingTask
+        {
+            get
+            {
+                if (soundLoadingTasksLock != null) lock (soundLoadingTasksLock)
+                    {
+                        soundLoadingTasks++;
+                        if (soundLoadingTasks > 20) soundLoadingTasks = 20;
+                        return soundLoadingTasks < 20;
+                    }
+                else return false;
+            }            
+        }
+
+        public int RemoveSoundLoadingTask       {
+            
+            set
+            {
+                if (soundLoadingTasksLock != null) lock (soundLoadingTasksLock)
+                    {
+                        soundLoadingTasks -= value;
+                    }
+            }
+        }
+
+        public int SoundLoadingTasks
+        {
+            get
+            {
+                if (soundLoadingTasksLock != null) lock (soundLoadingTasksLock)
+                    {
+                        return soundLoadingTasks;
+                    }
+                else return 0;
+            }
+            set
+            {
+                if (soundLoadingTasksLock != null) lock (soundLoadingTasksLock)
+                    {
+                        soundLoadingTasks = value;
+                    }
+            }
+        }
+
+        private bool hadStarted = false;
+        private int audioPlayingPosition = -1;
 
         public BookPage_ViewModel(INavigation navigation, View loadingView, View bottomTextView, ScrollView scrollView, string book_id)
         {
@@ -120,6 +170,8 @@ namespace DinoLingo
 
         public async void MenuButton_Tapped(object sender, System.EventArgs e)
         {
+            
+
             Debug.WriteLine("MenuButton_Tapped");
             try
             {
@@ -135,7 +187,7 @@ namespace DinoLingo
                 {
                     IsSwipeEnabled = false;
                     await AnimateClick(view, 250);
-                    myPosition = page + 1;
+                    myPosition++;
                     GoToNextPage();
                     IsSwipeEnabled = true;
                 }
@@ -143,7 +195,7 @@ namespace DinoLingo
                 {
                     IsSwipeEnabled = false;
                     await AnimateClick(view, 250);
-                    myPosition = page - 1;
+                    myPosition--;
                     GoToPrevPage();
                     IsSwipeEnabled = true;
                 }
@@ -167,18 +219,18 @@ namespace DinoLingo
                         if (App.Audio.sayWord.IsPlaying) App.Audio.sayWord.Stop();
 
                         // show text2
-                        if (mainLanguage) Text2 = bookPages[page].data.content;
-                        else Text2 = bookPages[page].engTrans.content;
+                        if (mainLanguage) Text2 = bookPages[myPosition].data.content;
+                        else Text2 = bookPages[myPosition].engTrans.content;
 
                         // check if we have audio
                         if (mainLanguage)
                         {
-                            IsAudioVisible = !string.IsNullOrEmpty(bookPages[page].data.audio);
+                            IsAudioVisible = !string.IsNullOrEmpty(bookPages[myPosition].data.audio);
                             IsEngVisible = false;
                         }
                         else
                         {
-                            IsAudioVisible = !string.IsNullOrEmpty(bookPages[page].engTrans.audio);
+                            IsAudioVisible = !string.IsNullOrEmpty(bookPages[myPosition].engTrans.audio);
                             IsEngVisible = true;
                         }
                     }
@@ -198,7 +250,7 @@ namespace DinoLingo
         void GoToPrevPage()
         {
             //await ImageService.Instance.InvalidateCacheEntryAsync(ImageUrl(page), FFImageLoading.Cache.CacheType.All, true);
-            page--;
+            //page--;
             scrollView.ScrollToAsync(0, 0, false);
             IsAudioPlaying = false;
             if (App.Audio.sayWord.IsPlaying) App.Audio.sayWord.Stop();
@@ -208,7 +260,7 @@ namespace DinoLingo
 
         void GoToNextPage()
         {
-            page++;
+            //page++;
             scrollView.ScrollToAsync(0, 0, false);
 
             IsAudioPlaying = false;
@@ -216,6 +268,7 @@ namespace DinoLingo
 
             ShowCurrentPage();
 
+            /*
             if (page == bookPages.Count - 1 && bookPages[page].next_page > 0) // it is last downloaded page
             {// we have page to download  
                 Debug.WriteLine("download next page, nextpage = " + (page + 1));
@@ -225,6 +278,7 @@ namespace DinoLingo
             {
                 Debug.WriteLine("do not download next page, nextpage = " + (page + 1));
             }
+            */
         }
 
         public void OnPositionSelected(object sender, CarouselView.FormsPlugin.Abstractions.PositionSelectedEventArgs e)
@@ -232,15 +286,18 @@ namespace DinoLingo
             try
             {
                 IsSwipeEnabled = false;
-
+                GoToNextPage();
+                /*
                 if (e.NewValue > page)
                 {
                     Debug.WriteLine("BookPage_ViewModel -> OnPositionSelected -> NEXT PAGE");
+                    page = e.NewValue;
                     GoToNextPage();
                 }
                 else if (e.NewValue < page)
                 {
                     Debug.WriteLine("BookPage_ViewModel -> OnPositionSelected -> PREV PAGE");
+                    page = e.NewValue;
                     GoToPrevPage();
                 }
                 else
@@ -251,28 +308,9 @@ namespace DinoLingo
                     Debug.WriteLine($"BookPage_ViewModel -> OnPositionSelected -> SAME PAGE -> myItemsSource.Count = {myItemsSource.Count}, bookPages= {bookPages.Count}");
 
                     //check if it is pre-last page
-                    if (page > 0 && myItemsSource.Count > 1 && page == bookPages.Count - 2 && prevPosSelected != e.NewValue)
-                    {
-                        prevPosSelected = e.NewValue;
-
-                        Debug.WriteLine($"BookPage_ViewModel -> OnPositionSelected -> SAME PAGE -> lastPage image= {myItemsSource[myItemsSource.Count - 1].image}");
-                        ObservableCollection<BookPageResponse.BookPage.Data> myItemsSource_old =
-                            new ObservableCollection<BookPageResponse.BookPage.Data>(myItemsSource);
-
-                        Debug.WriteLine($"BookPage_ViewModel -> OnPositionSelected -> SAME PAGE -> create myItemsSource_empty");
-                        ObservableCollection<BookPageResponse.BookPage.Data> myItemsSource_empty =
-                                                new ObservableCollection<BookPageResponse.BookPage.Data>(new List<BookPageResponse.BookPage.Data>(myItemsSource.Count));
-
-                        Debug.WriteLine($"BookPage_ViewModel -> OnPositionSelected -> SAME PAGE -> create myItemsSource = myItemsSource_empty");
-                        myItemsSource = myItemsSource_empty;
-
-                        Debug.WriteLine($"BookPage_ViewModel -> OnPositionSelected -> SAME PAGE -> create myItemsSource = myItemsSource_old");
-                        myItemsSource = myItemsSource_old;
-
-
-                    }
+                   
                 }
-
+                */
                 IsSwipeEnabled = true;
                 Debug.WriteLine("BookPage_ViewModel -> OnPositionSelected -> EXIT");
             }
@@ -291,42 +329,45 @@ namespace DinoLingo
 
         bool TryToSpellPage()
         {
+            Debug.WriteLine("BookPage_ViewModel -> TryToSpellPage, page= " + myPosition);
             try
             {
                 if (!App.Audio.sayWord.IsPlaying)
                 {
                     Debug.WriteLine("if (!App.Audio.sayWord.IsPlaying)");
                     IsAudioPlaying = true;
+                    audioPlayingPosition = myPosition;
                     if (isFavorite)
                     {
                         if (mainLanguage)
                         {
-                            if (!string.IsNullOrEmpty(bookPages[page].data.audio))
-                                App.Audio.SayWord("BOOK" + UserHelper.Lang_cat + "_" + book_id + "_" + page + ".mp3");
+                            if (!string.IsNullOrEmpty(bookPages[audioPlayingPosition].data.audio))
+                                App.Audio.SayWord("BOOK" + UserHelper.Lang_cat + "_" + book_id + "_" + audioPlayingPosition + ".mp3");
                         }
                         else
                         {
-                            if (bookPages[page].engTrans != null && !string.IsNullOrEmpty(bookPages[page].engTrans.audio))
-                                App.Audio.SayWord("BOOK" + UserHelper.Lang_cat + "_" + book_id + "_" + page + "transl.mp3");
+                            if (bookPages[audioPlayingPosition].engTrans != null && !string.IsNullOrEmpty(bookPages[audioPlayingPosition].engTrans.audio))
+                                App.Audio.SayWord("BOOK" + UserHelper.Lang_cat + "_" + book_id + "_" + audioPlayingPosition + "transl.mp3");
                         }
                     }
                     else
                     {
                         if (mainLanguage)
                         {
-                            if (!string.IsNullOrEmpty(bookPages[page].data.audio))
-                                App.Audio.SayWord(page + "_main_.mp3");
+                            if (!string.IsNullOrEmpty(bookPages[audioPlayingPosition].data.audio))
+                                App.Audio.SayWord(audioPlayingPosition + "_main_.mp3");
                         }
                         else
                         {
-                            if (bookPages[page].engTrans != null && !string.IsNullOrEmpty(bookPages[page].engTrans.audio))
-                                App.Audio.SayWord(page + "_trans_.mp3");
+                            if (bookPages[audioPlayingPosition].engTrans != null && !string.IsNullOrEmpty(bookPages[audioPlayingPosition].engTrans.audio))
+                                App.Audio.SayWord(audioPlayingPosition + "_trans_.mp3");
                         }
                     }
                 }
-                else
+                else if (audioPlayingPosition != myPosition)
                 {
                     Debug.WriteLine("pause audio ...");
+                    audioPlayingPosition = -1;
                     IsAudioPlaying = false;
                     App.Audio.sayWord.Pause();
                 }
@@ -424,7 +465,7 @@ namespace DinoLingo
                         Debug.WriteLine("nothing to download");
                         // WHEN DOWNLOADED 
 
-                        myItemsSource.Add(bookPages[0].data);
+                        //myItemsSource.Add(bookPages[0].data);
                         Debug.WriteLine("BookPage_ViewModel -> AnimateLoadingView -> myItemsSource.Count =" + myItemsSource.Count);
 
                         AnimateLoadingView(1000);
@@ -433,7 +474,7 @@ namespace DinoLingo
                         Debug.WriteLine("downloaded - ok, total files = " + DownloadHelper.DownloadHelper.totalFilesDownloaded);
                         // WHEN DOWNLOADED
 
-                        myItemsSource.Add(bookPages[0].data);
+                        //myItemsSource.Add(bookPages[0].data);
                         Debug.WriteLine("BookPage_ViewModel -> AnimateLoadingView -> myItemsSource.Count =" + myItemsSource.Count);
 
                         AnimateLoadingView(1000);
@@ -478,8 +519,8 @@ namespace DinoLingo
             IsSwitchLangVisible = true;
             IsEngVisible = false;
 
-            DownloadHelper.DownloadHelper.OnLoadingStarted_InBckground = OnLoadingStarted_InBckground;
-            DownloadHelper.DownloadHelper.OnLoadingEnded_InBckground = OnLoadingEnded_InBckground_OnStart;
+            //DownloadHelper.DownloadHelper.OnLoadingStarted_InBckground = OnLoadingStarted_InBckground;
+            //DownloadHelper.DownloadHelper.OnLoadingEnded_InBckground = OnLoadingEnded_InBckground_OnStart;
 
             activityReport.Start();
 
@@ -530,6 +571,7 @@ namespace DinoLingo
                     bookPages.Add(page);
                     
                 }
+
                 if (isFavorite) { // check last page
                     Debug.WriteLine("BookPage_ViewModel -> all pages are ok, check last page ...");
                     if (bookPages[pages.Length - 1].next_page != 0) { // it's not las page - have some error
@@ -540,8 +582,9 @@ namespace DinoLingo
             Debug.WriteLine("BookPage_ViewModel -> CheckIfFavorite -> isFavorite = " + isFavorite);
 
             if (!isFavorite) { // reset pages
-                bookPages.Clear();
-                DownloadPage(page);
+                //bookPages.Clear();
+                //DownloadPage(page);
+                DownloadAllThePagesData();
             }
             else {
                 List<BookPageResponse.BookPage.Data> pagesDataList = new List<BookPageResponse.BookPage.Data>();
@@ -555,7 +598,331 @@ namespace DinoLingo
             }
         }
 
+        async void DownloadAllThePagesData()
+        {
+            Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData");
+            bookPages.Clear();
+
+            if (CrossConnectivity.Current.IsConnected && DownloadHelper.DownloadHelper.CheckInternetConnectionProgressive())
+            {
+                // download the first page
+                int lang_id_ = -1;
+                int book_id_ = -1;
+                Int32.TryParse(LANGUAGES.CAT_INFO[lang_cat].Id, out lang_id_);
+                Int32.TryParse(book_id, out book_id_);
+
+                BookPageResponse firstPageResponse = null;
+                string postPrefix = $"lang_id={LANGUAGES.CAT_INFO[lang_cat].Id}";
+                postPrefix += $"&book_id={book_id}";
+
+                // check cached first page
+                BookPageResponse.BookPage firstPageCached = await BookPageCacheHelper.GetBookPageCached(lang_id_, book_id_, 0);
+
+                if (firstPageCached == null)
+                {
+                    Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, firstPageCached == null");
+                    int numberOfTries = 2;
+                    for (int i = 0; i < numberOfTries; i++)
+                    {
+                        firstPageResponse = await DownloadPageAsyncNew(0, postPrefix);
+                        if (animLock == null) return;
+
+                        if (firstPageResponse != null && firstPageResponse.error == null && firstPageResponse.result != null)
+                        {
+                            try
+                            {
+                                string result = JsonConvert.SerializeObject(firstPageResponse);
+                                Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, firstPageResponse= " + result);
+                                // add to cache
+                                await BookPageCacheHelper.Add(lang_id_, book_id_, 0, firstPageResponse.result);
+                                break;
+                            }
+                            catch (Exception ex)
+                            {
+                                Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, firstPageResponse, exception= " + ex);
+                                firstPageResponse = null;
+                            }
+
+                        }
+                        // else try to download again
+                        if (animLock == null) return;
+                    }
+                }
+                else
+                {
+                    Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, firstPageCached != null");
+                    firstPageResponse = new BookPageResponse()
+                    {
+                        result = firstPageCached,
+                        error = null
+                    };
+                }
+                
+                // check the result here
+                if (firstPageResponse == null || firstPageResponse.error != null)
+                {
+                    Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, firstPageResponse - ERROR, can't procede");
+                    Device.BeginInvokeOnMainThread(async () => {
+                        if (navigation != null) await navigation.PopModalAsync();
+                    });
+                    return;
+                }
+
+
+                // then download all the pages
+               
+                int totalPages = 1;
+                Int32.TryParse(firstPageResponse.result.page_count, out totalPages);
+                bookPages.Add(firstPageResponse.result);
+
+                // populate bookPages with empty pages
+
+                ObservableCollection<BookPageResponse.BookPage.Data>  myItemsSourceTmp = new ObservableCollection<BookPageResponse.BookPage.Data>();
+                myItemsSourceTmp.Add(new BookPageResponse.BookPage.Data());
+                for (int i = 1; i < totalPages; i++)
+                {
+                    bookPages.Add(new BookPageResponse.BookPage());
+                    myItemsSourceTmp.Add(new BookPageResponse.BookPage.Data());
+                }
+
+                // set data here
+                myItemsSourceTmp[0] = bookPages[0].data;
+
+
+
+                int pagesCount = 0;
+                Int32.TryParse(firstPageResponse.result.page_count, out pagesCount);
+                if (pagesCount <= 1)
+                {
+                    await OnPagesDataDownloaded();
+                    return;
+                }
+
+
+                Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, downloadRestThePages");
+                int pagesToDownload = pagesCount - 1;
+                List<int> indexesToDownload = new List<int>();
+                int requestGroupSize = 9;
+                Task<BookPageResponse>[] tasks = new Task<BookPageResponse>[requestGroupSize];
+
+                
+
+                List<BookPageResponse.BookPage> cachedPages =
+                    await BookPageCacheHelper.GetBookPagesCached(lang_id_, book_id_);
+                int cp = cachedPages == null ? 0 : cachedPages.Count;
+                Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, cachedPages.Count= " + cp);
+
+                for (int i = 1; i <= pagesToDownload; i++)
+                {
+                    indexesToDownload.Add(i);                    
+                }
+
+                // process the cached pages here 
+                foreach (var cachedPage in cachedPages)
+                {
+                    int page = -1;
+                    Int32.TryParse(cachedPage.data.page_num, out page);
+
+                    if (indexesToDownload.Contains(page))
+                    {
+                        indexesToDownload.Remove(page);
+                        bookPages[page] = cachedPage;
+                        myItemsSourceTmp[page] = cachedPage.data;
+                    }
+                }
+
+                // array of requests
+                if (indexesToDownload.Count > 0)
+                {
+                    int allPagesTries = 3;
+                    int[] requestIndexes = new int[requestGroupSize];
+
+                    for (int t = 0; t < allPagesTries; t++)
+                    {
+                        Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, try= " + t);
+                        if (animLock == null) return;
+                        if (indexesToDownload.Count == 0) break;
+
+                        List<int> indexesToDownloadTemp = new List<int>(indexesToDownload);
+                        int itemsToDownload = indexesToDownloadTemp.Count;
+                        int waves = (itemsToDownload - 1) / requestGroupSize + 1;
+                        for (int w = 0; w < waves; w++)
+                        {
+                            // create request group here
+                            if (animLock == null) return;
+
+                            for (int r = 0; r < requestGroupSize; r++)
+                            {
+                                int currentIndex = w * requestGroupSize + r;
+                                if (currentIndex < indexesToDownloadTemp.Count)
+                                {
+                                    requestIndexes[r] = indexesToDownloadTemp[currentIndex];
+                                }
+                                else
+                                {
+                                    requestIndexes[r] = -1;
+                                } 
+                            }
+                            // here we have a group (wave)
+                            for (int ta = 0; ta < tasks.Length; ta++)  
+                            {
+                                tasks[ta] = requestIndexes[ta] > 0 ? DownloadPageAsyncNew(requestIndexes[ta], postPrefix) : NullableTask();
+                            }
+
+                            if (CrossConnectivity.Current.IsConnected)
+                            {
+                                await Task.WhenAll(tasks[0], tasks[1], tasks[2], tasks[3], tasks[4],
+                                tasks[5], tasks[6], tasks[7], tasks[8]
+                                );
+
+                                // process the responses
+                                for (int ta = 0; ta < tasks.Length; ta++)
+                                {
+
+                                    if (animLock == null) return;
+
+
+                                    BookPageResponse bookPageResponse = await tasks[ta];
+                                    // process the result here
+                                    if (bookPageResponse != null && bookPageResponse.error == null && bookPageResponse.result != null)
+                                    {
+                                        try
+                                        {
+                                            string result = JsonConvert.SerializeObject(bookPageResponse);
+                                            int page_ = requestIndexes[ta];
+                                            Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, page= " + page_ + " , bookPageResponse= " + result);
+                                            indexesToDownload.Remove(page_);
+
+
+                                            bookPages[page_] = bookPageResponse.result;
+
+                                            myItemsSourceTmp[requestIndexes[ta]] = bookPageResponse.result.data;
+
+                                            // add to cache
+                                            await BookPageCacheHelper.Add(lang_id_, book_id_, page_, bookPageResponse.result);
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, page= " + requestIndexes[ta] + ", exception= " + ex);
+
+                                        }
+
+                                    }
+
+                                    // else try to download again
+                                    if (animLock == null) return;
+
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+                
+
+                // here we can chek the result
+                Debug.WriteLine("BookPage_ViewModel -> DownloadAllThePagesData, indexesToDownload.Count= " + indexesToDownload.Count);
+                
+                if (animLock != null) myItemsSource = new ObservableCollection<BookPageResponse.BookPage.Data>(myItemsSourceTmp);
+
+                if (indexesToDownload.Count > 0)
+                {
+                    await App.Current.MainPage.DisplayAlert(POP_UP.OOPS, POP_UP.SOME_ERROR_IN_RESPONSE + POP_UP.GetCode(null, ERROR_PREFIX + 5), POP_UP.OK);
+                    await navigation?.PopModalAsync();
+                    return;
+                }
+
+                await OnPagesDataDownloaded();
+            }
+            else
+            {               
+                AsyncMessages.CheckConnectionTimeout();
+                await App.Current.MainPage.DisplayAlert(POP_UP.OOPS, POP_UP.NO_CONNECTION, POP_UP.OK);
+                await navigation.PopModalAsync();
+            }
+        }
+
+        private async Task OnPagesDataDownloaded()
+        {
+            if (animLock == null) return;
+            Debug.WriteLine("BookPage_ViewModel -> OnPagesDataDownloaded");
+
+            // remove all the sounds if have
+            for (int i = 0; i < bookPages.Count; i++)               
+            {
+                if (IsSoundPresent(i))
+                {
+                    if (await PCLHelper.IsFileExistAsync(i + "_main_.mp3"))
+                    {
+                        await PCLHelper.DeleteFile(i + "_main_.mp3");
+                    }
+                }
+
+                if ((IsSoundPresentTranslated(i)))
+                {
+                    if (await PCLHelper.IsFileExistAsync(i + "_trans_.mp3"))
+                    {
+                        await PCLHelper.DeleteFile(i + "_trans_.mp3");
+                    }
+                }
+            }
+
+
+            if (animLock == null) return;
+
+            // download sounds for first page only
+
+            if (CrossConnectivity.Current.IsConnected)
+            {
+                for (int p = 0; p < 1; p++)
+                {
+                    var taskSound1 = IsSoundPresent(p) ? DownloadHelper.DownloadHelper.SimpleAudioLoader(bookPages[p].data.audio, 0 + "_main_.mp3") : DownloadHelper.DownloadHelper.SimpleAudioLoaderNull();
+                    var taskSound2 = IsSoundPresentTranslated(p) ? DownloadHelper.DownloadHelper.SimpleAudioLoader(bookPages[p].engTrans.audio, 0 + "_trans_.mp3") : DownloadHelper.DownloadHelper.SimpleAudioLoaderNull();
+
+                    await Task.WhenAll(taskSound1, taskSound2);
+                    // process the result here
+                    Debug.WriteLine("BookPage_ViewModel -> OnPagesDataDownloaded, SimpleAudioLoader, taskSound1= " + (await taskSound1) + ", taskSound2= " + (await taskSound2));
+                }
+            }
+                
+
+
+
+
+            // start book
+            AnimateLoadingView(800);
+
+        }
+
+        private Boolean IsSoundPresent(int page_)
+        {
+            return bookPages[page_] != null && bookPages[page_].data != null
+                && bookPages[page_].data.audio != null && bookPages[page_].data.audio != string.Empty;
+        }
+
+        private Boolean IsSoundPresentTranslated(int page_)
+        {
+            return bookPages[page_] != null && bookPages[page_].engTrans != null && bookPages[page_].engTrans.audio != null
+                && bookPages[page_].engTrans.audio != string.Empty;
+        }
+
+        private async Task<BookPageResponse> DownloadPageAsyncNew(int page_, string postPrefix)
+        {
+            //string postData = $"lang_id={LANGUAGES.CAT_INFO[lang_cat].Id}";
+            //postData += $"&book_id={book_id}";
+            Debug.WriteLine("BookPage_ViewModel -> DownloadPageAsyncNew, page =" + page_);
+            BookPageResponse bookPageResponse = await ServerApi.PostRequestProgressive<BookPageResponse>(ServerApi.BOOK_URL, postPrefix + $"&page={page_}", null);
+            return bookPageResponse;
+        }
+
+        private async Task<BookPageResponse> NullableTask()
+        {            
+            return null;
+        }
+
         async void DownloadPage (int page) {
+            if (animLock == null) return;
             if (CrossConnectivity.Current.IsConnected && DownloadHelper.DownloadHelper.CheckInternetConnectionProgressive())
             {
                 DownloadPageAsync(page);
@@ -641,17 +1008,49 @@ namespace DinoLingo
                             return;
                         }
 
-                        string result = JsonConvert.SerializeObject(bookPageResponse);
-                        Debug.WriteLine("bookPageResponse = " + result);
+                        try
+                        {
+                            string result = JsonConvert.SerializeObject(bookPageResponse);
+                            Debug.WriteLine("bookPageResponse = " + result);
+                            int totalPages = 1;
+                            Int32.TryParse(bookPageResponse.result.page_count, out totalPages);
+                            bookPages.Add(bookPageResponse.result);
 
-                        // add pageinfo:
-                        bookPages.Add(bookPageResponse.result);
+                            if (pageIndex == 0)
+                            {
+                                // populate bookPages with empty pages
+                                Debug.WriteLine("BookPage_ViewModel -> DownloadPageAsync, populate bookPages with empty pages, totalPages=" + totalPages);
+                                myItemsSource = new ObservableCollection<BookPageResponse.BookPage.Data>();
+                                myItemsSource.Add(new BookPageResponse.BookPage.Data());
+                                for (int i = 1; i < totalPages; i++)
+                                {
+                                    bookPages.Add(new BookPageResponse.BookPage());
+                                    myItemsSource.Add(new BookPageResponse.BookPage.Data()); 
+                                }                               
+
+                            }
+                            else
+                            {
+                                Debug.WriteLine("BookPage_ViewModel -> DownloadPageAsync, pageData downloaded, pageIndex= " + pageIndex);
+                                bookPages[pageIndex] = bookPageResponse.result;
+                            }
+
+                            // set data here
+                            myItemsSource[pageIndex] = bookPages[pageIndex].data;
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine("BookPage_ViewModel -> DownloadPageAsync ex: " + ex.Message);
+                        }                     
+                        
 
                     }
 
                     // download 2 audios here
                     string transUrlAudio = string.Empty;
                     if (bookPages[pageIndex].engTrans != null) transUrlAudio = bookPages[pageIndex].engTrans.audio;
+
+                    if (animLock == null) return;
 
                     DownloadHelper.DownloadHelper.Download2AudioAsync_InBckground(bookPages[pageIndex].data.audio, pageIndex + "_main_.mp3",
                                                                                   transUrlAudio, pageIndex + "_trans_.mp3");
@@ -685,8 +1084,8 @@ namespace DinoLingo
         }
 
         bool RetryDownload () {
-            if (page == bookPages.Count - 1) { // if we on last page
-                DownloadPage(page+1);
+            if (myPosition == bookPages.Count - 1) { // if we on last page
+                DownloadPage(myPosition + 1);
             }
             return false;
         }
@@ -738,16 +1137,16 @@ namespace DinoLingo
             try
             {
                 //are we on pre-last page?
-                if (page == bookPages.Count - 2)
+                if (myPosition == bookPages.Count - 2)
                 {
                     // update cached image
-                    CashedImageSource = bookPages[page + 1].data.image;
+                    CashedImageSource = bookPages[myPosition + 1].data.image;
                     // update next button
                     IsNextBtnEnabled = IsNextBtnVisible = true;
 
-                    Debug.WriteLine($"BookPage_ViewModel -> myItemsSource.Add({page + 1})");
-                    myItemsSource.Add(bookPages[page + 1].data);
-                    Debug.WriteLine($"BookPage_ViewModel -> myItemsSource.Add({page + 1}) - OK");
+                   
+                    //myItemsSource.Add(bookPages[page + 1].data);
+                    Debug.WriteLine($"BookPage_ViewModel -> myItemsSource.Add({myPosition + 1}) - OK");
                     Debug.WriteLine("BookPage_ViewModel -> OnNextPageDownloaded -> myItemsSource.Count =" + myItemsSource.Count);
                 }
             }
@@ -784,23 +1183,28 @@ namespace DinoLingo
                 loadingView.InputTransparent = true;
                 IsAnimating = false;
 
+                /*
                 DownloadHelper.DownloadHelper.OnLoadingStarted_InBckground -= OnLoadingStarted_InBckground;
                 DownloadHelper.DownloadHelper.OnLoadingEnded_InBckground -= OnLoadingEnded_InBckground_OnStart;
 
                 DownloadHelper.DownloadHelper.OnLoadingStarted_InBckground = OnLoadingNextPageStarted_InBckground;
                 DownloadHelper.DownloadHelper.OnLoadingEnded_InBckground = OnLoadingNextPageEnded_InBckground;
+                */
 
                 // CONTINUE DOWNLOADING !!!
                 // show current page
+                hadStarted = true;
                 ShowCurrentPage();
 
                 // download next page (if we have one)
+                /*
                 if (!isFavorite && bookPages[0].next_page > 0)
                 { // we have page to download
                   //download data for page [0]
                     Debug.WriteLine("next page for page 0 : " + 1);
                     DownloadPage(1);
                 }
+                */
             }
             catch (Exception ex)
             {
@@ -809,59 +1213,124 @@ namespace DinoLingo
         }
 
         void ShowCurrentPage() {
+
+
             // here we have at least [0] page
             // report activity here
 
             //check page here
-            if (page < 0) page = 0;
-            if (page > bookPages.Count - 1) page = bookPages.Count - 1;
+            if (bookPages.Count == 0 || !hadStarted) return;
 
-            if (page > maxReadPages) {
-                maxReadPages = page;
+
+            if (!isFavorite && CrossConnectivity.Current.IsConnected) CheckPageDataAndSounds(myPosition);
+
+            if (myPosition > maxReadPages) {
+                maxReadPages = myPosition;
                 double totalPages = double.Parse(bookPages[0].page_count);
                 activityReport.ReportProgress((maxReadPages + 1) / totalPages * 100);
             }
 
 
-            Debug.WriteLine("ShowCurrentPage, page = " + page);
+            Debug.WriteLine("ShowCurrentPage, page = " + myPosition);
             // check if we have audio & text
-            BottomFrameEnabled = BottomFrameVisible = ((!string.IsNullOrEmpty(bookPages[page].data.audio) && !string.IsNullOrWhiteSpace(bookPages[page].data.audio)) || 
-                                                       (!string.IsNullOrEmpty(bookPages[page].data.content) && !string.IsNullOrWhiteSpace(bookPages[page].data.content)) );
+            BottomFrameEnabled = BottomFrameVisible = ((!string.IsNullOrEmpty(bookPages[myPosition].data.audio) && !string.IsNullOrWhiteSpace(bookPages[myPosition].data.audio)) || 
+                                                       (!string.IsNullOrEmpty(bookPages[myPosition].data.content) && !string.IsNullOrWhiteSpace(bookPages[myPosition].data.content)) );
 
             // check if we have audio
             if (mainLanguage) {
-                IsAudioVisible = !string.IsNullOrEmpty(bookPages[page].data.audio);
+                IsAudioVisible = !string.IsNullOrEmpty(bookPages[myPosition].data.audio);
                 Debug.WriteLine("do not have native lang audio");
             }
             else {
-                IsAudioVisible = !string.IsNullOrEmpty(bookPages[page].engTrans.audio);
+                IsAudioVisible = !string.IsNullOrEmpty(bookPages[myPosition].engTrans.audio);
             }
 
 
             // check if we have translation
-            IsSwitchLangVisible = bookPages[page].engTrans != null;
+            IsSwitchLangVisible = bookPages[myPosition].engTrans != null;
             if (!IsSwitchLangVisible) IsEngVisible = false;
 
             // check previous page 
-            IsPrevBtnEnabled = IsPrevBtnVisible = page > 0;
+            IsPrevBtnEnabled = IsPrevBtnVisible = myPosition > 0;
 
             // check next page
-            IsNextBtnEnabled = IsNextBtnVisible = page < bookPages.Count - 1;
+            IsNextBtnEnabled = IsNextBtnVisible = myPosition < bookPages.Count - 1;
 
             //check home button
-            IsHomeBtnEnabled = IsHomeBtnVisible = (bookPages[page].next_page == 0);
+            IsHomeBtnEnabled = IsHomeBtnVisible = (bookPages[myPosition].next_page == 0);
 
             // show text2
-            if (mainLanguage) Text2 = bookPages[page].data.content;
-            else Text2 = bookPages[page].engTrans.content;
+            if (mainLanguage) Text2 = bookPages[myPosition].data.content;
+            else Text2 = bookPages[myPosition].engTrans.content;
 
             // main image
-            Debug.WriteLine("Image : " + bookPages[page].data.image);
-            MainImageSource = bookPages[page].data.image;
+            Debug.WriteLine("Image : " + bookPages[myPosition].data.image);
+            MainImageSource = bookPages[myPosition].data.image;
             
 
             // try to spell the page
-            if (IsAudioVisible) Device.StartTimer(TimeSpan.FromMilliseconds(500), TryToSpellPage);
+            if (IsAudioVisible) Device.StartTimer(TimeSpan.FromMilliseconds(300), TryToSpellPage);
+        }
+
+        private async Task CheckPageDataAndSounds(int page_)
+        {
+            Debug.WriteLine("BookPageViewModel --> CheckPageDataAndSounds, page= " + page_);
+            // check current page
+            // and x pages after current
+            if (animLock == null) return;
+
+            // download sounds for current page only
+            if (animLock == null) return;
+
+            if (CrossConnectivity.Current.IsConnected)
+            {
+                await CheckAndLoadSounds(page_);
+            }
+            
+
+            int pagesToPreload = 3;
+            int maxForwardDistance = 10;
+
+            int preloadingPage = page_ + 1;
+            while (preloadingPage < page_ + maxForwardDistance && pagesToPreload > 0 && preloadingPage < bookPages.Count)
+            {
+                Debug.WriteLine("BookPageViewModel --> CheckPageDataAndSounds, SoundLoadingTasks= " + SoundLoadingTasks);
+                if (animLock == null) return;
+
+                if (CrossConnectivity.Current.IsConnected)
+                {
+                    if (CanAddSoundLoadingTask && await CheckAndLoadSounds(preloadingPage))
+                    {
+                        pagesToPreload--;
+                    }
+                    RemoveSoundLoadingTask = 1;
+                }
+                
+
+
+                // dosome
+                preloadingPage++;
+            }
+        }
+
+        private async Task<Boolean> CheckAndLoadSounds(int page_)
+        {
+            Debug.WriteLine("BookPageViewModel --> CheckAndLoadSounds, page= " + page_);
+            bool needToLoadSoundFile = IsSoundPresent(page_) && !(await PCLHelper.IsFileExistAsync(page_ + "_main_.mp3"));
+            bool needToLoadSoundFileTranslated = IsSoundPresentTranslated(page_) && !(await PCLHelper.IsFileExistAsync(page_ + "_trans_.mp3"));
+
+            if (!needToLoadSoundFile && !needToLoadSoundFileTranslated) return false;
+
+            var taskSound1 = needToLoadSoundFile ? DownloadHelper.DownloadHelper.SimpleAudioLoader(bookPages[page_].data.audio, page_ + "_main_.mp3") : DownloadHelper.DownloadHelper.SimpleAudioLoaderNull();
+            var taskSound2 = needToLoadSoundFileTranslated ? DownloadHelper.DownloadHelper.SimpleAudioLoader(bookPages[page_].engTrans.audio, page_ + "_trans_.mp3") : DownloadHelper.DownloadHelper.SimpleAudioLoaderNull();
+
+            await Task.WhenAll(taskSound1, taskSound2);
+
+            // process the result here
+            Debug.WriteLine("BookPage_ViewModel -> CheckAndLoadSounds, SimpleAudioLoader, taskSound1= " + (await taskSound1) + ", taskSound2= " + (await taskSound2));
+
+            if (IsAudioVisible && page_ == myPosition && needToLoadSoundFile) TryToSpellPage();
+            return true;
         }
 
         public void OnAppearing()
@@ -890,7 +1359,11 @@ namespace DinoLingo
             // clear all ffimageloading cache
             if (!isFavorite)
             foreach (BookPageResponse.BookPage bp in bookPages) {
-                await ImageService.Instance.InvalidateCacheEntryAsync(bp.data.image, FFImageLoading.Cache.CacheType.All, true);
+                if (bp != null && bp.data != null && bp.data.image != null)
+                    {
+                        await ImageService.Instance.InvalidateCacheEntryAsync(bp.data.image, FFImageLoading.Cache.CacheType.All, true);
+                    }
+                
             }
             activityReport.OnDisappearing();
         }

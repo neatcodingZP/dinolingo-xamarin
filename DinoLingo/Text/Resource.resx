@@ -1220,4 +1220,445 @@
   <data name="subscribe_one_month_subscriptions" xml:space="preserve">
     <value>1 month subscriptions</value>
   </data>
+  <data name="dino_descr_0" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to read books and swim with my brothers and sisters in the ocean. My favorite color is orange and my favorite number is 7.</value>
+  </data>
+  <data name="dino_descr_1" xml:space="preserve">
+    <value>Hi, my name is {0}. I am a really fast runner and I swim underwater alot. My favorite color is yellow and my favorite number is 6.</value>
+  </data>
+  <data name="dino_descr_10" xml:space="preserve">
+    <value>My name is {0} and I like big warm hugs. What is your name? I am 5 years old in May.</value>
+  </data>
+  <data name="dino_descr_100" xml:space="preserve">
+    <value>My name is {0} and I am a baby. My old house is a yellow egg. I am growing every day and my egg is too small now.</value>
+  </data>
+  <data name="dino_descr_101" xml:space="preserve">
+    <value>Hi everyone, my name is {0} and I have lots of toes. I keep them nice and shiny.</value>
+  </data>
+  <data name="dino_descr_102" xml:space="preserve">
+    <value>My name is {0} and I usually like to eat my dinner outside when the weather is warm.  I like to play with my friends in the park and sunny days.</value>
+  </data>
+  <data name="dino_descr_103" xml:space="preserve">
+    <value>Hi, my name is {0} and I am very good at painting water color paintings.  I like to paint rainbows.</value>
+  </data>
+  <data name="dino_descr_104" xml:space="preserve">
+    <value>My name is {0} and I am very tiny for my age. Many of my friends are faller but I am a fast runner.</value>
+  </data>
+  <data name="dino_descr_105" xml:space="preserve">
+    <value>I am {0} and I go to the dentist once every six months. I like to brush my teeth after every meal to keep them white and shiny.</value>
+  </data>
+  <data name="dino_descr_106" xml:space="preserve">
+    <value>My name is {0} and I am very strong.  Sometimes I lift large trees and carry them to the stream.</value>
+  </data>
+  <data name="dino_descr_107" xml:space="preserve">
+    <value>My name is {0} and I like lots and lots of different flowers because I like colors so much.</value>
+  </data>
+  <data name="dino_descr_108" xml:space="preserve">
+    <value>My name is {0} and cold weather is my favorite.  I play in the snow and slide on the ice.</value>
+  </data>
+  <data name="dino_descr_109" xml:space="preserve">
+    <value>My name is {0}. What is your name? I come from a very large family. I have five brothers and two sisters.</value>
+  </data>
+  <data name="dino_descr_11" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to drink lemonade that I make with my Mommy. My favorite color is yellow and my favorite number is 3.</value>
+  </data>
+  <data name="dino_descr_110" xml:space="preserve">
+    <value>I am {0} and I go to the dentist once every six months. My teeth are very important! Do you know why? I brush my teeth after every meal to keep them white and shiny. I wash my hands often too.</value>
+  </data>
+  <data name="dino_descr_111" xml:space="preserve">
+    <value>My name is {0} and I color happy dinosaur. I am learning how to swim and can float on my back. I only swim when a responsible adult is with me.</value>
+  </data>
+  <data name="dino_descr_112" xml:space="preserve">
+    <value>My name is {0} and my favorite ice cream flavor is strawberry. I also like mangos and eat bananas every day for my breakfast.</value>
+  </data>
+  <data name="dino_descr_113" xml:space="preserve">
+    <value>My name is {0} but my nick name is Daffodil because I am yellow like a daffodil flower. What is your name?</value>
+  </data>
+  <data name="dino_descr_114" xml:space="preserve">
+    <value>My name is {0} and I am a very happy dinosaur. I go to my gymnastics class every Thursday.</value>
+  </data>
+  <data name="dino_descr_115" xml:space="preserve">
+    <value>My name is {0} and my favorite hobby is sailing.  I have a very nice boat and I call it ‘ Sea Banjo’.</value>
+  </data>
+  <data name="dino_descr_116" xml:space="preserve">
+    <value>My name is {0} and I eat apples with soft chocolate. My Mam packs me a nice snake when I go to the park with my friends.</value>
+  </data>
+  <data name="dino_descr_117" xml:space="preserve">
+    <value>My name is {0} and I live in the desert in a cave and its very cosy and warm. I love counting and singing.</value>
+  </data>
+  <data name="dino_descr_118" xml:space="preserve">
+    <value>My name is {0} and I love to play hide and seek in the jungle with my friends. I am a master at finding my friends.</value>
+  </data>
+  <data name="dino_descr_119" xml:space="preserve">
+    <value>I am {0} and I am the youngest member of my family. My brothers and sisters take turns to give me big warm hugs and read me stories at night.</value>
+  </data>
+  <data name="dino_descr_12" xml:space="preserve">
+    <value>My name is {0} and my favorite ice cream flavor is strawberry. I also like mangos and eat bananas every day for my breakfast.</value>
+  </data>
+  <data name="dino_descr_120" xml:space="preserve">
+    <value>I am {0} and I can write my name backwards. I am right handed. What hand do you write with?</value>
+  </data>
+  <data name="dino_descr_121" xml:space="preserve">
+    <value>My name is {0} and I am a baby dinosaur.  I am growing big and strong. What age are you?</value>
+  </data>
+  <data name="dino_descr_122" xml:space="preserve">
+    <value>My name is {0} and I come from a small village called Rapterville. My school has lots of kids in it.</value>
+  </data>
+  <data name="dino_descr_123" xml:space="preserve">
+    <value>My name is {0} and I go to the gym and run in the park.  I play soccer, basketball and cross country running.  I am an athlete. What about you?</value>
+  </data>
+  <data name="dino_descr_124" xml:space="preserve">
+    <value>{0} I am and I am really small for my age.  My Mom says I will get bigger soon if I keep eating my vegetables. Do you eat veggies?</value>
+  </data>
+  <data name="dino_descr_125" xml:space="preserve">
+    <value>My name is {0} and I am a dinosaur.  I live in the jungle with lots of bushes and trees. There is a big lake by my cave that I call my swimming pool.</value>
+  </data>
+  <data name="dino_descr_126" xml:space="preserve">
+    <value>My name is {0} but my friends call me Nati. I jump and dance to the music I play on my Daddy’s phone.</value>
+  </data>
+  <data name="dino_descr_127" xml:space="preserve">
+    <value>{0} My name is {0} and I like to stay up at night and sleep during the day.  I like the darkness best.</value>
+  </data>
+  <data name="dino_descr_128" xml:space="preserve">
+    <value>My name is {0} and I am so happy today because its my birthday. I am having a party and my friends and me will eat alot of cake.</value>
+  </data>
+  <data name="dino_descr_129" xml:space="preserve">
+    <value>My name is {0} and my friends call me Tiny. I am very popular with my friends because I tell a lot of funny jokes.</value>
+  </data>
+  <data name="dino_descr_13" xml:space="preserve">
+    <value>My name is {0} and I am a very happy dinosaur.  I can see lots of stars in the sky at night. I try to count them all with my Dad sometimes.</value>
+  </data>
+  <data name="dino_descr_130" xml:space="preserve">
+    <value>My name is {0} but my friends call me Egger.  I really like eggs alot.  I eat alot of eggs during the day.</value>
+  </data>
+  <data name="dino_descr_131" xml:space="preserve">
+    <value>My name is {0} but my friends call me Jelly.  I really like lemon jelly.  What dessert do you like to eat?</value>
+  </data>
+  <data name="dino_descr_132" xml:space="preserve">
+    <value>I'm {0} and I like to do my chores everyday for my Mam and Dad and on a Sunday, I can buy an ice cream and an bowl of peanuts at the candy shop in town.</value>
+  </data>
+  <data name="dino_descr_133" xml:space="preserve">
+    <value>Hello my friends! I like to do my chores everyday for my Mam and Dad and on a Sunday, I buy ice cream when I shop with my sister in town. What about you?</value>
+  </data>
+  <data name="dino_descr_134" xml:space="preserve">
+    <value>I'm {0} and I love to go out with my friends during the day. I have always been energetic and lively. Sometimes I play different sport games for health and pleasure.</value>
+  </data>
+  <data name="dino_descr_135" xml:space="preserve">
+    <value>My name is {0} and I read story books every night before I fall asleep. Jack and the Beanstalk is my favorite.</value>
+  </data>
+  <data name="dino_descr_136" xml:space="preserve">
+    <value>Hi everyone! My name is {0} and I love monster trucks. I have a toy Monster Truck and it is red.</value>
+  </data>
+  <data name="dino_descr_137" xml:space="preserve">
+    <value>My name is {0} and some of my friends call me Tiny. I make paper birds that flay really far.</value>
+  </data>
+  <data name="dino_descr_138" xml:space="preserve">
+    <value>Hi there!  My name is {0} and I am a very happy dinosaur, most of the time.  When I feel sad or upset, I take deep breaths and count to five.</value>
+  </data>
+  <data name="dino_descr_139" xml:space="preserve">
+    <value>Hi, my name is {0} and my favorite food is vegetable soup. I like to eat nuts and apples for my lunch too.</value>
+  </data>
+  <data name="dino_descr_14" xml:space="preserve">
+    <value>Hi, my name is {0}. I like going to the movies and diving into the sea. My favorite color is green and my favorite number is 5.</value>
+  </data>
+  <data name="dino_descr_140" xml:space="preserve">
+    <value>Hi, my name is {0} and I live with my family. I have so many brothers and sisters that we have our own football team.</value>
+  </data>
+  <data name="dino_descr_141" xml:space="preserve">
+    <value>Hi, my name is {0} and I like to jump in the rain puddles. Sometimes, I jump in the puddles while skipping rope.</value>
+  </data>
+  <data name="dino_descr_142" xml:space="preserve">
+    <value>My name is {0} and I like to dance and sing all day long.  My friends and I have a girl band called, The Rex Rockers.</value>
+  </data>
+  <data name="dino_descr_143" xml:space="preserve">
+    <value>My name is {0} and I like going to school.  My teacher said I am very good at math class.</value>
+  </data>
+  <data name="dino_descr_144" xml:space="preserve">
+    <value>My name is {0} and that is because I like bananas so much. I make banana splits every weekend with my mom.</value>
+  </data>
+  <data name="dino_descr_145" xml:space="preserve">
+    <value>My name is {0} and I am from Ireland. Green is my favorite color in the world. What is your favorite color?</value>
+  </data>
+  <data name="dino_descr_146" xml:space="preserve">
+    <value>My name is {0} and my favorite color is pink. I ride a pink scooter. Dressing up is my favorite past time.</value>
+  </data>
+  <data name="dino_descr_15" xml:space="preserve">
+    <value>Hi, my name is {0}. I play hide and seek and eat bananas all day long. My favorite color is purple and my favorite number is 6.</value>
+  </data>
+  <data name="dino_descr_16" xml:space="preserve">
+    <value>Hi, my name is {0}. I sleep during the day and eat alot of tomatoes at night. My favorite colors are blue, yellow, green and purple and my favorite number is 3,2,1.</value>
+  </data>
+  <data name="dino_descr_17" xml:space="preserve">
+    <value>My name is {0} and I am a little scared of the dark sometimes. Are you afraid of anything?  What do you do when you are afraid?</value>
+  </data>
+  <data name="dino_descr_18" xml:space="preserve">
+    <value>My name is {0} and I jump across the river on big logs to stay dry. I only do this when my learning coach is with me so that I am safe.</value>
+  </data>
+  <data name="dino_descr_19" xml:space="preserve">
+    <value>My name is {0} and I play hide and seek with my friend lady bug every day after school.</value>
+  </data>
+  <data name="dino_descr_2" xml:space="preserve">
+    <value>Hi, my name is  {0}. I love to go on holidays with my family. My favorite color is blue and my favorite number is 6.</value>
+  </data>
+  <data name="dino_descr_20" xml:space="preserve">
+    <value>My name is {0} and I am a rock climber.  I like to wear a helmet when climbing big rocks.</value>
+  </data>
+  <data name="dino_descr_21" xml:space="preserve">
+    <value>My name is {0} and I live near a volcano. I like to watch the sun set at night with my family.</value>
+  </data>
+  <data name="dino_descr_22" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to jump in the fields. My favorite color is dark blue and my favorite number is 3.</value>
+  </data>
+  <data name="dino_descr_23" xml:space="preserve">
+    <value>My name is {0} and I am very happy today.  I am going to see my best friend at the other side of the town.</value>
+  </data>
+  <data name="dino_descr_24" xml:space="preserve">
+    <value>I am {0} and I can speak 3 languages and count to 20 with my fingers and toes.</value>
+  </data>
+  <data name="dino_descr_25" xml:space="preserve">
+    <value>My name is {0} and my sister is an ice skater.  I like to play warm weather sports and swim in the ocean on sunny days.</value>
+  </data>
+  <data name="dino_descr_26" xml:space="preserve">
+    <value>Hi, my name is {0}. I laugh and tell funny jokes. My favorite food is cucumber and I like the number 12.</value>
+  </data>
+  <data name="dino_descr_27" xml:space="preserve">
+    <value>My name is {0} and red is my favorite color.  I like playing in the garden with my best friends. Sometimes I feel sad and it makes me feel better to look up at the sky or talk to my cat.</value>
+  </data>
+  <data name="dino_descr_28" xml:space="preserve">
+    <value>Hi, my name is {0}. I eat carrots and drink milk everyday. My favorite color is orange and my favorite number is 2.</value>
+  </data>
+  <data name="dino_descr_29" xml:space="preserve">
+    <value>Hi, my name is {0}. I like to go to ballet class and drink apple juice after class. My favorite color is purple and my favorite number is 4.</value>
+  </data>
+  <data name="dino_descr_3" xml:space="preserve">
+    <value>Hi, my name is {0} and I love to sing punk rock songs with my Dad because he has a band. My favorite color is black and my favorite number is 4.</value>
+  </data>
+  <data name="dino_descr_30" xml:space="preserve">
+    <value>My name is {0} and I wash my hands while singing the 'Happy Birthday' song.</value>
+  </data>
+  <data name="dino_descr_31" xml:space="preserve">
+    <value>Hi, my name is {0} and I build really big sandcastles in the sand pit.  I also like to drink strawberry smoothies.</value>
+  </data>
+  <data name="dino_descr_32" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to build sand castles and eat oranges My favorite number is 15.</value>
+  </data>
+  <data name="dino_descr_33" xml:space="preserve">
+    <value>My name is {0} and my favorite toy is my kite. The handles are yellow and I race with it all the time when its not too windy.</value>
+  </data>
+  <data name="dino_descr_34" xml:space="preserve">
+    <value>My name is Burley and my favorite passtime is reading. I read alot of books about nature and sea animals.</value>
+  </data>
+  <data name="dino_descr_35" xml:space="preserve">
+    <value>My name is {0} and I like my skateboard.  I ride it to school when it is not raining.</value>
+  </data>
+  <data name="dino_descr_36" xml:space="preserve">
+    <value>My name is {0} and I like going fishing with my grandfather. We tell alot of jokes when we are catching fish on the lake.</value>
+  </data>
+  <data name="dino_descr_37" xml:space="preserve">
+    <value>Hello, my name is {0} and my favorite TV show is Humpty Dumpty. He does not fall down in the show like he does in the nursery rhyme.</value>
+  </data>
+  <data name="dino_descr_38" xml:space="preserve">
+    <value>Hello, my name is {0} and I love surprises. I also like it when all the leaves in the trees turn orange and red.</value>
+  </data>
+  <data name="dino_descr_39" xml:space="preserve">
+    <value>Hello, my name is {0} and I am very good at counting.  I can count from 1 to 20.</value>
+  </data>
+  <data name="dino_descr_4" xml:space="preserve">
+    <value>My name is {0} and I like to sing songs when I am making slime with my Mom. Glitter Slime is my favorite.</value>
+  </data>
+  <data name="dino_descr_40" xml:space="preserve">
+    <value>Hello, my name is {0} and I like to help my parents on the farm.  We have a lot of chickens and goats.</value>
+  </data>
+  <data name="dino_descr_41" xml:space="preserve">
+    <value>Hello, my name is {0} and I can can jump over the wall in our back yard.</value>
+  </data>
+  <data name="dino_descr_42" xml:space="preserve">
+    <value>Hi, my name is {0} and I like to go on holidays to see my cousins during the summer holidays.</value>
+  </data>
+  <data name="dino_descr_43" xml:space="preserve">
+    <value>Hello, my name is {0} and I have a new baby sister. I like to tell her stories that help her go to sleep.</value>
+  </data>
+  <data name="dino_descr_44" xml:space="preserve">
+    <value>Hello, my name is {0} and I can speak two languages. Russian and English. I like chocolate chip cookies.</value>
+  </data>
+  <data name="dino_descr_45" xml:space="preserve">
+    <value>Hello, my name is {0} and I go bowling every Friday with my Dad. I listen to classical music on the radio.</value>
+  </data>
+  <data name="dino_descr_46" xml:space="preserve">
+    <value>Hi, my name is {0} and like spinach lolly pops and carrot ice cream. Flowers make me sneeze when I smell them up close.</value>
+  </data>
+  <data name="dino_descr_47" xml:space="preserve">
+    <value>Hi, my name is {0} and I like to jump over big rocks.  I also like to dig holes in the sand at the beach.</value>
+  </data>
+  <data name="dino_descr_48" xml:space="preserve">
+    <value>Hello, my name is {0} and I can be grumpy sometimes when I get hungry. I am learning how to swim.</value>
+  </data>
+  <data name="dino_descr_49" xml:space="preserve">
+    <value>Hi everyone, my name is {0} and I play tennis with my friends Oscar and Peppi.</value>
+  </data>
+  <data name="dino_descr_5" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to run in the flowers and sing songs with my family. My favorite color is blue and my favorite number is 2.</value>
+  </data>
+  <data name="dino_descr_50" xml:space="preserve">
+    <value>Hello, my name is {0} and my brother is a lot older than I am but we play a lot of hide and seek together. </value>
+  </data>
+  <data name="dino_descr_51" xml:space="preserve">
+    <value>Hello everybody, my name is {0} and I can paint really big leaves on trees. I like chalk drawing in the driveway.</value>
+  </data>
+  <data name="dino_descr_52" xml:space="preserve">
+    <value>Hello, my name is {0} and my favorite color is blue. I also like pink and green stripes.  I also like to play with my cat</value>
+  </data>
+  <data name="dino_descr_53" xml:space="preserve">
+    <value>Hi, my name is {0} and I build really big castles in the sand pit.  I also like to drink strawberry smoothies.</value>
+  </data>
+  <data name="dino_descr_54" xml:space="preserve">
+    <value>My name is {0} and I read lots story books. I play cards with my brother.</value>
+  </data>
+  <data name="dino_descr_55" xml:space="preserve">
+    <value>My name is {0} and I have a pet fish called fishy and a duck called ducky. Can you count to 10?</value>
+  </data>
+  <data name="dino_descr_56" xml:space="preserve">
+    <value>I am {0} and I am 7 years old. My Mom is a police officer and my Dad is a teacher. I want to be a doctor someday when I get older.</value>
+  </data>
+  <data name="dino_descr_57" xml:space="preserve">
+    <value>I am {0} and I can write my name. I am right handed and I have a pink pen with a fluffy ball on top of it. What languages do you speak?</value>
+  </data>
+  <data name="dino_descr_58" xml:space="preserve">
+    <value>Hi, my name is {0} and I can live i n the city with my Mom. She is a singer and sings songs to be every night.</value>
+  </data>
+  <data name="dino_descr_59" xml:space="preserve">
+    <value>I'm {0} and I have a very good singing voice.  I am in the choir at school and play the piano. I play lots of games with my friends.</value>
+  </data>
+  <data name="dino_descr_6" xml:space="preserve">
+    <value>Hi, my name is {0}. I like to build with blocks and run in the fields with my brothers. My favorite color is green and my favorite number is 1.</value>
+  </data>
+  <data name="dino_descr_60" xml:space="preserve">
+    <value>My name is {0} and I have a swimming pool near my house. I go there every weekend with my friends and we learn to swim with our swim coach.</value>
+  </data>
+  <data name="dino_descr_61" xml:space="preserve">
+    <value>My name is {0} and I am 11 years old. I am learning how to read and write and I enjoy learning new things.</value>
+  </data>
+  <data name="dino_descr_62" xml:space="preserve">
+    <value>I'm {0} and I am 3 years old next week. I am very excited for my birthday and want a new fire truck. </value>
+  </data>
+  <data name="dino_descr_63" xml:space="preserve">
+    <value>Hi everyone, my name is {0} and I play alot of jokes on my Dad and brothers. We like to eat pop corn and watch movies in my pajamas.</value>
+  </data>
+  <data name="dino_descr_64" xml:space="preserve">
+    <value>I'm {0} and I have a very good singing voice.  Can you sing a song for me? I am in the choir at school and play the piano too.</value>
+  </data>
+  <data name="dino_descr_65" xml:space="preserve">
+    <value>Hello! My name is {0} and I am silly sometimes.  I like to make silly faces. Whats your silly face? I am in the choir at school and play the harp.</value>
+  </data>
+  <data name="dino_descr_66" xml:space="preserve">
+    <value>My name is {0} and I have a pet rabbit I found in the garden. I have a very long fingers.  I am in the swimming club at school.</value>
+  </data>
+  <data name="dino_descr_67" xml:space="preserve">
+    <value>My name is {0} and I can be serious but also funny too. Sometimes I feel angry or maybe sad.  I like drawing pictures about my feelings.  Do you like to draw?</value>
+  </data>
+  <data name="dino_descr_68" xml:space="preserve">
+    <value>Hi, my name is {0}. I love butterflies and swimming. My favorite color is red and my favorite number is 15.</value>
+  </data>
+  <data name="dino_descr_69" xml:space="preserve">
+    <value>Hi, my name is {0}. I play board games and jigsaw puzzles in the winter when its cold. My favorite favorite number is 8.</value>
+  </data>
+  <data name="dino_descr_7" xml:space="preserve">
+    <value>Hi, my name is {0}. I play jump rope with my friend Skyback and my favorite color is purple.</value>
+  </data>
+  <data name="dino_descr_70" xml:space="preserve">
+    <value>Hi, my name is {0} I like to play video games with my freinds.  My favorite number is 7 because there are 7 days in the week.</value>
+  </data>
+  <data name="dino_descr_71" xml:space="preserve">
+    <value>Hi, my name is {0} and I am 4 years old. I love butterflies and we have a butterfly garden. Do you play outside too?</value>
+  </data>
+  <data name="dino_descr_72" xml:space="preserve">
+    <value>Hi, my name is {0} and my favorite number is 0. My favorite day of the week is Friday. I go to my best friends house every Friday and we play catch.</value>
+  </data>
+  <data name="dino_descr_73" xml:space="preserve">
+    <value>Hi, my name is {0}. I think I am very tall. What height are you? What would you like to do today?</value>
+  </data>
+  <data name="dino_descr_74" xml:space="preserve">
+    <value>I am {0} and I come from a small family.  We like to play board games together.  We play basket ball with our neighbors. Nice to meet you!</value>
+  </data>
+  <data name="dino_descr_75" xml:space="preserve">
+    <value>My name is {0} and I can speak 1 language and I am learning to speak a second language with DinoLingo. I can count to 10 with my fingers.</value>
+  </data>
+  <data name="dino_descr_76" xml:space="preserve">
+    <value>My name is {0} and I live near the ocean. Sometimes it gets very windy. I like to watch the big boats go by.</value>
+  </data>
+  <data name="dino_descr_77" xml:space="preserve">
+    <value>Hello everyone and how is your day? I am {0}. I hope you are well and will have time to visit me again soon.</value>
+  </data>
+  <data name="dino_descr_78" xml:space="preserve">
+    <value>My name is {0} and I am in a rock band with my sister and brother.  I play my moms pots and pans and my sister and brother play the sweeping brushes and vaccum cleaner.</value>
+  </data>
+  <data name="dino_descr_79" xml:space="preserve">
+    <value>Hi everyone! I am {0} and butterflies are beautiful. Some butterflies have only one color and some have many colors.</value>
+  </data>
+  <data name="dino_descr_8" xml:space="preserve">
+    <value>Hi, I'm {0}. I play alot of board games with my friends at school and paint flowers with my Mom. My favorite color is red and I like the number 7 alot.</value>
+  </data>
+  <data name="dino_descr_80" xml:space="preserve">
+    <value>Hi everyone! I am {0} and I can skip rope really fast. What is your favorite color? </value>
+  </data>
+  <data name="dino_descr_81" xml:space="preserve">
+    <value>My name is {0}. What is your name? Will you be my friend?</value>
+  </data>
+  <data name="dino_descr_82" xml:space="preserve">
+    <value>Hi everyone, my name is {0} and I am a fan of race car driving. Some day I will have a sports car.</value>
+  </data>
+  <data name="dino_descr_83" xml:space="preserve">
+    <value>Hello my friends! My name is {0} and I like to go boating when the weather is calm. I always wear my life jacket and I am a good swimmer.</value>
+  </data>
+  <data name="dino_descr_84" xml:space="preserve">
+    <value>My name is {0} and I am very happy today because I am learning a new song. We sing songs art school everyday.</value>
+  </data>
+  <data name="dino_descr_85" xml:space="preserve">
+    <value>Hi, my name is {0} . I like to sleep late in the mornings and stay away late at night. Sometimes I am a little late for school. My favorite color is purple and my favorite number is 15.</value>
+  </data>
+  <data name="dino_descr_86" xml:space="preserve">
+    <value>Hi, my name is {0} and I like playing the drums and tin whistle. The number 11 is my favorite. Do you play a musical instrument?</value>
+  </data>
+  <data name="dino_descr_87" xml:space="preserve">
+    <value>Hi, my name is {0} . I love to make snowmen. My favorite color is white and my favorite number is 10. What is your favorite time of the year?</value>
+  </data>
+  <data name="dino_descr_88" xml:space="preserve">
+    <value>Hi, my name is {0} . I am a good golfer and tennis player. My favorite color is navy blue and I like the number 20.</value>
+  </data>
+  <data name="dino_descr_89" xml:space="preserve">
+    <value>My name is {0} and my favorite color is yellow. I ride a brown and yellow skateboard to match my body. I pretend to be a lion and make big roar sounds.</value>
+  </data>
+  <data name="dino_descr_9" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to hang out with my friends and play with my pet turtle polly. My favorite color is pink and my favorite number is 1.</value>
+  </data>
+  <data name="dino_descr_90" xml:space="preserve">
+    <value>Hi, my name is {0} and I am a race car driver.  I also like to play basketball and swing on the swing. What is your favorite toy?</value>
+  </data>
+  <data name="dino_descr_91" xml:space="preserve">
+    <value>Hi, my name is {0} . I love to garden with my grandmother and eat carrots we grow. My favorite color is orange and my favorite number is 9.</value>
+  </data>
+  <data name="dino_descr_92" xml:space="preserve">
+    <value>My name is {0} and I am moving into a new home with my family. I am excited to have my own bedroom.</value>
+  </data>
+  <data name="dino_descr_93" xml:space="preserve">
+    <value>Hi! My name is {0} and I will be a very famous actor someday.  I am playing the lead role in my school play this year.</value>
+  </data>
+  <data name="dino_descr_94" xml:space="preserve">
+    <value>Hi, my name is {0}. I play with my brothers and sisters all day long and I love to eat apples. My favorite color is green and my favorite number is 5.</value>
+  </data>
+  <data name="dino_descr_95" xml:space="preserve">
+    <value>{0} is my name and I run very fast. I like to make cupcakes with my grandmother.</value>
+  </data>
+  <data name="dino_descr_96" xml:space="preserve">
+    <value>My name is {0} and I am very very tall. I live in a house made of rocks and I have purple blankets on my bed.</value>
+  </data>
+  <data name="dino_descr_97" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to play hide and seek with my friends. My favorite color is brown and my favorite number is 8.</value>
+  </data>
+  <data name="dino_descr_98" xml:space="preserve">
+    <value>Hi, my name is {0}. I love to play with my brothers and sisters and paint rainbows with my friends.</value>
+  </data>
+  <data name="dino_descr_99" xml:space="preserve">
+    <value>My name is {0} and I am red colored with brown spots.  I am so happy that I am learning how to read my own books.</value>
+  </data>
 </root>

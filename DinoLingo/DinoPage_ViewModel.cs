@@ -169,12 +169,14 @@ namespace DinoLingo
         }
 
         void GetImageUrlAndTextFromPostContent() {
+            
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(post.content);
 
             HtmlNode imgNode = htmlDoc.DocumentNode.SelectNodes("//img")[0];
             MainImage = imgNode.GetAttributeValue("src", "").Replace ("../..", "https://dinolingo.com");
 
+            /*
             HtmlNodeCollection mainTextNodes = htmlDoc.DocumentNode.SelectNodes("//p");
             Debug.WriteLine("post.content = " + post.content);
             if (mainTextNodes != null && mainTextNodes.Count == 2) {
@@ -204,6 +206,7 @@ namespace DinoLingo
                     }
                 }
             }
+            */
 
             /*
             int index = post.content.ToLower().IndexOf("p>");
@@ -215,6 +218,13 @@ namespace DinoLingo
                 MainText = post.content;
             }
             */
+
+            var id = 0;
+            int.TryParse(post.id, out id);
+            var index = id % 147;
+            MainText = String.Format(Translate.GetString("dino_descr_" + index), post.title);
+            //MainText = String.Format("{0} Hello_ {0}" + index, post.title);
+
         }
 
 

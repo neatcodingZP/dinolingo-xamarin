@@ -20,6 +20,7 @@ namespace DinoLingo
             //Debug.WriteLine("Word Table - OK");
             //DropTableAsync<CacheData>().Wait();
             CreateTableAsync<CacheData>().Wait();
+            CreateTableAsync<BookPageCache>().Wait();
             //DeleteAllAsync<CacheData>().Wait();
 
             Debug.WriteLine("LocalDatabase -> Initiated");
@@ -132,5 +133,30 @@ namespace DinoLingo
         [Column("_TimeSpan")]
         public string TimeSpan { get; set; }
     }
-   
+
+    [Table("BookPageCache")]
+    public class BookPageCache
+    {
+        [PrimaryKey, AutoIncrement, Column("_id")]
+        public int Id { get; set; }
+
+        [Column("_BookId")]
+        public int BookId { get; set; }
+
+        [Column("_LangId")]
+        public int LangId { get; set; }
+
+        [Column("_PageId")]
+        public int PageId { get; set; }
+
+        [Column("_Data")]
+        public string Data { get; set; }
+
+        [Column("_Date")]
+        public string DateTime { get; set; }
+
+        [Column("_TimeSpan")]
+        public string TimeSpan { get; set; }
+    }
+
 }

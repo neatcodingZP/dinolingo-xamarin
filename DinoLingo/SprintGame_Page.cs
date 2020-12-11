@@ -382,7 +382,7 @@ namespace DinoLingo
             base.OnParentSet();
             if (Parent == null)
             {
-                Dispose();
+                Dispose();   
                 GC.Collect();
                 MemoryLeak.TrackMemory();
             }
@@ -394,8 +394,8 @@ namespace DinoLingo
 
             DownloadHelper.DownloadHelper.OnLoadingEnded -= OnLoadingEnded;
 
-            gameScene.OnEndGame -= OnEndGame;
-            gameScene.OnMadeClick -= OnMadeClick;
+            if (gameScene != null) gameScene.OnEndGame -= OnEndGame;
+            if (gameScene != null) gameScene.OnMadeClick -= OnMadeClick;
             gameScene = null;
 
             gameView = null;

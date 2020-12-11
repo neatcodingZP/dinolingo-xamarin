@@ -15,7 +15,8 @@ using Plugin.FirebasePushNotification.Abstractions;
 
 namespace DinoLingo.Droid
 {
-    [Application]
+   // [Application]
+    [Application(HardwareAccelerated = true, LargeHeap = true)]
     class MainApplication:  Application, Application.IActivityLifecycleCallbacks
     {
         public static bool ProcessNotification = false;

@@ -45,10 +45,10 @@
                     FontSize="{Binding TopTextSize}"   
                     TextColor="{StaticResource YellowColor}"/>
                         
-                <Image  Grid.Row="1"
+                <ffimageloading:CachedImage  Grid.Row="1"
                     Source = "{Binding VictoryImage}"
                     Aspect="AspectFit">
-                </Image>
+                </ffimageloading:CachedImage>
 
                 <controls:MyLabel Grid.Row="2" HorizontalOptions="Center" HorizontalTextAlignment="Center"
                     Text="{Binding VictoryText}"

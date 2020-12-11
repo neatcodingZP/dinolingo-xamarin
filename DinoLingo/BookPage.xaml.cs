@@ -35,7 +35,7 @@ namespace DinoLingo
 
         public void MenuButton_Tapped(object sender, System.EventArgs e)
         {
-            Debug.WriteLine("MenuButton_Tapped");
+            //Debug.WriteLine("MenuButton_Tapped");
             viewModel.MenuButton_Tapped(sender, e);
         }
 
@@ -62,9 +62,12 @@ namespace DinoLingo
         {
             Debug.WriteLine("BookPage -> Dispose");
 
+
             Content = null;
             BindingContext = null;
             viewModel = null;
         }
+
+      
     }
 }

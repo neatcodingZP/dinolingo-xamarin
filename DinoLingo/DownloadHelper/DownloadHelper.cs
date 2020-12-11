@@ -173,7 +173,7 @@ namespace DownloadHelper
             {
                 //connection is ok
                 int targetTotal = 0;
-                if (!string.IsNullOrEmpty(uri1)) {
+                if (!string.IsNullOrEmpty(uri1)) { 
                     targetTotal++;
                     await GetAudioAsync_InBckground(uri1, filename1);
                 }
@@ -583,6 +583,78 @@ namespace DownloadHelper
             TimeSpan interval = end - start;
             Debug.WriteLine($"{totalFilesDownloaded_InBckground} audio downloaded and saved, total time _InBckground, s = " + interval.TotalSeconds);
             Debug.WriteLine("file successfully saved _InBckground? = " + await PCLHelper.IsFileExistAsync(filename));
+        }
+
+        public static async Task<Boolean> SimpleAudioLoader(string uri, string filename)
+        {
+            DateTime start = DateTime.Now;
+            HttpWebRequest webReq;
+            Uri url = new Uri(uri);
+
+            byte[] bytes = default(byte[]); //null;
+            var memstream = new MemoryStream();
+            int totalBytes = 0;
+            webReq = (HttpWebRequest)HttpWebRequest.Create(url);
+            webReq.Timeout = 30000;
+
+            try
+            {
+                Debug.WriteLine("SimpleAudioLoader HttpWebRequest..., uri = " + uri);
+                webReq.CookieContainer = new CookieContainer();
+                webReq.Method = "GET";
+                using (WebResponse response = webReq.GetResponse())
+                {
+                    totalBytes = Int32.Parse(response.Headers[HttpResponseHeader.ContentLength]);
+                    Debug.WriteLine("SimpleAudioLoader, totalBytes = " + totalBytes);
+                    using (Stream stream = response.GetResponseStream())
+                    {
+                        // === OLD WAY
+                        await stream.CopyToAsync(memstream);
+                        bytes = memstream.ToArray();
+                        Debug.WriteLine("SimpleAudioLoader, Try to save audio to file..." + filename);
+
+                        try
+                        {
+                            if (bytes.Length == totalBytes) await PCLHelper.SaveImage(bytes, filename);
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine("SimpleAudioLoader, error saving file, ex= " + ex.Message);
+                        }
+                        
+
+                        if (await PCLHelper.IsFileExistAsync(filename))
+                        {
+                           
+                            Debug.WriteLine($"SimpleAudioLoader, audio downloaded and saved, total time, s = " + (DateTime.Now -start).TotalSeconds);
+                            Debug.WriteLine("SimpleAudioLoader, file successfully saved ? = " + await PCLHelper.IsFileExistAsync(filename));
+
+                            return true;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // delete file if have some
+                if (await PCLHelper.IsFileExistAsync(filename))
+                {
+                    await PCLHelper.DeleteFile(filename);
+                }
+                GoogleAnalytics.Current.Tracker.SendEvent("SimpleAudioLoader", $"Exception, url= {url}", "GetResponse().ex: " + ex.Message, 3);
+                Debug.WriteLine("SimpleAudioLoader -> HttpWebRequest EXCEPTION :(, audio not loaded _InBckground, uri : " + uri);
+            }
+
+
+            Debug.WriteLine($"SimpleAudioLoader, ERROR, total time, s = " + (DateTime.Now - start).TotalSeconds);
+            Debug.WriteLine("SimpleAudioLoader, file successfully saved ? = " + await PCLHelper.IsFileExistAsync(filename));
+            return false;
+        }
+
+        public static async Task<Boolean> SimpleAudioLoaderNull()
+        {
+            return true;
         }
 
         public static Task<bool> GetVideoAsync_InBckground(string uri, string filename)

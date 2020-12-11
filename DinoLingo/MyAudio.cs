@@ -56,7 +56,7 @@ namespace DinoLingo
 
         public async void SayWord(string path)
         {
-            Debug.WriteLine("Try to say word: + " + path);
+            Debug.WriteLine("Try to say word: + " + path); 
 
             if (sayWord.IsPlaying) sayWord.Stop();
 

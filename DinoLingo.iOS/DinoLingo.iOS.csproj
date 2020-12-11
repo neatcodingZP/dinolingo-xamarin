@@ -51,6 +51,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchExtraArgs>--registrar:static</MtouchExtraArgs>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>dinolingo_alvakos_distr_2019_2020</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1354,4 +1356,9 @@
   <ItemGroup>
     <BundleResource Include="Content\Images\SPRINT_GAME\question2.png" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadXFormsNugetUpgradeInfoBarDinoLingoiOSHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
