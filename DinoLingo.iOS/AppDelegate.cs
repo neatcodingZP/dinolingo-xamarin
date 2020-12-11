@@ -11,6 +11,7 @@ using Plugin.GoogleAnalytics;
 using CarouselView.FormsPlugin.iOS;
 using Plugin.FirebasePushNotification;
 using Plugin.FirebasePushNotification.Abstractions;
+using AVFoundation;
 
 namespace DinoLingo.iOS
 {
@@ -83,6 +84,8 @@ namespace DinoLingo.iOS
             NSUserDefaults.StandardUserDefaults.SetValueForKey(NSArray.FromObjects(languageValues), key);
             NSUserDefaults.StandardUserDefaults.Synchronize();
             */
+
+            NSError error = AVAudioSession.SharedInstance().SetCategory(AVAudioSessionCategory.Playback);
 
             return base.FinishedLaunching(app, options);
         }

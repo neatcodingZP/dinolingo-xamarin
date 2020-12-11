@@ -64,11 +64,12 @@
     <WarningLevel>0</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer: Serdar Acar (E4U76SMQ84)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>
     </CodesignEntitlements>
-    <CodesignProvision>dinolingo_alvakos_dev_2019_2020</CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <CodesignExtraArgs />
     <CodesignResourceRules />
     <MtouchI18n>
