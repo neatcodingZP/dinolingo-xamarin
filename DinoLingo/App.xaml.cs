@@ -14,7 +14,7 @@ using Plugin.DeviceInfo;
 using System.Globalization;
 using System.Resources;
 using HtmlAgilityPack;
-using Plugin.FirebasePushNotification;
+//using Plugin.FirebasePushNotification;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DinoLingo
@@ -277,6 +277,7 @@ namespace DinoLingo
         {
             System.Diagnostics.Debug.WriteLine("SetUpNotifications -> ");
             // Handle when your app starts
+            /*
             CrossFirebasePushNotification.Current.Subscribe("general");
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
@@ -316,13 +317,13 @@ namespace DinoLingo
                         if (p.Data.ContainsKey("body"))
                         {
                             haveNewNotification = true;
-                            /*
-                            Device.BeginInvokeOnMainThread(() =>
-                            {
-                                App.Current.MainPage.DisplayAlert("App -> SetUpNotifications -> OnNotificationReceived", "p.Data[body] = " + p.Data["body"], "OK");
+                            
+                            //Device.BeginInvokeOnMainThread(() =>
+                            //{
+                            //    App.Current.MainPage.DisplayAlert("App -> SetUpNotifications -> OnNotificationReceived", "p.Data[body] = " + p.Data["body"], "OK");
                                 //mPage.Message = $"{p.Data["body"]}";
-                            });
-                            */
+                            //});
+                           
                         }
                     }
                     catch (Exception ex)
@@ -331,8 +332,9 @@ namespace DinoLingo
                     }
                 }
             };
+            */
 
-
+            /*
             CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>
             {
                 System.Diagnostics.Debug.WriteLine("OnNotificationOpened");
@@ -342,7 +344,7 @@ namespace DinoLingo
                     data_ += "\n" + $"{data.Key} : {data.Value}";                   
                 }
                 Debug.WriteLine($"data_ = {data_}");
-                
+            */    
 
                 /*
                 if (!string.IsNullOrEmpty(p.Identifier))
@@ -374,7 +376,7 @@ namespace DinoLingo
 
                 }
                 */
-
+/*
                 // *** iOS
                 if (Device.RuntimePlatform == Device.iOS)
                 {
@@ -415,7 +417,9 @@ namespace DinoLingo
                 
                 
             };
+*/
 
+/*
             CrossFirebasePushNotification.Current.OnNotificationAction += (s, p) =>
             {
                 Debug.WriteLine("Action");                
@@ -435,7 +439,7 @@ namespace DinoLingo
                 
                 Debug.WriteLine("Dismissed");
             };
-
+            */
 
             
             

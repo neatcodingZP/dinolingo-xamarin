@@ -10,8 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Plugin.CurrentActivity;
-using Plugin.FirebasePushNotification;
-using Plugin.FirebasePushNotification.Abstractions;
+//using Plugin.FirebasePushNotification;
+//using Plugin.FirebasePushNotification.Abstractions;
 
 namespace DinoLingo.Droid
 {
@@ -32,6 +32,7 @@ namespace DinoLingo.Droid
 
 
             //Set the default notification channel for your app when running Android Oreo
+            /*
             if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
             {
                 //Change for your default notification channel id here
@@ -40,7 +41,7 @@ namespace DinoLingo.Droid
                 //Change for your default notification channel name here
                 FirebasePushNotificationManager.DefaultNotificationChannelName = "General";
             }
-
+            
 
             //If debug you should reset the token each time.
 #if DEBUG
@@ -58,6 +59,7 @@ namespace DinoLingo.Droid
 
 		    },true);
 #else
+
             FirebasePushNotificationManager.Initialize(this, new NotificationUserCategory[]
         {
             new NotificationUserCategory("message",new List<NotificationUserAction> {
@@ -78,8 +80,8 @@ namespace DinoLingo.Droid
                 //Toast.MakeText(this, "MainApplication -> OnNotificationReceived", ToastLength.Long).Show();
                 System.Diagnostics.Debug.WriteLine("MainApplication -> OnNotificationReceived");
             };
+*/
 
-            
         }
 
         public override void OnTerminate()

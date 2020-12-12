@@ -9,8 +9,8 @@ using UIKit;
 using System.Diagnostics;
 using Plugin.GoogleAnalytics;
 using CarouselView.FormsPlugin.iOS;
-using Plugin.FirebasePushNotification;
-using Plugin.FirebasePushNotification.Abstractions;
+//using Plugin.FirebasePushNotification;
+//using Plugin.FirebasePushNotification.Abstractions;
 using AVFoundation;
 
 namespace DinoLingo.iOS
@@ -66,6 +66,7 @@ namespace DinoLingo.iOS
             UI_Sizes.SetAllSizes((int)UIScreen.MainScreen.Bounds.Width, (int)UIScreen.MainScreen.Bounds.Height, 1.0f);
             RateWidget.IsFreshIOS = UIDevice.CurrentDevice.CheckSystemVersion(10, 3);
 
+            /*
             FirebasePushNotificationManager.Initialize(options, new NotificationUserCategory[]
         {
                 new NotificationUserCategory("message",new List<NotificationUserAction> {
@@ -77,7 +78,7 @@ namespace DinoLingo.iOS
                 })
 
         });
-
+        */
             /*
             var key = new NSString("AppleLanguages");
             string[] languageValues = { "en-US" };
@@ -115,7 +116,7 @@ namespace DinoLingo.iOS
 
         }
         
-
+        /*
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
             FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
@@ -143,5 +144,6 @@ namespace DinoLingo.iOS
             Debug.WriteLine("AppDelegate -> DidReceiveRemoteNotification -> userInfo = " + userInfo);
             completionHandler(UIBackgroundFetchResult.NewData);
         }
+        */
     }
 }
