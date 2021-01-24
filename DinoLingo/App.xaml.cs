@@ -199,8 +199,11 @@ namespace DinoLingo
             {
                 Debug.WriteLine("App.cs -> ChooseStartPage -> STEP -4- -> UserHelper.Login.user_id=null, go to LoginPage()");
 
-                //MainPage = new LoginPage();
-                MainPage = new LoginPage_new();
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    App.Current.MainPage = new LoginPage_new();
+                });               
+
 
                 //_weak = new WeakReference(MainPage);
                 //Device.StartTimer(TimeSpan.FromSeconds(2), App_Timer);
@@ -232,16 +235,23 @@ namespace DinoLingo
                     NavigationPage.SetHasNavigationBar(page, false);
                     await MainPage.Navigation.PushAsync(page);
                     App.Current.MainPage.Navigation.RemovePage(App.Current.MainPage.Navigation.NavigationStack[0]);
-                    */
+                    */                    
 
-                    MainPage = page;
-                    
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        App.Current.MainPage = page;
+                    });
+
                     //MainPage = new MainPage_((await CacheHelper.GetAsync<CategoryResponse>(CacheHelper.CATEGORYS_RESPONSE + Lang_Cat)).result[0].viewType);
                 }
                 else // we do not know the current language
                 {
                     Debug.WriteLine("App.cs -> ChooseStartPage -> STEP -4- -> UserHelper.Login.user_id!=null, lang is not chosen");
-                    MainPage = new LoginPage_new(true);                   
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        App.Current.MainPage = new LoginPage_new(true);
+                    });                                   
                 }
             }            
         }

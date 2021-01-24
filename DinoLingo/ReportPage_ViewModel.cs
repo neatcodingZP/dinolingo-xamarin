@@ -224,7 +224,7 @@ namespace DinoLingo
 
         void ShowList_UpdateMainInfo()
         {
-            Debug.WriteLine("ShowList_UpdateMainInfo()");
+            Debug.WriteLine("ReportPage_ViewModel -> ShowList_UpdateMainInfo()");
             string[] main_info_values = { dataForScrollView.main_info.email, dataForScrollView.main_info.course, dataForScrollView.main_info.dinos.ToString(), dataForScrollView.main_info.stars.ToString(), dataForScrollView.main_info.quizes.ToString(), dataForScrollView.main_info.books.ToString() };
             for (int i = 0; i < main_info_fields.Length; i++)
             {
@@ -678,19 +678,28 @@ namespace DinoLingo
         }
 
         void ShowListWhenDownloaded () {
-            dataForScrollView = (dataForScrollView_ != null) ? dataForScrollView_ : dataForScrollView_cached;
-            if (dataForScrollView == null) return;
-            if (showBottomStarted)  { // update
-                Debug.WriteLine("ShowListWhenDownloaded  --> update");
-                ShowList_UpdateMainInfo();
-                ShowList_UpdateChartInfo();
-                ShowList_UpdateDailyReport();
-                ShowList_UpdateLessonsReport();
+            try
+            {
+                dataForScrollView = (dataForScrollView_ != null) ? dataForScrollView_ : dataForScrollView_cached;
+                if (dataForScrollView == null) return;
+                if (showBottomStarted)
+                { // update
+                    Debug.WriteLine("ShowListWhenDownloaded  --> update");
+                    ShowList_UpdateMainInfo();
+                    ShowList_UpdateChartInfo();
+                    ShowList_UpdateDailyReport();
+                    ShowList_UpdateLessonsReport();
+                }
+                else
+                { // create from zero 
+                    Debug.WriteLine("ShowListWhenDownloaded  --> create");
+                    ShowTopAndBottomOfList();
+                }
             }
-            else { // create from zero 
-                Debug.WriteLine("ShowListWhenDownloaded  --> create");
-                ShowTopAndBottomOfList();
-            }
+            catch 
+            {
+
+            }            
         }
 
         async void OnClickedClose(View view)

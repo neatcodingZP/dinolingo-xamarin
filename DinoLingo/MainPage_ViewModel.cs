@@ -102,9 +102,12 @@ namespace DinoLingo
             {
                 Debug.WriteLine("MainPage_ViewModel -- > OnResume - > Exception in App.Audio.SayWordFromRes(harp_3_sec.mp)");
             }
+
+            centerListView.viewModel.isBlocked = false;
         }
 
         public async void OnAppearing() {
+            centerListView.viewModel.isBlocked = false;
             id = id;
             if (testViewModel == null) return;
             

@@ -225,15 +225,19 @@ namespace DinoLingo
                     ParentMenu_Page.IsBlocked = true;
 
                     Page current = App.Current.MainPage;
-
+                    
                     while (current.Navigation.ModalStack.Count > 0)
                     {
                         await current.Navigation.PopModalAsync();
-                    };
+                    };                   
 
-                    App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 1);
-                    
-                    //await App.Current.MainPage.Navigation.PushAsync(new MainPage_(categoryResponse.result[0].viewType));
+                    Debug.WriteLine("ChooseLanguage_ViewModel -> new MainPage_");
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 1);
+                    });                    
+
+                    //await App.Current.MainPage.Navigation.PushAsync(new MainPage_(categoryResponse.result[0].viewType, 1));
                     //App.Current.MainPage.Navigation.RemovePage(App.Current.MainPage.Navigation.NavigationStack[0]);
 
                     // ??? navigation.RemovePage(current);
@@ -269,8 +273,12 @@ namespace DinoLingo
                             {
                                 await current.Navigation.PopModalAsync();
                             };
-
-                            App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
+                            Debug.WriteLine("Choose Lang -> categoryResponse = " + JsonConvert.SerializeObject(categoryResponse));
+                            Device.BeginInvokeOnMainThread(() =>
+                            {
+                                App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
+                            });
+                            
                             //await App.Current.MainPage.Navigation.PushAsync(new MainPage_(categoryResponse.result[0].viewType));
                             //App.Current.MainPage.Navigation.RemovePage(App.Current.MainPage.Navigation.NavigationStack[0]);
                             //current.Navigation.RemovePage(current);

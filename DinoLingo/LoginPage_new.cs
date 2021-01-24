@@ -819,7 +819,12 @@ namespace DinoLingo
                     Debug.WriteLine("categories:" + (await CacheHelper.GetAsync(CacheHelper.CATEGORYS_RESPONSE + cat_id)).Data);
 
                     Xamarin.Forms.Page current = App.Current.MainPage;
-                    App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
+                    });
+                    
                     //navigation.RemovePage(current);
                 }
                 else
@@ -842,7 +847,13 @@ namespace DinoLingo
                             await CacheHelper.Add(CacheHelper.CATEGORYS_RESPONSE + cat_id, categoryResponse);
 
                             Xamarin.Forms.Page current = App.Current.MainPage;
-                            App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
+
+                            Device.BeginInvokeOnMainThread(() =>
+                            {
+                                App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType);
+                            });
+
+                            
                             //navigation.RemovePage(current);
                         }
                         else

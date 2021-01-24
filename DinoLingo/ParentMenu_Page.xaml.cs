@@ -134,8 +134,14 @@ namespace DinoLingo
                         await CacheHelper.Add<Login_Response.Login>(CacheHelper.LOGIN, UserHelper.Login);
 
                         Page current = App.Current.MainPage;
-                        App.Current.MainPage = new LoginPage_new();
-                        current.Navigation.RemovePage(current);
+
+                        Device.BeginInvokeOnMainThread(() =>
+                        {
+                            App.Current.MainPage = new LoginPage_new();
+                            current.Navigation.RemovePage(current);
+                        });
+
+                        
                     }
                 }
                 else
@@ -147,9 +153,14 @@ namespace DinoLingo
 
                     await CacheHelper.Add<Login_Response.Login>(CacheHelper.LOGIN, UserHelper.Login);
 
-                    Page current = App.Current.MainPage;
-                    App.Current.MainPage = new LoginPage_new();
-                    current.Navigation.RemovePage(current);
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Page current = App.Current.MainPage;
+                        App.Current.MainPage = new LoginPage_new();
+                        current.Navigation.RemovePage(current);
+                    });
+                    
                 }                  
 
             }
@@ -172,7 +183,7 @@ namespace DinoLingo
                         await Task.Delay(200 - (int)deltaTime);
                     }
                     await Task.WhenAll(
-                       App.Current.MainPage.Navigation.PopModalAsync(),
+                       //App.Current.MainPage.Navigation.PopModalAsync(),
                        App.Current.MainPage.Navigation.PushModalAsync(page));
                 }
 
@@ -219,13 +230,13 @@ namespace DinoLingo
             else if (view.ClassId == "HelpBtn")
             {
                 await App.Current.MainPage.Navigation.PopModalAsync();
-                Device.OpenUri(new System.Uri("https://dinolingo.com/help/"));
+                Device.OpenUri(new System.Uri("https://wp.dinolingo.com/help/"));
             }
             
             else if (view.ClassId == "PrivacyPolicyBtn")
             {
                 App.Current.MainPage.Navigation.PopModalAsync();
-                Device.OpenUri(new System.Uri("https://dinolingo.com/privacy/"));
+                Device.OpenUri(new System.Uri("https://wp.dinolingo.com/privacy/"));
             }
             else if (view.ClassId == "FeedbackBtn")
             {

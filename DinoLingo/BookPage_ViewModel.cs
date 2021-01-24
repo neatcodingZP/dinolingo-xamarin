@@ -944,37 +944,7 @@ namespace DinoLingo
             {
                 // IF IT IS FAVORITE - NO NEED TO DOWNLOAD !
                 if (isFavorite) return;
-                /*
-                Debug.WriteLine("BookPage_ViewModel -> DownloadPage -> Check connection here...");
-                Debug.WriteLine("==============================================================");
-                Debug.WriteLine("BookPage_ViewModel -> DownloadPage -> is server_api reachable ?");
-                if (await CrossConnectivity.Current.IsRemoteReachable ("https://dinolingo.com")) {
-                    Debug.WriteLine($"BookPage_ViewModel -> DownloadPage -> server {"https://dinolingo.com"} is remote reachable");
-                }
-                else {
-                        Debug.WriteLine($"BookPage_ViewModel -> DownloadPage -> server {"https://dinolingo.com"} is NOT remote reachable");
                 
-                                        }
-                                        if (await CrossConnectivity.Current.IsReachable("https://dinolingo.com"))
-                {
-                    Debug.WriteLine($"BookPage_ViewModel -> DownloadPage -> server {"https://dinolingo.com"} is reachable");
-                }
-                else
-                {
-                    Debug.WriteLine($"BookPage_ViewModel -> DownloadPage -> server {"https://dinolingo.com"} is NOT reachable");
-                }
-
-                var current = Connectivity.NetworkAccess;
-                if (current == NetworkAccess.Internet)
-                {
-                    // Connection to internet is available
-                    Debug.WriteLine($"BookPage_ViewModel -> DownloadPage -> Connectivity.NetworkAccess - is OK");
-                }
-                else {
-                    Debug.WriteLine($"BookPage_ViewModel -> DownloadPage -> Connectivity.NetworkAccess - ERROR !!!");
-                }
-
-                */
                     
                 try
                 {

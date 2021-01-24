@@ -13,8 +13,11 @@ namespace DinoLingo.iOS
     {
         protected override void OnElementChanged(ElementChangedEventArgs <Frame> e) {  
             base.OnElementChanged(e);  
-            //Layer.BorderColor = UIColor.White.CGColor;  
-            //Layer.CornerRadius = 10;  
+
+            //Layer.BorderColor = UIColor.White.CGColor;
+            
+            
+            //Layer.CornerRadius = UI_Sizes.ButtonCornerRadius;
             //Layer.MasksToBounds = false;  
             //Layer.ShadowOffset = new CGSize(-2, 2);  
             //Layer.ShadowRadius = 5;  
@@ -23,6 +26,8 @@ namespace DinoLingo.iOS
             if (Element != null)
             {
                 Layer.MasksToBounds = true;
+                Layer.BorderColor = UIColor.White.CGColor;
+                Layer.CornerRadius = (float)(Element as ExtendedFrame).CornerRadius;
                 Layer.BorderWidth = (float)(Element as ExtendedFrame).OutLineWidth;
                 Debug.WriteLine("Layer.BorderWidth = " + Layer.BorderWidth);
             }

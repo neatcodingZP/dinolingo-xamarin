@@ -14,7 +14,7 @@ using Plugin.GoogleAnalytics;
 using Plugin.InAppBilling;
 using Plugin.CurrentActivity;
 using CarouselView.FormsPlugin.Android;
-using Plugin.FirebasePushNotification;
+//using Plugin.FirebasePushNotification;
 using Xamarin.Forms;
 using DinoLingo;
 
@@ -110,7 +110,7 @@ namespace DinoLingo.Droid
             
             LoadApplication(new App());
 
-            FirebasePushNotificationManager.ProcessIntent(this, Intent);
+            //FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
 
         protected override void OnNewIntent(Intent intent)
@@ -118,7 +118,7 @@ namespace DinoLingo.Droid
             //App.haveNotificationBeforeStart = true;
             base.OnNewIntent(intent);
 
-            FirebasePushNotificationManager.ProcessIntent(this, Intent);
+            //FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
 
         // Field, properties, and method for Video Picker

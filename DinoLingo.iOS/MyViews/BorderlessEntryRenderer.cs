@@ -16,15 +16,14 @@ namespace DinoLingo.iOS.MyViews
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
+            if (Control != null)
+            {
+                Control.KeyboardType = UIKeyboardType.Default;
+                Control.AutocorrectionType = UITextAutocorrectionType.No;
 
-            Control.KeyboardType = UIKeyboardType.Default;
-            Control.AutocorrectionType = UITextAutocorrectionType.No;
-
-            Control.Layer.BorderWidth = 0;
-            Control.BorderStyle = UITextBorderStyle.None;
-
-            
-
+                Control.Layer.BorderWidth = 0;
+                Control.BorderStyle = UITextBorderStyle.None;
+            }
         }
     }
 }

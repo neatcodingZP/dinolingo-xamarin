@@ -29,6 +29,7 @@ namespace DinoLingo
 
         protected override void OnAppearing()
         {
+            Debug.WriteLine("MainPage_ -> OnAppearing()");
             base.OnAppearing();
             MessagingCenter.Send((ContentPage)this, "ForceLandscape");
             ScreenOrientation.Instance.ForceLandscape();

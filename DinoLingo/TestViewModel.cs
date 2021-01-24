@@ -81,7 +81,7 @@ namespace DinoLingo
             }
         }
 
-        bool isBlocked;
+        public bool isBlocked;
 
         // local data
         //double height = -1;

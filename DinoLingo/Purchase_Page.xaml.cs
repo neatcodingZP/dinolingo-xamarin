@@ -177,10 +177,13 @@ namespace DinoLingo
                     await App.Current.MainPage.Navigation.PushModalAsync(new SignUp_Page(true));
                 }
                 */
-                App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, needToSignUp);
-                current.Navigation.RemovePage(current);
-                
-                
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, needToSignUp);
+                    current.Navigation.RemovePage(current);
+                });
+
             }
             else
             { // download categories...
@@ -217,8 +220,12 @@ namespace DinoLingo
                             await App.Current.MainPage.Navigation.PushModalAsync(new SignUp_Page(true));
                         }
                         */
-                        App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, needToSignUp);
-                        current.Navigation.RemovePage(current);                       
+
+                        Device.BeginInvokeOnMainThread(() =>
+                        {
+                            App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, needToSignUp);
+                            current.Navigation.RemovePage(current);
+                        });                                              
                         
                     }
                     else
@@ -255,12 +262,12 @@ namespace DinoLingo
             else if (view.ClassId == "TermsOfUse")
             {
                 Debug.WriteLine("Purchase_Page -> MenuButton_Tapped -> TermsOfUse");
-                Device.OpenUri(new System.Uri("https://dinolingo.com/terms/"));
+                Device.OpenUri(new System.Uri("https://wp.dinolingo.com/terms/"));
             }
             else if (view.ClassId == "PrivacyPolicy")
             {
                 Debug.WriteLine("Purchase_Page -> MenuButton_Tapped -> PrivacyPolicy");
-                Device.OpenUri(new System.Uri("https://dinolingo.com/privacy/"));
+                Device.OpenUri(new System.Uri("https://wp.dinolingo.com/privacy/"));
             }
             else if (view.ClassId == "PurchaseBtn")
             {

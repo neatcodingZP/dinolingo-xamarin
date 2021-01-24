@@ -351,9 +351,12 @@ namespace DinoLingo
                     await App.Current.MainPage.Navigation.PushModalAsync(new SignUp_Page(true));
                 }
                 */
-                App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, false);
-                current.Navigation.RemovePage(current);
 
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, false);
+                    current.Navigation.RemovePage(current);
+                });
 
             }
             else
@@ -391,8 +394,12 @@ namespace DinoLingo
                             await App.Current.MainPage.Navigation.PushModalAsync(new SignUp_Page(true));
                         }
                         */
-                        App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, false);
-                        current.Navigation.RemovePage(current);
+
+                        Device.BeginInvokeOnMainThread(() =>
+                        {
+                            App.Current.MainPage = new MainPage_(categoryResponse.result[0].viewType, 0, false);
+                            current.Navigation.RemovePage(current);
+                        });                        
 
                     }
                     else

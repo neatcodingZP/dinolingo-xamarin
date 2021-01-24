@@ -13,7 +13,9 @@ namespace DinoLingo
     public static class ServerApi
     {
        // static readonly string ROOT_URL_DEV = "https://dev.dinolingo.com/wp-json/dinolingo_api/v1/";
-        static readonly string ROOT_URL = "https://dinolingo.com/wp-json/dinolingo_api/v1/";
+        //static readonly string ROOT_URL = "https://dinolingo.com/wp-json/dinolingo_api/v1/";
+        static readonly string ROOT_URL = "https://wp.dinolingo.com/wp-json/dinolingo_api/v1/";
+
         public static readonly string LOGIN_URL = ROOT_URL + "login";  // login, pass --> Login_Response
 
         public static readonly string POST_URL = ROOT_URL + "post"; // id, user_id, type, lang_id --> PostResponse
@@ -63,29 +65,27 @@ namespace DinoLingo
             request.KeepAlive = false;
             request.AllowWriteStreamBuffering = false;
             request.AllowReadStreamBuffering = false;
+            //request.AllowAutoRedirect = true;
 
             var data = Encoding.ASCII.GetBytes(postData);
 
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
             
-            request.ContentLength = data.Length;
+            request.ContentLength = data.Length;            
 
             return Task.Run(async () =>
             {
                 // Debug.WriteLine("ServerApi -> try to get stream ->");
                 HttpWebResponse response = null;
-                try {
-                    
-                    
+                try {                    
                     using (var stream = request.GetRequestStream())
                     {
                         stream.Write(data, 0, data.Length);
-                    }
-                    
+                    }                    
                     
                     Debug.WriteLine("ServerApi -> try to get response ->");
-                    response = (HttpWebResponse)request.GetResponse();
+                    response = (HttpWebResponse)request.GetResponse();                    
 
                     try
                     {
@@ -105,9 +105,7 @@ namespace DinoLingo
                         {
                             Debug.WriteLine("error: can not DeserializeObject, ex:" + ex.Message);
                             GoogleAnalytics.Current.Tracker.SendEvent("ServerApi", $"Exception, url= {url}, postData= {postData}", "JsonConvert.ex: " + ex.Message, 1);
-
-
-                            
+                                                        
                             request?.Abort();
                             response?.Close();
 
@@ -123,9 +121,14 @@ namespace DinoLingo
                         response?.Close();
                         return defaultValue;
                     }
+                    
                 }
                 catch (Exception ex) {
                     Debug.WriteLine($"HttpWebRequest EXCEPTION, problem with request.GetRequestStream()  :(, download text data failed, ex.Message= {ex.Message}");
+                    if (response != null)
+                    {
+                        Debug.WriteLine($"HttpWebRequest EXCEPTION, problem with request.GetRequestStream()  :(, download text data failed, response.statusCode= {response.StatusCode}");
+                    }
                     GoogleAnalytics.Current.Tracker.SendEvent("ServerApi", $"Exception, url= {url}, postData= {postData}", "GetRequestStream().ex: " + ex.Message, 3);                    
 
                     request?.Abort();
