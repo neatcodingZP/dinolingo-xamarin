@@ -155,6 +155,8 @@ namespace DinoLingo
         }
 
         async void OnClickedClose(View view) {
+            Debug.WriteLine("VideoPage_ViewModel -> OnClickedClose ()");
+
             if (IsAnimating) return;
             IsAnimating = true;
             await AnimateImage(view, 250);

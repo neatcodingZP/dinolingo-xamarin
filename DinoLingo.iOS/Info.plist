@@ -22,7 +22,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.dinolingo.DinoLingo</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>1</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
@@ -45,7 +45,7 @@
 		<string>Arial_Rounded_MT_Bold.ttf</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.0</string>
+	<string>2.0.1</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

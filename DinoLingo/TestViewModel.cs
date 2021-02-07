@@ -1347,6 +1347,7 @@ namespace DinoLingo
 
         public void OnAppearing()
         {
+            Debug.WriteLine("TestViewModel -> OnAppearing()");
             isBlocked = false;
         }
 
@@ -1394,7 +1395,7 @@ namespace DinoLingo
                             {                                
                                 await App.Current.MainPage.Navigation.PushModalAsync(new ParentCheck_Page(ParentCheck_Page.WhatToDoNext.WANT_TO_SIGN_UP));
                             }
-                            else isBlocked = false;
+                            isBlocked = false;
 
                             IsAnimating = false;
                             return;
@@ -1447,24 +1448,30 @@ namespace DinoLingo
                         switch (gameT) {
                             case GAME_TYPE.SPRINT:
                             await App.Current.MainPage.Navigation.PushModalAsync(new SprintGame_Page(themeName, starsInfo));
+                                isBlocked = false;
                                 break;
 
                             case GAME_TYPE.FIND_THE_PAIR:
                                 //await App.Current.MainPage.Navigation.PushModalAsync(new SprintGame_Page(themeName, starsInfo));
 
                                 await rootViewModel.FindThePairGame(themeName, starsInfo);
+                                isBlocked = false;
                                 break;
                             case GAME_TYPE.CAROUSEL: 
                                 await rootViewModel.CarouselGame(themeName, starsInfo);
+                                isBlocked = false;
                                 break;
                             case GAME_TYPE.SEE_AND_SAY: 
                                 await rootViewModel.SASGame(themeName, 0, starsInfo);
+                                isBlocked = false;
                                 break;
                             case GAME_TYPE.QUIZ: 
                                 await rootViewModel.QuizGame(themeName, starsInfo);
+                                isBlocked = false;
                                 break;
                             case GAME_TYPE.SEE_AND_SAY_2: 
                                 await rootViewModel.SASGame(themeName, 1, starsInfo);
+                                isBlocked = false;
                                 break;
                             default: isBlocked = false;
                                 break;
@@ -1486,14 +1493,14 @@ namespace DinoLingo
                             
                             await App.Current.MainPage.Navigation.PushModalAsync(new ParentCheck_Page(ParentCheck_Page.WhatToDoNext.WANT_TO_SIGN_UP));
                         }
-                        else isBlocked = false;
+                        isBlocked = false;
 
                         IsAnimating = false;
                         return;
                     }
-
-                    isBlocked = true;
+                    
                     await rootViewModel.WatchLesson(dataForListView[index].id, starsInfo);
+                    isBlocked = false;
                     break;
                     
                 case MainPage_ViewModel.CENTRAL_VIEWS.BOOKS:
@@ -1507,13 +1514,14 @@ namespace DinoLingo
                             
                             await App.Current.MainPage.Navigation.PushModalAsync(new ParentCheck_Page(ParentCheck_Page.WhatToDoNext.WANT_TO_SIGN_UP));
                         }
-                        else isBlocked = false;
+                        isBlocked = false;
                         IsAnimating = false;
                         return;
                     }
 
                     
                     await rootViewModel.ReadBook(dataForListView[index].id);
+                    isBlocked = false;
                     break;
                     
                 case MainPage_ViewModel.CENTRAL_VIEWS.STORIES:
@@ -1531,13 +1539,14 @@ namespace DinoLingo
                         {
                             await App.Current.MainPage.Navigation.PushModalAsync(new ParentCheck_Page(ParentCheck_Page.WhatToDoNext.WANT_TO_SIGN_UP));
                         }
-                        else isBlocked = false;
+                        isBlocked = false;
                         IsAnimating = false;
                         return;
                     }
 
                     
                     await rootViewModel.WatchLesson(dataForListView[index].id, starsInfo);
+                    isBlocked = false;
                     break;
                     
                 case MainPage_ViewModel.CENTRAL_VIEWS.SONGS: 
@@ -1552,13 +1561,14 @@ namespace DinoLingo
                             
                             await App.Current.MainPage.Navigation.PushModalAsync(new ParentCheck_Page(ParentCheck_Page.WhatToDoNext.WANT_TO_SIGN_UP));
                         }
-                        else isBlocked = false;
+                        isBlocked = false;
                         IsAnimating = false;
                         return;
                     }
 
                     
                     await rootViewModel.WatchLesson(dataForListView[index].id, starsInfo);
+                    isBlocked = false;
                     break;    
             }
             IsAnimating = false;

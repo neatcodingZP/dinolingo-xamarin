@@ -706,6 +706,7 @@ namespace DinoLingo
 
         async void OnClickedClose(BackButtonView view)
         {
+            Debug.WriteLine("SASViewModel -> OnClickedClose ()");
             if (isAnimating) return;
             isAnimating = true;
             await view.ScaleTo(1.2, 125);
